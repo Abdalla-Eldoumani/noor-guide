@@ -1,0 +1,138 @@
+{
+  "module_id": "wudu",
+  "title_en": "Wudu — How to Perform Ablution",
+  "title_ar": "الوضوء",
+  "introduction": {
+    "content_en": "Before praying, a Muslim must be in a state of ritual purity. Wudu (ablution) is the washing of specific body parts as taught by the Prophet Muhammad ﷺ. It is a prerequisite for prayer — your salah is not valid without it.",
+    "source": {
+      "type": "hadith",
+      "reference": "Sahih Muslim 225",
+      "text_en": "The Prophet ﷺ said: 'Allah does not accept the prayer of any one of you if he is in a state of impurity until he performs wudu.'",
+      "grade": "sahih"
+    }
+  },
+  "prerequisites": [
+    "Water must be clean and pure (tahir)",
+    "The intention (niyyah) to perform wudu must be in the heart",
+    "Remove anything that prevents water from reaching the skin (nail polish, heavy makeup, etc.)"
+  ],
+  "steps": [
+    {
+      "id": "wudu-step-1",
+      "order": 1,
+      "title_en": "Intention (Niyyah)",
+      "title_ar": "النية",
+      "instruction_en": "Make the intention in your heart to perform wudu for the sake of Allah. The intention is in the heart, not spoken aloud.",
+      "notes": "The Prophet ﷺ never instructed verbal intention for wudu. It is purely in the heart.",
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 1", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-2",
+      "order": 2,
+      "title_en": "Say Bismillah",
+      "title_ar": "بسم الله",
+      "instruction_en": "Say 'Bismillah' (In the name of Allah) before beginning.",
+      "content": {
+        "arabic": "بِسْمِ اللَّهِ",
+        "transliteration": "Bismillah",
+        "translation": "In the name of Allah"
+      },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-3",
+      "order": 3,
+      "title_en": "Wash the Hands",
+      "title_ar": "غسل اليدين",
+      "instruction_en": "Wash both hands up to the wrists three times, starting with the right hand. Make sure water reaches between the fingers.",
+      "repetitions": 3,
+      "notes": "Always start with the right side. The Prophet ﷺ loved starting with the right in all things.",
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 168", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-4",
+      "order": 4,
+      "title_en": "Rinse the Mouth",
+      "title_ar": "المضمضة",
+      "instruction_en": "Take water into your mouth with your right hand, swish it around thoroughly, and spit it out. Do this three times.",
+      "repetitions": 3,
+      "verified": true
+    },
+    {
+      "id": "wudu-step-5",
+      "order": 5,
+      "title_en": "Rinse the Nose",
+      "title_ar": "الاستنشاق والاستنثار",
+      "instruction_en": "Sniff water into your nose with your right hand, then blow it out with your left hand. Do this three times.",
+      "repetitions": 3,
+      "verified": true
+    },
+    {
+      "id": "wudu-step-6",
+      "order": 6,
+      "title_en": "Wash the Face",
+      "title_ar": "غسل الوجه",
+      "instruction_en": "Wash your entire face three times. The face extends from the hairline to the chin, and from ear to ear. Make sure water covers every part.",
+      "repetitions": 3,
+      "notes": "Men with beards should run wet fingers through the beard.",
+      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-7",
+      "order": 7,
+      "title_en": "Wash the Arms",
+      "title_ar": "غسل اليدين إلى المرفقين",
+      "instruction_en": "Wash the right arm from fingertips to the elbow (including the elbow) three times. Then wash the left arm the same way three times.",
+      "repetitions": 3,
+      "notes": "Always start with the right arm before the left.",
+      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-8",
+      "order": 8,
+      "title_en": "Wipe the Head",
+      "title_ar": "مسح الرأس",
+      "instruction_en": "With wet hands, wipe over your head from the front (hairline) to the back, and then bring your hands back to the front. This is done once.",
+      "repetitions": 1,
+      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "verified": true
+    },
+    {
+      "id": "wudu-step-9",
+      "order": 9,
+      "title_en": "Wipe the Ears",
+      "title_ar": "مسح الأذنين",
+      "instruction_en": "With wet fingers, wipe the inside of your ears with your index fingers and the outside with your thumbs. This is done once.",
+      "repetitions": 1,
+      "verified": true
+    },
+    {
+      "id": "wudu-step-10",
+      "order": 10,
+      "title_en": "Wash the Feet",
+      "title_ar": "غسل القدمين",
+      "instruction_en": "Wash the right foot up to and including the ankle three times, making sure water goes between the toes. Then wash the left foot the same way.",
+      "repetitions": 3,
+      "notes": "Use your little finger to wash between the toes.",
+      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "verified": true
+    }
+  ],
+  "dua_after_wudu": {
+    "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+    "transliteration": "Ashhadu an la ilaha illallahu wahdahu la sharika lahu, wa ashhadu anna Muhammadan abduhu wa rasuluh.",
+    "translation": "I bear witness that there is no god but Allah alone, with no partner, and I bear witness that Muhammad is His servant and messenger.",
+    "source": { "type": "hadith", "reference": "Sahih Muslim 234", "grade": "sahih" },
+    "verified": true
+  },
+  "what_breaks_wudu": [
+    { "id": "breaker-1", "description": "Anything that exits from the private parts (urine, stool, gas)", "source": "Sahih Bukhari 135", "verified": true },
+    { "id": "breaker-2", "description": "Deep sleep (light dozing while seated does not break wudu)", "source": "Sunan Abu Dawud 203", "verified": true },
+    { "id": "breaker-3", "description": "Loss of consciousness", "verified": true },
+    { "id": "breaker-4", "description": "Bleeding from a wound (difference of opinion among scholars — some say it breaks wudu, some say it doesn't)", "notes": "This is a point of scholarly difference. To be safe, renew your wudu.", "verified": true }
+  ]
+}
