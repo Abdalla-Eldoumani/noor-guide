@@ -1,0 +1,223 @@
+{
+  "module_id": "salah",
+  "title_en": "How to Pray Salah",
+  "title_ar": "كيفية الصلاة",
+  "introduction": {
+    "content_en": "Salah (prayer) is the second pillar of Islam and the most important act of worship after believing in Allah. Muslims pray five times a day at specific times. The Prophet ﷺ said: 'Pray as you have seen me praying.' This guide follows exactly how he ﷺ prayed.",
+    "source": { "type": "hadith", "reference": "Sahih Bukhari 631", "text_en": "Pray as you have seen me praying.", "grade": "sahih" }
+  },
+  "prerequisites": [
+    "Be in a state of wudu (ablution)",
+    "Wear clean, modest clothing (men: navel to knees minimum; women: entire body except face and hands)",
+    "Pray in a clean place",
+    "Face the Qibla (direction of the Kaaba in Makkah)",
+    "Pray within the designated time for that prayer"
+  ],
+  "five_prayers": [
+    { "name_en": "Fajr", "name_ar": "الفجر", "time": "Dawn (before sunrise)", "fardh_rakaat": 2, "sunnah_before": 2, "sunnah_after": 0 },
+    { "name_en": "Dhuhr", "name_ar": "الظهر", "time": "After the sun passes its zenith (midday)", "fardh_rakaat": 4, "sunnah_before": 4, "sunnah_after": 2 },
+    { "name_en": "Asr", "name_ar": "العصر", "time": "Afternoon", "fardh_rakaat": 4, "sunnah_before": 0, "sunnah_after": 0 },
+    { "name_en": "Maghrib", "name_ar": "المغرب", "time": "Just after sunset", "fardh_rakaat": 3, "sunnah_before": 0, "sunnah_after": 2 },
+    { "name_en": "Isha", "name_ar": "العشاء", "time": "Night (after twilight disappears)", "fardh_rakaat": 4, "sunnah_before": 0, "sunnah_after": 2 }
+  ],
+  "steps_of_one_rakah": [
+    {
+      "id": "salah-step-1",
+      "order": 1,
+      "title_en": "Standing and Intention (Qiyam & Niyyah)",
+      "title_ar": "القيام والنية",
+      "position": "standing",
+      "instruction_en": "Stand upright facing the Qibla. Make the intention in your heart for the specific prayer you are about to perform. The intention is NOT spoken aloud.",
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 1", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-2",
+      "order": 2,
+      "title_en": "Opening Takbir (Takbiratul Ihram)",
+      "title_ar": "تكبيرة الإحرام",
+      "position": "standing-hands-raised",
+      "instruction_en": "Raise both hands up to your ears (men) or shoulders (women) and say 'Allahu Akbar' (Allah is the Greatest). This officially begins the prayer. From this moment, you are in a sacred state.",
+      "recitation": {
+        "arabic": "اللَّهُ أَكْبَرُ",
+        "transliteration": "Allahu Akbar",
+        "translation": "Allah is the Greatest"
+      },
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 735", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-3",
+      "order": 3,
+      "title_en": "Place Hands on Chest (Qabd)",
+      "title_ar": "وضع اليدين",
+      "position": "standing-hands-folded",
+      "instruction_en": "Place your right hand over your left hand on your chest. Your eyes should look toward the place where you will prostrate (the ground in front of you).",
+      "notes": "There is a difference of opinion on exactly where to place the hands. Placing them on the chest is the most common Sunni practice based on Sahih hadith.",
+      "source": { "type": "hadith", "reference": "Sahih Muslim 401", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-4",
+      "order": 4,
+      "title_en": "Opening Supplication (Dua Al-Istiftah)",
+      "title_ar": "دعاء الاستفتاح",
+      "position": "standing-hands-folded",
+      "instruction_en": "It is recommended (sunnah, not obligatory) to recite an opening supplication silently before Surah Al-Fatiha. One common dua is:",
+      "recitation": {
+        "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ",
+        "transliteration": "Subhanakal-lahumma wa bihamdika, wa tabarakas-muka, wa ta'ala jadduka, wa la ilaha ghayruk.",
+        "translation": "How perfect You are, O Allah, and I praise You. Blessed is Your name, and exalted is Your majesty. There is no god worthy of worship except You."
+      },
+      "notes": "This is said only in the first rakah, not in subsequent ones.",
+      "source": { "type": "hadith", "reference": "Sunan Abu Dawud 775", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-5",
+      "order": 5,
+      "title_en": "Seeking Refuge & Reciting Al-Fatiha",
+      "title_ar": "الاستعاذة وقراءة الفاتحة",
+      "position": "standing-hands-folded",
+      "instruction_en": "Say 'A'udhu billahi min ash-Shaytanir-rajim' (I seek refuge in Allah from the accursed Shaytan), then say 'Bismillahir-Rahmanir-Rahim' (In the name of Allah, the Most Gracious, the Most Merciful), then recite Surah Al-Fatiha. This surah is OBLIGATORY in every single rakah of every prayer.",
+      "recitation": {
+        "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+        "transliteration": "Bismillahir-Rahmanir-Rahim. Al-hamdu lillahi Rabbil-'alamin. Ar-Rahmanir-Rahim. Maliki yawmid-Din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim walad-dallin.",
+        "translation": "In the name of Allah, the Most Gracious, the Most Merciful. All praise is due to Allah, Lord of all the worlds. The Most Gracious, the Most Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have earned anger nor of those who are astray."
+      },
+      "after_fatiha": "Say 'Ameen' (meaning: O Allah, answer our prayer) after completing Al-Fatiha.",
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 756", "text_en": "There is no prayer for the one who does not recite the Opening of the Book (Al-Fatiha).", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-6",
+      "order": 6,
+      "title_en": "Recite an Additional Surah",
+      "title_ar": "قراءة سورة بعد الفاتحة",
+      "position": "standing-hands-folded",
+      "instruction_en": "After Al-Fatiha, recite any other surah or verses from the Quran. This is done in the first two rakaat of the Fardh prayer. Start with short surahs like Al-Ikhlas (112), Al-Falaq (113), or An-Nas (114).",
+      "notes": "In the 3rd and 4th rakaat of Fardh prayers, you only recite Al-Fatiha — no additional surah is needed.",
+      "verified": true
+    },
+    {
+      "id": "salah-step-7",
+      "order": 7,
+      "title_en": "Bowing (Ruku)",
+      "title_ar": "الركوع",
+      "position": "bowing",
+      "instruction_en": "Say 'Allahu Akbar' and bow down. Place your hands firmly on your knees with fingers spread. Keep your back straight and level with your head. In this position, say the tasbeeh three times.",
+      "recitation": {
+        "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
+        "transliteration": "Subhana Rabbiyal-'Adhim",
+        "translation": "How perfect is my Lord, the Supreme"
+      },
+      "repetitions": 3,
+      "source": { "type": "hadith", "reference": "Sahih Muslim 772", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-8",
+      "order": 8,
+      "title_en": "Rising from Bowing (I'tidal)",
+      "title_ar": "الاعتدال من الركوع",
+      "position": "standing",
+      "instruction_en": "Rise from bowing back to the standing position while saying 'Sami' Allahu liman hamidah' (Allah hears those who praise Him), then once standing say 'Rabbana wa lakal-hamd' (Our Lord, to You belongs all praise).",
+      "recitation_rising": {
+        "arabic": "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ",
+        "transliteration": "Sami'Allahu liman hamidah",
+        "translation": "Allah hears those who praise Him"
+      },
+      "recitation_standing": {
+        "arabic": "رَبَّنَا وَلَكَ الْحَمْدُ",
+        "transliteration": "Rabbana wa lakal-hamd",
+        "translation": "Our Lord, to You belongs all praise"
+      },
+      "source": { "type": "hadith", "reference": "Sahih Bukhari 795", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-9",
+      "order": 9,
+      "title_en": "First Prostration (Sujud)",
+      "title_ar": "السجود الأول",
+      "position": "prostrating",
+      "instruction_en": "Say 'Allahu Akbar' and go down into prostration. Your forehead, nose, both palms, both knees, and toes of both feet should touch the ground. In this position, say the tasbeeh three times. This is the closest a servant is to Allah.",
+      "recitation": {
+        "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
+        "transliteration": "Subhana Rabbiyal-A'la",
+        "translation": "How perfect is my Lord, the Most High"
+      },
+      "repetitions": 3,
+      "notes": "You may make personal dua (supplication) in any language during sujud. The Prophet ﷺ said this is the closest position to Allah.",
+      "source": { "type": "hadith", "reference": "Sahih Muslim 482", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-10",
+      "order": 10,
+      "title_en": "Sitting Between Prostrations (Jalsah)",
+      "title_ar": "الجلوس بين السجدتين",
+      "position": "sitting",
+      "instruction_en": "Rise from prostration saying 'Allahu Akbar' and sit upright briefly. You may say 'Rabbi ighfir li' (My Lord, forgive me) in this sitting.",
+      "recitation": {
+        "arabic": "رَبِّ اغْفِرْ لِي",
+        "transliteration": "Rabbighfir li",
+        "translation": "My Lord, forgive me"
+      },
+      "source": { "type": "hadith", "reference": "Sunan Abu Dawud 874", "grade": "sahih" },
+      "verified": true
+    },
+    {
+      "id": "salah-step-11",
+      "order": 11,
+      "title_en": "Second Prostration (Sujud)",
+      "title_ar": "السجود الثاني",
+      "position": "prostrating",
+      "instruction_en": "Say 'Allahu Akbar' and prostrate again exactly as the first time. Say the tasbeeh three times. This completes one full rakah (unit of prayer).",
+      "recitation": {
+        "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
+        "transliteration": "Subhana Rabbiyal-A'la",
+        "translation": "How perfect is my Lord, the Most High"
+      },
+      "repetitions": 3,
+      "verified": true
+    }
+  ],
+  "tashahhud": {
+    "title_en": "Tashahhud (Testimony of Faith in Prayer)",
+    "title_ar": "التشهد",
+    "when": "Recited while sitting after every 2 rakaat and in the final sitting of the prayer.",
+    "recitation": {
+      "arabic": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+      "transliteration": "At-tahiyyatu lillahi was-salawatu wat-tayyibat. As-salamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakatuh. As-salamu 'alayna wa 'ala 'ibadillahis-salihin. Ash-hadu an la ilaha illallahu wa ash-hadu anna Muhammadan 'abduhu wa rasuluh.",
+      "translation": "All greetings, prayers, and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and messenger."
+    },
+    "source": { "type": "hadith", "reference": "Sahih Bukhari 831", "grade": "sahih" },
+    "finger_note": "When you reach the shahada part ('Ash-hadu an la ilaha illallah'), raise your right index finger. This symbolizes the Oneness of Allah (Tawhid).",
+    "verified": true
+  },
+  "salawat_ibrahimiyyah": {
+    "title_en": "Salawat (Sending blessings upon the Prophet ﷺ)",
+    "title_ar": "الصلاة الإبراهيمية",
+    "when": "Recited in the final sitting of the prayer, after the Tashahhud.",
+    "recitation": {
+      "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
+      "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin, kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima, innaka Hamidun Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin, kama barakta 'ala Ibrahima wa 'ala ali Ibrahima, innaka Hamidun Majid.",
+      "translation": "O Allah, send blessings upon Muhammad and upon the family of Muhammad, as You sent blessings upon Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious."
+    },
+    "source": { "type": "hadith", "reference": "Sahih Bukhari 3370", "grade": "sahih" },
+    "verified": true
+  },
+  "tasleem": {
+    "title_en": "Ending the Prayer (Tasleem)",
+    "title_ar": "التسليم",
+    "instruction_en": "To end the prayer, turn your head to the right and say 'As-salamu alaykum wa rahmatullah', then turn your head to the left and say it again.",
+    "recitation": {
+      "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
+      "transliteration": "As-salamu 'alaykum wa rahmatullah",
+      "translation": "Peace be upon you and the mercy of Allah"
+    },
+    "source": { "type": "hadith", "reference": "Sahih Muslim 582", "grade": "sahih" },
+    "verified": true
+  }
+}
