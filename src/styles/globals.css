@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts are loaded in layout.tsx via next/font or <link> */
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink font-body antialiased;
+  }
+
+  .dark body,
+  html.dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  /* Arabic text defaults */
+  [dir="rtl"] {
+    font-family: "Amiri", "Noto Naskh Arabic", serif;
+    line-height: 2;
+  }
+}
+
+@layer components {
+  /* Arabic text block styling */
+  .arabic-text {
+    @apply font-arabic text-arabic-base leading-loose;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  .arabic-text-lg {
+    @apply font-arabic text-arabic-lg leading-loose;
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+
+  /* Transliteration styling */
+  .transliteration {
+    @apply font-mono text-sm text-muted italic;
+  }
+
+  /* Source reference badge */
+  .source-ref {
+    @apply inline-flex items-center gap-1 text-xs text-primary-500 bg-primary-50 
+           px-2 py-0.5 rounded-full font-medium;
+  }
+
+  /* Card component base */
+  .card {
+    @apply bg-surface rounded-2xl border border-gray-100 p-6
+           shadow-sm transition-shadow hover:shadow-md
+           dark:bg-gray-800 dark:border-gray-700;
+  }
+
+  /* Step indicator */
+  .step-circle {
+    @apply w-10 h-10 rounded-full flex items-center justify-center 
+           text-sm font-bold transition-colors;
+  }
+
+  .step-circle-active {
+    @apply bg-primary-500 text-white;
+  }
+
+  .step-circle-complete {
+    @apply bg-primary-100 text-primary-600;
+  }
+
+  .step-circle-pending {
+    @apply bg-gray-100 text-gray-400;
+  }
+}
+
+@layer utilities {
+  /* Ensure Arabic text has minimum readable size */
+  .min-arabic-size {
+    min-font-size: 1.25rem;
+  }
+}
