@@ -1,0 +1,176 @@
+{
+  "module_id": "aqeedah",
+  "title_en": "The Six Pillars of Iman (Faith)",
+  "title_ar": "أركان الإيمان",
+  "introduction": {
+    "content_en": "Iman (faith) is the foundation of being a Muslim. The Prophet Muhammad ﷺ defined faith when the Angel Jibril (Gabriel) asked him about it. These six beliefs are what every Muslim holds in their heart.",
+    "source": {
+      "type": "hadith",
+      "reference": "Sahih Muslim 8a",
+      "text_en": "The Prophet ﷺ said: '[Iman is] that you believe in Allah, His angels, His Books, His Messengers, the Last Day, and that you believe in Divine Decree, both its good and its bad.'",
+      "grade": "sahih"
+    }
+  },
+  "pillars": [
+    {
+      "id": "belief-in-allah",
+      "order": 1,
+      "title_en": "Belief in Allah",
+      "title_ar": "الإيمان بالله",
+      "description_en": "To believe that Allah is the One and Only God. He has no partners, no children, no parents. He is the Creator of everything, the Sustainer of all existence, and the Only One worthy of worship. This is called Tawhid — the Oneness of God.",
+      "key_points": [
+        "Allah is One (Ahad) — there is no god but Him",
+        "He was not born, nor does He have children (Quran 112:3)",
+        "Nothing in creation is like Him (Quran 42:11)",
+        "He knows everything, sees everything, hears everything",
+        "He is the Creator of all things (Quran 6:102)",
+        "Only He deserves worship — no saints, no prophets, no idols"
+      ],
+      "quran_references": [
+        {
+          "reference": "112:1-4",
+          "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "transliteration": "Qul Huwa Allahu Ahad. Allahu As-Samad. Lam yalid wa lam yulad. Wa lam yakun lahu kufuwan ahad.",
+          "translation": "Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent."
+        },
+        {
+          "reference": "42:11",
+          "arabic": "لَيْسَ كَمِثْلِهِ شَيْءٌ ۖ وَهُوَ السَّمِيعُ الْبَصِيرُ",
+          "transliteration": "Laysa kamithlihi shay'un wa Huwa as-Sami'u al-Basir",
+          "translation": "There is nothing like Him, and He is the All-Hearing, the All-Seeing."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "belief-in-angels",
+      "order": 2,
+      "title_en": "Belief in the Angels",
+      "title_ar": "الإيمان بالملائكة",
+      "description_en": "Angels are beings created by Allah from light. They do not have free will — they obey Allah completely. We cannot see them, but we believe in them because Allah and His Messenger ﷺ told us about them.",
+      "key_points": [
+        "Angels are created from light",
+        "They do not disobey Allah — they have no free will to sin",
+        "Jibril (Gabriel) — delivered Allah's revelations to the Prophets",
+        "Mika'il (Michael) — responsible for rain and provision",
+        "Israfil — will blow the trumpet on the Day of Judgment",
+        "Malik — the guardian of Hellfire",
+        "Every person has two angels recording their good and bad deeds"
+      ],
+      "quran_references": [
+        {
+          "reference": "50:17-18",
+          "arabic": "إِذْ يَتَلَقَّى الْمُتَلَقِّيَانِ عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ قَعِيدٌ ۝ مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ",
+          "transliteration": "Idh yatalaqqa al-mutalaqqiyani 'an al-yamini wa 'an ash-shimali qa'id. Ma yalfizu min qawlin illa ladayhi raqibun 'atid.",
+          "translation": "When the two receivers receive, seated on the right and on the left. Not a word does he utter but there is a watcher by him ready."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "belief-in-books",
+      "order": 3,
+      "title_en": "Belief in the Revealed Books",
+      "title_ar": "الإيمان بالكتب",
+      "description_en": "Allah sent divine books to guide humanity through His prophets. We believe in all of them, but the Quran is the final and preserved revelation that supersedes all previous scriptures.",
+      "key_points": [
+        "The Suhuf (Scrolls) — revealed to Prophet Ibrahim (Abraham)",
+        "The Zabur (Psalms) — revealed to Prophet Dawud (David)",
+        "The Tawrah (Torah) — revealed to Prophet Musa (Moses)",
+        "The Injil (Gospel) — revealed to Prophet Isa (Jesus)",
+        "The Quran — revealed to Prophet Muhammad ﷺ, the final revelation",
+        "The Quran is the only scripture preserved in its original form",
+        "Previous scriptures were altered over time by human hands"
+      ],
+      "quran_references": [
+        {
+          "reference": "3:3-4",
+          "arabic": "نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ التَّوْرَاةَ وَالْإِنجِيلَ",
+          "transliteration": "Nazzala 'alayka al-Kitaba bil-haqqi musaddiqan lima bayna yadayhi wa anzala at-Tawrata wal-Injil.",
+          "translation": "He has revealed to you the Book in truth, confirming what came before it, as He revealed the Torah and the Gospel."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "belief-in-messengers",
+      "order": 4,
+      "title_en": "Belief in the Messengers",
+      "title_ar": "الإيمان بالرسل",
+      "description_en": "Allah sent prophets and messengers to every nation throughout history to guide people to worship Him alone. We believe in all of them without distinction. Muhammad ﷺ is the final messenger.",
+      "key_points": [
+        "Allah sent prophets to every nation (Quran 16:36)",
+        "25 prophets are mentioned by name in the Quran",
+        "All prophets taught the same core message: worship Allah alone",
+        "Key prophets include: Adam, Nuh (Noah), Ibrahim (Abraham), Musa (Moses), Isa (Jesus)",
+        "Muhammad ﷺ is the Seal of the Prophets — the last and final messenger",
+        "We respect ALL prophets equally — we do not distinguish between them in belief",
+        "Muslims believe in Jesus (Isa) as a mighty prophet, born miraculously, but NOT as God or son of God"
+      ],
+      "quran_references": [
+        {
+          "reference": "33:40",
+          "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَـٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ",
+          "transliteration": "Ma kana Muhammadun aba ahadin min rijalikum walakin Rasula Allahi wa khatama an-nabiyyin.",
+          "translation": "Muhammad is not the father of any of your men, but he is the Messenger of Allah and the Seal of the Prophets."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "belief-in-last-day",
+      "order": 5,
+      "title_en": "Belief in the Day of Judgment",
+      "title_ar": "الإيمان باليوم الآخر",
+      "description_en": "This life is temporary. There will come a Day when all of creation will be resurrected and held accountable for their deeds. The righteous will enter Paradise, and the wicked will face punishment.",
+      "key_points": [
+        "This worldly life is a test (Quran 67:2)",
+        "Every soul will taste death (Quran 3:185)",
+        "All humans will be resurrected and gathered before Allah",
+        "Everyone will be given their book of deeds — right hand (good) or left hand (bad)",
+        "Deeds will be weighed on the Scale (Al-Mizan)",
+        "Paradise (Jannah) is the reward for believers",
+        "Hellfire (Jahannam) is the punishment for disbelievers and evildoers",
+        "Allah is the Most Just — no soul will be wronged"
+      ],
+      "quran_references": [
+        {
+          "reference": "21:47",
+          "arabic": "وَنَضَعُ الْمَوَازِينَ الْقِسْطَ لِيَوْمِ الْقِيَامَةِ فَلَا تُظْلَمُ نَفْسٌ شَيْئًا",
+          "transliteration": "Wa nada'u al-mawazina al-qista li-yawmi al-qiyamati fala tuzlamu nafsun shay'an.",
+          "translation": "We will set up the scales of justice on the Day of Judgment, so no soul will be wronged in the least."
+        }
+      ],
+      "verified": true
+    },
+    {
+      "id": "belief-in-qadr",
+      "order": 6,
+      "title_en": "Belief in Divine Decree (Qadr)",
+      "title_ar": "الإيمان بالقدر",
+      "description_en": "Everything that happens — good or bad — is by the knowledge, will, and creation of Allah. He wrote everything in the Preserved Tablet before creation. This does not mean we have no choice — we make choices, but Allah already knows what we will choose.",
+      "key_points": [
+        "Allah knows everything that was, is, and will be",
+        "Everything is written in the Preserved Tablet (Al-Lawh Al-Mahfuz)",
+        "Nothing happens except by Allah's will",
+        "We still have free will to make choices — we are tested by our choices",
+        "Good and bad are both from Allah's decree, but we are responsible for our actions",
+        "Belief in Qadr brings peace — nothing that was meant for you will miss you"
+      ],
+      "quran_references": [
+        {
+          "reference": "54:49",
+          "arabic": "إِنَّا كُلَّ شَيْءٍ خَلَقْنَاهُ بِقَدَرٍ",
+          "transliteration": "Inna kulla shay'in khalaqnahu bi-qadar.",
+          "translation": "Indeed, We have created everything by a [divine] decree."
+        }
+      ],
+      "hadith_reference": {
+        "text_en": "Allah wrote the destiny of creation fifty thousand years before He created the heavens and the earth.",
+        "reference": "Sahih Muslim 2653",
+        "grade": "sahih"
+      },
+      "verified": true
+    }
+  ]
+}
