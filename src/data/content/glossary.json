@@ -1,0 +1,28 @@
+{
+  "module_id": "glossary",
+  "terms": [
+    { "id": "allah", "term_en": "Allah", "term_ar": "الله", "definition": "The Arabic word for God. The one and only Creator and Sustainer of all existence.", "verified": true },
+    { "id": "quran", "term_en": "Quran", "term_ar": "القرآن", "definition": "The holy book of Islam, the literal word of Allah revealed to Prophet Muhammad ﷺ through Angel Jibril over 23 years.", "verified": true },
+    { "id": "hadith", "term_en": "Hadith", "term_ar": "الحديث", "definition": "A recorded saying, action, or approval of the Prophet Muhammad ﷺ. Collections graded as 'sahih' (authentic) are the most reliable.", "verified": true },
+    { "id": "sunnah", "term_en": "Sunnah", "term_ar": "السنة", "definition": "The way of the Prophet Muhammad ﷺ — his practices, habits, and teachings that Muslims strive to follow.", "verified": true },
+    { "id": "salah", "term_en": "Salah", "term_ar": "الصلاة", "definition": "The five daily obligatory prayers. Also called salat or namaz in some cultures.", "verified": true },
+    { "id": "wudu", "term_en": "Wudu", "term_ar": "الوضوء", "definition": "Ablution — the ritual washing performed before prayer to achieve a state of purity.", "verified": true },
+    { "id": "rakah", "term_en": "Rakah", "term_ar": "ركعة", "definition": "A single unit or cycle of prayer. Each prayer consists of 2, 3, or 4 rakaat.", "verified": true },
+    { "id": "dua", "term_en": "Dua", "term_ar": "الدعاء", "definition": "Personal supplication or prayer to Allah. Can be made at any time, in any language.", "verified": true },
+    { "id": "iman", "term_en": "Iman", "term_ar": "الإيمان", "definition": "Faith or belief. Specifically, belief in the six articles of faith.", "verified": true },
+    { "id": "tawhid", "term_en": "Tawhid", "term_ar": "التوحيد", "definition": "The Oneness of Allah — the most fundamental concept in Islam. Allah is One, with no partners.", "verified": true },
+    { "id": "shahada", "term_en": "Shahada", "term_ar": "الشهادة", "definition": "The declaration of faith: 'There is no god but Allah, and Muhammad is the Messenger of Allah.'", "verified": true },
+    { "id": "qibla", "term_en": "Qibla", "term_ar": "القبلة", "definition": "The direction of the Kaaba in Makkah, which Muslims face during prayer.", "verified": true },
+    { "id": "kaaba", "term_en": "Kaaba", "term_ar": "الكعبة", "definition": "The sacred cubic structure in Makkah. It was originally built by Prophet Ibrahim (Abraham) and his son Ismail.", "verified": true },
+    { "id": "masjid", "term_en": "Masjid", "term_ar": "المسجد", "definition": "A mosque — the place of worship for Muslims. Literally means 'place of prostration'.", "verified": true },
+    { "id": "ummah", "term_en": "Ummah", "term_ar": "الأمة", "definition": "The global community of Muslims, regardless of nationality, ethnicity, or language.", "verified": true },
+    { "id": "haram", "term_en": "Haram", "term_ar": "حرام", "definition": "Forbidden or prohibited in Islam (e.g., consuming alcohol, pork, lying).", "verified": true },
+    { "id": "halal", "term_en": "Halal", "term_ar": "حلال", "definition": "Permissible or lawful in Islam.", "verified": true },
+    { "id": "jannah", "term_en": "Jannah", "term_ar": "الجنة", "definition": "Paradise — the eternal reward for righteous believers in the Hereafter.", "verified": true },
+    { "id": "taqwa", "term_en": "Taqwa", "term_ar": "التقوى", "definition": "God-consciousness or piety. Being aware of Allah in all your actions.", "verified": true },
+    { "id": "dhikr", "term_en": "Dhikr", "term_ar": "الذكر", "definition": "Remembrance of Allah through repeating His names, phrases of praise, or Quran recitation.", "verified": true },
+    { "id": "sawm", "term_en": "Sawm", "term_ar": "الصوم", "definition": "Fasting — abstaining from food, drink, and intimate relations from dawn to sunset.", "verified": true },
+    { "id": "zakat", "term_en": "Zakat", "term_ar": "الزكاة", "definition": "Obligatory annual charity of 2.5% on qualifying wealth, given to those in need.", "verified": true },
+    { "id": "hajj", "term_en": "Hajj", "term_ar": "الحج", "definition": "The annual pilgrimage to Makkah, obligatory once in a lifetime for those who are able.", "verified": true }
+  ]
+}
