@@ -1,0 +1,69 @@
+{
+  "module_id": "pillars",
+  "title_en": "The Five Pillars of Islam",
+  "title_ar": "أركان الإسلام",
+  "introduction": {
+    "content_en": "Islam is built upon five foundational practices. These are the actions that define a Muslim's life. The Prophet ﷺ described them clearly in an authentic hadith.",
+    "source": {
+      "type": "hadith",
+      "reference": "Sahih Bukhari 8",
+      "text_en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing prayer, giving zakat, fasting Ramadan, and pilgrimage to the House (Kaaba) for whoever is able.",
+      "grade": "sahih"
+    }
+  },
+  "pillars": [
+    {
+      "id": "pillar-shahada",
+      "order": 1,
+      "title_en": "Shahada — The Declaration of Faith",
+      "title_ar": "الشهادة",
+      "description_en": "The shahada is the declaration that there is no god worthy of worship except Allah, and that Muhammad ﷺ is His messenger. This is the entry point into Islam. By saying it sincerely, a person becomes a Muslim.",
+      "content": {
+        "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
+        "transliteration": "Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah.",
+        "translation": "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah."
+      },
+      "verified": true
+    },
+    {
+      "id": "pillar-salah",
+      "order": 2,
+      "title_en": "Salah — The Five Daily Prayers",
+      "title_ar": "الصلاة",
+      "description_en": "Muslims pray five times a day: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer is a direct connection between the servant and Allah — there is no intermediary.",
+      "link_to_module": "/learn/salah",
+      "verified": true
+    },
+    {
+      "id": "pillar-zakat",
+      "order": 3,
+      "title_en": "Zakat — Charitable Giving",
+      "title_ar": "الزكاة",
+      "description_en": "Zakat is an obligatory annual charity of 2.5% of one's savings (above a minimum threshold called nisab) given to those in need. It purifies wealth and helps the community. It is only required if you have savings above the nisab threshold for a full year.",
+      "notes": "As a new Muslim, zakat becomes obligatory after you have held savings above the nisab for one full lunar year. Focus on learning prayer first.",
+      "verified": true
+    },
+    {
+      "id": "pillar-sawm",
+      "order": 4,
+      "title_en": "Sawm — Fasting in Ramadan",
+      "title_ar": "الصيام",
+      "description_en": "During the month of Ramadan (the 9th month of the Islamic calendar), Muslims fast from dawn to sunset — no food, drink, or intimate relations. Fasting teaches self-discipline, gratitude, and empathy for those who are less fortunate.",
+      "notes": "Exemptions exist for those who are ill, traveling, pregnant, nursing, menstruating, or elderly. Islam does not burden beyond one's capacity.",
+      "quran_reference": {
+        "reference": "2:183",
+        "translation": "O you who believe, fasting is prescribed for you as it was prescribed for those before you, that you may attain taqwa (God-consciousness)."
+      },
+      "verified": true
+    },
+    {
+      "id": "pillar-hajj",
+      "order": 5,
+      "title_en": "Hajj — Pilgrimage to Makkah",
+      "title_ar": "الحج",
+      "description_en": "Once in a lifetime, every Muslim who is physically and financially able must perform the pilgrimage to Makkah. Hajj takes place in the 12th month of the Islamic calendar (Dhul Hijjah). It is a profound spiritual journey that unites Muslims from every corner of the world.",
+      "notes": "Hajj is only obligatory if you can afford it and are physically able. There is no rush — many Muslims save for years or decades before performing Hajj.",
+      "verified": true
+    }
+  ]
+}
