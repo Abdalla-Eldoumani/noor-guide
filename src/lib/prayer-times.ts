@@ -1,5 +1,3 @@
-// AlAdhan API wrapper — prayer times with localStorage caching
-
 import type { AlAdhanResponse, AlAdhanTimings } from "@/types/api";
 import { getItem, setItem } from "./storage";
 
@@ -74,10 +72,6 @@ export const PRAYER_METHODS: { id: number; name: string }[] = [
   { id: 1, name: "University of Islamic Sciences, Karachi" },
 ];
 
-/**
- * Determine which prayer is next based on current time.
- * Returns the prayer name or null if all prayers have passed.
- */
 export function getNextPrayer(
   timings: AlAdhanTimings
 ): string | null {
