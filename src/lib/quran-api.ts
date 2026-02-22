@@ -1,5 +1,3 @@
-// Al Quran Cloud API wrapper — audio URLs with localStorage caching
-
 import type { QuranSurahResponse } from "@/types/api";
 import { getItem, setItem } from "./storage";
 
@@ -11,10 +9,6 @@ interface CachedAudio {
   audioUrls: string[];
 }
 
-/**
- * Fetch audio URLs for a surah from Al Quran Cloud API (Mishary Alafasy edition).
- * Caches in localStorage for offline fallback.
- */
 export async function fetchSurahAudio(
   surahNumber: number
 ): Promise<string[]> {
