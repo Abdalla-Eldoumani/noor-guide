@@ -16,7 +16,6 @@ interface WuduClientProps {
 }
 
 export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps) {
-  // Transform WuduStep[] to StepByStep format
   const transformedSteps = steps.map((step) => ({
     id: step.id,
     title: step.title_en,
