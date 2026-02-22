@@ -127,7 +127,7 @@ export function LocationPicker({ onLocationSet }: LocationPickerProps) {
 
       {showManual && (
         <p className="mt-3 text-sm text-muted dark:text-gray-400">
-          Please enter coordinates in the format: latitude, longitude (e.g., 40.7128, -74.0060)
+          Please enter coordinates as latitude, longitude.
         </p>
       )}
     </div>
