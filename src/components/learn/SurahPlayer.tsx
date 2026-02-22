@@ -21,7 +21,6 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
   const playAllRef = useRef(false);
   const playingIndexRef = useRef<number | null>(null);
 
-  // Keep refs in sync with state for use in event handlers
   useEffect(() => {
     playAllRef.current = playAll;
   }, [playAll]);
@@ -30,7 +29,6 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
     playingIndexRef.current = playingIndex;
   }, [playingIndex]);
 
-  // Fetch audio URLs on mount
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
@@ -55,7 +53,6 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
     };
   }, [surah.number]);
 
-  // Create audio element and handle ended event
   useEffect(() => {
     const audio = new Audio();
     audioRef.current = audio;
