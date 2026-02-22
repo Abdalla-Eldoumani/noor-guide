@@ -87,10 +87,9 @@ export default function QiblaPage() {
           About the Qibla
         </h3>
         <p className="text-sm text-muted dark:text-gray-400">
-          The Qibla is the direction that Muslims face during prayer. It points towards the
-          Kaaba in the Sacred Mosque (Al-Masjid al-Haram) in Makkah, Saudi Arabia. The direction
-          shown here is calculated mathematically based on your coordinates and the position of the
-          Kaaba. For best accuracy, use a physical compass to align with the bearing shown above.
+          The Qibla is the direction that Muslims face during prayer, pointing towards the
+          Kaaba in the Sacred Mosque (Al-Masjid al-Haram) in Makkah. For best accuracy, use a
+          physical compass to align with the bearing shown above.
         </p>
       </div>
     </PageWrapper>
