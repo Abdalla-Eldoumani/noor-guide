@@ -1,5 +1,3 @@
-// Type-safe localStorage wrapper — SSR-safe
-
 export function getItem<T>(key: string, defaultValue: T): T {
   if (typeof window === "undefined") return defaultValue;
   try {
@@ -15,18 +13,14 @@ export function setItem<T>(key: string, value: T): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.setItem(key, JSON.stringify(value));
-  } catch {
-    // localStorage full or unavailable — silently fail
-  }
+  } catch {}
 }
 
 export function removeItem(key: string): void {
   if (typeof window === "undefined") return;
   try {
     localStorage.removeItem(key);
-  } catch {
-    // silently fail
-  }
+  } catch {}
 }
 
 // Key constants
