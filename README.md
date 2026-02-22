@@ -70,6 +70,8 @@ The content follows Sunni Islam (Ahl as-Sunnah wal-Jamaa'ah). Where differences 
 ## Running locally
 
 ```bash
+git clone https://github.com/Abdalla-Eldoumani/noor-guide.git
+cd noor-guide
 npm install
 npm run dev
 ```
@@ -115,3 +117,7 @@ src/
 ├── styles/              # globals.css with Tailwind layers
 └── types/               # TypeScript interfaces for content and API responses
 ```
+
+## License
+
+[MIT](LICENSE)
