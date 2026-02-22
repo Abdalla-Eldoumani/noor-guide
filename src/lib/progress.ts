@@ -1,5 +1,3 @@
-// Learning progress manager
-
 import { getItem, setItem, STORAGE_KEYS } from "./storage";
 import type { NoorProgress } from "@/types/content";
 
@@ -69,12 +67,9 @@ function updateStreak(progress: NoorProgress): void {
   const diffDays = diffMs / (1000 * 60 * 60 * 24);
 
   if (diffDays < 1) {
-    // Same day — keep streak
   } else if (diffDays < 2) {
-    // Next day — increment
     progress.streakDays += 1;
   } else {
-    // Streak broken
     progress.streakDays = 1;
   }
 }
