@@ -1,5 +1,3 @@
-// Browser geolocation wrapper — Promise-based, SSR-safe
-
 export interface GeoPosition {
   lat: number;
   lng: number;
