@@ -16,7 +16,6 @@ interface SalahClientProps {
 }
 
 export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
-  // Transform SalahStep[] to StepByStep format
   const transformedSteps = steps.map((step) => ({
     id: step.id,
     title: step.title_en,
