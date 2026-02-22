@@ -22,7 +22,6 @@ export function useAudioPlayer(): UseAudioPlayerResult {
   const [currentUrl, setCurrentUrl] = useState<string | null>(null);
 
   useEffect(() => {
-    // Create audio element on mount
     audioRef.current = new Audio();
     const audio = audioRef.current;
 
