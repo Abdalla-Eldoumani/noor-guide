@@ -1,5 +1,3 @@
-// Qibla direction calculator — pure math, zero dependencies
-
 const KAABA_LAT = 21.4225;
 const KAABA_LNG = 39.8262;
 
@@ -11,11 +9,7 @@ function toDegrees(radians: number): number {
   return (radians * 180) / Math.PI;
 }
 
-/**
- * Calculate the Qibla bearing from a given location.
- * Uses the spherical law of cosines formula.
- * @returns bearing in degrees from North (0-360)
- */
+/** Returns Qibla bearing in degrees from North (0-360). */
 export function getQiblaDirection(lat: number, lng: number): number {
   const phiK = toRadians(KAABA_LAT);
   const lambdaK = toRadians(KAABA_LNG);
