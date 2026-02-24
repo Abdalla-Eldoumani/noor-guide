@@ -57,6 +57,16 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
     const audio = new Audio();
     audioRef.current = audio;
 
+    return () => {
+      audio.pause();
+      audio.src = "";
+    };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
     const onEnded = () => {
       if (
         playAllRef.current &&
@@ -84,8 +94,6 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
 
     return () => {
       audio.removeEventListener("ended", onEnded);
-      audio.pause();
-      audio.src = "";
     };
   }, [audioUrls]);
 
@@ -202,7 +210,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                     <button
                       type="button"
                       onClick={() => handleVersePlay(i)}
-                      className="w-6 h-6 rounded-full bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors"
+                      className="relative w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors before:absolute before:inset-[-6px] before:content-['']"
                       aria-label={
                         isPlaying && playingIndex === i
                           ? `Pause verse ${verse.verse}`
@@ -210,9 +218,9 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                       }
                     >
                       {isPlaying && playingIndex === i ? (
-                        <Pause size={10} />
+                        <Pause size={14} />
                       ) : (
-                        <Play size={10} className="ml-0.5" />
+                        <Play size={14} className="ml-0.5" />
                       )}
                     </button>
                   )}
