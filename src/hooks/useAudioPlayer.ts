@@ -25,7 +25,13 @@ export function useAudioPlayer(): UseAudioPlayerResult {
     audioRef.current = new Audio();
     const audio = audioRef.current;
 
-    const onTimeUpdate = () => setCurrentTime(audio.currentTime);
+    let lastUpdate = 0;
+    const onTimeUpdate = () => {
+      const now = Date.now();
+      if (now - lastUpdate < 250) return;
+      lastUpdate = now;
+      setCurrentTime(audio.currentTime);
+    };
     const onDurationChange = () => setDuration(audio.duration || 0);
     const onEnded = () => {
       setIsPlaying(false);
