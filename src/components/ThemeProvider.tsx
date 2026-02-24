@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useSettings } from "@/hooks/useSettings";
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeSync() {
   const { settings } = useSettings();
 
   useEffect(() => {
@@ -15,5 +15,5 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     }
   }, [settings.theme]);
 
-  return <>{children}</>;
+  return null;
 }
