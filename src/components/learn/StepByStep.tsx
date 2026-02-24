@@ -57,7 +57,7 @@ export function StepByStep({ steps, moduleId }: StepByStepProps) {
         completedSteps={completedSteps}
       />
 
-      <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
+      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 space-y-4">
         <h3 className="font-heading text-xl font-semibold text-ink">
           Step {currentStep + 1}: {step.title}
         </h3>
@@ -75,7 +75,7 @@ export function StepByStep({ steps, moduleId }: StepByStepProps) {
         )}
 
         {step.notes && (
-          <div className="flex gap-3 bg-blue-50 text-blue-800 rounded-lg p-4 text-sm">
+          <div className="flex gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 rounded-lg p-4 text-sm">
             <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
             <p>{step.notes}</p>
           </div>
