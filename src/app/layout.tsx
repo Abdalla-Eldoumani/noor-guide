@@ -3,7 +3,7 @@ import { Plus_Jakarta_Sans, Inter, Amiri } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeSync } from "@/components/ThemeProvider";
 import "@/styles/globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -88,18 +88,22 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-cream text-ink font-body min-h-screen flex flex-col">
-        <ThemeProvider>
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-primary-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
-          >
-            Skip to main content
-          </a>
-          <Header />
-          <main id="main-content" className="flex-1 pb-20 md:pb-0">{children}</main>
-          <Footer />
-          <MobileNav />
-        </ThemeProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var s=JSON.parse(localStorage.getItem('noor-settings'));if(s&&s.theme==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`,
+          }}
+        />
+        <ThemeSync />
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-primary-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
+        >
+          Skip to main content
+        </a>
+        <Header />
+        <main id="main-content" className="flex-1 pb-20 md:pb-0">{children}</main>
+        <Footer />
+        <MobileNav />
       </body>
     </html>
   );
