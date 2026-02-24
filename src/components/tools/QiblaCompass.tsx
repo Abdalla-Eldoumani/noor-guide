@@ -8,7 +8,7 @@ export function QiblaCompass({ bearing }: QiblaCompassProps) {
   return (
     <div className="flex flex-col items-center gap-6">
       {/* Compass container */}
-      <div className="relative h-72 w-72 sm:h-80 sm:w-80">
+      <div className="relative w-full max-w-72 sm:max-w-80 aspect-square mx-auto">
         {/* Outer compass circle */}
         <div className="absolute inset-0 rounded-full border-4 border-gray-200 bg-surface shadow-lg dark:border-gray-600 dark:bg-gray-800">
           {/* Cardinal direction markers */}
