@@ -18,11 +18,10 @@ export function StepIndicator({
   className = "",
 }: StepIndicatorProps) {
   return (
-    <div className={`flex items-start ${className}`}>
+    <div className={`flex items-start overflow-x-auto pb-2 scrollbar-hide ${className}`}>
       {steps.map((step, index) => {
-        const stepNumber = index + 1;
-        const isCompleted = completedSteps.includes(stepNumber);
-        const isActive = stepNumber === currentStep;
+        const isCompleted = completedSteps.includes(index);
+        const isActive = index === currentStep;
 
         const circleClass = isCompleted
           ? "step-circle step-circle-complete"
@@ -37,7 +36,7 @@ export function StepIndicator({
                 {isCompleted ? (
                   <Check size={18} aria-hidden="true" />
                 ) : (
-                  stepNumber
+                  index + 1
                 )}
               </div>
               <span className="mt-1.5 text-xs text-center text-muted max-w-[5rem]">
@@ -46,7 +45,7 @@ export function StepIndicator({
             </div>
             {index < steps.length - 1 && (
               <div
-                className={`h-0.5 w-8 sm:w-12 mt-5 mx-1 ${
+                className={`h-0.5 w-6 sm:w-12 mt-5 mx-0.5 sm:mx-1 ${
                   isCompleted ? "bg-primary-500" : "bg-gray-200"
                 }`}
                 aria-hidden="true"
