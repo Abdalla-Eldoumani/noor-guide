@@ -61,7 +61,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.href)
                     ? "bg-primary-50 text-primary-600"
                     : "text-muted hover:text-ink hover:bg-gray-50"
