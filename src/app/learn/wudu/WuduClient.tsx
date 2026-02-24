@@ -114,7 +114,7 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
           <AlertCircle className="w-5 h-5 text-red-500" />
           What Breaks Your Wudu
         </h2>
-        <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
+        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700">
           {breakers.map((breaker) => (
             <div key={breaker.id} className="px-5 py-3">
               <p className="text-ink">{breaker.description}</p>
