@@ -88,7 +88,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg p-1.5 text-muted hover:text-ink hover:bg-gray-100 transition-colors"
+            className="rounded-lg p-2.5 text-muted hover:text-ink hover:bg-gray-100 transition-colors"
             aria-label="Close dialog"
           >
             <X size={20} />
