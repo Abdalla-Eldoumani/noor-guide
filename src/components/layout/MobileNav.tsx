@@ -31,15 +31,15 @@ export default function MobileNav() {
             <Link
               key={href}
               href={href}
-              className={`flex flex-col items-center gap-0.5 px-3 py-2 rounded-lg transition-colors ${
+              className={`flex flex-col items-center gap-0.5 px-3 py-2 min-w-[3rem] min-h-[3rem] rounded-lg transition-colors ${
                 active
                   ? "text-primary-500"
                   : "text-muted hover:text-ink"
               }`}
               aria-current={active ? "page" : undefined}
             >
-              <Icon size={20} />
-              <span className="text-[10px] font-medium">{label}</span>
+              <Icon size={22} />
+              <span className="text-[11px] font-medium">{label}</span>
             </Link>
           );
         })}
