@@ -1,9 +1,30 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { LessonContent } from "@/components/learn/LessonContent";
-import { SurahPlayer } from "@/components/learn/SurahPlayer";
-import { MemorizationHelper } from "@/components/learn/MemorizationHelper";
 import type { SurahsData, Surah } from "@/types/content";
+
+const SurahPlayer = dynamic(
+  () =>
+    import("@/components/learn/SurahPlayer").then((m) => m.SurahPlayer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-6 animate-pulse">
+        <div className="h-6 bg-gray-200 dark:bg-gray-700 rounded w-1/3 mb-3" />
+        <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3" />
+      </div>
+    ),
+  }
+);
+
+const MemorizationHelper = dynamic(
+  () =>
+    import("@/components/learn/MemorizationHelper").then(
+      (m) => m.MemorizationHelper
+    ),
+  { ssr: false }
+);
 
 interface SurahsClientProps {
   data: SurahsData;
