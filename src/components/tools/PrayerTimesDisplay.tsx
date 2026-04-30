@@ -45,9 +45,13 @@ export function PrayerTimesDisplay({ timings, nextPrayer }: PrayerTimesDisplayPr
             <p className="font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
               {prayer.name_ar}
             </p>
-            <p className={`mt-3 font-heading text-2xl font-bold ${
-              isNext ? "text-accent-500" : "text-primary-500"
-            }`}>
+            <p
+              className={`mt-3 font-heading text-2xl font-bold ${
+                isNext
+                  ? "text-accent-600 dark:text-accent-300"
+                  : "text-primary-500 dark:text-primary-300"
+              }`}
+            >
               {formatTime(timings[prayer.key])}
             </p>
           </div>
