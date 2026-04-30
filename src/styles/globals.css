@@ -90,6 +90,15 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  /* Dark-mode color tokens. Components that explicitly override with
+     dark:text-* classes still win because of cascade order. */
+  .dark .text-ink {
+    color: rgb(243 244 246); /* gray-100 */
+  }
+  .dark .text-muted {
+    color: rgb(156 163 175); /* gray-400 */
+  }
 }
 
 @media print {
