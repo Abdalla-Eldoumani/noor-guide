@@ -38,7 +38,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
         <div className="flex items-center gap-3 mb-2">
           <BookOpen className="w-8 h-8 text-primary-500" />
           <h1 className="font-heading text-3xl font-bold text-ink">
-            Your Learning Journey
+            Learning Path
           </h1>
         </div>
         <p className="text-muted">
@@ -102,7 +102,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
           );
         })}
 
-        {/* Glossary — reference resource */}
+        {/* Glossary */}
         <Link
           href="/learn/glossary"
           className="block rounded-2xl border border-gray-200 bg-surface p-5 transition-all hover:border-primary-300 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:border-primary-500"
@@ -119,7 +119,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
                 مصطلحات إسلامية
               </p>
               <p className="text-sm text-muted dark:text-gray-400">
-                A reference of essential Islamic terms and common Arabic phrases you will encounter on your journey.
+                Essential Islamic terms and common Arabic phrases you&apos;ll come across as you learn.
               </p>
             </div>
           </div>
