@@ -1,9 +1,11 @@
 import { getSurahsData, getSurahs, getLessonIdsForModule } from "@/lib/content";
 import { PageWrapper } from "@/components/layout/PageWrapper";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { lessonJsonLd } from "@/components/seo/lessonJsonLd";
 import { SurahsClient } from "./SurahsClient";
 
 export const metadata = {
-  title: "Essential Surahs for Prayer — Noor Guide",
+  title: "Essential Surahs for Prayer | Noor Guide",
   description:
     "Learn the essential short surahs from the Quran needed for your daily prayers, starting with Al-Fatiha.",
 };
@@ -15,6 +17,13 @@ export default function SurahsPage() {
 
   return (
     <PageWrapper>
+      <JsonLd
+        data={lessonJsonLd({
+          id: "surahs",
+          title: "Essential Surahs for Prayer",
+          description: metadata.description,
+        })}
+      />
       <SurahsClient data={data} surahs={surahs} lessonIds={lessonIds} />
     </PageWrapper>
   );
