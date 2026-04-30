@@ -11,18 +11,19 @@ import { useLocale } from "next-intl";
 // When neither is available, returns undefined so callers can decide how to
 // surface the gap (typically `?? ""`).
 export function pickLocalized<T = string>(
-  obj: Record<string, unknown> | null | undefined,
+  obj: object | null | undefined,
   field: string,
   locale: string,
 ): T | undefined {
   if (!obj) return undefined;
+  const record = obj as Record<string, unknown>;
   if (locale !== "en") {
-    const localized = obj[`${field}_${locale}`];
+    const localized = record[`${field}_${locale}`];
     if (localized != null) return localized as T;
   }
-  const bare = obj[field];
+  const bare = record[field];
   if (bare != null) return bare as T;
-  const enSuffix = obj[`${field}_en`];
+  const enSuffix = record[`${field}_en`];
   if (enSuffix != null) return enSuffix as T;
   return undefined;
 }
@@ -33,7 +34,7 @@ export function pickLocalized<T = string>(
 export function useLocalizedContent() {
   const locale = useLocale();
   return <T = string>(
-    obj: Record<string, unknown> | null | undefined,
+    obj: object | null | undefined,
     field: string,
   ): T | undefined => pickLocalized<T>(obj, field, locale);
 }
