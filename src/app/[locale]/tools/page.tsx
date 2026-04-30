@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Clock, Compass, MapPin } from "lucide-react";
 
 export const metadata = {
-  title: "Tools — Noor Guide",
+  title: "Tools | Noor Guide",
   description:
     "Practical tools for your daily worship: prayer times, Qibla direction, and mosque finder.",
 };
