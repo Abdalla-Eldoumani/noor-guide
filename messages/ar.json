@@ -1,0 +1,228 @@
+{
+  "site": {
+    "name": "نور",
+    "subtitle": "رحلتك إلى النّور",
+    "tagline": "دليلٌ هادئ ومتدرّج للمسلمين الجدد، مستقاةٌ تعاليمه من المصادر الموثّقة.",
+    "description": "تعلّم أساسيات الإسلام على راحتك: العقيدة، والصلاة، والقرآن، والأذكار اليومية، من مصادر معتمدة."
+  },
+  "common": {
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "skipToContent": "تخطّي إلى المحتوى الرئيسي",
+    "next": "التالي",
+    "previous": "السابق",
+    "loading": "جارٍ التحميل",
+    "or": "أو",
+    "verseLabel": "الآية {number}",
+    "switchToArabic": "العربية",
+    "switchToEnglish": "English"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "learn": "تعلّم",
+    "tools": "أدوات",
+    "progress": "تقدّمي"
+  },
+  "home": {
+    "heroLine1": "مرحباً بك في",
+    "heroHighlight": "رحلتك إلى النّور",
+    "ctaShahada": "نطقتُ الشهادة، أريد أن أبدأ التعلّم",
+    "ctaExploring": "أتعرّف على الإسلام",
+    "featureStepByStepTitle": "خطوةً بخطوة",
+    "featureStepByStepBody": "تعلّم بتدرّج وعلى راحتك دون استعجال.",
+    "featureSourcesTitle": "مصادر موثّقة",
+    "featureSourcesBody": "كلّ ما يُعرض مستندٌ إلى القرآن والحديث الصحيح.",
+    "featureFreeTitle": "مجّاني دائماً",
+    "featureFreeBody": "بلا حسابات، ولا رسوم، ولا إعلانات.",
+    "modulesHeading": "رحلتك التعليمية",
+    "modulesSubheading": "ستّ وحدات تأخذك من أساسيات العقيدة إلى تطبيقها في الحياة اليومية.",
+    "ctaBeginTitle": "ابدأ رحلتك",
+    "ctaBeginBody": "اخطُ الخطوة الأولى في طريق العلم والسكينة والمعنى.",
+    "ctaBeginButton": "ابدأ التعلّم",
+    "estimatedMinutes": "{minutes} دقيقة"
+  },
+  "learn": {
+    "dashboardTitle": "رحلتك التعليمية",
+    "dashboardIntro": "اتبع هذا المسار لتتعلّم أساسيات الإسلام على راحتك. كلّ وحدة تُبنى على ما قبلها.",
+    "overallProgress": "إجمالي التقدّم",
+    "lessonsCompleted": "{completed} من {total} درساً",
+    "continueTitle": "تابع من حيث توقّفت",
+    "continueButton": "تابع",
+    "glossaryTitle": "مصطلحات إسلامية",
+    "glossaryBody": "مرجعٌ للمصطلحات الإسلامية الأساسية والعبارات العربية الشائعة التي ستمرّ بك في رحلتك.",
+    "statusComplete": "مكتمل",
+    "statusInProgress": "قيد التقدّم",
+    "statusNotStarted": "لم يبدأ"
+  },
+  "lesson": {
+    "markComplete": "تحديد كمكتمل",
+    "alreadyComplete": "أكملت هذا الدرس",
+    "navPrev": "السابق",
+    "navNext": "التالي",
+    "stepIndicator": "الخطوة {current} من {total}",
+    "stepPrev": "الخطوة السابقة",
+    "stepNext": "الخطوة التالية",
+    "stepFinish": "إنهاء",
+    "sourceQuran": "القرآن",
+    "sourceHadith": "الحديث",
+    "sourceConsensus": "إجماع العلماء",
+    "memorizationTitle": "تدريب على الحفظ",
+    "memorizationHelper": "اقرأ النصّ العربي أولاً، ثم اكشف عن النطق اللاتيني للتحقّق من نطقك.",
+    "transliteration": "النطق اللاتيني",
+    "translation": "الترجمة"
+  },
+  "aqeedah": {
+    "keyPoints": "النقاط الأساسية"
+  },
+  "pillars": {
+    "learnMore": "اقرأ المزيد"
+  },
+  "wudu": {
+    "prereqHeading": "قبل أن تبدأ",
+    "stepsHeading": "خطوات الوضوء",
+    "duaHeading": "دعاء بعد الوضوء",
+    "breakersHeading": "نواقض الوضوء",
+    "repeat": "كرّر {count} مرّات"
+  },
+  "salah": {
+    "prereqHeading": "قبل الصلاة",
+    "fivePrayersHeading": "الصلوات الخمس",
+    "tableHeaderPrayer": "الصلاة",
+    "tableHeaderTime": "الوقت",
+    "tableHeaderFardh": "الفرض",
+    "tableHeaderSunnahBefore": "السنّة قبلها",
+    "tableHeaderSunnahAfter": "السنّة بعدها",
+    "rakahHeading": "خطوات الركعة",
+    "rakahSubheading": "كلّ ركعة تتبع هذه الخطوات. يختلف عدد الركعات بحسب الصلاة، انظر الجدول أعلاه.",
+    "positionStanding": "القيام",
+    "positionBowing": "الركوع",
+    "positionProstrating": "السجود",
+    "positionSitting": "الجلوس",
+    "whenLabel": "متى",
+    "additionalRecitations": "أذكارٌ إضافية",
+    "whileRising": "أثناء الرفع",
+    "onceStanding": "عند الاعتدال",
+    "sayThisTimes": "قُل ذلك {count} مرّات."
+  },
+  "surahs": {
+    "startHere": "ابدأ هنا",
+    "playFullSurah": "تشغيل السورة كاملة",
+    "stopPlayback": "إيقاف",
+    "loadingAudio": "جارٍ تحميل الصوت",
+    "audioError": "تعذّر تحميل الصوت. يُرجى المحاولة لاحقاً.",
+    "playVerseAria": "تشغيل الآية {number}",
+    "pauseVerseAria": "إيقاف الآية {number}",
+    "surahNumberLabel": "السورة {number}"
+  },
+  "duas": {
+    "bookmarkAdd": "أضف هذا الدعاء إلى المحفوظات",
+    "bookmarkRemove": "إزالة من المحفوظات",
+    "context": {
+      "beforeEating": "قبل الطعام",
+      "afterEating": "بعد الطعام",
+      "seekingForgiveness": "للاستغفار",
+      "inDistress": "عند الكرب أو الشدّة"
+    }
+  },
+  "glossary": {
+    "title": "مصطلحات إسلامية",
+    "subtitle": "مصطلحاتٌ إسلامية أساسية وعباراتٌ عربية يومية.",
+    "searchPlaceholder": "ابحث عن المصطلحات والعبارات",
+    "termsHeading": "المصطلحات الإسلامية ({count})",
+    "phrasesHeading": "عبارات عربية أساسية ({count})",
+    "noTermsMatch": "لا توجد مصطلحات تطابق بحثك.",
+    "noPhrasesMatch": "لا توجد عبارات تطابق بحثك."
+  },
+  "tools": {
+    "title": "أدواتٌ عمليّة",
+    "subtitle": "أدوات تعينك على عبادتك اليومية.",
+    "prayerTimesTitle": "أوقات الصلاة",
+    "prayerTimesBody": "أوقات صلاة دقيقة لموقعك، باستخدام طرق حساب موثوقة.",
+    "qiblaTitle": "اتجاه القبلة",
+    "qiblaBody": "اعرف اتجاه الكعبة في مكّة من أيّ مكان في العالم.",
+    "masjidFinderTitle": "ابحث عن مسجد",
+    "masjidFinderBody": "حدّد المساجد القريبة منك لصلاة الجماعة وللتواصل المجتمعي."
+  },
+  "location": {
+    "setHeading": "حدّد موقعك",
+    "useMyLocation": "استخدم موقعي",
+    "detecting": "جارٍ تحديد الموقع",
+    "manualPlaceholder": "أدخل الإحداثيات (مثال: 40.7128, -74.0060)",
+    "set": "تأكيد",
+    "manualHelp": "يُرجى إدخال الإحداثيات بصيغة: خط العرض، خط الطول.",
+    "change": "تغيير الموقع",
+    "errorPermissionDenied": "رُفض إذن الموقع. فعّل خدمة الموقع في إعدادات المتصفّح، أو أدخل الإحداثيات يدوياً.",
+    "errorUnavailable": "تعذّر تحديد موقعك. أعد المحاولة أو أدخل الإحداثيات يدوياً.",
+    "errorTimeout": "انتهت مهلة طلب الموقع. أعد المحاولة أو أدخل الإحداثيات يدوياً.",
+    "errorUnsupported": "متصفّحك لا يدعم تحديد الموقع. يُرجى إدخال الإحداثيات يدوياً."
+  },
+  "prayerTimes": {
+    "title": "أوقات الصلاة",
+    "subtitle": "اطّلع على أوقات الصلوات الخمس لموقعك.",
+    "promptLocation": "لعرض أوقات الصلاة، نحتاج إلى معرفة موقعك.",
+    "calculationMethod": "طريقة الحساب",
+    "loading": "جارٍ تحميل أوقات الصلاة",
+    "errorRetry": "تحقّق من اتصالك بالإنترنت وأعد المحاولة.",
+    "nextPrayerLabel": "الصلاة التالية",
+    "footerNote": "تُحسب أوقات الصلاة من موقعك ومن طريقة الحساب المختارة، وقد تختلف قليلاً عن مسجدك المحلّي. اتّبع جدول مسجدك المحلّي ما أمكن."
+  },
+  "qibla": {
+    "title": "اتجاه القبلة",
+    "subtitle": "اعرف اتجاه القبلة، الكعبة المشرّفة في مكّة، من موقعك.",
+    "promptLocation": "لمعرفة اتجاه القبلة، نحتاج إلى موقعك.",
+    "fromNorth": "من الشمال",
+    "directionStatement": "اتجاه القبلة من موقعك هو {bearing}° من الشمال.",
+    "aboutHeading": "عن القبلة",
+    "aboutBody": "القبلة هي الجهة التي يستقبلها المسلمون في صلاتهم، وهي الكعبة المشرّفة في المسجد الحرام بمكّة. وللحصول على دقّة أعلى، استخدم بوصلة فعليّة لمحاذاة الزاوية المعروضة."
+  },
+  "masjidFinder": {
+    "title": "ابحث عن مسجد قريب منك",
+    "subtitle": "حدّد المساجد القريبة منك لصلاة الجماعة وللتواصل المجتمعي.",
+    "promptLocation": "حدّد موقعك للبحث عن المساجد القريبة.",
+    "googleSearchTitle": "ابحث على خرائط جوجل",
+    "googleSearchBody": "اعثر على المساجد مع المراجعات والاتجاهات وأوقات الصلاة.",
+    "osmSearchTitle": "ابحث على OpenStreetMap",
+    "osmSearchBody": "خريطة مجانية مفتوحة المصدر للمساجد حول العالم.",
+    "tipsHeading": "نصائح للعثور على مسجدك المحلّي",
+    "tip1": "ابحث عن «مسجد» أو «جامع» أو «مركز إسلامي» في منطقتك.",
+    "tip2": "كثيرٌ من المساجد ترحّب بالمسلمين الجدد ولديها برامج خاصّة بهم.",
+    "tip3": "لا تتردّد في الزيارة وقت الصلاة، وستجد ترحيباً وعوناً من المصلّين.",
+    "tip4": "صلاة الجمعة فرصةٌ جيّدة لزيارتك الأولى. احرص على الحضور مبكّراً للتعرّف على الناس.",
+    "directions": "احصل على الاتجاهات"
+  },
+  "progress": {
+    "title": "تقدّمك",
+    "subtitle": "تابِع رحلة تعلّمك لأساسيات الإسلام.",
+    "lessonsCompletedLabel": "الدروس المكتملة",
+    "streakLabel": "أيام متواصلة",
+    "startedLabel": "بدأت في",
+    "notStarted": "لم تبدأ بعد",
+    "overallProgress": "إجمالي التقدّم",
+    "moduleProgressHeading": "تقدّم الوحدات",
+    "moduleComplete": "مكتملة",
+    "resetButton": "إعادة تعيين كلّ التقدّم",
+    "resetConfirmBody": "سيؤدّي هذا إلى مسح كلّ تقدّمك. هل أنت متأكّد؟",
+    "resetConfirmYes": "نعم، أعد تعيين كلّ شيء",
+    "resetCancel": "إلغاء"
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "body": "الصفحة التي تبحث عنها غير موجودة، أو ربما نُقلت. دعنا نُرشدك إلى المسار الصحيح.",
+    "ctaHome": "إلى الرئيسية",
+    "ctaContinue": "تابع التعلّم"
+  },
+  "footer": {
+    "verifiedNote": "كلّ المحتوى مستقاةٌ من القرآن الكريم وكتب الحديث الصحيحة.",
+    "copyright": "© {year} نور. مجّاني ومفتوح المصدر."
+  },
+  "breadcrumb": {
+    "home": "الرئيسية",
+    "learn": "تعلّم",
+    "tools": "أدوات",
+    "progress": "تقدّمي",
+    "glossary": "المصطلحات",
+    "prayerTimes": "أوقات الصلاة",
+    "qibla": "اتجاه القبلة",
+    "masjidFinder": "ابحث عن مسجد"
+  }
+}
