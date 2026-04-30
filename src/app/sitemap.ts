@@ -19,12 +19,25 @@ const ROUTES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["ch
   { path: "/progress", changeFrequency: "monthly", priority: 0.5 },
 ];
 
+// One entry per English (default-locale) URL. The `alternates.languages` block
+// declares the Arabic counterpart so search engines can pick the right locale.
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  return ROUTES.map(({ path, changeFrequency, priority }) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: now,
-    changeFrequency,
-    priority,
-  }));
+  return ROUTES.map(({ path, changeFrequency, priority }) => {
+    const enUrl = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
+    const arUrl = path === "/" ? `${SITE_URL}/ar` : `${SITE_URL}/ar${path}`;
+    return {
+      url: enUrl,
+      lastModified: now,
+      changeFrequency,
+      priority,
+      alternates: {
+        languages: {
+          en: enUrl,
+          ar: arUrl,
+          "x-default": enUrl,
+        },
+      },
+    };
+  });
 }
