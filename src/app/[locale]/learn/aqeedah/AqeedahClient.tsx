@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { HadithBlock } from "@/components/learn/HadithBlock";
 import { QuranVerse } from "@/components/learn/QuranVerse";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { AqeedahData, AqeedahPillar } from "@/types/content";
-import { SourceReference } from "@/components/ui/SourceReference";
+import { useLocalizedContent } from "@/lib/content-i18n";
 
 interface AqeedahClientProps {
   data: AqeedahData;
@@ -15,6 +16,9 @@ interface AqeedahClientProps {
 }
 
 export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) {
+  const t = useLocalizedContent();
+  const locale = useLocale();
+  const tAqeedah = useTranslations("aqeedah");
   const [openPillar, setOpenPillar] = useState<string | null>(
     pillars[0]?.id || null
   );
@@ -23,22 +27,26 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
     setOpenPillar((prev) => (prev === id ? null : id));
   };
 
+  const lessonTitle = t<string>(data, "title") ?? data.title_en;
+  const introContent =
+    t<string>(data.introduction, "content") ?? data.introduction.content_en;
+  const introHadithText =
+    t<string>(data.introduction.source, "text") ?? data.introduction.source.text_en;
+
   return (
     <LessonContent
       moduleId="aqeedah"
       lessonIds={lessonIds}
-      title={data.title_en}
-      titleAr={data.title_ar}
+      title={lessonTitle}
+      titleAr={locale === "ar" ? undefined : data.title_ar}
       nextHref="/learn/pillars"
       nextLabel="Five Pillars of Islam"
     >
       {/* Introduction */}
       <section>
-        <p className="text-ink leading-relaxed mb-4">
-          {data.introduction.content_en}
-        </p>
+        <p className="text-ink leading-relaxed mb-4">{introContent}</p>
         <HadithBlock
-          text={data.introduction.source.text_en}
+          text={introHadithText}
           reference={data.introduction.source.reference}
           grade={data.introduction.source.grade}
         />
@@ -48,13 +56,21 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
       <section className="space-y-3">
         {pillars.map((pillar) => {
           const isOpen = openPillar === pillar.id;
+          const pillarTitle = t<string>(pillar, "title") ?? pillar.title_en;
+          const pillarDescription =
+            t<string>(pillar, "description") ?? pillar.description_en;
+          const keyPoints = t<string[]>(pillar, "key_points") ?? pillar.key_points;
+          const hadithText = pillar.hadith_reference
+            ? (t<string>(pillar.hadith_reference, "text") ?? pillar.hadith_reference.text_en)
+            : null;
+
           return (
             <div
               key={pillar.id}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-4 text-start hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
                 onClick={() => toggle(pillar.id)}
                 aria-expanded={isOpen}
               >
@@ -62,13 +78,15 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                   <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500 text-white text-sm flex items-center justify-center font-semibold">
                     {pillar.order}
                   </span>
-                  <div>
-                    <h3 className="font-heading font-semibold text-ink">
-                      {pillar.title_en}
+                  <div className="text-start">
+                    <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
+                      {pillarTitle}
                     </h3>
-                    <p className="font-arabic text-sm text-muted">
-                      {pillar.title_ar}
-                    </p>
+                    {locale !== "ar" && (
+                      <p className="font-arabic text-sm text-muted">
+                        {pillar.title_ar}
+                      </p>
+                    )}
                   </div>
                 </div>
                 {isOpen ? (
@@ -79,17 +97,15 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
               </button>
 
               {isOpen && (
-                <div className="px-6 pb-6 space-y-4 border-t border-gray-100 pt-4">
-                  <p className="text-ink leading-relaxed">
-                    {pillar.description_en}
-                  </p>
+                <div className="px-6 pb-6 space-y-4 border-t border-gray-100 dark:border-gray-700 pt-4">
+                  <p className="text-ink leading-relaxed">{pillarDescription}</p>
 
                   <div>
                     <h4 className="font-heading text-sm font-semibold text-muted uppercase tracking-wide mb-2">
-                      Key Points
+                      {tAqeedah("keyPoints")}
                     </h4>
                     <ul className="space-y-1.5">
-                      {pillar.key_points.map((point, i) => (
+                      {keyPoints.map((point, i) => (
                         <li
                           key={i}
                           className="flex items-start gap-2 text-sm text-ink"
@@ -111,9 +127,9 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                     />
                   ))}
 
-                  {pillar.hadith_reference && (
+                  {pillar.hadith_reference && hadithText && (
                     <HadithBlock
-                      text={pillar.hadith_reference.text_en}
+                      text={hadithText}
                       reference={pillar.hadith_reference.reference}
                       grade={pillar.hadith_reference.grade}
                     />
