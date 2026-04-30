@@ -1,5 +1,6 @@
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
+import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 
 interface QuranVerseProps {
   reference: string;
@@ -15,7 +16,7 @@ export function QuranVerse({
   translation,
 }: QuranVerseProps) {
   return (
-    <div className="bg-primary-50/50 rounded-xl p-5 space-y-3">
+    <RecitationBlockquote>
       <ArabicText
         arabic={arabic}
         transliteration={transliteration}
@@ -23,6 +24,6 @@ export function QuranVerse({
         size="lg"
       />
       <SourceReference type="quran" reference={`Quran ${reference}`} />
-    </div>
+    </RecitationBlockquote>
   );
 }
