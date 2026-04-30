@@ -1,24 +1,8 @@
 import { Card } from "@/components/ui/Card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Badge } from "@/components/ui/Badge";
-import {
-  Heart,
-  Building,
-  Droplets,
-  Moon,
-  BookOpen,
-  HandMetal,
-} from "lucide-react";
+import { MODULE_GLYPHS, GlyphBook } from "@/components/ui/Glyphs";
 import type { LearningModule } from "@/types/content";
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  heart: Heart,
-  building: Building,
-  droplets: Droplets,
-  moon: Moon,
-  "book-open": BookOpen,
-  hands: HandMetal,
-};
 
 interface LessonCardProps {
   module: LearningModule;
@@ -31,7 +15,7 @@ export function LessonCard({
   completedLessons,
   totalLessons,
 }: LessonCardProps) {
-  const Icon = iconMap[module.icon] || BookOpen;
+  const Glyph = MODULE_GLYPHS[module.icon] ?? GlyphBook;
   const percent =
     totalLessons === 0
       ? 0
@@ -46,8 +30,8 @@ export function LessonCard({
   return (
     <Card href={`/learn/${module.id}`} className="group">
       <div className="flex items-start gap-4">
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center text-primary-500 group-hover:bg-primary-100 transition-colors">
-          <Icon className="w-6 h-6" />
+        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-500/10 flex items-center justify-center text-primary-500 dark:text-primary-300 group-hover:bg-primary-100 dark:group-hover:bg-primary-500/20 transition-colors">
+          <Glyph size={24} />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2 mb-1">
