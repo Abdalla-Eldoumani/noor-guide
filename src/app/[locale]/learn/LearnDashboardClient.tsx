@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useProgress } from "@/hooks/useProgress";
 import { LessonCard } from "@/components/learn/LessonCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
