@@ -1,0 +1,228 @@
+{
+  "site": {
+    "name": "Noor Guide",
+    "subtitle": "Your Journey of Light",
+    "tagline": "A gentle, step-by-step guide for new Muslims, backed by authentic sources.",
+    "description": "Learn the basics of Islam at your own pace. Beliefs, prayer, Quran, and daily supplications, all from verified sources."
+  },
+  "common": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to main content",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading",
+    "or": "or",
+    "verseLabel": "Verse {number}",
+    "switchToArabic": "العربية",
+    "switchToEnglish": "English"
+  },
+  "nav": {
+    "home": "Home",
+    "learn": "Learn",
+    "tools": "Tools",
+    "progress": "Progress"
+  },
+  "home": {
+    "heroLine1": "Welcome to your",
+    "heroHighlight": "Journey of Light",
+    "ctaShahada": "I just took my Shahada, start learning",
+    "ctaExploring": "I'm exploring Islam",
+    "featureStepByStepTitle": "Step by step",
+    "featureStepByStepBody": "Learn gradually, at your own pace.",
+    "featureSourcesTitle": "Authentic sources",
+    "featureSourcesBody": "Every teaching backed by Quran and verified Hadith.",
+    "featureFreeTitle": "Free, always",
+    "featureFreeBody": "No accounts, no fees, no ads.",
+    "modulesHeading": "Your learning journey",
+    "modulesSubheading": "Six modules to take you from the foundations of belief to daily practice.",
+    "ctaBeginTitle": "Begin your journey",
+    "ctaBeginBody": "Take the first step on a path of knowledge, peace, and purpose.",
+    "ctaBeginButton": "Start learning",
+    "estimatedMinutes": "{minutes} min"
+  },
+  "learn": {
+    "dashboardTitle": "Your learning journey",
+    "dashboardIntro": "Follow this path to learn the essentials of Islam at your own pace. Each module builds on the one before.",
+    "overallProgress": "Overall progress",
+    "lessonsCompleted": "{completed} of {total} lessons",
+    "continueTitle": "Continue where you left off",
+    "continueButton": "Continue",
+    "glossaryTitle": "Islamic glossary",
+    "glossaryBody": "A reference for the essential Islamic terms and Arabic phrases you'll come across on your journey.",
+    "statusComplete": "Complete",
+    "statusInProgress": "In progress",
+    "statusNotStarted": "Not started"
+  },
+  "lesson": {
+    "markComplete": "Mark as complete",
+    "alreadyComplete": "You've completed this lesson",
+    "navPrev": "Previous",
+    "navNext": "Next",
+    "stepIndicator": "Step {current} of {total}",
+    "stepPrev": "Previous step",
+    "stepNext": "Next step",
+    "stepFinish": "Finish",
+    "sourceQuran": "Quran",
+    "sourceHadith": "Hadith",
+    "sourceConsensus": "Scholarly consensus",
+    "memorizationTitle": "Memorization practice",
+    "memorizationHelper": "Try reading the Arabic first, then reveal the transliteration to check your pronunciation.",
+    "transliteration": "Transliteration",
+    "translation": "Translation"
+  },
+  "aqeedah": {
+    "keyPoints": "Key points"
+  },
+  "pillars": {
+    "learnMore": "Learn more"
+  },
+  "wudu": {
+    "prereqHeading": "Before you begin",
+    "stepsHeading": "The steps of wudu",
+    "duaHeading": "Dua after wudu",
+    "breakersHeading": "What breaks your wudu",
+    "repeat": "Repeat {count} times"
+  },
+  "salah": {
+    "prereqHeading": "Before you pray",
+    "fivePrayersHeading": "The five daily prayers",
+    "tableHeaderPrayer": "Prayer",
+    "tableHeaderTime": "Time",
+    "tableHeaderFardh": "Fardh",
+    "tableHeaderSunnahBefore": "Sunnah before",
+    "tableHeaderSunnahAfter": "Sunnah after",
+    "rakahHeading": "Steps of one rakah",
+    "rakahSubheading": "Each unit of prayer follows these steps. The number of rakaat varies by prayer; see the table above.",
+    "positionStanding": "Standing",
+    "positionBowing": "Bowing",
+    "positionProstrating": "Prostrating",
+    "positionSitting": "Sitting",
+    "whenLabel": "When",
+    "additionalRecitations": "Additional recitations",
+    "whileRising": "While rising",
+    "onceStanding": "Once standing",
+    "sayThisTimes": "Say this {count} times."
+  },
+  "surahs": {
+    "startHere": "Start here",
+    "playFullSurah": "Play entire surah",
+    "stopPlayback": "Stop",
+    "loadingAudio": "Loading audio",
+    "audioError": "Could not load audio. Please try again later.",
+    "playVerseAria": "Play verse {number}",
+    "pauseVerseAria": "Pause verse {number}",
+    "surahNumberLabel": "Surah {number}"
+  },
+  "duas": {
+    "bookmarkAdd": "Bookmark this dua",
+    "bookmarkRemove": "Remove bookmark",
+    "context": {
+      "beforeEating": "Before eating",
+      "afterEating": "After eating",
+      "seekingForgiveness": "Seeking forgiveness",
+      "inDistress": "When in distress or difficulty"
+    }
+  },
+  "glossary": {
+    "title": "Islamic glossary",
+    "subtitle": "Essential Islamic terms and everyday Arabic phrases.",
+    "searchPlaceholder": "Search terms and phrases",
+    "termsHeading": "Islamic terms ({count})",
+    "phrasesHeading": "Essential Arabic phrases ({count})",
+    "noTermsMatch": "No terms match your search.",
+    "noPhrasesMatch": "No phrases match your search."
+  },
+  "tools": {
+    "title": "Practical tools",
+    "subtitle": "Tools to support your daily worship and practice.",
+    "prayerTimesTitle": "Prayer times",
+    "prayerTimesBody": "Accurate prayer times for your location, using trusted calculation methods.",
+    "qiblaTitle": "Qibla direction",
+    "qiblaBody": "Find the direction of the Kaaba in Makkah from anywhere in the world.",
+    "masjidFinderTitle": "Find a mosque",
+    "masjidFinderBody": "Locate mosques near you for congregational prayers and community."
+  },
+  "location": {
+    "setHeading": "Set your location",
+    "useMyLocation": "Use my location",
+    "detecting": "Detecting",
+    "manualPlaceholder": "Enter coordinates (e.g., 40.7128, -74.0060)",
+    "set": "Set",
+    "manualHelp": "Please enter coordinates as latitude, longitude.",
+    "change": "Change location",
+    "errorPermissionDenied": "Location permission was denied. Enable location access in your browser settings, or enter coordinates manually.",
+    "errorUnavailable": "Unable to determine your location. Try again or enter coordinates manually.",
+    "errorTimeout": "Location request timed out. Try again or enter coordinates manually.",
+    "errorUnsupported": "Geolocation is not supported in your browser. Please enter coordinates manually."
+  },
+  "prayerTimes": {
+    "title": "Prayer times",
+    "subtitle": "View the five daily prayer times for your location.",
+    "promptLocation": "To display prayer times, we need to know your location.",
+    "calculationMethod": "Calculation method",
+    "loading": "Loading prayer times",
+    "errorRetry": "Please check your internet connection and try again.",
+    "nextPrayerLabel": "Next prayer",
+    "footerNote": "Prayer times are calculated from your location and the selected method. Times may vary slightly from your local mosque. Where possible, follow your local mosque's schedule."
+  },
+  "qibla": {
+    "title": "Qibla direction",
+    "subtitle": "Find the direction of the Qibla, the Kaaba in Makkah, from your location.",
+    "promptLocation": "To find the Qibla direction, we need to know your location.",
+    "fromNorth": "from North",
+    "directionStatement": "The Qibla from your location is {bearing}° from North.",
+    "aboutHeading": "About the Qibla",
+    "aboutBody": "The Qibla is the direction Muslims face during prayer, pointing toward the Kaaba in the Sacred Mosque (Al-Masjid al-Haram) in Makkah. For best accuracy, use a physical compass to align with the bearing shown above."
+  },
+  "masjidFinder": {
+    "title": "Find a mosque near you",
+    "subtitle": "Locate mosques in your area for congregational prayers and community.",
+    "promptLocation": "Set your location to find mosques nearby.",
+    "googleSearchTitle": "Search on Google Maps",
+    "googleSearchBody": "Find mosques with reviews, directions, and prayer times.",
+    "osmSearchTitle": "Search on OpenStreetMap",
+    "osmSearchBody": "Free, community-driven map of mosques worldwide.",
+    "tipsHeading": "Tips for finding your local mosque",
+    "tip1": "Search for \"mosque\", \"masjid\", or \"Islamic center\" in your area.",
+    "tip2": "Many mosques welcome new Muslims and have programmes for reverts.",
+    "tip3": "Don't be shy to visit during prayer times. The community will be happy to help.",
+    "tip4": "Friday (Jumu'ah) prayer is a great first visit. Arrive early to meet people.",
+    "directions": "Get directions"
+  },
+  "progress": {
+    "title": "Your progress",
+    "subtitle": "Track your learning journey through the fundamentals of Islam.",
+    "lessonsCompletedLabel": "Lessons completed",
+    "streakLabel": "Day streak",
+    "startedLabel": "Started",
+    "notStarted": "Not started",
+    "overallProgress": "Overall progress",
+    "moduleProgressHeading": "Module progress",
+    "moduleComplete": "Completed",
+    "resetButton": "Reset all progress",
+    "resetConfirmBody": "This will erase all your progress. Are you sure?",
+    "resetConfirmYes": "Yes, reset everything",
+    "resetCancel": "Cancel"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist, or it may have moved. Let us guide you back.",
+    "ctaHome": "Go home",
+    "ctaContinue": "Continue learning"
+  },
+  "footer": {
+    "verifiedNote": "All content sourced from the Quran and authenticated Hadith collections.",
+    "copyright": "© {year} Noor Guide. Free and open source."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "learn": "Learn",
+    "tools": "Tools",
+    "progress": "Progress",
+    "glossary": "Glossary",
+    "prayerTimes": "Prayer times",
+    "qibla": "Qibla direction",
+    "masjidFinder": "Find a mosque"
+  }
+}
