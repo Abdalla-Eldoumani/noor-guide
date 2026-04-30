@@ -60,13 +60,16 @@ The content follows Sunni Islam (Ahl as-Sunnah wal-Jamaa'ah). Where differences 
 
 ## Arabic locale
 
-Translation files for an Arabic UI live at `messages/ar.json` and `messages/en.json`. Wiring them through `next-intl` with a `/ar` route is planned but not yet implemented. Religious content (Quran translations, hadith, duas) and the project's authored educational prose stay in their existing form across both locales; only UI chrome (navigation, buttons, page intros) will be localized.
+The site runs under English (`/`) and Arabic (`/ar`), powered by `next-intl` with `localePrefix: "as-needed"`. Translations live at `messages/en.json` and `messages/ar.json`; both were hand-authored, not machine-translated. The header includes a language switcher that swaps locales while preserving the current path and writes the choice to `localStorage` so return visits land on the right prefix.
+
+Religious content (Quran translations, hadith, duas in `src/data/content/*.json`) and the project's authored educational instructional prose render the same on both locales. Only UI chrome (navigation, buttons, page intros, breadcrumbs, footer) is localized for the initial Arabic launch. See `docs/I18N.md` for the full plan.
 
 ## Tech stack
 
-- Next.js 14.2.35 with App Router (static site generation)
+- Next.js 14.2.35 with App Router (static site generation, locale routing)
 - React 18.3.1, TypeScript 5.9.3
-- Tailwind CSS 3.4.19 with class-based dark mode
+- Tailwind CSS 4.2.4 with class-based dark mode (`@theme` CSS-first config)
+- `next-intl` 4.11.0 for routing and message dictionaries
 - `lucide-react` 0.400.0 for icons
 - `localStorage` (no database, no backend)
 - AlAdhan API for prayer times (free, no key required)
