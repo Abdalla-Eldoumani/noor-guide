@@ -9,6 +9,8 @@ const DEFAULT_PROGRESS: NoorProgress = {
   streakDays: 0,
 };
 
+const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
 export function getProgress(): NoorProgress {
   return getItem<NoorProgress>(STORAGE_KEYS.progress, DEFAULT_PROGRESS);
 }
@@ -22,8 +24,10 @@ export function markLessonComplete(lessonId: string): NoorProgress {
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId);
   }
-  progress.lastActiveAt = new Date().toISOString();
-  updateStreak(progress);
+  const priorLastActiveAt = progress.lastActiveAt;
+  const now = new Date();
+  progress.lastActiveAt = now.toISOString();
+  progress.streakDays = computeStreak(priorLastActiveAt, now, progress.streakDays);
   saveProgress(progress);
   return progress;
 }
@@ -52,26 +56,29 @@ export function resetProgress(): void {
   saveProgress(DEFAULT_PROGRESS);
 }
 
-function updateStreak(progress: NoorProgress): void {
-  const now = new Date();
-  const lastActive = progress.lastActiveAt
-    ? new Date(progress.lastActiveAt)
-    : null;
+// Streak is bucketed by local-midnight day boundaries so a visit at 23:55
+// followed by 00:05 the next day registers as a +1 streak.
+export function computeStreak(
+  priorLastActiveAt: string,
+  now: Date,
+  prevStreak: number,
+): number {
+  if (!priorLastActiveAt) return 1;
 
-  if (!lastActive) {
-    progress.streakDays = 1;
-    return;
-  }
+  const prior = new Date(priorLastActiveAt);
+  if (Number.isNaN(prior.getTime())) return 1;
 
-  const diffMs = now.getTime() - lastActive.getTime();
-  const diffDays = diffMs / (1000 * 60 * 60 * 24);
+  const priorDay = startOfLocalDay(prior);
+  const nowDay = startOfLocalDay(now);
+  const diffDays = Math.round((nowDay.getTime() - priorDay.getTime()) / MS_PER_DAY);
 
-  if (diffDays < 1) {
-  } else if (diffDays < 2) {
-    progress.streakDays += 1;
-  } else {
-    progress.streakDays = 1;
-  }
+  if (diffDays <= 0) return prevStreak;
+  if (diffDays === 1) return prevStreak + 1;
+  return 1;
+}
+
+function startOfLocalDay(d: Date): Date {
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate());
 }
 
 // Bookmarks
