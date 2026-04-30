@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useSettings } from "@/hooks/useSettings";
 import { usePrayerTimes } from "@/hooks/usePrayerTimes";
-import { PRAYER_METHODS } from "@/lib/prayer-times";
+import { PRAYER_METHODS } from "@/config/prayer-methods";
 import { LocationPicker } from "@/components/tools/LocationPicker";
 import { PrayerTimesDisplay } from "@/components/tools/PrayerTimesDisplay";
 import { PageWrapper } from "@/components/layout/PageWrapper";
