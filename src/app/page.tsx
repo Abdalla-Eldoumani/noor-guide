@@ -1,27 +1,13 @@
 import Link from "next/link";
 import {
   Heart,
-  Building,
-  Droplets,
-  Moon,
-  BookOpen,
-  HandMetal,
   ArrowRight,
   Clock,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import { getLearningModules } from "@/lib/content";
-import type { LucideIcon } from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  heart: Heart,
-  building: Building,
-  droplets: Droplets,
-  moon: Moon,
-  "book-open": BookOpen,
-  hands: HandMetal,
-};
+import { MODULE_GLYPHS, GlyphBook } from "@/components/ui/Glyphs";
 
 export default function HomePage() {
   const modules = getLearningModules();
@@ -133,7 +119,7 @@ export default function HomePage() {
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {modules.map((mod) => {
-            const Icon = iconMap[mod.icon] || BookOpen;
+            const Glyph = MODULE_GLYPHS[mod.icon] ?? GlyphBook;
             return (
               <Link
                 key={mod.id}
@@ -142,7 +128,7 @@ export default function HomePage() {
               >
                 <div className="flex items-start gap-4">
                   <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 shrink-0 group-hover:bg-primary-100 dark:group-hover:bg-primary-500/20 transition-colors">
-                    <Icon size={22} />
+                    <Glyph size={22} />
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-heading font-semibold text-ink dark:text-gray-100 group-hover:text-primary-500 dark:group-hover:text-primary-300 transition-colors">
