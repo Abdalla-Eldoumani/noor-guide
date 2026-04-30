@@ -2,6 +2,8 @@
 // six learning modules. Each glyph is a 24x24 stroke composition that inherits
 // currentColor and the size of its container.
 
+import type { ReactElement } from "react";
+
 type GlyphProps = {
   className?: string;
   size?: number;
@@ -85,7 +87,7 @@ export function GlyphCuppedHands({ className = "", size = 24 }: GlyphProps) {
 // Map of module-icon ids to glyph components. The id strings match the values
 // in src/data/content/learning-path.json so the dashboard and home page can
 // look up the right glyph by id.
-export const MODULE_GLYPHS: Record<string, (props: GlyphProps) => JSX.Element> = {
+export const MODULE_GLYPHS: Record<string, (props: GlyphProps) => ReactElement> = {
   heart: GlyphHeart,
   building: GlyphArch,
   droplets: GlyphDroplet,
