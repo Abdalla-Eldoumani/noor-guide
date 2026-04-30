@@ -12,10 +12,29 @@ export function MasjidCard({ name, address, distance }: MasjidCardProps) {
       <div className="flex items-start gap-4">
         {/* Mosque icon */}
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-500 dark:bg-primary-500/10">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M12 2C8 6 4 10 4 14v6a2 2 0 002 2h12a2 2 0 002-2v-6c0-4-4-8-8-12z" />
-            <path d="M12 12v10" />
-            <path d="M8 22v-4a4 4 0 018 0v4" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M2 21h20" />
+            <path d="M8 21V14" />
+            <path d="M16 21V14" />
+            <path d="M7.5 14a4.5 4.5 0 0 1 9 0" />
+            <path d="M12 9V7" />
+            <path d="M11 21v-3a1 1 0 0 1 2 0v3" />
+            <path d="M4.5 21V9" />
+            <circle cx="4.5" cy="8" r="0.7" />
+            <path d="M4.5 7V5.8" />
+            <path d="M19.5 21V9" />
+            <circle cx="19.5" cy="8" r="0.7" />
+            <path d="M19.5 7V5.8" />
           </svg>
         </div>
 
