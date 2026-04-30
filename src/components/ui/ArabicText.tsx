@@ -33,15 +33,15 @@ export function ArabicText({
       <p
         dir="rtl"
         lang="ar"
-        className={`font-arabic ${sizeClasses[size]} leading-loose text-ink`}
+        className={`font-arabic ${sizeClasses[size]} leading-loose text-ink dark:text-gray-100`}
       >
         {text}
       </p>
       {transliteration && (
-        <p className="transliteration">{transliteration}</p>
+        <p className="transliteration dark:text-gray-400">{transliteration}</p>
       )}
       {translation && (
-        <p className="text-sm text-muted">{translation}</p>
+        <p className="text-sm text-muted dark:text-gray-300">{translation}</p>
       )}
     </div>
   );
