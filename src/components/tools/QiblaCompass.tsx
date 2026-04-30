@@ -41,26 +41,24 @@ export function QiblaCompass({ bearing }: QiblaCompassProps) {
             className="absolute left-1/2 top-0 h-1/2 w-8 -translate-x-1/2 origin-bottom transition-transform duration-500"
             style={{ transform: `translateX(-50%) rotate(${bearing}deg)` }}
           >
-            {/* Arrow SVG */}
             <svg
               viewBox="0 0 32 140"
               className="h-full w-full"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
-              {/* Arrow tip */}
-              <polygon
-                points="16,0 6,36 26,36"
+              <path
+                d="M16 2 L7 42 Q16 36 25 42 Z"
                 className="fill-primary-500"
               />
-              {/* Arrow shaft */}
               <rect
-                x="13"
-                y="34"
-                width="6"
-                height="80"
-                rx="3"
-                className="fill-primary-500 opacity-60"
+                x="14.5"
+                y="40"
+                width="3"
+                height="78"
+                rx="1.5"
+                className="fill-primary-500 opacity-40"
               />
             </svg>
           </div>
