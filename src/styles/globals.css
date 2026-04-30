@@ -91,3 +91,47 @@
     display: none;
   }
 }
+
+@media print {
+  header,
+  footer,
+  nav,
+  button,
+  [role="navigation"] {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  a[href]:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555;
+    word-break: break-all;
+  }
+
+  blockquote {
+    border-color: #888 !important;
+    page-break-inside: avoid;
+  }
+
+  .arabic-text,
+  .arabic-text-lg {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
