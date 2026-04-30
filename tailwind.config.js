@@ -51,6 +51,12 @@ module.exports = {
         "arabic-base": ["1.5rem", { lineHeight: "2.5rem" }],
         "arabic-lg": ["1.875rem", { lineHeight: "3rem" }],
         "arabic-xl": ["2.25rem", { lineHeight: "3.5rem" }],
+        // Fluid type scale via clamp(min, base + viewport, max).
+        // display: hero headlines. h1: page titles. h2: sections. h3: subsections.
+        display: ["clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem)", { lineHeight: "1.1" }],
+        h1: ["clamp(1.875rem, 1.5rem + 1.25vw, 2.5rem)", { lineHeight: "1.2" }],
+        h2: ["clamp(1.375rem, 1.125rem + 0.75vw, 1.75rem)", { lineHeight: "1.3" }],
+        h3: ["clamp(1.125rem, 1rem + 0.375vw, 1.375rem)", { lineHeight: "1.4" }],
       },
     },
   },
