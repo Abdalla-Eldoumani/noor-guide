@@ -6,6 +6,7 @@ import { StepByStep } from "@/components/learn/StepByStep";
 import { PrayerPosition } from "@/components/learn/PrayerPosition";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
+import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
 import type { SalahData, SalahStep } from "@/types/content";
 
@@ -124,10 +125,10 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
                     {prayer.fardh_rakaat}
                   </td>
                   <td className="px-4 py-3 text-center text-muted">
-                    {prayer.sunnah_before || "—"}
+                    {prayer.sunnah_before || "-"}
                   </td>
                   <td className="px-4 py-3 text-center text-muted">
-                    {prayer.sunnah_after || "—"}
+                    {prayer.sunnah_after || "-"}
                   </td>
                 </tr>
               ))}
@@ -143,7 +144,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
         </h2>
         <p className="text-muted text-sm mb-4">
           Each unit of prayer (rakah) follows these steps. The number of rakaat
-          varies by prayer — see the table above.
+          varies by prayer (see the table above).
         </p>
 
         {/* Position legend */}
@@ -168,12 +169,9 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
         {steps
           .filter((s) => s.recitation_rising || s.recitation_standing)
           .map((step) => (
-            <div
-              key={`extra-${step.id}`}
-              className="mt-4 bg-primary-50/50 rounded-xl p-5 space-y-3"
-            >
+            <RecitationBlockquote key={`extra-${step.id}`}>
               <h4 className="font-heading font-semibold text-ink text-sm">
-                {step.title_en} — Additional Recitations
+                {step.title_en}: Additional Recitations
               </h4>
               {step.recitation_rising && (
                 <div>
@@ -201,7 +199,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
                   reference={step.source.reference}
                 />
               )}
-            </div>
+            </RecitationBlockquote>
           ))}
       </section>
 
@@ -219,7 +217,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               When: {data.tashahhud.when}
             </p>
           )}
-          <div className="bg-primary-50/50 rounded-xl p-5 space-y-3">
+          <RecitationBlockquote>
             <ArabicText
               arabic={data.tashahhud.recitation.arabic}
               transliteration={data.tashahhud.recitation.transliteration}
@@ -227,7 +225,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               size="lg"
             />
             {data.tashahhud.finger_note && (
-              <div className="flex gap-3 bg-blue-50 text-blue-800 rounded-lg p-3 text-sm">
+              <div className="flex gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 rounded-lg p-3 text-sm">
                 <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <p>{data.tashahhud.finger_note}</p>
               </div>
@@ -236,7 +234,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               type={data.tashahhud.source.type}
               reference={data.tashahhud.source.reference}
             />
-          </div>
+          </RecitationBlockquote>
         </section>
       )}
 
@@ -254,7 +252,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               When: {data.salawat_ibrahimiyyah.when}
             </p>
           )}
-          <div className="bg-primary-50/50 rounded-xl p-5 space-y-3">
+          <RecitationBlockquote>
             <ArabicText
               arabic={data.salawat_ibrahimiyyah.recitation.arabic}
               transliteration={
@@ -267,7 +265,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               type={data.salawat_ibrahimiyyah.source.type}
               reference={data.salawat_ibrahimiyyah.source.reference}
             />
-          </div>
+          </RecitationBlockquote>
         </section>
       )}
 
@@ -285,7 +283,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               {data.tasleem.instruction_en}
             </p>
           )}
-          <div className="bg-primary-50/50 rounded-xl p-5 space-y-3">
+          <RecitationBlockquote>
             <ArabicText
               arabic={data.tasleem.recitation.arabic}
               transliteration={data.tasleem.recitation.transliteration}
@@ -296,7 +294,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
               type={data.tasleem.source.type}
               reference={data.tasleem.source.reference}
             />
-          </div>
+          </RecitationBlockquote>
         </section>
       )}
     </LessonContent>
