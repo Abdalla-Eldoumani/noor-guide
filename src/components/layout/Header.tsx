@@ -1,21 +1,24 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/learn", label: "Learn" },
-  { href: "/tools", label: "Tools" },
-  { href: "/progress", label: "Progress" },
-];
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 export default function Header() {
+  const t = useTranslations("nav");
+  const tSite = useTranslations("site");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: t("home") },
+    { href: "/learn", label: t("learn") },
+    { href: "/tools", label: t("tools") },
+    { href: "/progress", label: t("progress") },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 4);
@@ -44,7 +47,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-xl font-heading font-bold text-primary-600 dark:text-primary-300">
-              Noor Guide
+              {tSite("name")}
             </span>
             <span
               dir="rtl"
@@ -72,16 +75,19 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
-            aria-label={mobileOpen ? "Close menu" : "Open menu"}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <LocaleSwitcher />
+            {/* Mobile menu button */}
+            <button
+              type="button"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile nav dropdown */}
