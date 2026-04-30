@@ -11,6 +11,7 @@ export interface HadithSource {
   type: "hadith";
   reference: string;
   text_en?: string;
+  text_ar?: string;
   grade: "sahih" | "hasan" | "n/a";
 }
 
@@ -24,6 +25,7 @@ export interface ContentSource {
   type: "quran" | "hadith" | "scholarly_consensus";
   reference: string;
   text_en?: string;
+  text_ar?: string;
   grade?: "sahih" | "hasan" | "n/a";
 }
 
@@ -34,10 +36,13 @@ export interface AqeedahPillar {
   title_en: string;
   title_ar: string;
   description_en: string;
+  description_ar?: string;
   key_points: string[];
+  key_points_ar?: string[];
   quran_references: QuranReference[];
   hadith_reference?: {
     text_en: string;
+    text_ar?: string;
     reference: string;
     grade: string;
   };
@@ -50,6 +55,7 @@ export interface AqeedahData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
     source: HadithSource & { text_en: string };
   };
   pillars: AqeedahPillar[];
@@ -62,16 +68,20 @@ export interface IslamPillar {
   title_en: string;
   title_ar: string;
   description_en: string;
+  description_ar?: string;
   content?: {
     arabic: string;
     transliteration: string;
     translation: string;
+    translation_ar?: string;
   };
   link_to_module?: string;
   notes?: string;
+  notes_ar?: string;
   quran_reference?: {
     reference: string;
     translation: string;
+    translation_ar?: string;
   };
   verified: boolean;
 }
@@ -82,6 +92,7 @@ export interface PillarsData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
     source: HadithSource & { text_en: string };
   };
   pillars: IslamPillar[];
@@ -94,12 +105,15 @@ export interface WuduStep {
   title_en: string;
   title_ar: string;
   instruction_en: string;
+  instruction_ar?: string;
   repetitions?: number;
   notes?: string;
+  notes_ar?: string;
   content?: {
     arabic: string;
     transliteration: string;
     translation: string;
+    translation_ar?: string;
   };
   source?: ContentSource;
   verified: boolean;
@@ -108,8 +122,10 @@ export interface WuduStep {
 export interface WuduBreaker {
   id: string;
   description: string;
+  description_ar?: string;
   source?: string;
   notes?: string;
+  notes_ar?: string;
   verified: boolean;
 }
 
@@ -119,14 +135,17 @@ export interface WuduData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
     source: HadithSource & { text_en: string };
   };
   prerequisites: string[];
+  prerequisites_ar?: string[];
   steps: WuduStep[];
   dua_after_wudu: {
     arabic: string;
     transliteration: string;
     translation: string;
+    translation_ar?: string;
     source: ContentSource;
     verified: boolean;
   };
@@ -138,6 +157,7 @@ export interface Recitation {
   arabic: string;
   transliteration: string;
   translation: string;
+  translation_ar?: string;
 }
 
 export interface SalahStep {
@@ -147,12 +167,15 @@ export interface SalahStep {
   title_ar: string;
   position: string;
   instruction_en: string;
+  instruction_ar?: string;
   recitation?: Recitation;
   recitation_rising?: Recitation;
   recitation_standing?: Recitation;
   after_fatiha?: string;
+  after_fatiha_ar?: string;
   repetitions?: number;
   notes?: string;
+  notes_ar?: string;
   source?: ContentSource;
   verified: boolean;
 }
@@ -161,6 +184,7 @@ export interface FivePrayer {
   name_en: string;
   name_ar: string;
   time: string;
+  time_ar?: string;
   fardh_rakaat: number;
   sunnah_before: number;
   sunnah_after: number;
@@ -170,10 +194,13 @@ export interface SalahSection {
   title_en: string;
   title_ar: string;
   when?: string;
+  when_ar?: string;
   instruction_en?: string;
+  instruction_ar?: string;
   recitation: Recitation;
   source: ContentSource;
   finger_note?: string;
+  finger_note_ar?: string;
   verified: boolean;
 }
 
@@ -183,9 +210,11 @@ export interface SalahData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
     source: HadithSource & { text_en: string };
   };
   prerequisites: string[];
+  prerequisites_ar?: string[];
   five_prayers: FivePrayer[];
   steps_of_one_rakah: SalahStep[];
   tashahhud: SalahSection;
@@ -199,6 +228,7 @@ export interface Verse {
   arabic: string;
   transliteration: string;
   translation: string;
+  translation_ar?: string;
 }
 
 export interface Surah {
@@ -207,6 +237,7 @@ export interface Surah {
   title_en: string;
   title_ar: string;
   priority: string;
+  priority_ar?: string;
   verses: Verse[];
   audio_api_url: string;
   verified: boolean;
@@ -218,7 +249,9 @@ export interface SurahsData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
     notes: string;
+    notes_ar?: string;
   };
   surahs: Surah[];
 }
@@ -229,8 +262,11 @@ export interface Dua {
   arabic: string;
   transliteration: string;
   translation: string;
+  translation_ar?: string;
   context?: string;
+  context_ar?: string;
   notes?: string;
+  notes_ar?: string;
   source: {
     reference: string;
     grade: string;
@@ -241,6 +277,7 @@ export interface Dua {
 export interface DuaCategory {
   id: string;
   title_en: string;
+  title_ar?: string;
   duas: Dua[];
 }
 
@@ -250,6 +287,7 @@ export interface DuasData {
   title_ar: string;
   introduction: {
     content_en: string;
+    content_ar?: string;
   };
   categories: DuaCategory[];
 }
@@ -260,6 +298,7 @@ export interface GlossaryTerm {
   term_en: string;
   term_ar: string;
   definition: string;
+  definition_ar?: string;
   verified: boolean;
 }
 
@@ -274,13 +313,16 @@ export interface ArabicPhrase {
   phrase_ar: string;
   transliteration: string;
   translation: string;
+  translation_ar?: string;
   usage: string;
+  usage_ar?: string;
   verified: boolean;
 }
 
 export interface ArabicPhrasesData {
   module_id: string;
   title_en: string;
+  title_ar?: string;
   phrases: ArabicPhrase[];
 }
 
@@ -291,6 +333,7 @@ export interface LearningModule {
   title_en: string;
   title_ar: string;
   description_en: string;
+  description_ar?: string;
   icon: string;
   estimatedMinutes: number;
   lessons: string[];
