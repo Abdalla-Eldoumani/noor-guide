@@ -37,7 +37,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
       <div className="mt-6 mb-8">
         <div className="flex items-center gap-3 mb-2">
           <BookOpen className="w-8 h-8 text-primary-500" />
-          <h1 className="font-heading text-3xl font-bold text-ink">
+          <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">
             Learning Path
           </h1>
         </div>
