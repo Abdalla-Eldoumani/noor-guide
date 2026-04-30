@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Home, BookOpen, ArrowRight } from "lucide-react";
 import { StarOctagram } from "@/components/ui/StarOctagram";
 
