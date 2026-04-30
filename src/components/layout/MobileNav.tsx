@@ -1,18 +1,19 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { Home, BookOpen, Wrench, BarChart3 } from "lucide-react";
 
-const navItems = [
-  { href: "/", label: "Home", icon: Home },
-  { href: "/learn", label: "Learn", icon: BookOpen },
-  { href: "/tools", label: "Tools", icon: Wrench },
-  { href: "/progress", label: "Progress", icon: BarChart3 },
-];
-
 export default function MobileNav() {
+  const t = useTranslations("nav");
   const pathname = usePathname();
+
+  const navItems = [
+    { href: "/", label: t("home"), icon: Home },
+    { href: "/learn", label: t("learn"), icon: BookOpen },
+    { href: "/tools", label: t("tools"), icon: Wrench },
+    { href: "/progress", label: t("progress"), icon: BarChart3 },
+  ];
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -21,7 +22,7 @@ export default function MobileNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 bg-surface border-t border-gray-100 md:hidden"
+      className="fixed bottom-0 left-0 right-0 z-40 bg-surface dark:bg-gray-900 dark:border-gray-800 border-t border-gray-100 md:hidden"
       aria-label="Mobile bottom navigation"
     >
       <div className="flex items-center justify-around h-16">
@@ -33,8 +34,8 @@ export default function MobileNav() {
               href={href}
               className={`flex flex-col items-center gap-0.5 px-3 py-2 min-w-[3rem] min-h-[3rem] rounded-lg transition-colors ${
                 active
-                  ? "text-primary-500"
-                  : "text-muted hover:text-ink"
+                  ? "text-primary-500 dark:text-primary-300"
+                  : "text-muted hover:text-ink dark:text-gray-400 dark:hover:text-gray-100"
               }`}
               aria-current={active ? "page" : undefined}
             >
