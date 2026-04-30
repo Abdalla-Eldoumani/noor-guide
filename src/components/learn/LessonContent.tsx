@@ -45,9 +45,9 @@ export function LessonContent({
       />
 
       <div className="mt-6 mb-8">
-        <h1 className="font-heading text-3xl font-bold text-ink">{title}</h1>
+        <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">{title}</h1>
         {titleAr && (
-          <p className="font-arabic text-arabic-lg text-primary-500 mt-2">
+          <p className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
             {titleAr}
           </p>
         )}
@@ -55,7 +55,7 @@ export function LessonContent({
 
       <div className="space-y-8">{children}</div>
 
-      <div className="mt-12 pt-8 border-t border-gray-200">
+      <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
         <div className="flex justify-center mb-8">
           {completed ? (
             <div className="flex items-center gap-2 text-green-600 font-medium">
