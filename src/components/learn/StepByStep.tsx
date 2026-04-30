@@ -5,6 +5,7 @@ import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { StepIndicator } from "@/components/ui/StepIndicator";
 import { Button } from "@/components/ui/Button";
+import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
 
 interface StepData {
@@ -65,13 +66,13 @@ export function StepByStep({ steps, moduleId }: StepByStepProps) {
         <p className="text-ink leading-relaxed">{step.instruction}</p>
 
         {step.arabicContent && (
-          <div className="bg-primary-50/50 rounded-lg p-4">
+          <RecitationBlockquote>
             <ArabicText
               arabic={step.arabicContent.arabic}
               transliteration={step.arabicContent.transliteration}
               translation={step.arabicContent.translation}
             />
-          </div>
+          </RecitationBlockquote>
         )}
 
         {step.notes && (
