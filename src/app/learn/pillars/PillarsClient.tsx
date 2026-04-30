@@ -5,6 +5,7 @@ import { HadithBlock } from "@/components/learn/HadithBlock";
 import { Card } from "@/components/ui/Card";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
+import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 import type { PillarsData, IslamPillar } from "@/types/content";
@@ -63,14 +64,14 @@ export function PillarsClient({ data, pillars, lessonIds }: PillarsClientProps) 
               </p>
 
               {pillar.content && (
-                <div className="bg-primary-50/50 rounded-lg p-4">
+                <RecitationBlockquote>
                   <ArabicText
                     arabic={pillar.content.arabic}
                     transliteration={pillar.content.transliteration}
                     translation={pillar.content.translation}
                     size="lg"
                   />
-                </div>
+                </RecitationBlockquote>
               )}
 
               {pillar.quran_reference && (
