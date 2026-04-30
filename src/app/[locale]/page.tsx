@@ -1,3 +1,4 @@
+import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
   Heart,
@@ -8,9 +9,12 @@ import {
 } from "lucide-react";
 import { getLearningModules } from "@/lib/content";
 import { MODULE_GLYPHS, GlyphBook } from "@/components/ui/Glyphs";
+import { pickLocalized } from "@/lib/content-i18n";
 
-export default function HomePage() {
+export default async function HomePage() {
   const modules = getLearningModules();
+  const locale = await getLocale();
+  const tHome = await getTranslations("home");
 
   return (
     <>
@@ -42,8 +46,10 @@ export default function HomePage() {
         </svg>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
           <h1 className="text-display font-heading font-bold text-ink dark:text-gray-100">
-            Learn Islam,{" "}
-            <span className="text-primary-500 dark:text-primary-300">Step by Step</span>
+            {tHome("heroLine1")}{" "}
+            <span className="text-primary-500 dark:text-primary-300">
+              {tHome("heroHighlight")}
+            </span>
           </h1>
           <p
             dir="rtl"
@@ -52,24 +58,20 @@ export default function HomePage() {
           >
             نور
           </p>
-          <p className="mt-6 text-lg sm:text-xl text-muted dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            A guide for new Muslims. Learn at your own pace, backed by authentic
-            sources from the Quran and Sunnah.
-          </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/learn"
               className="inline-flex items-center gap-2 bg-primary-500 text-white px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-500 transition-colors"
             >
-              I just took my Shahada. Start here
-              <ArrowRight size={20} />
+              {tHome("ctaShahada")}
+              <ArrowRight size={20} className="rtl:rotate-180" />
             </Link>
             <Link
               href="/learn/aqeedah"
               className="inline-flex items-center gap-2 border-2 border-primary-500 text-primary-500 dark:border-primary-400 dark:text-primary-300 px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-50 dark:hover:bg-primary-500/10 transition-colors"
             >
-              I&apos;m exploring Islam
+              {tHome("ctaExploring")}
             </Link>
           </div>
         </div>
@@ -82,27 +84,33 @@ export default function HomePage() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
               <Sparkles size={24} />
             </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">Step by Step</h3>
+            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
+              {tHome("featureStepByStepTitle")}
+            </h3>
             <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              Learn gradually, at your own pace. No overwhelm.
+              {tHome("featureStepByStepBody")}
             </p>
           </div>
           <div className="text-center p-6">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
               <ShieldCheck size={24} />
             </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">Authentic Sources</h3>
+            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
+              {tHome("featureSourcesTitle")}
+            </h3>
             <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              Every teaching backed by the Quran and verified Hadith.
+              {tHome("featureSourcesBody")}
             </p>
           </div>
           <div className="text-center p-6">
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
               <Heart size={24} />
             </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">Free Forever</h3>
+            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
+              {tHome("featureFreeTitle")}
+            </h3>
             <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              No accounts, no fees, no ads. Just guidance.
+              {tHome("featureFreeBody")}
             </p>
           </div>
         </div>
@@ -111,15 +119,19 @@ export default function HomePage() {
       {/* Learning Modules */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-h1 font-heading font-bold text-ink dark:text-gray-100 text-center">
-          Learning Path
+          {tHome("modulesHeading")}
         </h2>
         <p className="mt-3 text-muted dark:text-gray-400 text-center max-w-xl mx-auto">
-          Six modules covering belief, prayer, Quran, and daily practice.
+          {tHome("modulesSubheading")}
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {modules.map((mod) => {
             const Glyph = MODULE_GLYPHS[mod.icon] ?? GlyphBook;
+            const moduleTitle =
+              pickLocalized<string>(mod, "title", locale) ?? mod.title_en;
+            const moduleDescription =
+              pickLocalized<string>(mod, "description", locale) ?? mod.description_en;
             return (
               <Link
                 key={mod.id}
@@ -132,23 +144,27 @@ export default function HomePage() {
                   </div>
                   <div className="min-w-0">
                     <h3 className="font-heading font-semibold text-ink dark:text-gray-100 group-hover:text-primary-500 dark:group-hover:text-primary-300 transition-colors">
-                      {mod.title_en}
+                      {moduleTitle}
                     </h3>
-                    <p
-                      dir="rtl"
-                      lang="ar"
-                      className="font-arabic text-sm text-muted dark:text-gray-400 mt-0.5"
-                    >
-                      {mod.title_ar}
-                    </p>
+                    {locale !== "ar" && (
+                      <p
+                        dir="rtl"
+                        lang="ar"
+                        className="font-arabic text-sm text-muted dark:text-gray-400 mt-0.5"
+                      >
+                        {mod.title_ar}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-muted dark:text-gray-400 line-clamp-2">
-                  {mod.description_en}
+                  {moduleDescription}
                 </p>
                 <div className="mt-4 flex items-center gap-1.5 text-xs text-muted dark:text-gray-500">
                   <Clock size={14} />
-                  <span>{mod.estimatedMinutes} min</span>
+                  <span>
+                    {tHome("estimatedMinutes", { minutes: mod.estimatedMinutes })}
+                  </span>
                 </div>
               </Link>
             );
@@ -160,21 +176,20 @@ export default function HomePage() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <div className="bg-gradient-to-br from-primary-600 to-primary-500 rounded-3xl p-10 sm:p-14 text-white">
           <h2 className="text-h1 font-heading font-bold">
-            Ready to start?
+            {tHome("ctaBeginTitle")}
           </h2>
           <p className="mt-3 text-primary-100 max-w-md mx-auto">
-            Start with the basics and build from there.
+            {tHome("ctaBeginBody")}
           </p>
           <Link
             href="/learn"
             className="mt-8 inline-flex items-center gap-2 bg-white text-primary-600 px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-50 transition-colors"
           >
-            Start Learning
-            <ArrowRight size={20} />
+            {tHome("ctaBeginButton")}
+            <ArrowRight size={20} className="rtl:rotate-180" />
           </Link>
         </div>
       </section>
-
     </>
   );
 }
