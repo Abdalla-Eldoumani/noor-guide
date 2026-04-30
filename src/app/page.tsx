@@ -55,7 +55,7 @@ export default function HomePage() {
           <rect width="100%" height="100%" fill="url(#hero-girih)" />
         </svg>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-ink dark:text-gray-100 leading-tight">
+          <h1 className="text-display font-heading font-bold text-ink dark:text-gray-100">
             Learn Islam,{" "}
             <span className="text-primary-500 dark:text-primary-300">Step by Step</span>
           </h1>
@@ -124,7 +124,7 @@ export default function HomePage() {
 
       {/* Learning Modules */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-3xl font-heading font-bold text-ink dark:text-gray-100 text-center">
+        <h2 className="text-h1 font-heading font-bold text-ink dark:text-gray-100 text-center">
           Learning Path
         </h2>
         <p className="mt-3 text-muted dark:text-gray-400 text-center max-w-xl mx-auto">
@@ -173,7 +173,7 @@ export default function HomePage() {
       {/* Bottom CTA */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         <div className="bg-gradient-to-br from-primary-600 to-primary-500 rounded-3xl p-10 sm:p-14 text-white">
-          <h2 className="text-2xl sm:text-3xl font-heading font-bold">
+          <h2 className="text-h1 font-heading font-bold">
             Ready to start?
           </h2>
           <p className="mt-3 text-primary-100 max-w-md mx-auto">
