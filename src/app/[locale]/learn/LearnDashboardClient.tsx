@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { useProgress } from "@/hooks/useProgress";
 import { LessonCard } from "@/components/learn/LessonCard";
@@ -8,13 +9,17 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Button } from "@/components/ui/Button";
 import { BookOpen, ArrowRight, BookA } from "lucide-react";
 import type { LearningModule } from "@/types/content";
+import { pickLocalized } from "@/lib/content-i18n";
 
 interface LearnDashboardClientProps {
   modules: LearningModule[];
 }
 
 export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
-  const { progress, isComplete } = useProgress();
+  const { progress } = useProgress();
+  const locale = useLocale();
+  const tLearn = useTranslations("learn");
+  const tNav = useTranslations("nav");
 
   const totalLessons = modules.reduce((sum, m) => sum + m.lessons.length, 0);
   const completedTotal = progress.completedLessons.length;
@@ -28,33 +33,37 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
     m.lessons.some((l) => !progress.completedLessons.includes(l))
   );
 
+  const currentTitle = currentModule
+    ? (pickLocalized<string>(currentModule, "title", locale) ?? currentModule.title_en)
+    : "";
+
   return (
     <div className="max-w-3xl mx-auto">
       <Breadcrumb
-        items={[{ label: "Home", href: "/" }, { label: "Learn" }]}
+        items={[{ label: tNav("home"), href: "/" }, { label: tNav("learn") }]}
       />
 
       <div className="mt-6 mb-8">
         <div className="flex items-center gap-3 mb-2">
           <BookOpen className="w-8 h-8 text-primary-500" />
           <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">
-            Learning Path
+            {tLearn("dashboardTitle")}
           </h1>
         </div>
-        <p className="text-muted">
-          Follow this guided path to learn the essentials of Islam at your own
-          pace. Each module builds on the one before it.
-        </p>
+        <p className="text-muted">{tLearn("dashboardIntro")}</p>
       </div>
 
       {/* Overall progress */}
       <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 mb-8">
         <div className="flex items-center justify-between mb-3">
           <span className="font-heading font-semibold text-ink">
-            Overall Progress
+            {tLearn("overallProgress")}
           </span>
           <span className="text-sm text-muted">
-            {completedTotal} of {totalLessons} lessons
+            {tLearn("lessonsCompleted", {
+              completed: completedTotal,
+              total: totalLessons,
+            })}
           </span>
         </div>
         <ProgressBar value={overallPercent} />
@@ -62,23 +71,25 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
 
       {/* Continue where you left off */}
       {currentModule && completedTotal > 0 && (
-        <div className="bg-primary-50 rounded-xl p-5 mb-8">
-          <p className="text-sm font-medium text-primary-600 mb-2">
-            Continue where you left off
+        <div className="bg-primary-50 dark:bg-primary-500/10 rounded-xl p-5 mb-8">
+          <p className="text-sm font-medium text-primary-600 dark:text-primary-300 mb-2">
+            {tLearn("continueTitle")}
           </p>
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-heading font-semibold text-ink">
-                {currentModule.title_en}
+              <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
+                {currentTitle}
               </h3>
-              <p className="font-arabic text-sm text-muted">
-                {currentModule.title_ar}
-              </p>
+              {locale !== "ar" && (
+                <p className="font-arabic text-sm text-muted">
+                  {currentModule.title_ar}
+                </p>
+              )}
             </div>
             <Button variant="primary" size="sm" href={`/learn/${currentModule.id}`}>
               <span className="flex items-center gap-1.5">
-                Continue
-                <ArrowRight className="w-4 h-4" />
+                {tLearn("continueButton")}
+                <ArrowRight className="w-4 h-4 rtl:rotate-180" />
               </span>
             </Button>
           </div>
@@ -113,13 +124,15 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-                Islamic Glossary
+                {tLearn("glossaryTitle")}
               </h3>
-              <p className="font-arabic text-sm text-muted dark:text-gray-400 mb-2" dir="rtl">
-                مصطلحات إسلامية
-              </p>
+              {locale !== "ar" && (
+                <p className="font-arabic text-sm text-muted dark:text-gray-400 mb-2" dir="rtl">
+                  مصطلحات إسلامية
+                </p>
+              )}
               <p className="text-sm text-muted dark:text-gray-400">
-                Essential Islamic terms and common Arabic phrases you&apos;ll come across as you learn.
+                {tLearn("glossaryBody")}
               </p>
             </div>
           </div>
