@@ -35,21 +35,21 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-surface transition-shadow ${
-        scrolled ? "shadow-md" : ""
+      className={`sticky top-0 z-40 bg-surface dark:bg-gray-900 dark:border-b dark:border-gray-800 transition-shadow ${
+        scrolled ? "shadow-md dark:shadow-none" : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-xl font-heading font-bold text-primary-600">
+            <span className="text-xl font-heading font-bold text-primary-600 dark:text-primary-300">
               Noor Guide
             </span>
             <span
               dir="rtl"
               lang="ar"
-              className="font-arabic text-arabic-sm text-primary-500 opacity-80 group-hover:opacity-100 transition-opacity"
+              className="font-arabic text-arabic-sm text-primary-500 dark:text-primary-400 opacity-80 group-hover:opacity-100 transition-opacity"
             >
               نور
             </span>
@@ -63,8 +63,8 @@ export default function Header() {
                 href={link.href}
                 className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-primary-50 text-primary-600"
-                    : "text-muted hover:text-ink hover:bg-gray-50"
+                    ? "bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300"
+                    : "text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {link.label}
@@ -76,7 +76,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 transition-colors"
+            className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -86,15 +86,15 @@ export default function Header() {
 
         {/* Mobile nav dropdown */}
         {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-100 pt-2" aria-label="Mobile navigation">
+          <nav className="md:hidden pb-4 border-t border-gray-100 dark:border-gray-800 pt-2" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "bg-primary-50 text-primary-600"
-                    : "text-muted hover:text-ink hover:bg-gray-50"
+                    ? "bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300"
+                    : "text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {link.label}
