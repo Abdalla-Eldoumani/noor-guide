@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { HadithBlock } from "@/components/learn/HadithBlock";
 import { StepByStep } from "@/components/learn/StepByStep";
@@ -8,7 +9,8 @@ import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
-import type { SalahData, SalahStep } from "@/types/content";
+import type { SalahData, SalahStep, SalahSection, Recitation } from "@/types/content";
+import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface SalahClientProps {
   data: SalahData;
@@ -16,39 +18,77 @@ interface SalahClientProps {
   lessonIds: string[];
 }
 
+function pickRecitationTranslation(rec: Recitation, locale: string) {
+  return pickLocalized<string>(rec, "translation", locale) ?? rec.translation;
+}
+
 export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
-  const transformedSteps = steps.map((step) => ({
-    id: step.id,
-    title: step.title_en,
-    instruction: step.instruction_en,
-    arabicContent: step.recitation
-      ? {
-          arabic: step.recitation.arabic,
-          transliteration: step.recitation.transliteration,
-          translation: step.recitation.translation,
-        }
-      : undefined,
-    notes: [
-      step.notes,
-      step.repetitions ? `Say this ${step.repetitions} times.` : null,
-      step.after_fatiha || null,
-    ]
-      .filter(Boolean)
-      .join(" ") || undefined,
-    source: step.source
-      ? {
-          type: step.source.type as "quran" | "hadith" | "scholarly_consensus",
-          reference: step.source.reference,
-        }
-      : undefined,
-  }));
+  const t = useLocalizedContent();
+  const locale = useLocale();
+  const tSalah = useTranslations("salah");
+
+  const lessonTitle = t<string>(data, "title") ?? data.title_en;
+  const introContent =
+    t<string>(data.introduction, "content") ?? data.introduction.content_en;
+  const introHadithText =
+    t<string>(data.introduction.source, "text") ?? data.introduction.source.text_en!;
+  const prerequisites =
+    t<string[]>(data, "prerequisites") ?? data.prerequisites;
+
+  const renderSectionTitle = (section: SalahSection) =>
+    pickLocalized<string>(section, "title", locale) ?? section.title_en;
+  const renderSectionWhen = (section: SalahSection) =>
+    pickLocalized<string>(section, "when", locale) ?? section.when;
+  const renderSectionInstruction = (section: SalahSection) =>
+    pickLocalized<string>(section, "instruction", locale) ?? section.instruction_en;
+  const renderSectionFingerNote = (section: SalahSection) =>
+    pickLocalized<string>(section, "finger_note", locale) ?? section.finger_note;
+
+  const transformedSteps = steps.map((step) => {
+    const stepInstruction =
+      pickLocalized<string>(step, "instruction", locale) ?? step.instruction_en;
+    const stepNotes = pickLocalized<string>(step, "notes", locale) ?? step.notes;
+    const stepAfterFatiha =
+      pickLocalized<string>(step, "after_fatiha", locale) ?? step.after_fatiha;
+    const stepRecTranslation = step.recitation
+      ? pickRecitationTranslation(step.recitation, locale)
+      : undefined;
+
+    return {
+      id: step.id,
+      title: pickLocalized<string>(step, "title", locale) ?? step.title_en,
+      instruction: stepInstruction,
+      arabicContent:
+        step.recitation && stepRecTranslation
+          ? {
+              arabic: step.recitation.arabic,
+              transliteration: step.recitation.transliteration,
+              translation: stepRecTranslation,
+            }
+          : undefined,
+      notes:
+        [
+          stepNotes,
+          step.repetitions ? tSalah("sayThisTimes", { count: step.repetitions }) : null,
+          stepAfterFatiha || null,
+        ]
+          .filter(Boolean)
+          .join(" ") || undefined,
+      source: step.source
+        ? {
+            type: step.source.type as "quran" | "hadith" | "scholarly_consensus",
+            reference: step.source.reference,
+          }
+        : undefined,
+    };
+  });
 
   return (
     <LessonContent
       moduleId="salah"
       lessonIds={lessonIds}
-      title={data.title_en}
-      titleAr={data.title_ar}
+      title={lessonTitle}
+      titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/wudu"
       prevLabel="Wudu"
       nextHref="/learn/surahs"
@@ -56,11 +96,9 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
     >
       {/* Introduction */}
       <section>
-        <p className="text-ink leading-relaxed mb-4">
-          {data.introduction.content_en}
-        </p>
+        <p className="text-ink leading-relaxed mb-4">{introContent}</p>
         <HadithBlock
-          text={data.introduction.source.text_en!}
+          text={introHadithText}
           reference={data.introduction.source.reference}
           grade={data.introduction.source.grade}
         />
@@ -69,10 +107,10 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       {/* Prerequisites */}
       <section>
         <h2 className="font-heading text-xl font-semibold text-ink mb-3">
-          Before You Pray
+          {tSalah("prereqHeading")}
         </h2>
         <ul className="space-y-2">
-          {data.prerequisites.map((prereq, i) => (
+          {prerequisites.map((prereq, i) => (
             <li key={i} className="flex items-start gap-2 text-ink">
               <span className="text-primary-500 mt-1">&#x2022;</span>
               <span>{prereq}</span>
@@ -84,54 +122,58 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       {/* Five Daily Prayers Table */}
       <section>
         <h2 className="font-heading text-xl font-semibold text-ink mb-4">
-          The Five Daily Prayers
+          {tSalah("fivePrayersHeading")}
         </h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
             <thead>
               <tr className="bg-primary-600 text-white">
-                <th className="px-4 py-3 text-left font-heading font-semibold">
-                  Prayer
+                <th className="px-4 py-3 text-start font-heading font-semibold">
+                  {tSalah("tableHeaderPrayer")}
                 </th>
-                <th className="px-4 py-3 text-left font-heading font-semibold">
-                  Time
-                </th>
-                <th className="px-4 py-3 text-center font-heading font-semibold">
-                  Fardh
+                <th className="px-4 py-3 text-start font-heading font-semibold">
+                  {tSalah("tableHeaderTime")}
                 </th>
                 <th className="px-4 py-3 text-center font-heading font-semibold">
-                  Sunnah Before
+                  {tSalah("tableHeaderFardh")}
                 </th>
                 <th className="px-4 py-3 text-center font-heading font-semibold">
-                  Sunnah After
+                  {tSalah("tableHeaderSunnahBefore")}
+                </th>
+                <th className="px-4 py-3 text-center font-heading font-semibold">
+                  {tSalah("tableHeaderSunnahAfter")}
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {data.five_prayers.map((prayer) => (
-                <tr key={prayer.name_en} className="hover:bg-gray-50">
-                  <td className="px-4 py-3">
-                    <div>
-                      <span className="font-semibold text-ink">
-                        {prayer.name_en}
-                      </span>
-                      <span className="font-arabic text-sm text-muted ml-2">
-                        {prayer.name_ar}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 text-muted">{prayer.time}</td>
-                  <td className="px-4 py-3 text-center font-semibold text-ink">
-                    {prayer.fardh_rakaat}
-                  </td>
-                  <td className="px-4 py-3 text-center text-muted">
-                    {prayer.sunnah_before || "-"}
-                  </td>
-                  <td className="px-4 py-3 text-center text-muted">
-                    {prayer.sunnah_after || "-"}
-                  </td>
-                </tr>
-              ))}
+              {data.five_prayers.map((prayer) => {
+                const prayerTimeText =
+                  pickLocalized<string>(prayer, "time", locale) ?? prayer.time;
+                return (
+                  <tr key={prayer.name_en} className="hover:bg-gray-50">
+                    <td className="px-4 py-3">
+                      <div>
+                        <span className="font-semibold text-ink">
+                          {prayer.name_en}
+                        </span>
+                        <span className="font-arabic text-sm text-muted ms-2">
+                          {prayer.name_ar}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 text-muted">{prayerTimeText}</td>
+                    <td className="px-4 py-3 text-center font-semibold text-ink">
+                      {prayer.fardh_rakaat}
+                    </td>
+                    <td className="px-4 py-3 text-center text-muted">
+                      {prayer.sunnah_before || "-"}
+                    </td>
+                    <td className="px-4 py-3 text-center text-muted">
+                      {prayer.sunnah_after || "-"}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
@@ -140,20 +182,17 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       {/* Steps of One Rakah with Position Indicators */}
       <section>
         <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-          Steps of One Rakah (Unit of Prayer)
+          {tSalah("rakahHeading")}
         </h2>
-        <p className="text-muted text-sm mb-4">
-          Each unit of prayer (rakah) follows these steps. The number of rakaat
-          varies by prayer (see the table above).
-        </p>
+        <p className="text-muted text-sm mb-4">{tSalah("rakahSubheading")}</p>
 
         {/* Position legend */}
         <div className="flex flex-wrap gap-2 mb-4">
           {[
-            { position: "standing", label: "Standing" },
-            { position: "bowing", label: "Bowing" },
-            { position: "prostrating", label: "Prostrating" },
-            { position: "sitting", label: "Sitting" },
+            { position: "standing", label: tSalah("positionStanding") },
+            { position: "bowing", label: tSalah("positionBowing") },
+            { position: "prostrating", label: tSalah("positionProstrating") },
+            { position: "sitting", label: tSalah("positionSitting") },
           ].map((pos) => (
             <PrayerPosition
               key={pos.position}
@@ -168,66 +207,82 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
         {/* Additional recitations for step 8 (I'tidal) */}
         {steps
           .filter((s) => s.recitation_rising || s.recitation_standing)
-          .map((step) => (
-            <RecitationBlockquote key={`extra-${step.id}`}>
-              <h4 className="font-heading font-semibold text-ink text-sm">
-                {step.title_en}: Additional Recitations
-              </h4>
-              {step.recitation_rising && (
-                <div>
-                  <p className="text-xs text-muted mb-1">While rising:</p>
-                  <ArabicText
-                    arabic={step.recitation_rising.arabic}
-                    transliteration={step.recitation_rising.transliteration}
-                    translation={step.recitation_rising.translation}
+          .map((step) => {
+            const stepTitle =
+              pickLocalized<string>(step, "title", locale) ?? step.title_en;
+            const risingTranslation = step.recitation_rising
+              ? pickRecitationTranslation(step.recitation_rising, locale)
+              : undefined;
+            const standingTranslation = step.recitation_standing
+              ? pickRecitationTranslation(step.recitation_standing, locale)
+              : undefined;
+            return (
+              <RecitationBlockquote key={`extra-${step.id}`}>
+                <h4 className="font-heading font-semibold text-ink text-sm">
+                  {stepTitle}: {tSalah("additionalRecitations")}
+                </h4>
+                {step.recitation_rising && risingTranslation && (
+                  <div>
+                    <p className="text-xs text-muted mb-1">
+                      {tSalah("whileRising")}:
+                    </p>
+                    <ArabicText
+                      arabic={step.recitation_rising.arabic}
+                      transliteration={step.recitation_rising.transliteration}
+                      translation={risingTranslation}
+                    />
+                  </div>
+                )}
+                {step.recitation_standing && standingTranslation && (
+                  <div>
+                    <p className="text-xs text-muted mb-1">
+                      {tSalah("onceStanding")}:
+                    </p>
+                    <ArabicText
+                      arabic={step.recitation_standing.arabic}
+                      transliteration={step.recitation_standing.transliteration}
+                      translation={standingTranslation}
+                    />
+                  </div>
+                )}
+                {step.source && (
+                  <SourceReference
+                    type={step.source.type}
+                    reference={step.source.reference}
                   />
-                </div>
-              )}
-              {step.recitation_standing && (
-                <div>
-                  <p className="text-xs text-muted mb-1">Once standing:</p>
-                  <ArabicText
-                    arabic={step.recitation_standing.arabic}
-                    transliteration={step.recitation_standing.transliteration}
-                    translation={step.recitation_standing.translation}
-                  />
-                </div>
-              )}
-              {step.source && (
-                <SourceReference
-                  type={step.source.type}
-                  reference={step.source.reference}
-                />
-              )}
-            </RecitationBlockquote>
-          ))}
+                )}
+              </RecitationBlockquote>
+            );
+          })}
       </section>
 
       {/* Tashahhud */}
       {data.tashahhud.verified && (
         <section>
           <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-            {data.tashahhud.title_en}
+            {renderSectionTitle(data.tashahhud)}
           </h2>
-          <p className="font-arabic text-sm text-muted mb-3">
-            {data.tashahhud.title_ar}
-          </p>
-          {data.tashahhud.when && (
+          {locale !== "ar" && (
+            <p className="font-arabic text-sm text-muted mb-3">
+              {data.tashahhud.title_ar}
+            </p>
+          )}
+          {renderSectionWhen(data.tashahhud) && (
             <p className="text-sm text-muted italic mb-4">
-              When: {data.tashahhud.when}
+              {tSalah("whenLabel")}: {renderSectionWhen(data.tashahhud)}
             </p>
           )}
           <RecitationBlockquote>
             <ArabicText
               arabic={data.tashahhud.recitation.arabic}
               transliteration={data.tashahhud.recitation.transliteration}
-              translation={data.tashahhud.recitation.translation}
+              translation={pickRecitationTranslation(data.tashahhud.recitation, locale)}
               size="lg"
             />
-            {data.tashahhud.finger_note && (
+            {renderSectionFingerNote(data.tashahhud) && (
               <div className="flex gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 rounded-lg p-3 text-sm">
                 <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <p>{data.tashahhud.finger_note}</p>
+                <p>{renderSectionFingerNote(data.tashahhud)}</p>
               </div>
             )}
             <SourceReference
@@ -242,23 +297,26 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       {data.salawat_ibrahimiyyah.verified && (
         <section>
           <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-            {data.salawat_ibrahimiyyah.title_en}
+            {renderSectionTitle(data.salawat_ibrahimiyyah)}
           </h2>
-          <p className="font-arabic text-sm text-muted mb-3">
-            {data.salawat_ibrahimiyyah.title_ar}
-          </p>
-          {data.salawat_ibrahimiyyah.when && (
+          {locale !== "ar" && (
+            <p className="font-arabic text-sm text-muted mb-3">
+              {data.salawat_ibrahimiyyah.title_ar}
+            </p>
+          )}
+          {renderSectionWhen(data.salawat_ibrahimiyyah) && (
             <p className="text-sm text-muted italic mb-4">
-              When: {data.salawat_ibrahimiyyah.when}
+              {tSalah("whenLabel")}: {renderSectionWhen(data.salawat_ibrahimiyyah)}
             </p>
           )}
           <RecitationBlockquote>
             <ArabicText
               arabic={data.salawat_ibrahimiyyah.recitation.arabic}
-              transliteration={
-                data.salawat_ibrahimiyyah.recitation.transliteration
-              }
-              translation={data.salawat_ibrahimiyyah.recitation.translation}
+              transliteration={data.salawat_ibrahimiyyah.recitation.transliteration}
+              translation={pickRecitationTranslation(
+                data.salawat_ibrahimiyyah.recitation,
+                locale,
+              )}
               size="lg"
             />
             <SourceReference
@@ -273,21 +331,23 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       {data.tasleem.verified && (
         <section>
           <h2 className="font-heading text-xl font-semibold text-ink mb-2">
-            {data.tasleem.title_en}
+            {renderSectionTitle(data.tasleem)}
           </h2>
-          <p className="font-arabic text-sm text-muted mb-3">
-            {data.tasleem.title_ar}
-          </p>
-          {data.tasleem.instruction_en && (
+          {locale !== "ar" && (
+            <p className="font-arabic text-sm text-muted mb-3">
+              {data.tasleem.title_ar}
+            </p>
+          )}
+          {renderSectionInstruction(data.tasleem) && (
             <p className="text-ink leading-relaxed mb-4">
-              {data.tasleem.instruction_en}
+              {renderSectionInstruction(data.tasleem)}
             </p>
           )}
           <RecitationBlockquote>
             <ArabicText
               arabic={data.tasleem.recitation.arabic}
               transliteration={data.tasleem.recitation.transliteration}
-              translation={data.tasleem.recitation.translation}
+              translation={pickRecitationTranslation(data.tasleem.recitation, locale)}
               size="lg"
             />
             <SourceReference
