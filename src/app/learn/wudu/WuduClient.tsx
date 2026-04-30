@@ -5,6 +5,7 @@ import { HadithBlock } from "@/components/learn/HadithBlock";
 import { StepByStep } from "@/components/learn/StepByStep";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
+import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { AlertCircle, Info } from "lucide-react";
 import type { WuduData, WuduStep, WuduBreaker } from "@/types/content";
 
@@ -93,7 +94,7 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
           <h2 className="font-heading text-xl font-semibold text-ink mb-3">
             Dua After Completing Wudu
           </h2>
-          <div className="bg-primary-50/50 rounded-xl p-5 space-y-3">
+          <RecitationBlockquote>
             <ArabicText
               arabic={data.dua_after_wudu.arabic}
               transliteration={data.dua_after_wudu.transliteration}
@@ -104,7 +105,7 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
               type={data.dua_after_wudu.source.type}
               reference={data.dua_after_wudu.source.reference}
             />
-          </div>
+          </RecitationBlockquote>
         </section>
       )}
 
