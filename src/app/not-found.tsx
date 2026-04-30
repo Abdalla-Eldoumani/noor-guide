@@ -1,17 +1,15 @@
 import Link from "next/link";
 import { Home, BookOpen, ArrowRight } from "lucide-react";
+import { StarOctagram } from "@/components/ui/StarOctagram";
 
 export default function NotFound() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
-        {/* Geometric pattern */}
-        <div className="mx-auto mb-8 w-32 h-32 relative">
-          <div className="absolute inset-0 rounded-full border-4 border-primary-100" />
-          <div className="absolute inset-3 rounded-full border-4 border-primary-200" />
-          <div className="absolute inset-6 rounded-full border-4 border-primary-300" />
+        <div className="mx-auto mb-8 w-32 h-32 relative text-primary-500 dark:text-primary-300">
+          <StarOctagram size={128} className="absolute inset-0" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-heading text-4xl font-bold text-primary-500">
+            <span className="font-heading text-3xl font-bold text-primary-600 dark:text-primary-200">
               404
             </span>
           </div>
@@ -30,8 +28,7 @@ export default function NotFound() {
         </p>
 
         <p className="mt-4 text-muted dark:text-gray-400 leading-relaxed">
-          The page you are looking for does not exist or may have been moved.
-          Let us guide you back to your journey.
+          This page doesn&apos;t exist. Head back home or continue learning.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
