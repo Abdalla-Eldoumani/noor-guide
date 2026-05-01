@@ -3,6 +3,9 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  turbopack: {
+    root: __dirname,
+  },
 };
 
 const createNextIntlPlugin = require("next-intl/plugin");
