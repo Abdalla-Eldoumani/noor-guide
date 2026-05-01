@@ -1,9 +1,10 @@
 {
   "module_id": "wudu",
-  "title_en": "Wudu — How to Perform Ablution",
+  "title_en": "Wudu: How to Perform Ablution",
   "title_ar": "الوضوء",
   "introduction": {
-    "content_en": "Before praying, a Muslim must be in a state of ritual purity. Wudu (ablution) is the washing of specific body parts as taught by the Prophet Muhammad ﷺ. It is a prerequisite for prayer — your salah is not valid without it.",
+    "content_en": "Before praying, a Muslim must be in a state of ritual purity. Wudu (ablution) is the washing of specific body parts as taught by the Prophet Muhammad ﷺ. It is a prerequisite for prayer: your salah is not valid without it.",
+    "content_ar": "قبل الصلاة، يجب على المسلم أن يكون على طهارة. الوضوء غسل أعضاء مخصوصة كما علّمنا النبي محمد ﷺ، وهو شرط للصلاة: لا تصح صلاتك بدونه.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Muslim 225",
@@ -16,6 +17,11 @@
     "The intention (niyyah) to perform wudu must be in the heart",
     "Remove anything that prevents water from reaching the skin (nail polish, heavy makeup, etc.)"
   ],
+  "prerequisites_ar": [
+    "أن يكون الماء طاهرًا نقيًا",
+    "أن تكون النية في القلب لأداء الوضوء",
+    "إزالة كل ما يمنع وصول الماء إلى البشرة، كطلاء الأظافر والمكياج الكثيف ونحوهما"
+  ],
   "steps": [
     {
       "id": "wudu-step-1",
@@ -23,7 +29,9 @@
       "title_en": "Intention (Niyyah)",
       "title_ar": "النية",
       "instruction_en": "Make the intention in your heart to perform wudu for the sake of Allah. The intention is in the heart, not spoken aloud.",
+      "instruction_ar": "انوِ في قلبك أداء الوضوء لله تعالى. النية محلها القلب، ولا تُتلفظ بها بلسان.",
       "notes": "The Prophet ﷺ never instructed verbal intention for wudu. It is purely in the heart.",
+      "notes_ar": "لم يأمر النبي ﷺ بالتلفظ بالنية في الوضوء، فالنية كلها في القلب.",
       "source": { "type": "hadith", "reference": "Sahih Bukhari 1", "grade": "sahih" },
       "verified": true
     },
@@ -33,6 +41,7 @@
       "title_en": "Say Bismillah",
       "title_ar": "بسم الله",
       "instruction_en": "Say 'Bismillah' (In the name of Allah) before beginning.",
+      "instruction_ar": "قل: بسم الله، قبل البدء بالوضوء.",
       "content": {
         "arabic": "بِسْمِ اللَّهِ",
         "transliteration": "Bismillah",
@@ -46,8 +55,10 @@
       "title_en": "Wash the Hands",
       "title_ar": "غسل اليدين",
       "instruction_en": "Wash both hands up to the wrists three times, starting with the right hand. Make sure water reaches between the fingers.",
+      "instruction_ar": "اغسل يديك إلى الرسغين ثلاث مرات، تبدأ باليمنى. واحرص على وصول الماء بين الأصابع.",
       "repetitions": 3,
       "notes": "Always start with the right side. The Prophet ﷺ loved starting with the right in all things.",
+      "notes_ar": "ابدأ دائمًا باليمين. كان النبي ﷺ يُعجبه التيمن في شأنه كله.",
       "source": { "type": "hadith", "reference": "Sahih Bukhari 168", "grade": "sahih" },
       "verified": true
     },
@@ -57,6 +68,7 @@
       "title_en": "Rinse the Mouth",
       "title_ar": "المضمضة",
       "instruction_en": "Take water into your mouth with your right hand, swish it around thoroughly, and spit it out. Do this three times.",
+      "instruction_ar": "خذ الماء في فمك بيدك اليمنى، ومضمض به فاك جيدًا، ثم أخرجه. كرّر ذلك ثلاث مرات.",
       "repetitions": 3,
       "verified": true
     },
@@ -66,6 +78,7 @@
       "title_en": "Rinse the Nose",
       "title_ar": "الاستنشاق والاستنثار",
       "instruction_en": "Sniff water into your nose with your right hand, then blow it out with your left hand. Do this three times.",
+      "instruction_ar": "استنشق الماء بأنفك بيدك اليمنى، ثم استنثره بيدك اليسرى. كرّر ذلك ثلاث مرات.",
       "repetitions": 3,
       "verified": true
     },
@@ -75,8 +88,10 @@
       "title_en": "Wash the Face",
       "title_ar": "غسل الوجه",
       "instruction_en": "Wash your entire face three times. The face extends from the hairline to the chin, and from ear to ear. Make sure water covers every part.",
+      "instruction_ar": "اغسل وجهك كاملًا ثلاث مرات. حدّ الوجه من منابت الشعر إلى الذقن، ومن الأذن إلى الأذن. واحرص على أن يعمّ الماء جميع أجزائه.",
       "repetitions": 3,
       "notes": "Men with beards should run wet fingers through the beard.",
+      "notes_ar": "من كان له لحية فليُخلّلها بأصابعه المبتلة.",
       "source": { "type": "quran", "reference": "Quran 5:6" },
       "verified": true
     },
@@ -86,8 +101,10 @@
       "title_en": "Wash the Arms",
       "title_ar": "غسل اليدين إلى المرفقين",
       "instruction_en": "Wash the right arm from fingertips to the elbow (including the elbow) three times. Then wash the left arm the same way three times.",
+      "instruction_ar": "اغسل يدك اليمنى من رؤوس الأصابع إلى المرفق، ويُدخَل المرفق، ثلاث مرات. ثم اغسل اليسرى مثل ذلك ثلاث مرات.",
       "repetitions": 3,
       "notes": "Always start with the right arm before the left.",
+      "notes_ar": "ابدأ دائمًا باليد اليمنى قبل اليسرى.",
       "source": { "type": "quran", "reference": "Quran 5:6" },
       "verified": true
     },
@@ -97,6 +114,7 @@
       "title_en": "Wipe the Head",
       "title_ar": "مسح الرأس",
       "instruction_en": "With wet hands, wipe over your head from the front (hairline) to the back, and then bring your hands back to the front. This is done once.",
+      "instruction_ar": "بلّ يديك ثم امسح بهما رأسك من مقدّمته إلى مؤخرته، ثم ردّهما إلى المقدمة. ويُفعل ذلك مرة واحدة.",
       "repetitions": 1,
       "source": { "type": "quran", "reference": "Quran 5:6" },
       "verified": true
@@ -107,6 +125,7 @@
       "title_en": "Wipe the Ears",
       "title_ar": "مسح الأذنين",
       "instruction_en": "With wet fingers, wipe the inside of your ears with your index fingers and the outside with your thumbs. This is done once.",
+      "instruction_ar": "بأصابع مبلّلة، امسح داخل أذنيك بالسبابتين وظاهرهما بالإبهامين. ويُفعل ذلك مرة واحدة.",
       "repetitions": 1,
       "verified": true
     },
@@ -116,8 +135,10 @@
       "title_en": "Wash the Feet",
       "title_ar": "غسل القدمين",
       "instruction_en": "Wash the right foot up to and including the ankle three times, making sure water goes between the toes. Then wash the left foot the same way.",
+      "instruction_ar": "اغسل قدمك اليمنى إلى الكعبين، ويُدخَل الكعبان، ثلاث مرات، واحرص على وصول الماء بين أصابع القدم. ثم اغسل اليسرى مثل ذلك.",
       "repetitions": 3,
       "notes": "Use your little finger to wash between the toes.",
+      "notes_ar": "استعن بإصبعك الصغرى لتخليل ما بين أصابع القدم.",
       "source": { "type": "quran", "reference": "Quran 5:6" },
       "verified": true
     }
@@ -130,9 +151,9 @@
     "verified": true
   },
   "what_breaks_wudu": [
-    { "id": "breaker-1", "description": "Anything that exits from the private parts (urine, stool, gas)", "source": "Sahih Bukhari 135", "verified": true },
-    { "id": "breaker-2", "description": "Deep sleep (light dozing while seated does not break wudu)", "source": "Sunan Abu Dawud 203", "verified": true },
-    { "id": "breaker-3", "description": "Loss of consciousness", "verified": true },
-    { "id": "breaker-4", "description": "Bleeding from a wound (difference of opinion among scholars — some say it breaks wudu, some say it doesn't)", "notes": "This is a point of scholarly difference. To be safe, renew your wudu.", "verified": true }
+    { "id": "breaker-1", "description": "Anything that exits from the private parts (urine, stool, gas)", "description_ar": "كل ما يخرج من السبيلين كالبول والغائط والريح", "source": "Sahih Bukhari 135", "verified": true },
+    { "id": "breaker-2", "description": "Deep sleep (light dozing while seated does not break wudu)", "description_ar": "النوم العميق، أما النعاس الخفيف وأنت جالس فلا ينقض الوضوء", "source": "Sunan Abu Dawud 203", "verified": true },
+    { "id": "breaker-3", "description": "Loss of consciousness", "description_ar": "زوال العقل بإغماء أو نحوه", "verified": true },
+    { "id": "breaker-4", "description": "Bleeding from a wound (difference of opinion among scholars: some say it breaks wudu, some say it doesn't)", "description_ar": "الدم الخارج من جرح، وفيه خلاف بين العلماء: بعضهم يرى أنه ينقض الوضوء وبعضهم لا يرى ذلك.", "notes": "This is a point of scholarly difference. To be safe, renew your wudu.", "notes_ar": "هذه مسألة فيها خلاف بين العلماء. والأحوط أن تعيد الوضوء.", "verified": true }
   ]
 }
