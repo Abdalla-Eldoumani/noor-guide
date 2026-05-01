@@ -1,5 +1,3 @@
-"use client";
-
 import { useLocale } from "next-intl";
 
 // Reads a field from a content object that may have `_en`, `_ar`, etc.
