@@ -1,4 +1,4 @@
-// Content loader — single gateway for all religious content
+// Content loader: single gateway for all religious content
 // Every accessor filters verified === true
 
 import type {

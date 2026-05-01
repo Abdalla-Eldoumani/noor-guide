@@ -143,13 +143,13 @@ export default function MasjidFinderPage() {
           <li className="flex gap-2">
             <span className="mt-1 text-primary-500">&#8226;</span>
             <span>
-              Don&apos;t be shy to visit during prayer times — the community will be happy to help you
+              Don&apos;t be shy to visit during prayer times. The community will be happy to help you
             </span>
           </li>
           <li className="flex gap-2">
             <span className="mt-1 text-primary-500">&#8226;</span>
             <span>
-              Friday (Jumu&apos;ah) prayer is a great time for your first visit — arrive early to meet people
+              Friday (Jumu&apos;ah) prayer is a great time for your first visit. Arrive early to meet people
             </span>
           </li>
         </ul>
