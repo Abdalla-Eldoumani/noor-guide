@@ -3,12 +3,14 @@
   "title_en": "Daily Supplications (Duas)",
   "title_ar": "الأدعية اليومية",
   "introduction": {
-    "content_en": "A dua is a personal prayer or supplication to Allah. Unlike salah which has a fixed structure, dua can be made at any time, in any language. However, the Prophet ﷺ taught us specific duas for different occasions. These are the most authentic ones for daily life."
+    "content_en": "A dua is a personal prayer or supplication to Allah. Unlike salah which has a fixed structure, dua can be made at any time, in any language. However, the Prophet ﷺ taught us specific duas for different occasions. These are the most authentic ones for daily life.",
+    "content_ar": "الدعاء مناجاة بين العبد وربه. وعلى خلاف الصلاة التي لها هيئة مخصوصة، يجوز الدعاء في أي وقت وبأي لغة. ومع ذلك، علّمنا النبي ﷺ أدعية مخصوصة في مناسبات مختلفة. وهذه أصحّ الأدعية المأثورة لحياتك اليومية."
   },
   "categories": [
     {
       "id": "duas-waking",
       "title_en": "When Waking Up",
+      "title_ar": "عند الاستيقاظ من النوم",
       "duas": [
         {
           "id": "dua-wakeup-1",
@@ -23,6 +25,7 @@
     {
       "id": "duas-sleeping",
       "title_en": "Before Sleeping",
+      "title_ar": "عند النوم",
       "duas": [
         {
           "id": "dua-sleep-1",
@@ -37,10 +40,12 @@
     {
       "id": "duas-eating",
       "title_en": "Before and After Eating",
+      "title_ar": "قبل الطعام وبعده",
       "duas": [
         {
           "id": "dua-before-eating",
           "context": "Before eating",
+          "context_ar": "قبل الطعام",
           "arabic": "بِسْمِ اللَّهِ",
           "transliteration": "Bismillah",
           "translation": "In the name of Allah",
@@ -50,6 +55,7 @@
         {
           "id": "dua-after-eating",
           "context": "After eating",
+          "context_ar": "بعد الطعام",
           "arabic": "الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
           "transliteration": "Al-hamdu lillahil-ladhi at'amani hadha wa razaqanihi min ghayri hawlin minni wa la quwwah.",
           "translation": "All praise is due to Allah Who fed me this and provided it for me without any might or power from me.",
@@ -61,6 +67,7 @@
     {
       "id": "duas-leaving-home",
       "title_en": "When Leaving the Home",
+      "title_ar": "عند الخروج من المنزل",
       "duas": [
         {
           "id": "dua-leave-home",
@@ -75,6 +82,7 @@
     {
       "id": "duas-entering-masjid",
       "title_en": "When Entering the Mosque",
+      "title_ar": "عند دخول المسجد",
       "duas": [
         {
           "id": "dua-enter-masjid",
@@ -89,24 +97,29 @@
     {
       "id": "duas-general",
       "title_en": "General Supplications",
+      "title_ar": "أدعية عامة",
       "duas": [
         {
           "id": "dua-forgiveness",
           "context": "Seeking forgiveness",
+          "context_ar": "في الاستغفار",
           "arabic": "أَسْتَغْفِرُ اللَّهَ",
           "transliteration": "Astaghfirullah",
           "translation": "I seek forgiveness from Allah",
           "notes": "Say this frequently throughout the day. The Prophet ﷺ used to seek forgiveness more than 70 times a day.",
+          "notes_ar": "قُلْها كثيرًا على مدار اليوم. كان النبي ﷺ يستغفر الله في اليوم الواحد أكثر من سبعين مرة.",
           "source": { "reference": "Sahih Bukhari 6307", "grade": "sahih" },
           "verified": true
         },
         {
           "id": "dua-distress",
           "context": "When in distress or difficulty",
+          "context_ar": "عند الكرب والشدة",
           "arabic": "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
           "transliteration": "La ilaha illa Anta Subhanaka inni kuntu minaz-zalimin.",
           "translation": "There is no god but You, glory be to You. Indeed, I have been of the wrongdoers.",
           "notes": "This is the dua of Prophet Yunus (Jonah) when he was in the belly of the whale.",
+          "notes_ar": "هذا دعاء النبي يونس عليه السلام حين كان في بطن الحوت.",
           "source": { "reference": "Quran 21:87", "grade": "n/a" },
           "verified": true
         }
