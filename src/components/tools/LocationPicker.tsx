@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { useSettings } from "@/hooks/useSettings";
 
@@ -9,6 +10,8 @@ interface LocationPickerProps {
 }
 
 export function LocationPicker({ onLocationSet }: LocationPickerProps) {
+  const t = useTranslations("location");
+  const tCommon = useTranslations("common");
   const { position, loading, error, requestLocation } = useGeolocation();
   const { setLocation } = useSettings();
   const [manualInput, setManualInput] = useState("");
@@ -58,7 +61,7 @@ export function LocationPicker({ onLocationSet }: LocationPickerProps) {
   return (
     <div className="rounded-2xl border border-gray-200 bg-surface p-6 dark:border-gray-700 dark:bg-gray-800">
       <h3 className="mb-4 font-heading text-lg font-semibold text-ink dark:text-gray-100">
-        Set Your Location
+        {t("setHeading")}
       </h3>
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -73,7 +76,7 @@ export function LocationPicker({ onLocationSet }: LocationPickerProps) {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
-              Detecting...
+              {t("detecting")}
             </>
           ) : (
             <>
@@ -84,26 +87,27 @@ export function LocationPicker({ onLocationSet }: LocationPickerProps) {
                 <line x1="2" y1="12" x2="6" y2="12" />
                 <line x1="18" y1="12" x2="22" y2="12" />
               </svg>
-              Use My Location
+              {t("useMyLocation")}
             </>
           )}
         </button>
 
-        <span className="text-center text-sm text-muted dark:text-gray-400">or</span>
+        <span className="text-center text-sm text-muted dark:text-gray-400">{tCommon("or")}</span>
 
         <form onSubmit={handleManualSubmit} className="flex flex-1 gap-2">
           <input
             type="text"
             value={manualInput}
             onChange={(e) => setManualInput(e.target.value)}
-            placeholder="Enter coordinates (e.g., 40.7128, -74.0060)"
+            placeholder={t("manualPlaceholder")}
+            aria-label={t("manualPlaceholder")}
             className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-ink placeholder:text-gray-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder:text-gray-500"
           />
           <button
             type="submit"
             className="rounded-xl border border-primary-500 px-4 py-3 text-sm font-medium text-primary-500 transition-colors hover:bg-primary-50 dark:hover:bg-primary-500/10"
           >
-            Set
+            {t("set")}
           </button>
         </form>
       </div>
@@ -111,23 +115,23 @@ export function LocationPicker({ onLocationSet }: LocationPickerProps) {
       {error && (
         <div className="mt-4 rounded-xl bg-red-50 p-4 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400">
           {error.code === "PERMISSION_DENIED" && (
-            <p>Location permission was denied. Please enable location access in your browser settings, or enter coordinates manually.</p>
+            <p>{t("errorPermissionDenied")}</p>
           )}
           {error.code === "POSITION_UNAVAILABLE" && (
-            <p>Unable to determine your location. Please try again or enter coordinates manually.</p>
+            <p>{t("errorUnavailable")}</p>
           )}
           {error.code === "TIMEOUT" && (
-            <p>Location request timed out. Please try again or enter coordinates manually.</p>
+            <p>{t("errorTimeout")}</p>
           )}
           {error.code === "NOT_SUPPORTED" && (
-            <p>Geolocation is not supported in your browser. Please enter coordinates manually.</p>
+            <p>{t("errorUnsupported")}</p>
           )}
         </div>
       )}
 
       {showManual && (
         <p className="mt-3 text-sm text-muted dark:text-gray-400">
-          Please enter coordinates as latitude, longitude.
+          {t("manualHelp")}
         </p>
       )}
     </div>
