@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { useSettings } from "@/hooks/useSettings";
 import { usePrayerTimes } from "@/hooks/usePrayerTimes";
 import { PRAYER_METHODS } from "@/config/prayer-methods";
@@ -10,6 +11,10 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 export default function PrayerTimesPage() {
+  const t = useTranslations("prayerTimes");
+  const tCrumb = useTranslations("breadcrumb");
+  const tLocation = useTranslations("location");
+  const locale = useLocale();
   const { settings, setPrayerMethod } = useSettings();
   const [location, setLocation] = useState(settings.location);
   const { timings, nextPrayer, loading, error } = usePrayerTimes(
@@ -26,21 +31,27 @@ export default function PrayerTimesPage() {
     <PageWrapper>
       <Breadcrumb
         items={[
-          { label: "Home", href: "/" },
-          { label: "Tools", href: "/tools" },
-          { label: "Prayer Times" },
+          { label: tCrumb("home"), href: "/" },
+          { label: tCrumb("tools"), href: "/tools" },
+          { label: tCrumb("prayerTimes") },
         ]}
       />
 
       <div className="mb-8">
         <h1 className="font-heading text-3xl font-bold text-ink dark:text-gray-100 sm:text-4xl">
-          Prayer Times
+          {t("title")}
         </h1>
-        <p className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
-          أوقات الصلاة
-        </p>
+        {locale !== "ar" && (
+          <p
+            className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400"
+            dir="rtl"
+            lang="ar"
+          >
+            أوقات الصلاة
+          </p>
+        )}
         <p className="mt-3 text-muted dark:text-gray-400">
-          View the five daily prayer times for your location.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -48,7 +59,7 @@ export default function PrayerTimesPage() {
       {!location ? (
         <div className="mb-8">
           <p className="mb-4 text-ink dark:text-gray-100">
-            To display prayer times, we need to know your location.
+            {t("promptLocation")}
           </p>
           <LocationPicker onLocationSet={handleLocationSet} />
         </div>
@@ -65,7 +76,7 @@ export default function PrayerTimesPage() {
             onClick={() => setLocation(null)}
             className="text-sm text-muted underline hover:text-ink dark:text-gray-400 dark:hover:text-gray-200"
           >
-            Change location
+            {tLocation("change")}
           </button>
         </div>
       )}
@@ -74,7 +85,7 @@ export default function PrayerTimesPage() {
       {location && (
         <div className="mb-8">
           <label htmlFor="prayer-method" className="mb-2 block text-sm font-medium text-ink dark:text-gray-100">
-            Calculation Method
+            {t("calculationMethod")}
           </label>
           <select
             id="prayer-method"
@@ -99,7 +110,7 @@ export default function PrayerTimesPage() {
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            <p className="text-sm text-muted dark:text-gray-400">Loading prayer times...</p>
+            <p className="text-sm text-muted dark:text-gray-400">{t("loading")}</p>
           </div>
         </div>
       )}
@@ -109,7 +120,7 @@ export default function PrayerTimesPage() {
         <div className="rounded-2xl bg-red-50 p-6 text-center dark:bg-red-900/20">
           <p className="text-red-700 dark:text-red-400">{error}</p>
           <p className="mt-2 text-sm text-red-600 dark:text-red-500">
-            Please check your internet connection and try again.
+            {t("errorRetry")}
           </p>
         </div>
       )}
@@ -123,9 +134,7 @@ export default function PrayerTimesPage() {
       {timings && (
         <div className="mt-8 rounded-2xl border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800/50">
           <p className="text-sm text-muted dark:text-gray-400">
-            Prayer times are calculated based on your location and the selected calculation method.
-            Times may vary slightly from your local mosque. It is recommended to follow your local
-            mosque&apos;s prayer schedule when possible.
+            {t("footerNote")}
           </p>
         </div>
       )}
