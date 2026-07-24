@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { useSettings } from "@/hooks/useSettings";
 import { getQiblaDirection } from "@/lib/qibla";
 import { LocationPicker } from "@/components/tools/LocationPicker";
@@ -9,6 +10,10 @@ import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 export default function QiblaPage() {
+  const t = useTranslations("qibla");
+  const tCrumb = useTranslations("breadcrumb");
+  const tLocation = useTranslations("location");
+  const locale = useLocale();
   const { settings } = useSettings();
   const [location, setLocation] = useState(settings.location);
 
@@ -22,21 +27,27 @@ export default function QiblaPage() {
     <PageWrapper>
       <Breadcrumb
         items={[
-          { label: "Home", href: "/" },
-          { label: "Tools", href: "/tools" },
-          { label: "Qibla Direction" },
+          { label: tCrumb("home"), href: "/" },
+          { label: tCrumb("tools"), href: "/tools" },
+          { label: tCrumb("qibla") },
         ]}
       />
 
       <div className="mb-8">
         <h1 className="font-heading text-3xl font-bold text-ink dark:text-gray-100 sm:text-4xl">
-          Qibla Direction
+          {t("title")}
         </h1>
-        <p className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
-          اتجاه القبلة
-        </p>
+        {locale !== "ar" && (
+          <p
+            className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400"
+            dir="rtl"
+            lang="ar"
+          >
+            اتجاه القبلة
+          </p>
+        )}
         <p className="mt-3 text-muted dark:text-gray-400">
-          Find the direction of the Qibla (Kaaba in Makkah) from your location.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -44,7 +55,7 @@ export default function QiblaPage() {
       {!location ? (
         <div className="mb-8">
           <p className="mb-4 text-ink dark:text-gray-100">
-            To find the Qibla direction, we need to know your location.
+            {t("promptLocation")}
           </p>
           <LocationPicker onLocationSet={handleLocationSet} />
         </div>
@@ -61,7 +72,7 @@ export default function QiblaPage() {
             onClick={() => setLocation(null)}
             className="text-sm text-muted underline hover:text-ink dark:text-gray-400 dark:hover:text-gray-200"
           >
-            Change location
+            {tLocation("change")}
           </button>
         </div>
       )}
@@ -73,9 +84,7 @@ export default function QiblaPage() {
 
           <div className="mt-8 max-w-md text-center">
             <p className="text-ink dark:text-gray-100">
-              The Qibla from your location is{" "}
-              <span className="font-bold text-primary-500">{bearing.toFixed(1)}&deg;</span> from
-              North.
+              {t("directionStatement", { bearing: bearing.toFixed(1) })}
             </p>
           </div>
         </div>
@@ -84,12 +93,10 @@ export default function QiblaPage() {
       {/* Info note */}
       <div className="mt-8 rounded-2xl border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800/50">
         <h3 className="mb-2 font-heading text-sm font-semibold text-ink dark:text-gray-100">
-          About the Qibla
+          {t("aboutHeading")}
         </h3>
         <p className="text-sm text-muted dark:text-gray-400">
-          The Qibla is the direction that Muslims face during prayer, pointing towards the
-          Kaaba in the Sacred Mosque (Al-Masjid al-Haram) in Makkah. For best accuracy, use a
-          physical compass to align with the bearing shown above.
+          {t("aboutBody")}
         </p>
       </div>
     </PageWrapper>
