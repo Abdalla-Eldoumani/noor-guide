@@ -224,5 +224,11 @@
     "prayerTimes": "Prayer times",
     "qibla": "Qibla direction",
     "masjidFinder": "Find a mosque"
+  },
+  "compass": {
+    "north": "N",
+    "east": "E",
+    "south": "S",
+    "west": "W"
   }
 }

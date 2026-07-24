@@ -224,5 +224,11 @@
     "prayerTimes": "أوقات الصلاة",
     "qibla": "اتجاه القبلة",
     "masjidFinder": "ابحث عن مسجد"
+  },
+  "compass": {
+    "north": "ش",
+    "east": "ق",
+    "south": "ج",
+    "west": "غ"
   }
 }
