@@ -1,54 +1,43 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Clock, Compass, MapPin } from "lucide-react";
 
-export const metadata = {
-  title: "Tools | Noor Guide",
-  description:
-    "Practical tools for your daily worship: prayer times, Qibla direction, and mosque finder.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-const tools = [
-  {
-    href: "/tools/prayer-times",
-    title: "Prayer Times",
-    titleAr: "أوقات الصلاة",
-    description: "Get accurate prayer times for your location based on trusted calculation methods.",
-    icon: Clock,
-  },
-  {
-    href: "/tools/qibla",
-    title: "Qibla Direction",
-    titleAr: "اتجاه القبلة",
-    description: "Find the direction of the Kaaba in Makkah from anywhere in the world.",
-    icon: Compass,
-  },
-  {
-    href: "/tools/masjid-finder",
-    title: "Find a Mosque",
-    titleAr: "ابحث عن مسجد",
-    description: "Locate mosques near you for congregational prayers and community.",
-    icon: MapPin,
-  },
-];
+export async function generateMetadata({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "tools" });
+  return { title: t("title"), description: t("subtitle") };
+}
 
-export default function ToolsPage() {
+const TOOLS = [
+  { href: "/tools/prayer-times", key: "prayerTimes", icon: Clock },
+  { href: "/tools/qibla", key: "qibla", icon: Compass },
+  { href: "/tools/masjid-finder", key: "masjidFinder", icon: MapPin },
+] as const;
+
+export default async function ToolsPage({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "tools" });
+  const tCrumb = await getTranslations({ locale, namespace: "breadcrumb" });
+
   return (
     <PageWrapper>
-      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Tools" }]} />
+      <Breadcrumb
+        items={[{ label: tCrumb("home"), href: "/" }, { label: tCrumb("tools") }]}
+      />
 
       <div className="mb-8">
         <h1 className="font-heading text-3xl font-bold text-ink dark:text-gray-100 sm:text-4xl">
-          Practical Tools
+          {t("title")}
         </h1>
-        <p className="mt-3 text-muted dark:text-gray-400">
-          Tools to help you in your daily worship and practice.
-        </p>
+        <p className="mt-3 text-muted dark:text-gray-400">{t("subtitle")}</p>
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map((tool) => {
+        {TOOLS.map((tool) => {
           const Icon = tool.icon;
           return (
             <Link
@@ -60,13 +49,10 @@ export default function ToolsPage() {
                 <Icon size={24} />
               </div>
               <h2 className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-                {tool.title}
+                {t(`${tool.key}Title`)}
               </h2>
-              <p className="mt-0.5 font-arabic text-sm text-primary-500" dir="rtl">
-                {tool.titleAr}
-              </p>
               <p className="mt-2 text-sm leading-relaxed text-muted dark:text-gray-400">
-                {tool.description}
+                {t(`${tool.key}Body`)}
               </p>
             </Link>
           );
