@@ -7,66 +7,123 @@
       "order": 1,
       "title_en": "What Muslims Believe",
       "title_ar": "العقيدة",
+      "title_fr": "Ce que croient les musulmans",
       "description_en": "The six foundational beliefs that form the core of Islamic faith. Understanding what you believe and why.",
       "description_ar": "أركان الإيمان الستة التي تشكل أساس العقيدة الإسلامية. فهم ما تؤمن به ولماذا.",
+      "description_fr": "Les six croyances fondamentales qui forment le cœur de la foi musulmane. Comprendre ce que tu crois, et pourquoi.",
       "icon": "heart",
       "estimatedMinutes": 30,
-      "lessons": ["aqeedah-intro", "belief-in-allah", "belief-in-angels", "belief-in-books", "belief-in-messengers", "belief-in-last-day", "belief-in-qadr"]
+      "lessons": [
+        "aqeedah-intro",
+        "belief-in-allah",
+        "belief-in-angels",
+        "belief-in-books",
+        "belief-in-messengers",
+        "belief-in-last-day",
+        "belief-in-qadr"
+      ]
     },
     {
       "id": "pillars",
       "order": 2,
       "title_en": "The Five Pillars of Islam",
       "title_ar": "أركان الإسلام",
+      "title_fr": "Les cinq piliers de l'islam",
       "description_en": "The five essential practices that every Muslim performs. These are the actions that define your daily life as a Muslim.",
       "description_ar": "العبادات الخمس التي يؤديها كل مسلم. هي الأعمال التي تشكل حياتك اليومية كمسلم.",
+      "description_fr": "Les cinq pratiques essentielles qu'accomplit tout musulman. Ce sont les actes qui structurent ta vie quotidienne de musulman.",
       "icon": "building",
       "estimatedMinutes": 20,
-      "lessons": ["pillars-intro", "pillar-shahada", "pillar-salah", "pillar-zakat", "pillar-sawm", "pillar-hajj"]
+      "lessons": [
+        "pillars-intro",
+        "pillar-shahada",
+        "pillar-salah",
+        "pillar-zakat",
+        "pillar-sawm",
+        "pillar-hajj"
+      ]
     },
     {
       "id": "wudu",
       "order": 3,
       "title_en": "Wudu: Purification for Prayer",
       "title_ar": "الوضوء",
+      "title_fr": "Les ablutions : se purifier pour la prière",
       "description_en": "Before you pray, you purify yourself with wudu (ablution). Learn the step-by-step process.",
       "description_ar": "قبل أن تصلي، تتطهر بالوضوء. تعلم خطوات الوضوء واحدة تلو الأخرى.",
+      "description_fr": "Avant de prier, tu te purifies par les ablutions (wudû'). Apprends la méthode étape par étape.",
       "icon": "droplets",
       "estimatedMinutes": 15,
-      "lessons": ["wudu-intro", "wudu-prerequisites", "wudu-steps", "wudu-breakers", "wudu-dua"]
+      "lessons": [
+        "wudu-intro",
+        "wudu-prerequisites",
+        "wudu-steps",
+        "wudu-breakers",
+        "wudu-dua"
+      ]
     },
     {
       "id": "salah",
       "order": 4,
       "title_en": "Salah: How to Pray",
       "title_ar": "الصلاة",
+      "title_fr": "La prière : comment l'accomplir",
       "description_en": "Prayer is the most important act of worship. Learn how the Prophet ﷺ prayed, step by step.",
       "description_ar": "الصلاة أعظم أركان العبادة. تعلم كيف كان النبي ﷺ يصلي، خطوة بخطوة.",
+      "description_fr": "La prière est le plus important des actes d'adoration. Apprends comment le Prophète ﷺ priait, étape par étape.",
       "icon": "moon",
       "estimatedMinutes": 45,
-      "lessons": ["salah-intro", "salah-times", "salah-prerequisites", "salah-steps", "salah-rakaat", "salah-tashahhud", "salah-common-mistakes"]
+      "lessons": [
+        "salah-intro",
+        "salah-times",
+        "salah-prerequisites",
+        "salah-steps",
+        "salah-rakaat",
+        "salah-tashahhud",
+        "salah-common-mistakes"
+      ]
     },
     {
       "id": "surahs",
       "order": 5,
       "title_en": "Essential Surahs",
       "title_ar": "سور أساسية",
+      "title_fr": "Sourates essentielles",
       "description_en": "Short chapters from the Quran that you need for prayer. Start with Al-Fatiha, then learn the short surahs.",
       "description_ar": "سور قصيرة من القرآن تحتاجها في صلاتك. ابدأ بسورة الفاتحة، ثم تعلم السور القصار.",
+      "description_fr": "Les courtes sourates du Coran dont tu as besoin pour la prière. Commence par Al-Fâtiha, puis apprends les sourates brèves.",
       "icon": "book-open",
       "estimatedMinutes": 40,
-      "lessons": ["surahs-intro", "surah-fatiha", "surah-ikhlas", "surah-falaq", "surah-nas", "surah-kawthar", "surah-asr"]
+      "lessons": [
+        "surahs-intro",
+        "surah-fatiha",
+        "surah-ikhlas",
+        "surah-falaq",
+        "surah-nas",
+        "surah-kawthar",
+        "surah-asr"
+      ]
     },
     {
       "id": "duas",
       "order": 6,
       "title_en": "Daily Supplications",
       "title_ar": "الأدعية اليومية",
+      "title_fr": "Invocations quotidiennes",
       "description_en": "Simple prayers and remembrances for everyday moments: waking up, eating, traveling, and more.",
       "description_ar": "أدعية وأذكار يسيرة لمواقف اليوم اليومية: عند الاستيقاظ، الطعام، السفر، وغيرها.",
+      "description_fr": "Des invocations et rappels simples pour les moments du quotidien : le réveil, le repas, le voyage, et plus encore.",
       "icon": "hands",
       "estimatedMinutes": 25,
-      "lessons": ["duas-intro", "duas-morning", "duas-evening", "duas-eating", "duas-sleeping", "duas-travel", "duas-general"]
+      "lessons": [
+        "duas-intro",
+        "duas-morning",
+        "duas-evening",
+        "duas-eating",
+        "duas-sleeping",
+        "duas-travel",
+        "duas-general"
+      ]
     }
   ]
 }
