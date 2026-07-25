@@ -208,10 +208,12 @@
     "resetCancel": "Cancel"
   },
   "notFound": {
-    "title": "Page not found",
-    "body": "The page you're looking for doesn't exist, or it may have moved. Let us guide you back.",
+    "title": "Page Not Found",
+    "body": "This page doesn't exist. Head back home or continue learning.",
     "ctaHome": "Go home",
-    "ctaContinue": "Continue learning"
+    "ctaContinue": "Continue learning",
+    "home": "Go Home",
+    "learn": "Continue Learning"
   },
   "footer": {
     "verifiedNote": "All content sourced from the Quran and authenticated Hadith collections.",
@@ -275,5 +277,14 @@
     "play": "Play",
     "pause": "Pause",
     "seek": "Seek audio"
+  },
+  "landmarks": {
+    "breadcrumb": "Breadcrumb",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "bottomNav": "Bottom navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "progress": "Progress"
   }
 }

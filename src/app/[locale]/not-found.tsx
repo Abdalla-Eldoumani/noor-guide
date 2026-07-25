@@ -1,8 +1,11 @@
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Home, BookOpen, ArrowRight } from "lucide-react";
 import { StarOctagram } from "@/components/ui/StarOctagram";
 
 export default function NotFound() {
+  const t = useTranslations("notFound");
+
   return (
     <div className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="max-w-md w-full text-center">
@@ -16,19 +19,11 @@ export default function NotFound() {
         </div>
 
         <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">
-          Page Not Found
+          {t("title")}
         </h1>
 
-        <p
-          dir="rtl"
-          lang="ar"
-          className="mt-2 font-arabic text-arabic-sm text-primary-500 opacity-70"
-        >
-          الصفحة غير موجودة
-        </p>
-
         <p className="mt-4 text-muted dark:text-gray-400 leading-relaxed">
-          This page doesn&apos;t exist. Head back home or continue learning.
+          {t("body")}
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -37,14 +32,14 @@ export default function NotFound() {
             className="inline-flex items-center gap-2 bg-primary-500 text-white px-6 py-3 rounded-xl font-heading font-semibold hover:bg-primary-600 transition-colors"
           >
             <Home size={18} />
-            Go Home
+            {t("home")}
           </Link>
           <Link
             href="/learn"
             className="inline-flex items-center gap-2 border-2 border-primary-500 text-primary-500 px-6 py-3 rounded-xl font-heading font-semibold hover:bg-primary-50 transition-colors dark:hover:bg-primary-900/20"
           >
             <BookOpen size={18} />
-            Continue Learning
+            {t("learn")}
             <ArrowRight size={16} />
           </Link>
         </div>

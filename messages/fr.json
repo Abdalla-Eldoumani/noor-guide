@@ -209,9 +209,11 @@
   },
   "notFound": {
     "title": "Page introuvable",
-    "body": "La page que tu cherches n'existe pas, ou elle a peut-être été déplacée. Laisse-nous te remettre sur la voie.",
+    "body": "Cette page n'existe pas. Reviens à l'accueil ou poursuis ton apprentissage.",
     "ctaHome": "Retour à l'accueil",
-    "ctaContinue": "Continuer à apprendre"
+    "ctaContinue": "Continuer à apprendre",
+    "home": "Retour à l'accueil",
+    "learn": "Poursuivre l'apprentissage"
   },
   "footer": {
     "verifiedNote": "Tout le contenu provient du Coran et de recueils de hadîths authentifiés.",
@@ -275,5 +277,14 @@
     "play": "Lecture",
     "pause": "Pause",
     "seek": "Déplacer la lecture"
+  },
+  "landmarks": {
+    "breadcrumb": "Fil d'Ariane",
+    "mainNav": "Navigation principale",
+    "mobileNav": "Navigation mobile",
+    "bottomNav": "Navigation du bas",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "progress": "Progression"
   }
 }
