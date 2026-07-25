@@ -21,9 +21,12 @@
           "description": "After sexual intercourse, whether or not there is discharge.",
           "description_ar": "بعد الجماع، أنزل أو لم يُنزل.",
           "description_fr": "Après un rapport sexuel, qu'il y ait eu émission ou non.",
-          "source": "Sahih Muslim 343",
+          "source": "Sahih Muslim 348",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "Reported with the wording that bathing is obligatory even without emission. An earlier narration tying it to emission alone is held by the majority to have been abrogated.",
+          "note_ar": "ورد بلفظ وجوب الغسل وإن لم يُنزل. وأما ما ورد من تعليقه بالإنزال فمنسوخ عند الجمهور.",
+          "note_fr": "Rapporté avec la formulation selon laquelle le bain est obligatoire même sans émission. Une narration antérieure le liant à la seule émission est tenue pour abrogée par la majorité."
         },
         {
           "id": "ghusl-when-2",
@@ -84,7 +87,7 @@
           "description": "Wash both hands, then wash the private parts.",
           "description_ar": "غسل الكفين ثم غسل الفرج.",
           "description_fr": "Lave les deux mains, puis les parties intimes.",
-          "source": "Sahih Bukhari 248",
+          "source": "Sahih Bukhari 249",
           "verified": true,
           "needs_scholarly_review": true
         },
@@ -195,7 +198,7 @@
           "description": "Fasting is not performed during this time, but the missed days are made up later.",
           "description_ar": "ولا يُصام فيها، لكن تُقضى الأيام بعد ذلك.",
           "description_fr": "Le jeûne n'est pas accompli durant cette période, mais les jours manqués sont rattrapés plus tard.",
-          "source": "Sahih Bukhari 321",
+          "source": "Sahih Muslim 335",
           "note": "This difference between prayer and fasting is reported from Aisha and is the position of the four schools.",
           "note_ar": "وهذا الفرق بين الصلاة والصيام ثابت عن عائشة رضي الله عنها وعليه المذاهب الأربعة.",
           "note_fr": "Cette différence entre la prière et le jeûne est rapportée d'Aïcha et constitue la position des quatre écoles.",
