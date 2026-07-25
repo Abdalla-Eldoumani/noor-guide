@@ -3,17 +3,21 @@
 import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { HadithBlock } from "@/components/learn/HadithBlock";
+import { RulingList } from "@/components/learn/RulingList";
 import { StepByStep } from "@/components/learn/StepByStep";
 import { PrayerPosition } from "@/components/learn/PrayerPosition";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
-import type { SalahData, SalahStep, SalahSection, Recitation } from "@/types/content";
+import type { SalahData, SalahStep, SalahSection, Recitation, RulingItem } from "@/types/content";
 import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface SalahClientProps {
+  arkan: RulingItem[];
+  wajibat: RulingItem[];
+  sunan: RulingItem[];
   data: SalahData;
   steps: SalahStep[];
   lessonIds: string[];
@@ -23,7 +27,14 @@ function pickRecitationTranslation(rec: Recitation, locale: string) {
   return pickLocalized<string>(rec, "translation", locale) ?? rec.translation;
 }
 
-export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
+export function SalahClient({
+  data,
+  steps,
+  arkan,
+  wajibat,
+  sunan,
+  lessonIds,
+}: SalahClientProps) {
   const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
@@ -361,6 +372,29 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
           </RecitationBlockquote>
         </section>
       )}
+
+      {/* Pillars, required duties, and recommended acts */}
+      <RulingList
+        heading={pickLocalized<string>(data, "arkan_heading", locale) ?? data.arkan_heading}
+        items={arkan}
+        emphasis="required"
+      />
+
+      <RulingList
+        heading={pickLocalized<string>(data, "wajibat_heading", locale) ?? data.wajibat_heading}
+        items={wajibat}
+        emphasis="required"
+      />
+
+      <RulingList
+        heading={pickLocalized<string>(data, "sunan_heading", locale) ?? data.sunan_heading}
+        items={sunan}
+        emphasis="recommended"
+      />
+
+      <p className="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4 text-sm text-muted dark:text-gray-400">
+        {pickLocalized<string>(data, "madhab_note", locale) ?? data.madhab_note}
+      </p>
     </LessonContent>
   );
 }

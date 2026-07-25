@@ -1,4 +1,11 @@
-import { getSalahData, getSalahSteps, getLessonIdsForModule } from "@/lib/content";
+import {
+  getSalahData,
+  getSalahSteps,
+  getSalahArkan,
+  getSalahWajibat,
+  getSalahSunan,
+  getLessonIdsForModule,
+} from "@/lib/content";
 import { getTranslations } from "next-intl/server";
 import { getModuleById } from "@/lib/content";
 import { pickLocalized } from "@/lib/content-i18n";
@@ -28,6 +35,9 @@ export default async function SalahPage({
   const moduleData = getModuleById("salah");
   const data = getSalahData();
   const steps = getSalahSteps();
+  const arkan = getSalahArkan();
+  const wajibat = getSalahWajibat();
+  const sunan = getSalahSunan();
   const lessonIds = getLessonIdsForModule("salah");
 
   return (
@@ -41,7 +51,14 @@ export default async function SalahPage({
           courseName: tLearn("dashboardTitle"),
         })}
       />
-      <SalahClient data={data} steps={steps} lessonIds={lessonIds} />
+      <SalahClient
+        data={data}
+        steps={steps}
+        arkan={arkan}
+        wajibat={wajibat}
+        sunan={sunan}
+        lessonIds={lessonIds}
+      />
     </PageWrapper>
   );
 }

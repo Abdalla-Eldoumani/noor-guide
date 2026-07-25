@@ -2,6 +2,8 @@ import {
   getWuduData,
   getWuduSteps,
   getWuduBreakers,
+  getWuduObligations,
+  getWuduSunan,
   getLessonIdsForModule,
 } from "@/lib/content";
 import { getTranslations } from "next-intl/server";
@@ -34,6 +36,8 @@ export default async function WuduPage({
   const data = getWuduData();
   const steps = getWuduSteps();
   const breakers = getWuduBreakers();
+  const obligations = getWuduObligations();
+  const sunan = getWuduSunan();
   const lessonIds = getLessonIdsForModule("wudu");
 
   return (
@@ -47,7 +51,14 @@ export default async function WuduPage({
           courseName: tLearn("dashboardTitle"),
         })}
       />
-      <WuduClient data={data} steps={steps} breakers={breakers} lessonIds={lessonIds} />
+      <WuduClient
+        data={data}
+        steps={steps}
+        breakers={breakers}
+        obligations={obligations}
+        sunan={sunan}
+        lessonIds={lessonIds}
+      />
     </PageWrapper>
   );
 }
