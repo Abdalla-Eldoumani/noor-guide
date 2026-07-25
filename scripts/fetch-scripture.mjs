@@ -1,71 +1,102 @@
 #!/usr/bin/env node
-// Fetches Quran and hadith text in all three locales from verified sources and
-// writes them into src/data/content/*.json.
+// Writes the Quran text for every cited passage into src/data/content/*.json
+// from a published edition in each locale: Uthmani, Saheeh International,
+// Hamidullah. It fetches; it never translates. That is what lets the content
+// claim `translation_provenance: "fetched"` truthfully.
 //
-// Nothing here translates anything. Quran French is the Hamidullah edition,
-// Quran English is Saheeh International, and hadith text in all three languages
-// comes from a single Encyclopedia of Translated Prophetic Hadiths entry, so the
-// three locales carry the same meaning by construction rather than by review.
+//   node scripts/fetch-scripture.mjs --check    report differences, write nothing
+//   node scripts/fetch-scripture.mjs            write the files and the manifest
 //
-//   node scripts/fetch-scripture.mjs --dry-run    report what would change
-//   node scripts/fetch-scripture.mjs              write the files
+// It also writes src/data/scripture-manifest.json, recording the ayah count and
+// a hash of the Arabic per passage so a reviewer can see at a glance whether a
+// passage changed.
 //
-// Requires outbound network. Run it where that is available, then commit the
-// resulting data and manifest together.
+// Two things this deliberately does not do:
+//
+// Hadith is not fetched. An earlier version pulled hadith from the Encyclopedia
+// of Translated Prophetic Hadiths keyed by an id map. That map is now a
+// verification record (src/data/hadith-mapping.json) carrying no encyclopedia
+// ids, so the loop had nothing to key on and failed on every entry, including
+// the record's own `_readme`. Hadith Arabic is read from the collection by hand
+// and recorded there instead.
+//
+// A passage is not narrowed. If the reference names a range, the whole range is
+// written in all three locales. Storing a clause of the Arabic beside a
+// full-range translation is how the two came to describe different passages.
 
 import { readFileSync, writeFileSync, readdirSync, mkdirSync } from "node:fs";
 import { createHash } from "node:crypto";
+import { pathToFileURL } from "node:url";
 import path from "node:path";
 
 const ROOT = new URL("..", import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1");
 const CONTENT = path.join(ROOT, "src", "data", "content");
 const MANIFEST = path.join(ROOT, "src", "data", "scripture-manifest.json");
-const DRY_RUN = process.argv.includes("--dry-run");
+const CHECK = process.argv.includes("--check") || process.argv.includes("--dry-run");
 
-const QURAN_EDITIONS = {
-  ar: "quran-uthmani",
-  en: "en.sahih",
-  fr: "fr.hamidullah",
-};
+const EDITIONS = { ar: "quran-uthmani", en: "en.sahih", fr: "fr.hamidullah" };
+
+// The field each locale lives in. These nodes predate the suffixed convention,
+// so English is the bare name.
+const FIELDS = { ar: "arabic", en: "translation", fr: "translation_fr" };
 
 const ARABIC = /[؀-ۿ]/;
 const sha256 = (value) => createHash("sha256").update(value, "utf8").digest("hex");
 
+// The Uthmani edition carries the basmalah on the opening ayah of every surah
+// but al-Fatihah and at-Tawbah, where it is not part of the ayah. Matched
+// without diacritics because the edition's vowel marks are not stable enough to
+// compare against a literal.
+const BASMALAH =
+  /^[^\s]*ب[^\s]*س[^\s]*م[^\s]*\s+[^\s]*ل[^\s]*ل[^\s]*ه[^\s]*\s+[^\s]*ر[^\s]*ح[^\s]*م[^\s]*ن[^\s]*\s+[^\s]*ر[^\s]*ح[^\s]*ي[^\s]*م[^\s]*\s+/u;
+
 async function getJson(url) {
-  const response = await fetch(url, { headers: { accept: "application/json" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
-  return response.json();
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      const response = await fetch(url, { headers: { accept: "application/json" } });
+      if (response.ok) return await response.json();
+    } catch {
+      // fall through to the retry
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
+  }
+  throw new Error(`could not fetch ${url}`);
 }
 
-// --- Quran ------------------------------------------------------------------
-
-// Accepts "2:255", "112:1-4", "18:23-24".
-function parseReference(reference) {
-  const match = reference.replace(/^Quran\s+/i, "").match(/^(\d+):(\d+)(?:-(\d+))?$/);
+// Accepts "2:255", "112:1-4", "Quran 18:23-24".
+export function parseReference(reference) {
+  const match = String(reference).replace(/^Quran\s+/i, "").match(/^(\d+):(\d+)(?:-(\d+))?$/);
   if (!match) return null;
   const [, surah, from, to] = match;
   return { surah: Number(surah), from: Number(from), to: Number(to ?? from) };
 }
 
+export function canonicalise(reference) {
+  const parsed = parseReference(reference);
+  if (!parsed) return null;
+  const range = parsed.to > parsed.from ? `${parsed.from}-${parsed.to}` : `${parsed.from}`;
+  return `Quran ${parsed.surah}:${range}`;
+}
+
 async function fetchAyah(surah, ayah) {
-  const editions = Object.values(QURAN_EDITIONS).join(",");
   const payload = await getJson(
-    `https://api.alquran.cloud/v1/ayah/${surah}:${ayah}/editions/${editions}`,
+    `https://api.alquran.cloud/v1/ayah/${surah}:${ayah}/editions/${Object.values(EDITIONS).join(",")}`,
   );
   const byIdentifier = Object.fromEntries(
     payload.data.map((entry) => [entry.edition.identifier, entry.text]),
   );
-  const result = {};
-  for (const [locale, identifier] of Object.entries(QURAN_EDITIONS)) {
+  const verse = {};
+  for (const [locale, identifier] of Object.entries(EDITIONS)) {
     const text = byIdentifier[identifier];
-    if (!text || !text.trim()) {
-      throw new Error(`missing ${identifier} for ${surah}:${ayah}`);
-    }
-    result[locale] = text.trim();
+    if (!text || !text.trim()) throw new Error(`missing ${identifier} for ${surah}:${ayah}`);
+    verse[locale] = text.trim();
   }
-  if (!ARABIC.test(result.ar)) throw new Error(`${surah}:${ayah} arabic is not arabic`);
-  if (ARABIC.test(result.fr)) throw new Error(`${surah}:${ayah} french contains arabic`);
-  return result;
+  if (ayah === 1 && surah !== 1 && surah !== 9) {
+    verse.ar = verse.ar.replace(BASMALAH, "").trim();
+  }
+  if (!ARABIC.test(verse.ar)) throw new Error(`${surah}:${ayah} arabic is not arabic`);
+  if (ARABIC.test(verse.fr)) throw new Error(`${surah}:${ayah} french contains arabic`);
+  return verse;
 }
 
 export async function fetchQuranRange(reference) {
@@ -77,115 +108,108 @@ export async function fetchQuranRange(reference) {
     for (const locale of Object.keys(parts)) parts[locale].push(verse[locale]);
   }
   return {
-    ar: parts.ar.join(" "),
+    ar: parts.ar.join(" ۝ "),
     en: parts.en.join(" "),
     fr: parts.fr.join(" "),
     ayahCount: parsed.to - parsed.from + 1,
   };
 }
 
-// --- Hadith -----------------------------------------------------------------
-// The encyclopedia is keyed by its own ids, not by collection and number, so the
-// mapping is checked in and reviewable rather than guessed at fetch time. An
-// unmapped hadith is reported, never silently left partly translated.
-
-const MAPPING_PATH = path.join(ROOT, "src", "data", "hadith-mapping.json");
-
-export async function fetchHadith(hadeethencId) {
-  const locales = ["ar", "en", "fr"];
-  const responses = await Promise.all(
-    locales.map((locale) =>
-      getJson(
-        `https://hadeethenc.com/api/v1/hadeeths/one/?language=${locale}&id=${hadeethencId}`,
-      ),
-    ),
-  );
-  const text = {};
-  const grade = {};
-  responses.forEach((payload, index) => {
-    const locale = locales[index];
-    if (!payload?.hadeeth?.trim()) throw new Error(`hadith ${hadeethencId}: empty ${locale}`);
-    text[locale] = payload.hadeeth.trim();
-    grade[locale] = (payload.grade ?? "").trim();
-  });
-  if (!ARABIC.test(text.ar)) throw new Error(`hadith ${hadeethencId} arabic is not arabic`);
-  return { text, grade };
-}
-
-// --- Driver -----------------------------------------------------------------
-
-function collectQuranReferences() {
-  const found = new Map();
-  for (const file of readdirSync(CONTENT).filter((f) => f.endsWith(".json"))) {
-    const data = JSON.parse(readFileSync(path.join(CONTENT, file), "utf8"));
-    (function walk(node) {
-      if (Array.isArray(node)) return node.forEach(walk);
-      if (!node || typeof node !== "object") return;
-      if (node.type === "quran" && typeof node.reference === "string") {
-        found.set(node.reference, file);
-      }
-      Object.values(node).forEach(walk);
-    })(data);
-  }
-  return found;
+// Every node carrying a parseable `reference` alongside stored scripture text
+// counts. Keying on `type === "quran"` missed nine passages, which is why their
+// English stayed a paraphrase while their French was a published edition.
+function eachQuranNode(data, visit) {
+  (function walk(node) {
+    if (Array.isArray(node)) return node.forEach(walk);
+    if (!node || typeof node !== "object") return;
+    const hasText = FIELDS.ar in node || FIELDS.en in node;
+    if (hasText && typeof node.reference === "string" && parseReference(node.reference)) {
+      visit(node);
+    }
+    Object.values(node).forEach(walk);
+  })(data);
 }
 
 async function main() {
-  const manifest = { quran: {}, hadith: {} };
+  const manifest = { quran: {} };
   const problems = [];
+  const cache = new Map();
+  let changed = 0;
+  let unchanged = 0;
 
-  for (const [reference] of collectQuranReferences()) {
-    try {
-      const verse = await fetchQuranRange(reference);
-      manifest.quran[reference] = {
+  for (const file of readdirSync(CONTENT).filter((f) => f.endsWith(".json"))) {
+    const full = path.join(CONTENT, file);
+    const data = JSON.parse(readFileSync(full, "utf8"));
+    let touched = false;
+    const nodes = [];
+    eachQuranNode(data, (node) => nodes.push(node));
+
+    for (const node of nodes) {
+      const canonical = canonicalise(node.reference);
+      if (node.reference !== canonical) {
+        console.log(`${file}: reference ${node.reference} -> ${canonical}`);
+        changed += 1;
+        touched = true;
+        if (!CHECK) node.reference = canonical;
+      }
+
+      let verse = cache.get(canonical);
+      if (!verse) {
+        try {
+          verse = await fetchQuranRange(canonical);
+          cache.set(canonical, verse);
+        } catch (error) {
+          problems.push(`${canonical}: ${error.message}`);
+          continue;
+        }
+      }
+
+      manifest.quran[canonical] = {
         ayahCount: verse.ayahCount,
         sha256: sha256(verse.ar),
-        editions: QURAN_EDITIONS,
+        editions: EDITIONS,
       };
-      console.log(`quran ${reference}: ${verse.ayahCount} ayah, all three locales`);
-    } catch (error) {
-      problems.push(`quran ${reference}: ${error.message}`);
+
+      for (const [locale, field] of Object.entries(FIELDS)) {
+        if (node[field] === verse[locale]) {
+          unchanged += 1;
+          continue;
+        }
+        changed += 1;
+        touched = true;
+        if (CHECK) {
+          console.log(
+            `${file} ${canonical} ${field}\n` +
+              `  stored: ${String(node[field] ?? "(none)").slice(0, 88)}\n` +
+              `  ${EDITIONS[locale]}: ${verse[locale].slice(0, 88)}`,
+          );
+        } else {
+          node[field] = verse[locale];
+        }
+      }
+      if (!CHECK) node.translation_provenance = "fetched";
+    }
+
+    if (touched && !CHECK) {
+      writeFileSync(full, `${JSON.stringify(data, null, 2)}\n`, "utf8");
     }
   }
 
-  let mapping = {};
-  try {
-    mapping = JSON.parse(readFileSync(MAPPING_PATH, "utf8"));
-  } catch {
-    problems.push(
-      `no ${path.relative(ROOT, MAPPING_PATH)}; every hadith needs a reviewed ` +
-        `collection-to-encyclopedia id mapping before it can be fetched`,
-    );
-  }
-
-  for (const [reference, hadeethencId] of Object.entries(mapping)) {
-    if (hadeethencId == null) {
-      problems.push(`hadith ${reference}: unmapped, needs a human to identify the entry`);
-      continue;
-    }
-    try {
-      const hadith = await fetchHadith(hadeethencId);
-      manifest.hadith[reference] = {
-        hadeethencId,
-        sha256: sha256(hadith.text.ar),
-        grades: hadith.grade,
-      };
-      console.log(`hadith ${reference} -> ${hadeethencId}: all three locales`);
-    } catch (error) {
-      problems.push(`hadith ${reference}: ${error.message}`);
-    }
-  }
-
-  if (!DRY_RUN) {
+  if (!CHECK) {
     mkdirSync(path.dirname(MANIFEST), { recursive: true });
     writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
   }
 
   for (const problem of problems) console.error(problem);
-  console.error(`\n${problems.length} unresolved`);
-  process.exit(problems.length ? 1 : 0);
+  console.error(
+    `\n${Object.keys(manifest.quran).length} passages, ` +
+      `${changed} fields ${CHECK ? "differ from" : "written from"} the published editions, ` +
+      `${unchanged} already matched`,
+  );
+  console.error(`${problems.length} unresolved`);
+  return problems.length;
 }
 
-if (process.argv[1] && import.meta.url.endsWith(path.basename(process.argv[1]))) {
-  await main();
+if (import.meta.url === pathToFileURL(process.argv[1]).href) {
+  process.exit((await main()) ? 1 : 0);
 }

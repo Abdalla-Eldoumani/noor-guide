@@ -23,7 +23,11 @@ function collectCitations() {
       if (Array.isArray(node)) return node.forEach(walk);
       if (!node || typeof node !== "object") return;
 
-      let ref = node.type === "hadith" ? node.reference : null;
+      // Any `reference` counts, not just one tagged `type: "hadith"`. The
+      // tagged-only version let Sahih Muslim 2653 sit in the content
+      // unaccounted for, because that node names its field
+      // `hadith_reference` and carries no `type`.
+      let ref = typeof node.reference === "string" ? node.reference : null;
       if (!ref && typeof node.source === "string" && node.source !== CONSENSUS) {
         ref = node.source;
       }
