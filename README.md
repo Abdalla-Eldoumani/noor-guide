@@ -4,6 +4,8 @@ Noor (نور) means "light" in Arabic. This is a free web app that helps new Mus
 
 No sign-ups. No payments. No ads. Just open it and start learning.
 
+Available in English, Arabic, and French.
+
 ## Who is this for?
 
 - Someone who just took their Shahada and doesn't know where to start
@@ -26,7 +28,7 @@ The app is organized into six modules, meant to be taken in order:
 
 **6. Daily Duas.** Supplications for waking up, sleeping, eating, leaving the house, entering the mosque, and more. All with Arabic, transliteration, translation, and source references.
 
-There's also a **glossary** with 22 Islamic terms and 13 common Arabic phrases explained in plain English.
+There's also a **glossary** with 23 Islamic terms and 13 common Arabic phrases, explained in whichever language you are reading in.
 
 ## Tools
 
@@ -58,16 +60,42 @@ This is the most important part of the project. Every piece of religious content
 
 The content follows Sunni Islam (Ahl as-Sunnah wal-Jamaa'ah). Where differences exist between madhabs, the most common position is presented with a note that variations exist.
 
-## Arabic locale
+## Languages
 
-The site runs under English (`/`) and Arabic (`/ar`), powered by `next-intl` with `localePrefix: "as-needed"`. Translations live at `messages/en.json` and `messages/ar.json`; both were hand-authored, not machine-translated. The header includes a language switcher that swaps locales while preserving the current path and writes the choice to `localStorage` so return visits land on the right prefix.
+The site runs in English (`/`), Arabic (`/ar`), and French (`/fr`), powered by `next-intl`
+with `localePrefix: "as-needed"`. The language switcher preserves your current page and
+writes the choice to `localStorage`, so return visits land on the right prefix.
 
-Religious content (Quran translations, hadith, duas in `src/data/content/*.json`) and the project's authored educational instructional prose render the same on both locales. Only UI chrome (navigation, buttons, page intros, breadcrumbs, footer) is localized for the initial Arabic launch. See `docs/I18N.md` for the full plan.
+Every user-visible string reaches all three languages: navigation, lesson prose, step
+instructions, glossary definitions, tooltips, error messages, page titles, and the
+accessibility skip link. This is enforced, not just intended. `npm run verify:i18n` fails
+the build on any key that is missing, empty, or left as English in another catalogue, and
+`npm run verify:locales` renders every page in every language and reports any text whose
+script disagrees with the page.
+
+Scripture is handled differently from prose. The project never retranslates Quran or hadith.
+Quran text is Uthmani in Arabic, Saheeh International in English, and Hamidullah in French.
+Hadith text in all three languages is pulled from a single Encyclopedia of Translated
+Prophetic Hadiths entry, so the three languages carry the same meaning by construction
+rather than by review. `npm run fetch:scripture` populates it.
+
+One gap is open: `src/data/hadith-mapping.json` maps each cited hadith to its encyclopedia
+id, and it is not yet filled in. Until it is, hadith quotations render in the English
+translation the project authors selected, with the citation and grading localized. The
+mapping is deliberately left for a human to complete rather than guessed.
+
+Transliteration and English back-translation are hidden on the Arabic locale, since a
+reader of the Arabic source does not need either.
+
+French follows the transliteration conventions used in French-speaking madrassahs
+(Abou Bakr, Aïcha, wudû', chahâda) so the text reads correctly aloud.
+
+See `docs/I18N.md` for how the pieces fit together and how to add a fourth language.
 
 ## Tech stack
 
-- Next.js 14.2.35 with App Router (static site generation, locale routing)
-- React 18.3.1, TypeScript 5.9.3
+- Next.js 16.2.4 with App Router and Turbopack (static site generation, locale routing)
+- React 19.2.5, TypeScript 5.9.3
 - Tailwind CSS 4.2.4 with class-based dark mode (`@theme` CSS-first config)
 - `next-intl` 4.11.0 for routing and message dictionaries
 - `lucide-react` 0.400.0 for icons
@@ -83,11 +111,26 @@ All dependencies are pinned to exact versions in `package.json`.
 ```bash
 git clone https://github.com/Abdalla-Eldoumani/noor-guide.git
 cd noor-guide
-npm install
+npm ci
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:3000`. Arabic is at `/ar`, French at `/fr`.
+
+Before opening a pull request:
+
+```bash
+npm run verify:i18n   # locale parity; also runs automatically before build
+npm run lint
+npm run type-check
+npm run build
+```
+
+To check for language leaking across locales, start the dev server and run:
+
+```bash
+LOCALES=ar,fr node scripts/verify-locales.mjs http://localhost:3000 / /learn /tools
+```
 
 ## Deploying
 
@@ -112,6 +155,8 @@ Push to GitHub, import into Vercel, and deploy. No environment variables or API 
 | `/tools/masjid-finder` | Mosque locator |
 | `/progress` | Your learning progress |
 
+Every route exists in all three languages: `/learn/salah`, `/ar/learn/salah`, `/fr/learn/salah`.
+
 ## Project structure
 
 ```
@@ -128,6 +173,12 @@ src/
 ├── lib/                 # content.ts, storage.ts, prayer-times.ts, quran-api.ts, qibla.ts, progress.ts
 ├── styles/              # globals.css with Tailwind layers and a print stylesheet
 └── types/               # TypeScript interfaces for content and API responses
+
+scripts/
+├── verify-i18n.mjs      # static locale parity, gates the build
+├── verify-locales.mjs   # render-time locale scan
+├── fetch-scripture.mjs  # pulls Quran and hadith in all three languages
+└── i18n-allowlist.json  # reviewable exceptions for both verifiers
 ```
 
 ## License
