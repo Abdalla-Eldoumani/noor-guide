@@ -1,5 +1,5 @@
 {
-  "_readme": "Verification record for every scripture citation in src/data/content. Each hadith was opened at sunnah.com under the number the content cites, because that is the numbering this project uses; cross-numbered editions of Sunan Abi Dawud in particular do not line up. Quran citations were read from the Saheeh International edition through AlQuran Cloud. npm run verify:citations gates the build on every citation having an entry and every entry still being cited.",
+  "_readme": "Verification record for every scripture citation in src/data/content, including the ones that carry no type tag: keying the collector on type == hadith once let seventeen citations sit unaccounted for. Each hadith was opened at sunnah.com under the number the content cites, because that is the numbering this project uses; cross-numbered editions of Sunan Abi Dawud in particular do not line up. Quran citations were read from the Saheeh International edition through AlQuran Cloud. npm run verify:citations gates the build on every citation having an entry and every entry still being cited.",
   "citations": {
     "Jami' at-Tirmidhi 1078": {
       "usedIn": [
@@ -22,6 +22,14 @@
       "grade": "Hasan (Darussalam)",
       "note": "Covers the beard alone. Running water between the fingers and toes is cited to Sunan Abi Dawud 142."
     },
+    "Quran 112:1-4": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Say, \"He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born\""
+    },
     "Quran 16:98": {
       "usedIn": [
         "salah-steps.json"
@@ -29,6 +37,22 @@
       "status": "verified",
       "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
       "confirmedWording": "when you recite the Qur'an, seek refuge in Allah from Satan, the expelled"
+    },
+    "Quran 21:47": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "And We place the scales of justice for the Day of Resurrection, so no soul will be treated unjustly"
+    },
+    "Quran 21:87": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers"
     },
     "Quran 22:77": {
       "usedIn": [
@@ -46,6 +70,14 @@
       "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
       "confirmedWording": "So turn your face toward al-Masjid al-Haram"
     },
+    "Quran 2:183": {
+      "usedIn": [
+        "pillars.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "decreed upon you is fasting as it was decreed upon those before you"
+    },
     "Quran 2:222": {
       "usedIn": [
         "taharah.json"
@@ -62,6 +94,30 @@
       "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
       "confirmedWording": "Maintain with care the obligatory prayers"
     },
+    "Quran 33:40": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Muhammad is not the father of any one of your men, but he is the Messenger of Allah and last of the prophets"
+    },
+    "Quran 3:3-4": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "He has sent down upon you the Book in truth, confirming what was before it"
+    },
+    "Quran 42:11": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "There is nothing like unto Him, and He is the Hearing, the Seeing"
+    },
     "Quran 4:101": {
       "usedIn": [
         "prayer-practice.json"
@@ -77,6 +133,22 @@
       "status": "verified",
       "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
       "confirmedWording": "prayer has been decreed upon the believers a decree of specified times"
+    },
+    "Quran 50:17-18": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "When the two receivers receive, seated on the right and on the left"
+    },
+    "Quran 54:49": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Indeed, all things We created with predestination"
     },
     "Quran 5:6": {
       "usedIn": [
@@ -383,6 +455,16 @@
       "confirmedWording": "perform the ablution properly, face the Qibla, and say the Takbir",
       "grade": "the collection carries no grading line"
     },
+    "Sahih Bukhari 6307": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "I ask forgiveness of Allah and turn to Him in repentance more than seventy times a day",
+      "grade": "the collection carries no grading line"
+    },
     "Sahih Bukhari 631": {
       "usedIn": [
         "salah-steps.json"
@@ -391,6 +473,26 @@
       "narrator": "Malik ibn al-Huwayrith",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Pray as you have seen me praying",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 6312": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "on waking: al-hamdu lillahi lladhi ahyana ba'da ma amatana wa ilayhi n-nushur",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 6324": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "on going to bed: bismika Allahumma amutu wa ahya",
       "grade": "the collection carries no grading line"
     },
     "Sahih Bukhari 735": {
@@ -566,6 +668,16 @@
       "confirmedWording": "when a man dies his acts come to an end but three: recurring charity, knowledge people benefit from, and a pious child who prays for him",
       "grade": "the collection carries no grading line"
     },
+    "Sahih Muslim 2017": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the name of Allah is mentioned over the food, and Shaytan finds it lawful when it is not",
+      "grade": "the collection carries no grading line"
+    },
     "Sahih Muslim 225": {
       "usedIn": [
         "wudu-steps.json"
@@ -597,6 +709,17 @@
       "confirmedWording": "whoever performs the ablution well and then testifies, the eight gates of Paradise are opened for him",
       "grade": "the collection carries no grading line",
       "note": "Cited at sunnah.com as 234a."
+    },
+    "Sahih Muslim 2653b": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Amr ibn al-As",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Allah ordained the measures of the creation fifty thousand years before He created the heavens and the earth, as His Throne was upon water",
+      "grade": "the collection carries no grading line",
+      "note": "Was cited as Sahih Muslim 2653, which on sunnah.com resolves to a follow-on chain carrying no matn. The wording quoted is Abdullah ibn Amr's, which is 2653b."
     },
     "Sahih Muslim 335": {
       "usedIn": [
@@ -710,6 +833,16 @@
       "narrator": "Ibn Abbas",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "observed the noon and afternoon prayers together, and the sunset and Isha prayers together",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 713": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Usayd al-Ansari",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when one of you enters the mosque let him say, O Allah open for me the doors of Your mercy",
       "grade": "the collection carries no grading line"
     },
     "Sahih Muslim 772": {
@@ -865,6 +998,26 @@
       "narrator": "Qays ibn Asim",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "he came intending to embrace Islam and was commanded to bathe",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 4023": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Mu'adh ibn Anas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "praise be to Allah who has fed me with this food and provided it for me through no might or power of mine",
+      "grade": "the collection carries no grading line for this narration"
+    },
+    "Sunan Abu Dawud 5095": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Anas ibn Malik",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when a man leaves his house and says, in the name of Allah, I trust in Allah, there is no might and no power but in Allah",
       "grade": "Sahih (Al-Albani)"
     },
     "Sunan Abu Dawud 61": {
