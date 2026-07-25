@@ -8,7 +8,7 @@ import { QuranVerse } from "@/components/learn/QuranVerse";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { AqeedahData, AqeedahPillar } from "@/types/content";
 import { getModuleById } from "@/lib/content";
-import { useLocalizedContent } from "@/lib/content-i18n";
+import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface AqeedahClientProps {
   data: AqeedahData;
@@ -125,7 +125,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                       reference={ref.reference}
                       arabic={ref.arabic}
                       transliteration={ref.transliteration}
-                      translation={ref.translation}
+                      translation={pickLocalized<string>(ref, "translation", locale) ?? ref.translation}
                     />
                   ))}
 

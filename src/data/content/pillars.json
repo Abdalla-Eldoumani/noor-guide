@@ -27,7 +27,9 @@
       "content": {
         "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
         "transliteration": "Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah.",
-        "translation": "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah."
+        "translation": "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah.",
+        "translation_fr": "J'atteste qu'il n'y a de divinité qu'Allah, et j'atteste que Mouhammad est le Messager d'Allah.",
+        "translation_provenance": "project"
       },
       "verified": true
     },
@@ -68,7 +70,9 @@
       "description_fr": "Pendant le mois de Ramadan (le neuvième mois du calendrier musulman), les musulmans jeûnent de l'aube au coucher du soleil : ni nourriture, ni boisson, ni rapports intimes. Le jeûne enseigne la maîtrise de soi, la gratitude et l'empathie envers les plus démunis.",
       "quran_reference": {
         "reference": "2:183",
-        "translation": "O you who believe, fasting is prescribed for you as it was prescribed for those before you, that you may attain taqwa (God-consciousness)."
+        "translation": "O you who believe, fasting is prescribed for you as it was prescribed for those before you, that you may attain taqwa (God-consciousness).",
+        "translation_fr": "O les croyants! On vous a prescrit aS-Siyâm comme on l'a prescrit à ceux d'avant vous, ainsi atteindrez-vous la piété,",
+        "translation_provenance": "fetched"
       },
       "verified": true
     },

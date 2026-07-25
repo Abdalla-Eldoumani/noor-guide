@@ -123,7 +123,9 @@
       "recitation": {
         "arabic": "اللَّهُ أَكْبَرُ",
         "transliteration": "Allahu Akbar",
-        "translation": "Allah is the Greatest"
+        "translation": "Allah is the Greatest",
+        "translation_fr": "Allah est le plus grand.",
+        "translation_provenance": "project"
       },
       "source": {
         "type": "hadith",
@@ -165,7 +167,9 @@
       "recitation": {
         "arabic": "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلَا إِلَهَ غَيْرُكَ",
         "transliteration": "Subhanakal-lahumma wa bihamdika, wa tabarakas-muka, wa ta'ala jadduka, wa la ilaha ghayruk.",
-        "translation": "How perfect You are, O Allah, and I praise You. Blessed is Your name, and exalted is Your majesty. There is no god worthy of worship except You."
+        "translation": "How perfect You are, O Allah, and I praise You. Blessed is Your name, and exalted is Your majesty. There is no god worthy of worship except You.",
+        "translation_fr": "Gloire et pureté à Toi, ô Allah, et à Toi la louange. Béni soit Ton nom, et élevée soit Ta majesté. Il n'y a de divinité digne d'adoration que Toi.",
+        "translation_provenance": "project"
       },
       "notes": "This is said only in the first rakah, not in subsequent ones.",
       "notes_ar": "يُقال هذا الدعاء في الركعة الأولى فقط، لا في الركعات التي بعدها.",
@@ -190,7 +194,9 @@
       "recitation": {
         "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
         "transliteration": "Bismillahir-Rahmanir-Rahim. Al-hamdu lillahi Rabbil-'alamin. Ar-Rahmanir-Rahim. Maliki yawmid-Din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim walad-dallin.",
-        "translation": "In the name of Allah, the Most Gracious, the Most Merciful. All praise is due to Allah, Lord of all the worlds. The Most Gracious, the Most Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have earned anger nor of those who are astray."
+        "translation": "In the name of Allah, the Most Gracious, the Most Merciful. All praise is due to Allah, Lord of all the worlds. The Most Gracious, the Most Merciful. Master of the Day of Judgment. You alone we worship, and You alone we ask for help. Guide us to the straight path. The path of those upon whom You have bestowed favor, not of those who have earned anger nor of those who are astray.",
+        "translation_fr": "Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux. Louange à Allah, Seigneur de l'univers. Le Tout Miséricordieux, le Très Miséricordieux, Maître du Jour de la rétribution. C'est Toi [Seul] que nous adorons, et c'est Toi [Seul] dont nous implorons secours. Guide-nous dans le droit chemin, le chemin de ceux que Tu as comblés de faveurs, non pas de ceux qui ont encouru Ta colère, ni des égarés.",
+        "translation_provenance": "fetched"
       },
       "after_fatiha": "Say 'Ameen' (meaning: O Allah, answer our prayer) after completing Al-Fatiha.",
       "after_fatiha_ar": "قل: آمين، أي اللهم استجب، بعد فراغك من قراءة الفاتحة.",
@@ -231,7 +237,9 @@
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
         "transliteration": "Subhana Rabbiyal-'Adhim",
-        "translation": "How perfect is my Lord, the Supreme"
+        "translation": "How perfect is my Lord, the Supreme",
+        "translation_fr": "Gloire à mon Seigneur, le Très Grand.",
+        "translation_provenance": "project"
       },
       "repetitions": 3,
       "source": {
@@ -254,12 +262,16 @@
       "recitation_rising": {
         "arabic": "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ",
         "transliteration": "Sami'Allahu liman hamidah",
-        "translation": "Allah hears those who praise Him"
+        "translation": "Allah hears those who praise Him",
+        "translation_fr": "Allah entend celui qui Le loue",
+        "translation_provenance": "project"
       },
       "recitation_standing": {
         "arabic": "رَبَّنَا وَلَكَ الْحَمْدُ",
         "transliteration": "Rabbana wa lakal-hamd",
-        "translation": "Our Lord, to You belongs all praise"
+        "translation": "Our Lord, to You belongs all praise",
+        "translation_fr": "Notre Seigneur, à Toi la louange",
+        "translation_provenance": "project"
       },
       "source": {
         "type": "hadith",
@@ -281,7 +293,9 @@
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
         "transliteration": "Subhana Rabbiyal-A'la",
-        "translation": "How perfect is my Lord, the Most High"
+        "translation": "How perfect is my Lord, the Most High",
+        "translation_fr": "Gloire à mon Seigneur, le Très Haut.",
+        "translation_provenance": "project"
       },
       "repetitions": 3,
       "notes": "You may make personal dua (supplication) in any language during sujud. The Prophet ﷺ said this is the closest position to Allah.",
@@ -307,7 +321,9 @@
       "recitation": {
         "arabic": "رَبِّ اغْفِرْ لِي",
         "transliteration": "Rabbighfir li",
-        "translation": "My Lord, forgive me"
+        "translation": "My Lord, forgive me",
+        "translation_fr": "Mon Seigneur, pardonne-moi.",
+        "translation_provenance": "project"
       },
       "source": {
         "type": "hadith",
@@ -329,7 +345,9 @@
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
         "transliteration": "Subhana Rabbiyal-A'la",
-        "translation": "How perfect is my Lord, the Most High"
+        "translation": "How perfect is my Lord, the Most High",
+        "translation_fr": "Gloire à mon Seigneur, le Très Haut.",
+        "translation_provenance": "project"
       },
       "repetitions": 3,
       "verified": true
@@ -345,7 +363,9 @@
     "recitation": {
       "arabic": "التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
       "transliteration": "At-tahiyyatu lillahi was-salawatu wat-tayyibat. As-salamu 'alayka ayyuhan-Nabiyyu wa rahmatullahi wa barakatuh. As-salamu 'alayna wa 'ala 'ibadillahis-salihin. Ash-hadu an la ilaha illallahu wa ash-hadu anna Muhammadan 'abduhu wa rasuluh.",
-      "translation": "All greetings, prayers, and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and messenger."
+      "translation": "All greetings, prayers, and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and messenger.",
+      "translation_fr": "Les salutations, les prières et les bonnes choses appartiennent à Allah. Que la paix soit sur toi, ô Prophète, ainsi que la miséricorde d'Allah et Ses bénédictions. Que la paix soit sur nous et sur les serviteurs vertueux d'Allah. J'atteste qu'il n'y a de divinité qu'Allah, et j'atteste que Mouhammad est Son serviteur et Son messager.",
+      "translation_provenance": "project"
     },
     "source": {
       "type": "hadith",
@@ -367,7 +387,9 @@
     "recitation": {
       "arabic": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ",
       "transliteration": "Allahumma salli 'ala Muhammadin wa 'ala ali Muhammadin, kama sallayta 'ala Ibrahima wa 'ala ali Ibrahima, innaka Hamidun Majid. Allahumma barik 'ala Muhammadin wa 'ala ali Muhammadin, kama barakta 'ala Ibrahima wa 'ala ali Ibrahima, innaka Hamidun Majid.",
-      "translation": "O Allah, send blessings upon Muhammad and upon the family of Muhammad, as You sent blessings upon Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious."
+      "translation": "O Allah, send blessings upon Muhammad and upon the family of Muhammad, as You sent blessings upon Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim. You are indeed Praiseworthy, Glorious.",
+      "translation_fr": "Ô Allah, prie sur Mouhammad et sur la famille de Mouhammad, comme Tu as prié sur Ibrâhîm et sur la famille d'Ibrâhîm. Tu es certes Digne de louange et Glorieux. Ô Allah, bénis Mouhammad et la famille de Mouhammad, comme Tu as béni Ibrâhîm et la famille d'Ibrâhîm. Tu es certes Digne de louange et Glorieux.",
+      "translation_provenance": "project"
     },
     "source": {
       "type": "hadith",
@@ -386,7 +408,9 @@
     "recitation": {
       "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
       "transliteration": "As-salamu 'alaykum wa rahmatullah",
-      "translation": "Peace be upon you and the mercy of Allah"
+      "translation": "Peace be upon you and the mercy of Allah",
+      "translation_fr": "Que la paix et la miséricorde d'Allah soient sur vous.",
+      "translation_provenance": "project"
     },
     "source": {
       "type": "hadith",

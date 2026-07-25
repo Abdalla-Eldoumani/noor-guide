@@ -166,7 +166,7 @@ export default function GlossaryPage() {
                       {phrase.transliteration}
                     </p>
                     <p className="mt-1 text-sm font-medium text-ink dark:text-gray-100">
-                      {phrase.translation}
+                      {pick(phrase, "translation")}
                     </p>
                   </>
                 )}

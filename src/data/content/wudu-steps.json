@@ -61,7 +61,9 @@
       "content": {
         "arabic": "بِسْمِ اللَّهِ",
         "transliteration": "Bismillah",
-        "translation": "In the name of Allah"
+        "translation": "In the name of Allah",
+        "translation_fr": "Au nom d'Allah",
+        "translation_provenance": "project"
       },
       "verified": true
     },
@@ -199,12 +201,14 @@
     "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
     "transliteration": "Ashhadu an la ilaha illallahu wahdahu la sharika lahu, wa ashhadu anna Muhammadan abduhu wa rasuluh.",
     "translation": "I bear witness that there is no god but Allah alone, with no partner, and I bear witness that Muhammad is His servant and messenger.",
+    "translation_fr": "J'atteste qu'il n'y a de divinité qu'Allah, Seul et sans associé, et j'atteste que Mouhammad est Son serviteur et Son messager.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Muslim 234",
       "grade": "sahih"
     },
-    "verified": true
+    "verified": true,
+    "translation_provenance": "project"
   },
   "what_breaks_wudu": [
     {
