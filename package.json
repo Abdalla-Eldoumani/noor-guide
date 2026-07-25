@@ -12,7 +12,8 @@
     "verify:i18n": "node scripts/verify-i18n.mjs",
     "verify:locales": "node scripts/verify-locales.mjs",
     "verify": "npm run verify:i18n",
-    "prebuild": "npm run verify"
+    "prebuild": "npm run verify",
+    "fetch:scripture": "node scripts/fetch-scripture.mjs"
   },
   "dependencies": {
     "lucide-react": "0.400.0",
