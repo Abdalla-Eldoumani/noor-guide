@@ -119,7 +119,7 @@ export default function GlossaryPage() {
               >
                 <div className="mb-3 flex items-baseline justify-between gap-3">
                   <h3 className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-                    {locale === "ar" ? term.term_ar : term.term_en}
+                    {pick(term, "term")}
                   </h3>
                   {locale !== "ar" && (
                     <ArabicText className="text-arabic-sm shrink-0 text-primary-500">

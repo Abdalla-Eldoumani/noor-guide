@@ -154,23 +154,23 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-heading text-lg font-semibold">
-              {surah.title_en}
+              {pickLocalized<string>(surah, "title", locale) ?? surah.title_en}
             </h3>
             <p className="text-primary-200 text-sm mt-0.5">
-              Surah {surah.number}
+              {t("surahNumberLabel", { number: surah.number })}
             </p>
           </div>
-          <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg">{surah.title_ar}</p>
+          {/* The heading already carries the Arabic name on `/ar`; repeating it
+              beside itself is the both-locales-at-once habit this project drops. */}
+          {locale !== "ar" && (
+            <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg">
+              {surah.title_ar}
+            </p>
+          )}
         </div>
       </div>
 
       <div className="p-6 space-y-4">
-        {surah.priority && (
-          <p className="text-sm font-medium text-primary-500 bg-primary-50 dark:bg-primary-900/30 rounded-lg px-3 py-2">
-            {surah.priority}
-          </p>
-        )}
-
         {/* Play All button */}
         {!loading && !error && audioUrls.length > 0 && (
           <button
