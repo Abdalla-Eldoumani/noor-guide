@@ -11,7 +11,10 @@
       "type": "hadith",
       "reference": "Sahih Muslim 8a",
       "text_en": "The Prophet ﷺ said: '[Iman is] that you believe in Allah, His angels, His Books, His Messengers, the Last Day, and that you believe in Divine Decree, both its good and its bad.'",
-      "grade": "sahih"
+      "text_ar": "قَالَ فَأَخْبِرْنِي عَنِ الإِيمَانِ. قَالَ: أَنْ تُؤْمِنَ بِاللَّهِ وَمَلاَئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ وَالْيَوْمِ الآخِرِ وَتُؤْمِنَ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ. قَالَ صَدَقْتَ",
+      "text_fr": "Le Prophète ﷺ dit : « [La foi, c'est] que tu croies en Allah, en Ses anges, en Ses Livres, en Ses messagers et au Jour dernier, et que tu croies au destin, en son bien et en son mal. »",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "pillars": [
@@ -50,18 +53,18 @@
       ],
       "quran_references": [
         {
-          "reference": "112:1-4",
-          "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
+          "reference": "Quran 112:1-4",
+          "arabic": "قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝ ٱللَّهُ ٱلصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
           "transliteration": "Qul Huwa Allahu Ahad. Allahu As-Samad. Lam yalid wa lam yulad. Wa lam yakun lahu kufuwan ahad.",
-          "translation": "Say: He is Allah, the One. Allah, the Eternal Refuge. He neither begets nor is born. Nor is there to Him any equivalent.",
+          "translation": "Say, \"He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born, Nor is there to Him any equivalent.\"",
           "translation_fr": "Dis: «Il est Allah, Unique. Allah, Le Seul à être imploré pour ce que nous désirons. Il n'a jamais engendré, n'a pas été engendré non plus. Et nul n'est égal à Lui».",
           "translation_provenance": "fetched"
         },
         {
-          "reference": "42:11",
-          "arabic": "لَيْسَ كَمِثْلِهِ شَيْءٌ ۖ وَهُوَ السَّمِيعُ الْبَصِيرُ",
+          "reference": "Quran 42:11",
+          "arabic": "فَاطِرُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضِ ۚ جَعَلَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا وَمِنَ ٱلْأَنْعَٰمِ أَزْوَٰجًۭا ۖ يَذْرَؤُكُمْ فِيهِ ۚ لَيْسَ كَمِثْلِهِۦ شَىْءٌۭ ۖ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ",
           "transliteration": "Laysa kamithlihi shay'un wa Huwa as-Sami'u al-Basir",
-          "translation": "There is nothing like Him, and He is the All-Hearing, the All-Seeing.",
+          "translation": "[He is] Creator of the heavens and the earth. He has made for you from yourselves, mates, and among the cattle, mates; He multiplies you thereby. There is nothing like unto Him, and He is the Hearing, the Seeing.",
           "translation_fr": "...Créateur des cieux et de la terre. Il vous a donné des épouses [issues] de vous-mêmes et des bestiaux par couples; par ce moyen Il vous multiplie. Il n'y a rien qui Lui ressemble; et c'est Lui l'Audient, le Clairvoyant.",
           "translation_provenance": "fetched"
         }
@@ -106,10 +109,10 @@
       ],
       "quran_references": [
         {
-          "reference": "50:17-18",
-          "arabic": "إِذْ يَتَلَقَّى الْمُتَلَقِّيَانِ عَنِ الْيَمِينِ وَعَنِ الشِّمَالِ قَعِيدٌ ۝ مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ",
+          "reference": "Quran 50:17-18",
+          "arabic": "إِذْ يَتَلَقَّى ٱلْمُتَلَقِّيَانِ عَنِ ٱلْيَمِينِ وَعَنِ ٱلشِّمَالِ قَعِيدٌۭ ۝ مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌۭ",
           "transliteration": "Idh yatalaqqa al-mutalaqqiyani 'an al-yamini wa 'an ash-shimali qa'id. Ma yalfizu min qawlin illa ladayhi raqibun 'atid.",
-          "translation": "When the two receivers receive, seated on the right and on the left. Not a word does he utter but there is a watcher by him ready.",
+          "translation": "When the two receivers receive, seated on the right and on the left. Man does not utter any word except that with him is an observer prepared [to record].",
           "translation_fr": "quand les deux recueillants, assis à droite et à gauche, recueillent. Il ne prononce pas une parole sans avoir auprès de lui un observateur prêt à l'inscrire.",
           "translation_provenance": "fetched"
         }
@@ -154,11 +157,11 @@
       ],
       "quran_references": [
         {
-          "reference": "3:3-4",
-          "arabic": "نَزَّلَ عَلَيْكَ الْكِتَابَ بِالْحَقِّ مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ التَّوْرَاةَ وَالْإِنجِيلَ",
+          "reference": "Quran 3:3-4",
+          "arabic": "نَزَّلَ عَلَيْكَ ٱلْكِتَٰبَ بِٱلْحَقِّ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَأَنزَلَ ٱلتَّوْرَىٰةَ وَٱلْإِنجِيلَ ۝ مِن قَبْلُ هُدًۭى لِّلنَّاسِ وَأَنزَلَ ٱلْفُرْقَانَ ۗ إِنَّ ٱلَّذِينَ كَفَرُوا۟ بِـَٔايَٰتِ ٱللَّهِ لَهُمْ عَذَابٌۭ شَدِيدٌۭ ۗ وَٱللَّهُ عَزِيزٌۭ ذُو ٱنتِقَامٍ",
           "transliteration": "Nazzala 'alayka al-Kitaba bil-haqqi musaddiqan lima bayna yadayhi wa anzala at-Tawrata wal-Injil.",
-          "translation": "He has revealed to you the Book in truth, confirming what came before it, as He revealed the Torah and the Gospel.",
-          "translation_fr": "Il a fait descendre sur toi le Livre avec la vérité, confirmant les Livres descendus avant lui. Et Il fit descendre la Thora et l'Evangile auparavant, en tant que guide pour les gens. Et Il a fait descendre le Discernement. Ceux qui ne croient pas aux Révélations d'Allah auront, certes, un dur châtiment!",
+          "translation": "He has sent down upon you, [O Muhammad], the Book in truth, confirming what was before it. And He revealed the Torah and the Gospel. Before, as guidance for the people. And He revealed the Qur'an. Indeed, those who disbelieve in the verses of Allah will have a severe punishment, and Allah is exalted in Might, the Owner of Retribution.",
+          "translation_fr": "Il a fait descendre sur toi le Livre avec la vérité, confirmant les Livres descendus avant lui. Et Il fit descendre la Thora et l'Evangile. auparavant, en tant que guide pour les gens. Et Il a fait descendre le Discernement. Ceux qui ne croient pas aux Révélations d'Allah auront, certes, un dur châtiment! Et, Allah est Puissant, Détenteur du pouvoir de punir.",
           "translation_provenance": "fetched"
         }
       ],
@@ -202,10 +205,10 @@
       ],
       "quran_references": [
         {
-          "reference": "33:40",
-          "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَا أَحَدٍ مِّن رِّجَالِكُمْ وَلَـٰكِن رَّسُولَ اللَّهِ وَخَاتَمَ النَّبِيِّينَ",
+          "reference": "Quran 33:40",
+          "arabic": "مَّا كَانَ مُحَمَّدٌ أَبَآ أَحَدٍۢ مِّن رِّجَالِكُمْ وَلَٰكِن رَّسُولَ ٱللَّهِ وَخَاتَمَ ٱلنَّبِيِّۦنَ ۗ وَكَانَ ٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمًۭا",
           "transliteration": "Ma kana Muhammadun aba ahadin min rijalikum walakin Rasula Allahi wa khatama an-nabiyyin.",
-          "translation": "Muhammad is not the father of any of your men, but he is the Messenger of Allah and the Seal of the Prophets.",
+          "translation": "Muhammad is not the father of [any] one of your men, but [he is] the Messenger of Allah and last of the prophets. And ever is Allah, of all things, Knowing.",
           "translation_fr": "Muhammad n'a jamais été le père de l'un de vos hommes, mais le messager d'Allah et le dernier des prophètes. Allah est Omniscient.",
           "translation_provenance": "fetched"
         }
@@ -253,10 +256,10 @@
       ],
       "quran_references": [
         {
-          "reference": "21:47",
-          "arabic": "وَنَضَعُ الْمَوَازِينَ الْقِسْطَ لِيَوْمِ الْقِيَامَةِ فَلَا تُظْلَمُ نَفْسٌ شَيْئًا",
+          "reference": "Quran 21:47",
+          "arabic": "وَنَضَعُ ٱلْمَوَٰزِينَ ٱلْقِسْطَ لِيَوْمِ ٱلْقِيَٰمَةِ فَلَا تُظْلَمُ نَفْسٌۭ شَيْـًۭٔا ۖ وَإِن كَانَ مِثْقَالَ حَبَّةٍۢ مِّنْ خَرْدَلٍ أَتَيْنَا بِهَا ۗ وَكَفَىٰ بِنَا حَٰسِبِينَ",
           "transliteration": "Wa nada'u al-mawazina al-qista li-yawmi al-qiyamati fala tuzlamu nafsun shay'an.",
-          "translation": "We will set up the scales of justice on the Day of Judgment, so no soul will be wronged in the least.",
+          "translation": "And We place the scales of justice for the Day of Resurrection, so no soul will be treated unjustly at all. And if there is [even] the weight of a mustard seed, We will bring it forth. And sufficient are We as accountant.",
           "translation_fr": "Au Jour de la Résurrection, Nous placerons les balances exactes. Nulle âme ne sera lésée en rien, fût-ce du poids d'un grain de moutarde que Nous ferons venir. Nous suffisons largement pour dresser les comptes.",
           "translation_provenance": "fetched"
         }
@@ -298,18 +301,21 @@
       ],
       "quran_references": [
         {
-          "reference": "54:49",
-          "arabic": "إِنَّا كُلَّ شَيْءٍ خَلَقْنَاهُ بِقَدَرٍ",
+          "reference": "Quran 54:49",
+          "arabic": "إِنَّا كُلَّ شَىْءٍ خَلَقْنَٰهُ بِقَدَرٍۢ",
           "transliteration": "Inna kulla shay'in khalaqnahu bi-qadar.",
-          "translation": "Indeed, We have created everything by a [divine] decree.",
+          "translation": "Indeed, all things We created with predestination.",
           "translation_fr": "Nous avons créé toute chose avec mesure,",
           "translation_provenance": "fetched"
         }
       ],
       "hadith_reference": {
         "text_en": "Allah wrote the destiny of creation fifty thousand years before He created the heavens and the earth.",
-        "reference": "Sahih Muslim 2653",
-        "grade": "sahih"
+        "text_ar": "كَتَبَ اللَّهُ مَقَادِيرَ الْخَلاَئِقِ قَبْلَ أَنْ يَخْلُقَ السَّمَوَاتِ وَالأَرْضَ بِخَمْسِينَ أَلْفَ سَنَةٍ، وَعَرْشُهُ عَلَى الْمَاءِ",
+        "text_fr": "Allah a inscrit les destinées des créatures cinquante mille ans avant de créer les cieux et la terre.",
+        "reference": "Sahih Muslim 2653b",
+        "grade": "sahih",
+        "translation_provenance": "project"
       },
       "verified": true
     }

@@ -11,7 +11,10 @@
       "type": "hadith",
       "reference": "Sahih Muslim 225",
       "text_en": "The Prophet ﷺ said: 'Allah does not accept the prayer of any one of you if he is in a state of impurity until he performs wudu.'",
-      "grade": "sahih"
+      "text_ar": "لاَ تُقْبَلُ صَلاَةُ أَحَدِكُمْ إِذَا أَحْدَثَ حَتَّى يَتَوَضَّأَ",
+      "text_fr": "Le Prophète ﷺ dit : « Allah n'accepte pas la prière de l'un d'entre vous s'il est en état d'impureté, jusqu'à ce qu'il fasse les ablutions. »",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "prerequisites": [

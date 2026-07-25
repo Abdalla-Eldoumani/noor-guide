@@ -11,7 +11,10 @@
       "type": "hadith",
       "reference": "Sahih Bukhari 631",
       "text_en": "Pray as you have seen me praying.",
-      "grade": "sahih"
+      "text_ar": "وَصَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي، فَإِذَا حَضَرَتِ الصَّلاَةُ فَلْيُؤَذِّنْ لَكُمْ أَحَدُكُمْ وَلْيَؤُمَّكُمْ أَكْبَرُكُمْ",
+      "text_fr": "Priez comme vous m'avez vu prier.",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "prerequisites": [
@@ -205,7 +208,10 @@
         "type": "hadith",
         "reference": "Sahih Bukhari 756",
         "text_en": "There is no prayer for the one who does not recite the Opening of the Book (Al-Fatiha).",
-        "grade": "sahih"
+        "text_ar": "لاَ صَلاَةَ لِمَنْ لَمْ يَقْرَأْ بِفَاتِحَةِ الْكِتَابِ",
+        "text_fr": "Il n'y a pas de prière pour celui qui ne récite pas l'Ouverture du Livre (Al-Fâtiha).",
+        "grade": "sahih",
+        "translation_provenance": "project"
       },
       "verified": true
     },

@@ -11,7 +11,10 @@
       "type": "hadith",
       "reference": "Sahih Bukhari 8",
       "text_en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing prayer, giving zakat, fasting Ramadan, and pilgrimage to the House (Kaaba) for whoever is able.",
-      "grade": "sahih"
+      "text_ar": "بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالْحَجِّ، وَصَوْمِ رَمَضَانَ",
+      "text_fr": "L'islam est bâti sur cinq : l'attestation qu'il n'y a de divinité qu'Allah et que Mouhammad est le Messager d'Allah, l'accomplissement de la prière, l'acquittement de la zakât, le jeûne du Ramadan, et le pèlerinage à la Maison sacrée pour qui en a la capacité.",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "pillars": [
@@ -69,10 +72,11 @@
       "description_ar": "في شهر رمضان، وهو الشهر التاسع في التقويم الهجري، يصوم المسلمون من طلوع الفجر إلى غروب الشمس، فيمتنعون عن الطعام والشراب والمعاشرة الزوجية. الصوم يربّي على ضبط النفس، والشكر، والتعاطف مع المحتاجين.",
       "description_fr": "Pendant le mois de Ramadan (le neuvième mois du calendrier musulman), les musulmans jeûnent de l'aube au coucher du soleil : ni nourriture, ni boisson, ni rapports intimes. Le jeûne enseigne la maîtrise de soi, la gratitude et l'empathie envers les plus démunis.",
       "quran_reference": {
-        "reference": "2:183",
-        "translation": "O you who believe, fasting is prescribed for you as it was prescribed for those before you, that you may attain taqwa (God-consciousness).",
+        "reference": "Quran 2:183",
+        "translation": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous -",
         "translation_fr": "O les croyants! On vous a prescrit aS-Siyâm comme on l'a prescrit à ceux d'avant vous, ainsi atteindrez-vous la piété,",
-        "translation_provenance": "fetched"
+        "translation_provenance": "fetched",
+        "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ"
       },
       "verified": true
     },
