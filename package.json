@@ -11,9 +11,10 @@
     "type-check": "tsc --noEmit",
     "verify:i18n": "node scripts/verify-i18n.mjs",
     "verify:locales": "node scripts/verify-locales.mjs",
-    "verify": "npm run verify:i18n",
+    "verify": "npm run verify:i18n && npm run verify:citations",
     "prebuild": "npm run verify",
-    "fetch:scripture": "node scripts/fetch-scripture.mjs"
+    "fetch:scripture": "node scripts/fetch-scripture.mjs",
+    "verify:citations": "node scripts/verify-citations.mjs"
   },
   "dependencies": {
     "lucide-react": "0.400.0",
