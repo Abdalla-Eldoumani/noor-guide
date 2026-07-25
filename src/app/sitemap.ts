@@ -20,24 +20,24 @@ const ROUTES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["ch
 ];
 
 // One entry per English (default-locale) URL. The `alternates.languages` block
-// declares the Arabic counterpart so search engines can pick the right locale.
+// declares every other locale so search engines can pick the right one.
+const ALTERNATE_LOCALES = ["ar", "fr"] as const;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return ROUTES.map(({ path, changeFrequency, priority }) => {
     const enUrl = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
-    const arUrl = path === "/" ? `${SITE_URL}/ar` : `${SITE_URL}/ar${path}`;
+    const languages: Record<string, string> = { en: enUrl, "x-default": enUrl };
+    for (const locale of ALTERNATE_LOCALES) {
+      languages[locale] =
+        path === "/" ? `${SITE_URL}/${locale}` : `${SITE_URL}/${locale}${path}`;
+    }
     return {
       url: enUrl,
       lastModified: now,
       changeFrequency,
       priority,
-      alternates: {
-        languages: {
-          en: enUrl,
-          ar: arUrl,
-          "x-default": enUrl,
-        },
-      },
+      alternates: { languages },
     };
   });
 }
