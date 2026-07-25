@@ -255,7 +255,9 @@
       "bukhari": "Sahih al-Bukhari",
       "muslim": "Sahih Muslim",
       "abudawud": "Sunan Abu Dawud",
-      "quran": "Quran"
+      "quran": "Quran",
+      "nasai": "Sunan an-Nasa'i",
+      "tirmidhi": "Jami' at-Tirmidhi"
     },
     "grades": {
       "sahih": "Sahih",

@@ -255,7 +255,9 @@
       "bukhari": "Sahîh al-Boukhârî",
       "muslim": "Sahîh Mouslim",
       "abudawud": "Sounan Abou Dâwoud",
-      "quran": "Coran"
+      "quran": "Coran",
+      "nasai": "Sounan an-Nasâ'î",
+      "tirmidhi": "Jâmi' at-Tirmidhî"
     },
     "grades": {
       "sahih": "Sahîh",

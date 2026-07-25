@@ -17,6 +17,8 @@ const COLLECTION_SLUGS: Record<string, string> = {
   "sahih al-bukhari": "bukhari",
   "sahih muslim": "muslim",
   "sunan abu dawud": "abudawud",
+  "sunan an-nasa'i": "nasai",
+  "jami' at-tirmidhi": "tirmidhi",
   quran: "quran",
 };
 
