@@ -57,7 +57,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
             key={verse.verse}
             className="border-b border-gray-100 pb-3 last:border-0 last:pb-0"
           >
-            <p className="font-arabic text-arabic-lg text-right text-ink leading-loose">
+            <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg text-right text-ink leading-loose">
               {verse.arabic}
             </p>
             {showTransliteration && (

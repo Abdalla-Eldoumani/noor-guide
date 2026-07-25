@@ -75,7 +75,7 @@ export function PillarsClient({ data, pillars, lessonIds }: PillarsClientProps) 
                       {pillarTitle}
                     </h3>
                     {locale !== "ar" && (
-                      <p className="font-arabic text-sm text-muted">
+                      <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted">
                         {pillar.title_ar}
                       </p>
                     )}

@@ -42,7 +42,7 @@ export function PrayerTimesDisplay({ timings, nextPrayer }: PrayerTimesDisplayPr
             <p className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
               {prayer.name_en}
             </p>
-            <p className="font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
+            <p dir="rtl" lang="ar" className="font-arabic text-arabic-sm text-muted dark:text-gray-400">
               {prayer.name_ar}
             </p>
             <p

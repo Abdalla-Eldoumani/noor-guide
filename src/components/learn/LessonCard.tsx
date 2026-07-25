@@ -60,7 +60,7 @@ export function LessonCard({
             <Badge variant={variant}>{statusLabel}</Badge>
           </div>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-2">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-2">
               {module.title_ar}
             </p>
           )}

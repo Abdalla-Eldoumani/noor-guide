@@ -155,7 +155,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
               Surah {surah.number}
             </p>
           </div>
-          <p className="font-arabic text-arabic-lg">{surah.title_ar}</p>
+          <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg">{surah.title_ar}</p>
         </div>
       </div>
 

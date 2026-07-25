@@ -159,7 +159,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
                           {pickLocalized<string>(prayer, "name", locale)}
                         </span>
                         {locale !== "ar" && (
-                          <span className="font-arabic text-sm text-muted ms-2">
+                          <span dir="rtl" lang="ar" className="font-arabic text-sm text-muted ms-2">
                             {prayer.name_ar}
                           </span>
                         )}
@@ -267,7 +267,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.tashahhud)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.tashahhud.title_ar}
             </p>
           )}
@@ -304,7 +304,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.salawat_ibrahimiyyah)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.salawat_ibrahimiyyah.title_ar}
             </p>
           )}
@@ -338,7 +338,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.tasleem)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.tasleem.title_ar}
             </p>
           )}

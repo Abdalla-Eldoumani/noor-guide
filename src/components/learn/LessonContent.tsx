@@ -51,7 +51,7 @@ export function LessonContent({
       <div className="mt-6 mb-8">
         <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">{title}</h1>
         {titleAr && (
-          <p className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
+          <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
             {titleAr}
           </p>
         )}

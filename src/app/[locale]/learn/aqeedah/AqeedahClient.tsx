@@ -85,7 +85,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                       {pillarTitle}
                     </h3>
                     {locale !== "ar" && (
-                      <p className="font-arabic text-sm text-muted">
+                      <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted">
                         {pillar.title_ar}
                       </p>
                     )}
