@@ -14,7 +14,7 @@ Available in English, Arabic, and French.
 
 ## What you can learn
 
-The app is organized into six modules, meant to be taken in order:
+The app is organized into nine modules, meant to be taken in order:
 
 **1. Aqeedah (Beliefs).** The six pillars of Iman: belief in Allah, the Angels, the Books, the Prophets, the Day of Judgment, and Divine Decree. Each pillar includes Quran references and relevant hadith.
 
