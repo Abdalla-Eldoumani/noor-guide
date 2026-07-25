@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SourceReference } from "@/components/ui/SourceReference";
 
 interface HadithBlockProps {
@@ -17,6 +17,7 @@ const ARABIC_RE = /[؀-ۿ]/;
 
 export function HadithBlock({ text, reference, grade }: HadithBlockProps) {
   const locale = useLocale();
+  const t = useTranslations("sources");
   const showText = locale !== "ar" || ARABIC_RE.test(text);
 
   return (
@@ -28,9 +29,9 @@ export function HadithBlock({ text, reference, grade }: HadithBlockProps) {
       )}
       <div className="flex items-center gap-3">
         <SourceReference type="hadith" reference={reference} />
-        {grade && (
-          <span className="text-xs text-muted dark:text-gray-400 capitalize">
-            ({grade})
+        {grade && grade !== "n/a" && (
+          <span className="text-xs text-muted dark:text-gray-400">
+            ({t(`grades.${grade}`)})
           </span>
         )}
       </div>
