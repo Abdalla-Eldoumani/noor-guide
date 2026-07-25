@@ -245,5 +245,20 @@
       "salah",
       "Islamic prayer"
     ]
+  },
+  "sources": {
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "consensus": "Scholarly consensus",
+    "collections": {
+      "bukhari": "Sahih al-Bukhari",
+      "muslim": "Sahih Muslim",
+      "abudawud": "Sunan Abu Dawud",
+      "quran": "Quran"
+    },
+    "grades": {
+      "sahih": "Sahih",
+      "hasan": "Hasan"
+    }
   }
 }
