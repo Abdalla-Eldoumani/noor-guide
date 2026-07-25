@@ -1,0 +1,193 @@
+{
+  "module_id": "janazah",
+  "title_en": "When a Muslim dies",
+  "title_ar": "أحكام الجنائز",
+  "title_fr": "Quand un musulman meurt",
+  "introduction": {
+    "content_en": "This is the module nobody reads until they need it, and by then there is no time to learn. What follows is the sequence, and the words to say. It is a communal obligation: if some of the community carry it out, the duty is lifted from the rest.",
+    "content_ar": "هذه وحدة لا يقرؤها أحد حتى يحتاج إليها، وعندها لا يبقى وقت للتعلم. وهذا بيان الترتيب وما يُقال. وهو فرض كفاية، إذا قام به بعض المسلمين سقط عن الباقين.",
+    "content_fr": "C'est le module que personne ne lit avant d'en avoir besoin, et il est alors trop tard pour apprendre. Voici la marche à suivre et les paroles à dire. C'est une obligation communautaire : si une partie de la communauté s'en acquitte, les autres en sont dispensés."
+  },
+  "sections": [
+    {
+      "id": "at-death",
+      "heading": "At the moment of death",
+      "heading_ar": "عند الاحتضار وبعد الوفاة",
+      "heading_fr": "Au moment du décès",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "death-1",
+          "description": "Encourage the dying person gently to say the declaration of faith.",
+          "description_ar": "يُلقَّن المحتضر الشهادة برفق.",
+          "description_fr": "Encourage doucement le mourant à prononcer l'attestation de foi.",
+          "source": "Sahih Muslim 916",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "death-2",
+          "description": "After death, close the eyes and cover the body.",
+          "description_ar": "وبعد الموت تُغمض عيناه ويُسجّى بثوب.",
+          "description_fr": "Après le décès, ferme-lui les yeux et couvre le corps.",
+          "source": "Sahih Muslim 920",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "death-3",
+          "description": "Say the words of patience, and supplicate for the deceased.",
+          "description_ar": "ويُقال كلمة الاسترجاع ويُدعى للميت.",
+          "description_fr": "Prononce les paroles de patience et invoque pour le défunt.",
+          "source": "Sahih Muslim 918",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "death-4",
+          "description": "Settle the debts of the deceased without delay.",
+          "description_ar": "وتُقضى ديون الميت دون تأخير.",
+          "description_fr": "Règle les dettes du défunt sans délai.",
+          "source": "Jami' at-Tirmidhi 1078",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "preparation",
+      "heading": "Washing and shrouding",
+      "heading_ar": "الغسل والتكفين",
+      "heading_fr": "Le lavage et le linceul",
+      "emphasis": "recommended",
+      "items": [
+        {
+          "id": "prep-1",
+          "description": "The body is washed an odd number of times by people of the same sex, except that a spouse may wash a spouse.",
+          "description_ar": "يُغسّل الميت وترًا ويتولاه من كان من جنسه، ويجوز أن يغسّل أحد الزوجين الآخر.",
+          "description_fr": "Le corps est lavé un nombre impair de fois par des personnes du même sexe, sauf qu'un époux peut laver son conjoint.",
+          "source": "Sahih Bukhari 1253",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "prep-2",
+          "description": "The body is then wrapped in simple white cloth.",
+          "description_ar": "ثم يُكفَّن في ثياب بيض بسيطة.",
+          "description_fr": "Le corps est ensuite enveloppé dans un simple linceul blanc.",
+          "source": "Sahih Bukhari 1264",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "prep-3",
+          "description": "Someone who dies in the state of pilgrimage, or as a martyr on the battlefield, is treated differently.",
+          "description_ar": "ويُستثنى المحرم والشهيد في المعركة فلهما حكم آخر.",
+          "description_fr": "Celui qui meurt en état de pèlerinage, ou en martyr sur le champ de bataille, est traité différemment.",
+          "source": "Sahih Bukhari 1265",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "funeral-prayer",
+      "heading": "The funeral prayer",
+      "heading_ar": "صلاة الجنازة",
+      "heading_fr": "La prière funéraire",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "janazah-1",
+          "description": "It is prayed standing, with no bowing and no prostration.",
+          "description_ar": "تُصلّى قيامًا بلا ركوع ولا سجود.",
+          "description_fr": "Elle s'accomplit debout, sans inclinaison ni prosternation.",
+          "source": "Sahih Bukhari 1245",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "janazah-2",
+          "description": "After the first takbir, recite Surah Al-Fatiha.",
+          "description_ar": "بعد التكبيرة الأولى تُقرأ الفاتحة.",
+          "description_fr": "Après le premier takbîr, récite la sourate Al-Fâtiha.",
+          "source": "Sahih Bukhari 1335",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "janazah-3",
+          "description": "After the second, send blessings upon the Prophet as in the tashahhud.",
+          "description_ar": "وبعد الثانية يُصلّى على النبي صلى الله عليه وسلم كما في التشهد.",
+          "description_fr": "Après le deuxième, invoque les bénédictions sur le Prophète comme dans le tachahhoud.",
+          "source": "Sunan an-Nasa'i 1989",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "janazah-4",
+          "description": "After the third, supplicate for the deceased.",
+          "description_ar": "وبعد الثالثة يُدعى للميت.",
+          "description_fr": "Après le troisième, invoque en faveur du défunt.",
+          "source": "Sahih Muslim 963",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "janazah-5",
+          "description": "After the fourth, pause briefly and then give the tasleem.",
+          "description_ar": "وبعد الرابعة يقف قليلاً ثم يسلّم.",
+          "description_fr": "Après le quatrième, marque une brève pause puis donne le taslîm.",
+          "source": "Sahih Muslim 963",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "burial",
+      "heading": "Burial and after",
+      "heading_ar": "الدفن وما بعده",
+      "heading_fr": "L'enterrement et après",
+      "emphasis": "recommended",
+      "items": [
+        {
+          "id": "burial-1",
+          "description": "Burial is done without delay, with the body laid on its right side facing the qibla.",
+          "description_ar": "يُعجَّل بالدفن، ويوضع الميت على جنبه الأيمن مستقبل القبلة.",
+          "description_fr": "L'enterrement se fait sans délai, le corps couché sur le côté droit face à la qibla.",
+          "source": "Sahih Bukhari 1315",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "burial-2",
+          "description": "Stand at the grave afterwards and ask forgiveness and steadfastness for the deceased.",
+          "description_ar": "ويُوقف عند القبر بعد الدفن فيُستغفر للميت ويُسأل له التثبيت.",
+          "description_fr": "Reste ensuite près de la tombe et demande le pardon et la fermeté pour le défunt.",
+          "source": "Sunan Abu Dawud 3221",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "burial-3",
+          "description": "Visiting graves is encouraged as a reminder of the hereafter. Wailing and striking oneself are not from the Sunnah.",
+          "description_ar": "وتُستحب زيارة القبور لتذكر الآخرة، وليس من السنة النياحة ولطم الخدود.",
+          "description_fr": "La visite des tombes est encouragée comme rappel de l'au-delà. Les lamentations et les gestes de violence sur soi ne sont pas de la Sunna.",
+          "source": "Sahih Bukhari 1294",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "burial-4",
+          "description": "Continue to supplicate for them, give charity on their behalf, and fulfil their pledges.",
+          "description_ar": "ويستمر الدعاء له والصدقة عنه والوفاء بعهوده.",
+          "description_fr": "Continue d'invoquer pour eux, de donner en aumône en leur nom et d'honorer leurs engagements.",
+          "source": "Sahih Muslim 1631",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "module_id": "prayer-practice",
+  "title_en": "Prayer in practice",
+  "title_ar": "الصلاة في الواقع العملي",
+  "title_fr": "La prière en pratique",
+  "introduction": {
+    "content_en": "Knowing how to pray is the first step. This module answers what happens next: when each prayer's window opens and closes, what to do about a prayer you missed, how prayer changes when you travel, and what makes Friday different.",
+    "content_ar": "معرفة كيفية الصلاة أول الطريق، وهذه الوحدة تجيب عمّا بعده: متى يبدأ وقت كل صلاة وينتهي، وما العمل فيما فات منها، وكيف تتغير الصلاة في السفر، وما الذي يميز يوم الجمعة.",
+    "content_fr": "Savoir comment prier est la première étape. Ce module répond à la suite : quand s'ouvre et se ferme le temps de chaque prière, que faire d'une prière manquée, comment la prière change en voyage, et ce qui distingue le vendredi."
+  },
+  "sections": [
+    {
+      "id": "windows",
+      "heading": "When each prayer's time begins and ends",
+      "heading_ar": "أوقات الصلوات الخمس",
+      "heading_fr": "Quand commence et finit le temps de chaque prière",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "window-fajr",
+          "description": "Fajr: from the true dawn until sunrise.",
+          "description_ar": "الفجر: من طلوع الفجر الصادق إلى طلوع الشمس.",
+          "description_fr": "Fajr : de l'aube véritable jusqu'au lever du soleil.",
+          "source": "Sahih Muslim 612",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "window-dhuhr",
+          "description": "Dhuhr: from just after the sun passes its highest point until an object's shadow equals its own length.",
+          "description_ar": "الظهر: من زوال الشمس إلى أن يصير ظل الشيء مثله.",
+          "description_fr": "Dhuhr : juste après que le soleil a dépassé son zénith, jusqu'à ce que l'ombre d'un objet égale sa longueur.",
+          "source": "Sahih Muslim 612",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "window-asr",
+          "description": "Asr: from the end of Dhuhr until sunset, though praying it before the sun yellows is better.",
+          "description_ar": "العصر: من خروج وقت الظهر إلى غروب الشمس، والأفضل أداؤها قبل اصفرار الشمس.",
+          "description_fr": "'Asr : de la fin de Dhuhr jusqu'au coucher du soleil, mais il vaut mieux l'accomplir avant que le soleil ne jaunisse.",
+          "source": "Sahih Muslim 612",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "window-maghrib",
+          "description": "Maghrib: from sunset until the red twilight disappears.",
+          "description_ar": "المغرب: من غروب الشمس إلى مغيب الشفق الأحمر.",
+          "description_fr": "Maghrib : du coucher du soleil jusqu'à la disparition du crépuscule rouge.",
+          "source": "Sahih Muslim 612",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "window-isha",
+          "description": "Isha: from the end of the twilight until midnight, and in necessity until the true dawn.",
+          "description_ar": "العشاء: من مغيب الشفق إلى منتصف الليل، وعند الضرورة إلى طلوع الفجر.",
+          "description_fr": "'Ichâ : de la fin du crépuscule jusqu'à minuit, et en cas de nécessité jusqu'à l'aube véritable.",
+          "source": "Sahih Muslim 612",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "qada",
+      "heading": "A prayer you missed",
+      "heading_ar": "قضاء الفوائت",
+      "heading_fr": "Une prière manquée",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "qada-1",
+          "description": "A prayer missed through sleep or forgetfulness is prayed as soon as you remember, and there is no sin in it.",
+          "description_ar": "من نام عن صلاة أو نسيها فليصلها إذا ذكرها ولا إثم عليه.",
+          "description_fr": "Une prière manquée par sommeil ou oubli s'accomplit dès que tu t'en souviens, et il n'y a pas de péché en cela.",
+          "source": "Sahih Bukhari 597",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "qada-2",
+          "description": "Make it up in the order the prayers fall where you can.",
+          "description_ar": "ويُستحب قضاؤها مرتبة على ترتيب الصلوات ما أمكن.",
+          "description_fr": "Rattrape-les dans l'ordre où elles se succèdent, autant que possible.",
+          "source": "Sahih Bukhari 598",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "qada-3",
+          "description": "If many prayers were missed over a long period, make them up gradually alongside the current prayers rather than abandoning the effort.",
+          "description_ar": "ومن فاتته صلوات كثيرة على مدة طويلة قضاها تدريجيًّا مع صلوات وقته ولا ييأس.",
+          "description_fr": "Si de nombreuses prières ont été manquées sur une longue période, rattrape-les progressivement en parallèle des prières actuelles plutôt que d'abandonner.",
+          "source": "Sahih Bukhari 597",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "travel",
+      "heading": "Praying while travelling",
+      "heading_ar": "صلاة المسافر",
+      "heading_fr": "La prière en voyage",
+      "emphasis": "recommended",
+      "items": [
+        {
+          "id": "travel-1",
+          "description": "A traveller shortens the four-unit prayers to two: Dhuhr, Asr, and Isha.",
+          "description_ar": "يقصر المسافر الرباعية إلى ركعتين: الظهر والعصر والعشاء.",
+          "description_fr": "Le voyageur raccourcit à deux unités les prières de quatre : Dhuhr, 'Asr et 'Ichâ.",
+          "source": "Quran 4:101",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "travel-2",
+          "description": "Fajr stays two units and Maghrib stays three.",
+          "description_ar": "وتبقى الفجر ركعتين والمغرب ثلاثًا.",
+          "description_fr": "Fajr reste à deux unités et Maghrib à trois.",
+          "source": "Sahih Bukhari 1090",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "travel-3",
+          "description": "Dhuhr may be joined with Asr, and Maghrib with Isha, in either the earlier or the later time.",
+          "description_ar": "ويجوز الجمع بين الظهر والعصر، وبين المغرب والعشاء، جمع تقديم أو تأخير.",
+          "description_fr": "Dhuhr peut être jointe à 'Asr, et Maghrib à 'Ichâ, dans le temps de la première ou de la seconde.",
+          "source": "Sahih Muslim 705",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "travel-4",
+          "description": "The schools differ on the distance and duration that make someone a traveller. Follow what your local mosque teaches.",
+          "description_ar": "واختلف الفقهاء في مسافة السفر ومدته، فاتبع ما يُفتى به في بلدك.",
+          "description_fr": "Les écoles divergent sur la distance et la durée qui font de quelqu'un un voyageur. Suis l'enseignement de ta mosquée locale.",
+          "source": "Sahih Bukhari 1081",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "jumuah",
+      "heading": "Friday prayer",
+      "heading_ar": "صلاة الجمعة",
+      "heading_fr": "La prière du vendredi",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "jumuah-1",
+          "description": "It replaces Dhuhr on Friday and is obligatory on adult men who are resident.",
+          "description_ar": "تقوم مقام الظهر يوم الجمعة، وهي واجبة على الرجال البالغين المقيمين.",
+          "description_fr": "Elle remplace Dhuhr le vendredi et est obligatoire pour les hommes adultes résidents.",
+          "source": "Quran 62:9",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "jumuah-2",
+          "description": "It is two units, preceded by a sermon in two parts, which is part of the prayer.",
+          "description_ar": "وهي ركعتان تسبقهما خطبتان، والخطبة من الصلاة.",
+          "description_fr": "Elle compte deux unités, précédées d'un sermon en deux parties, qui fait partie de la prière.",
+          "source": "Sahih Muslim 866",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "jumuah-3",
+          "description": "Listen silently during the sermon. Speaking during it removes its reward.",
+          "description_ar": "ويجب الإنصات أثناء الخطبة، ومن تكلم فيها فقد لغا.",
+          "description_fr": "Écoute en silence pendant le sermon. Parler pendant celui-ci en annule la récompense.",
+          "source": "Sahih Bukhari 934",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "jumuah-4",
+          "description": "Bathing, wearing clean clothes, using fragrance, and arriving early are all recommended.",
+          "description_ar": "ويُستحب الغسل ولبس أحسن الثياب والتطيب والتبكير.",
+          "description_fr": "Se laver, porter des vêtements propres, se parfumer et arriver tôt sont tous recommandés.",
+          "source": "Sahih Bukhari 877",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "jumuah-5",
+          "description": "Women may attend but it is not obligatory on them; they pray Dhuhr if they do not.",
+          "description_ar": "ويجوز للنساء الحضور ولا تجب عليهن، فإن لم يحضرن صلّين الظهر.",
+          "description_fr": "Les femmes peuvent y assister sans que ce soit obligatoire ; sinon elles accomplissent Dhuhr.",
+          "source": "Sunan Abu Dawud 1067",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    }
+  ]
+}
