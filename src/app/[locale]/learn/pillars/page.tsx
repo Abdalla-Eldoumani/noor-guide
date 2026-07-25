@@ -25,7 +25,7 @@ export default async function PillarsPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("pillars");
+  const moduleData = getModuleById("pillars");
   const data = getPillarsData();
   const pillars = getIslamPillars();
   const lessonIds = getLessonIdsForModule("pillars");
@@ -35,8 +35,8 @@ export default async function PillarsPage({
       <JsonLd
         data={lessonJsonLd({
           id: "pillars",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}

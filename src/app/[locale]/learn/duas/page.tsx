@@ -25,7 +25,7 @@ export default async function DuasPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("duas");
+  const moduleData = getModuleById("duas");
   const data = getDuasData();
   const categories = getDuaCategories();
   const lessonIds = getLessonIdsForModule("duas");
@@ -35,8 +35,8 @@ export default async function DuasPage({
       <JsonLd
         data={lessonJsonLd({
           id: "duas",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}

@@ -25,7 +25,7 @@ export default async function SurahsPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("surahs");
+  const moduleData = getModuleById("surahs");
   const data = getSurahsData();
   const surahs = getSurahs();
   const lessonIds = getLessonIdsForModule("surahs");
@@ -35,8 +35,8 @@ export default async function SurahsPage({
       <JsonLd
         data={lessonJsonLd({
           id: "surahs",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}

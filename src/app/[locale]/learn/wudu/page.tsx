@@ -30,7 +30,7 @@ export default async function WuduPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("wudu");
+  const moduleData = getModuleById("wudu");
   const data = getWuduData();
   const steps = getWuduSteps();
   const breakers = getWuduBreakers();
@@ -41,8 +41,8 @@ export default async function WuduPage({
       <JsonLd
         data={lessonJsonLd({
           id: "wudu",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}

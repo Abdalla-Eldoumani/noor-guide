@@ -7,9 +7,9 @@ import { pickLocalized } from "@/lib/content-i18n";
 // The site name is appended by the title template in the locale layout and must
 // not be repeated here.
 export function moduleMetadata(moduleId: string, locale: string): Metadata {
-  const module = getModuleById(moduleId);
-  const title = pickLocalized<string>(module, "title", locale);
-  const description = pickLocalized<string>(module, "description", locale);
+  const moduleData = getModuleById(moduleId);
+  const title = pickLocalized<string>(moduleData, "title", locale);
+  const description = pickLocalized<string>(moduleData, "description", locale);
 
   return {
     ...(title ? { title } : {}),

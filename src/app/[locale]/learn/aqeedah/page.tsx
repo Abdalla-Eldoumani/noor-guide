@@ -25,7 +25,7 @@ export default async function AqeedahPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("aqeedah");
+  const moduleData = getModuleById("aqeedah");
   const data = getAqeedahData();
   const pillars = getAqeedahPillars();
   const lessonIds = getLessonIdsForModule("aqeedah");
@@ -35,8 +35,8 @@ export default async function AqeedahPage({
       <JsonLd
         data={lessonJsonLd({
           id: "aqeedah",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}

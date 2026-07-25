@@ -25,7 +25,7 @@ export default async function SalahPage({
 }) {
   const { locale } = await params;
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const module = getModuleById("salah");
+  const moduleData = getModuleById("salah");
   const data = getSalahData();
   const steps = getSalahSteps();
   const lessonIds = getLessonIdsForModule("salah");
@@ -35,8 +35,8 @@ export default async function SalahPage({
       <JsonLd
         data={lessonJsonLd({
           id: "salah",
-          title: pickLocalized<string>(module, "title", locale) ?? "",
-          description: pickLocalized<string>(module, "description", locale) ?? "",
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
           locale,
           courseName: tLearn("dashboardTitle"),
         })}
