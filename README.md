@@ -77,20 +77,22 @@ Scripture is handled differently from prose. The project never retranslates Qura
 Quran text is Uthmani in Arabic, Saheeh International in English, and Hamidullah in French.
 The French for the six essential surahs is the published Hamidullah edition, fetched rather
 than translated.
-Hadith text in all three languages is pulled from a single Encyclopedia of Translated
-Prophetic Hadiths entry, so the three languages carry the same meaning by construction
-rather than by review. `npm run fetch:scripture` populates it.
-
-Where no encyclopedia entry backs a citation, hadith quotations render in the English
-translation the project authors selected, with the citation and grading localized.
+`npm run fetch:scripture` writes every cited Quran passage into the content from those
+editions, for the whole cited range in all three languages, so the Arabic and the two
+translations can never describe different passages. Hadith is not fetched: its Arabic is
+read from the collection by hand and recorded in the verification record, and the English
+and French renderings are the project's own and marked `translation_provenance: "project"`.
 
 Every citation in the content has an entry in `src/data/hadith-mapping.json` naming the
 narrator, the wording confirmed, the grading the collection carries, and the source the
-check was made against. All 92 have been checked; `npm run verify:citations` fails the
-build if one is added without an entry. Checking them found ten references pointing at the
-wrong narration and two resting on narrations graded da'if, all now corrected. Rulings that
-rest on the agreement of the schools rather than on a single narration say so instead of
-borrowing a citation.
+check was made against. **All 109 have been checked**, and `npm run verify:citations` fails
+the build if one is added without an entry.
+
+Checking them found ten references pointing at the wrong narration and two resting on
+narrations graded da'if, all corrected. Seventeen more were not being counted at all,
+because the collector keyed on a `type` tag those nodes did not carry; they are counted and
+checked now. Rulings that rest on the agreement of the schools rather than on a single
+narration say so instead of borrowing a citation.
 
 ## Scholarly review
 
@@ -194,7 +196,7 @@ src/
 scripts/
 ├── verify-i18n.mjs      # static locale parity, gates the build
 ├── verify-locales.mjs   # render-time locale scan
-├── fetch-scripture.mjs  # pulls Quran and hadith in all three languages
+├── fetch-scripture.mjs  # writes the cited Quran passages from published editions
 └── i18n-allowlist.json  # reviewable exceptions for both verifiers
 ```
 
