@@ -303,7 +303,7 @@
       "notes_fr": "Tu peux formuler des invocations personnelles dans n'importe quelle langue pendant la prosternation. Le Prophète ﷺ a dit que c'est la position la plus proche d'Allah.",
       "source": {
         "type": "hadith",
-        "reference": "Sahih Muslim 482",
+        "reference": "Sahih Muslim 772",
         "grade": "sahih"
       },
       "verified": true
@@ -624,7 +624,7 @@
       "description": "Saying subhana rabbiyal-azim once in bowing.",
       "description_ar": "قول سبحان ربي العظيم في الركوع.",
       "description_fr": "Dire soubhâna rabbiya l-'azîm dans l'inclinaison.",
-      "source": "Sunan Abu Dawud 869",
+      "source": "Sahih Muslim 772",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -633,7 +633,7 @@
       "description": "Saying subhana rabbiyal-a'la once in prostration.",
       "description_ar": "قول سبحان ربي الأعلى في السجود.",
       "description_fr": "Dire soubhâna rabbiya l-a'lâ dans la prosternation.",
-      "source": "Sunan Abu Dawud 869",
+      "source": "Sahih Muslim 772",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -698,18 +698,21 @@
     },
     {
       "id": "salah-sunnah-5",
-      "description": "Placing the right hand over the left on the chest.",
-      "description_ar": "وضع اليد اليمنى على اليسرى على الصدر.",
-      "description_fr": "Poser la main droite sur la gauche, sur la poitrine.",
+      "description": "Placing the right hand over the left forearm.",
+      "description_ar": "وضع اليد اليمنى على ذراع اليسرى.",
+      "description_fr": "Poser la main droite sur l'avant-bras gauche.",
       "source": "Sahih Bukhari 740",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "The narration says the forearm. Placing the hands on the chest is the most common Sunni practice, and the schools differ on the exact place.",
+      "note_ar": "جاء في الحديث وضعها على الذراع، ووضع اليدين على الصدر هو الأشهر عند أهل السنة، وقد اختلفت المذاهب في موضعهما.",
+      "note_fr": "Le hadith mentionne l'avant-bras. Poser les mains sur la poitrine est la pratique sunnite la plus répandue, et les écoles divergent sur l'endroit exact."
     },
     {
       "id": "salah-sunnah-6",
-      "description": "Looking toward the place of prostration.",
-      "description_ar": "النظر إلى موضع السجود.",
-      "description_fr": "Regarder vers l'endroit de la prosternation.",
+      "description": "Keeping the gaze low and not raising it toward the sky.",
+      "description_ar": "خفض البصر وترك رفعه إلى السماء.",
+      "description_fr": "Baisser le regard et ne pas le lever vers le ciel.",
       "source": "Sunan an-Nasa'i 1194",
       "verified": true,
       "needs_scholarly_review": true
@@ -719,7 +722,7 @@
       "description": "Saying ameen aloud after Al-Fatiha in the audible prayers.",
       "description_ar": "التأمين بعد الفاتحة في الصلاة الجهرية.",
       "description_fr": "Dire âmîn à voix haute après Al-Fâtiha dans les prières à voix haute.",
-      "source": "Sahih Bukhari 780",
+      "source": "Sahih Bukhari 782",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -729,6 +732,15 @@
       "description_ar": "الإشارة بالسبابة في التشهد.",
       "description_fr": "Lever l'index pendant le tachahhoud.",
       "source": "Sahih Muslim 580",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-9",
+      "description": "Making personal supplication while prostrating.",
+      "description_ar": "الإكثار من الدعاء في السجود.",
+      "description_fr": "Faire des invocations personnelles pendant la prosternation.",
+      "source": "Sahih Muslim 482",
       "verified": true,
       "needs_scholarly_review": true
     }

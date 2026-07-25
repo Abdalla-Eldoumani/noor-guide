@@ -93,9 +93,12 @@
           "description": "If many prayers were missed over a long period, make them up gradually alongside the current prayers rather than abandoning the effort.",
           "description_ar": "ومن فاتته صلوات كثيرة على مدة طويلة قضاها تدريجيًّا مع صلوات وقته ولا ييأس.",
           "description_fr": "Si de nombreuses prières ont été manquées sur une longue période, rattrape-les progressivement en parallèle des prières actuelles plutôt que d'abandonner.",
-          "source": "Sahih Bukhari 597",
+          "source": "Scholarly consensus",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The schools agree that missed obligatory prayers are made up. They differ over prayers left deliberately over a long period, so ask a local scholar about your own case.",
+          "note_ar": "اتفقت المذاهب على قضاء الفرائض الفائتة، واختلفت فيمن ترك الصلاة عمدا مدة طويلة، فليسأل عن حاله أهل العلم.",
+          "note_fr": "Les écoles s'accordent sur le rattrapage des prières obligatoires manquées. Elles divergent au sujet des prières délaissées volontairement sur une longue période : demandez conseil à un savant."
         }
       ]
     },
@@ -122,7 +125,10 @@
           "description_fr": "Fajr reste à deux unités et Maghrib à trois.",
           "source": "Sahih Bukhari 1090",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "Maghrib is not shortened. The narration establishes the shortening of the four-unit prayers; that Maghrib stays three is by established practice.",
+          "note_ar": "ولا تُقصر المغرب. والحديث يثبت قصر الرباعية، وأما بقاء المغرب ثلاثًا فبالعمل المستفيض.",
+          "note_fr": "Maghrib n'est pas raccourcie. La narration établit le raccourcissement des prières de quatre unités ; que Maghrib reste à trois relève de la pratique établie."
         },
         {
           "id": "travel-3",
@@ -140,7 +146,10 @@
           "description_fr": "Les écoles divergent sur la distance et la durée qui font de quelqu'un un voyageur. Suis l'enseignement de ta mosquée locale.",
           "source": "Sahih Bukhari 1081",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration records a journey on which the prayer was shortened. The thresholds of distance and duration are inferences the schools draw from reports like it, and they differ.",
+          "note_ar": "يذكر الحديث سفرا قصرت فيه الصلاة، وأما تحديد المسافة والمدة فاجتهاد اختلفت فيه المذاهب.",
+          "note_fr": "Le hadith rapporte un voyage durant lequel la prière fut raccourcie. Les seuils de distance et de durée sont des déductions des écoles, qui divergent entre elles."
         }
       ]
     },
@@ -165,7 +174,7 @@
           "description": "It is two units, preceded by a sermon in two parts, which is part of the prayer.",
           "description_ar": "وهي ركعتان تسبقهما خطبتان، والخطبة من الصلاة.",
           "description_fr": "Elle compte deux unités, précédées d'un sermon en deux parties, qui fait partie de la prière.",
-          "source": "Sahih Muslim 866",
+          "source": "Sahih Muslim 861",
           "verified": true,
           "needs_scholarly_review": true
         },
@@ -185,16 +194,22 @@
           "description_fr": "Se laver, porter des vêtements propres, se parfumer et arriver tôt sont tous recommandés.",
           "source": "Sahih Bukhari 877",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration names the bath. Clean clothes, fragrance, and arriving early are established by other reports and are agreed to be recommended.",
+          "note_ar": "نص الحديث على الغسل، وأما الثياب النظيفة والطيب والتبكير فثابتة بأحاديث أخرى، والاستحباب متفق عليه.",
+          "note_fr": "Le hadith mentionne le bain. Les vêtements propres, le parfum et le fait d'arriver tôt sont établis par d'autres rapports et leur caractère recommandé fait consensus."
         },
         {
           "id": "jumuah-5",
           "description": "Women may attend but it is not obligatory on them; they pray Dhuhr if they do not.",
           "description_ar": "ويجوز للنساء الحضور ولا تجب عليهن، فإن لم يحضرن صلّين الظهر.",
           "description_fr": "Les femmes peuvent y assister sans que ce soit obligatoire ; sinon elles accomplissent Dhuhr.",
-          "source": "Sunan Abu Dawud 1067",
+          "source": "Scholarly consensus",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The four schools agree Jumuah is not obligatory on women, who pray Dhuhr instead if they do not attend. The narration usually cited for this is graded differently across collections, so it is presented here as the agreed position rather than tied to one number.",
+          "note_ar": "اتفقت المذاهب الأربعة على أن الجمعة لا تجب على النساء، وتصلي من لم تحضر الظهر. وقد اختُلف في تصحيح الحديث المستدل به، فذُكر هنا بوصفه القول المتفق عليه دون تعليقه برقم بعينه.",
+          "note_fr": "Les quatre écoles s'accordent : la joumou'a n'est pas obligatoire pour les femmes, qui accomplissent Dhuhr si elles n'y assistent pas. La narration habituellement citée est gradée différemment selon les recueils ; elle est donc présentée ici comme la position admise plutôt que rattachée à un numéro précis."
         }
       ]
     }

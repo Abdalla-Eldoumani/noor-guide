@@ -115,9 +115,9 @@
           "description_ar": "إفاضة الماء على سائر الجسد مبتدئًا بالميامن، بحيث لا يبقى موضع لم يصبه الماء.",
           "description_fr": "Verse de l'eau sur tout le corps en commençant par la droite, sans laisser aucune partie sèche.",
           "source": "Sahih Bukhari 248",
-          "note": "A ghusl performed this way also counts as wudu, so you may pray without repeating it.",
-          "note_ar": "ومن اغتسل هكذا أجزأه غسله عن الوضوء فله أن يصلي دون إعادته.",
-          "note_fr": "Un ghousl accompli ainsi tient lieu d'ablutions : tu peux prier sans les refaire.",
+          "note": "Beginning with the right is the Prophet's general practice rather than a wording in this narration.",
+          "note_ar": "البدء باليمين من هديه العام صلى الله عليه وسلم، وليس لفظا في هذا الحديث.",
+          "note_fr": "Commencer par la droite relève de sa pratique générale et non d'une formulation de ce hadith.",
           "verified": true,
           "needs_scholarly_review": true
         }
@@ -171,7 +171,7 @@
           "description": "It replaces both wudu and ghusl, and ends as soon as water becomes usable again.",
           "description_ar": "ويقوم مقام الوضوء والغسل، وينتهي حكمه متى قدر على استعمال الماء.",
           "description_fr": "Il remplace les ablutions et le ghousl, et cesse dès que l'eau redevient utilisable.",
-          "source": "Sahih Bukhari 344",
+          "source": "Sunan Abu Dawud 332",
           "verified": true,
           "needs_scholarly_review": true
         }

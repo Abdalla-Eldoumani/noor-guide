@@ -349,10 +349,19 @@
     },
     {
       "id": "wudu-sunnah-5",
-      "description": "Running wet fingers through the beard and between the fingers and toes.",
-      "description_ar": "تخليل اللحية وتخليل الأصابع.",
-      "description_fr": "Passer les doigts humides dans la barbe et entre les doigts et les orteils.",
+      "description": "Running wet fingers through the beard.",
+      "description_ar": "تخليل اللحية.",
+      "description_fr": "Passer les doigts mouillés dans la barbe.",
       "source": "Jami' at-Tirmidhi 31",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-10",
+      "description": "Running water between the fingers and between the toes.",
+      "description_ar": "تخليل الأصابع في اليدين والرجلين.",
+      "description_fr": "Faire passer l'eau entre les doigts et entre les orteils.",
+      "source": "Sunan Abu Dawud 142",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -379,7 +388,7 @@
       "description": "Wiping the ears with the same water used for the head.",
       "description_ar": "مسح الأذنين بماء الرأس.",
       "description_fr": "Essuyer les oreilles avec l'eau utilisée pour la tête.",
-      "source": "Sunan Abu Dawud 134",
+      "source": "Sunan an-Nasa'i 102",
       "verified": true,
       "needs_scholarly_review": true
     },

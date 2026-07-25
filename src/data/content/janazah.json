@@ -81,10 +81,19 @@
         },
         {
           "id": "prep-3",
-          "description": "Someone who dies in the state of pilgrimage, or as a martyr on the battlefield, is treated differently.",
-          "description_ar": "ويُستثنى المحرم والشهيد في المعركة فلهما حكم آخر.",
-          "description_fr": "Celui qui meurt en état de pèlerinage, ou en martyr sur le champ de bataille, est traité différemment.",
+          "description": "Someone who dies in the state of pilgrimage is washed and shrouded but not perfumed, and the head is left uncovered.",
+          "description_ar": "من مات محرما غسل وكفن ولم يطيب ولم يغط رأسه.",
+          "description_fr": "Celui qui meurt en état de sacralisation est lavé et enveloppé, mais non parfumé, et sa tête reste découverte.",
           "source": "Sahih Bukhari 1265",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "prep-4",
+          "description": "Those killed on the battlefield are buried in their clothes, without being washed.",
+          "description_ar": "الشهيد في المعركة يدفن بثيابه ولا يغسل.",
+          "description_fr": "Ceux qui sont tués sur le champ de bataille sont enterrés dans leurs vêtements, sans être lavés.",
+          "source": "Sahih Bukhari 1346",
           "verified": true,
           "needs_scholarly_review": true
         }
@@ -104,7 +113,10 @@
           "description_fr": "Elle s'accomplit debout, sans inclinaison ni prosternation.",
           "source": "Sahih Bukhari 1245",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narrations describe standing in rows and the takbirs only. That the prayer has no bowing and no prostration is agreed upon.",
+          "note_ar": "تصف الأحاديث القيام صفوفا والتكبير فقط، وكون هذه الصلاة بلا ركوع ولا سجود متفق عليه.",
+          "note_fr": "Les récits décrivent seulement la station debout en rangs et les takbîrs. L'absence d'inclinaison et de prosternation fait l'unanimité."
         },
         {
           "id": "janazah-2",
@@ -120,9 +132,12 @@
           "description": "After the second, send blessings upon the Prophet as in the tashahhud.",
           "description_ar": "وبعد الثانية يُصلّى على النبي صلى الله عليه وسلم كما في التشهد.",
           "description_fr": "Après le deuxième, invoque les bénédictions sur le Prophète comme dans le tachahhoud.",
-          "source": "Sunan an-Nasa'i 1989",
+          "source": "Scholarly consensus",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The four schools agree that blessings upon the Prophet follow the second takbir, on the fuller wording of Abu Umamah's report on the funeral prayer.",
+          "note_ar": "اتفقت المذاهب الأربعة على الصلاة على النبي صلى الله عليه وسلم بعد التكبيرة الثانية، اعتمادا على رواية أبي أمامة الموسعة في صلاة الجنازة.",
+          "note_fr": "Les quatre écoles s'accordent pour dire que les prières sur le Prophète suivent le deuxième takbîr, d'après la version complète du rapport d'Abou Oumâma sur la prière funéraire."
         },
         {
           "id": "janazah-4",
@@ -131,14 +146,17 @@
           "description_fr": "Après le troisième, invoque en faveur du défunt.",
           "source": "Sahih Muslim 963",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration preserves the supplication. Placing it after the third takbir is the arrangement the schools agree on.",
+          "note_ar": "حفظ الحديث الدعاء، وأما جعله بعد التكبيرة الثالثة فترتيب متفق عليه بين المذاهب.",
+          "note_fr": "Le hadith conserve l'invocation. La placer après le troisième takbîr est l'ordre sur lequel les écoles s'accordent."
         },
         {
           "id": "janazah-5",
           "description": "After the fourth, pause briefly and then give the tasleem.",
           "description_ar": "وبعد الرابعة يقف قليلاً ثم يسلّم.",
           "description_fr": "Après le quatrième, marque une brève pause puis donne le taslîm.",
-          "source": "Sahih Bukhari 1333",
+          "source": "Sunan an-Nasa'i 1989",
           "verified": true,
           "needs_scholarly_review": true
         }
@@ -158,7 +176,10 @@
           "description_fr": "L'enterrement se fait sans délai, le corps couché sur le côté droit face à la qibla.",
           "source": "Sahih Bukhari 1315",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration commands haste. Laying the body on its right side facing the qibla is the agreed practice.",
+          "note_ar": "أمر الحديث بالإسراع، وأما إضجاع الميت على شقه الأيمن نحو القبلة فهو العمل المتفق عليه.",
+          "note_fr": "Le hadith ordonne de se hâter. Coucher le corps sur le côté droit face à la qibla est la pratique reconnue."
         },
         {
           "id": "burial-2",
@@ -171,9 +192,18 @@
         },
         {
           "id": "burial-3",
-          "description": "Visiting graves is encouraged as a reminder of the hereafter. Wailing and striking oneself are not from the Sunnah.",
-          "description_ar": "وتُستحب زيارة القبور لتذكر الآخرة، وليس من السنة النياحة ولطم الخدود.",
-          "description_fr": "La visite des tombes est encouragée comme rappel de l'au-delà. Les lamentations et les gestes de violence sur soi ne sont pas de la Sunna.",
+          "description": "Visiting graves is encouraged as a reminder of the hereafter.",
+          "description_ar": "زيارة القبور مستحبة لأنها تذكر بالآخرة.",
+          "description_fr": "La visite des tombes est encouragée car elle rappelle l'au-delà.",
+          "source": "Sahih Muslim 976",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "burial-5",
+          "description": "Wailing and striking oneself are not from the Sunnah.",
+          "description_ar": "النياحة ولطم الخدود ليست من السنة.",
+          "description_fr": "Les lamentations et le fait de se frapper ne relèvent pas de la Sunna.",
           "source": "Sahih Bukhari 1294",
           "verified": true,
           "needs_scholarly_review": true
