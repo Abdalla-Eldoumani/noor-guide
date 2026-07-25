@@ -8,6 +8,7 @@ import { routing, type Locale } from "@/i18n/routing";
 const LABELS: Record<Locale, string> = {
   en: "English",
   ar: "العربية",
+  fr: "Français",
 };
 
 const SETTINGS_KEY = "noor-settings";
@@ -47,7 +48,7 @@ export function LocaleSwitcher() {
         className="appearance-none bg-transparent pe-2 ps-1 py-1.5 rounded-md font-medium text-ink dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2"
       >
         {routing.locales.map((l) => (
-          <option key={l} value={l}>
+          <option key={l} value={l} lang={l}>
             {LABELS[l as Locale]}
           </option>
         ))}
