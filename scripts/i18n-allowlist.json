@@ -3,5 +3,20 @@
     "English",
     "Français"
   ],
-  "fr": []
+  "fr": [
+    "العربية"
+  ],
+  "sameAsEnglish": [
+    "site.name",
+    "common.switchToArabic",
+    "common.switchToEnglish",
+    "home.estimatedMinutes",
+    "compass.north",
+    "compass.east",
+    "compass.south",
+    "sources.grades.hasan"
+  ],
+  "contentExempt": [
+    "text"
+  ]
 }
