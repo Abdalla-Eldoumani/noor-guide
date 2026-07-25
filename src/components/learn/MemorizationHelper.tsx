@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { pickLocalized } from "@/lib/content-i18n";
 import { Button } from "@/components/ui/Button";
 import { Eye, EyeOff } from "lucide-react";
 import type { Verse } from "@/types/content";
@@ -12,6 +13,7 @@ interface MemorizationHelperProps {
 
 export function MemorizationHelper({ verses }: MemorizationHelperProps) {
   const t = useTranslations("lesson");
+  const locale = useLocale();
   const [showTransliteration, setShowTransliteration] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
 
@@ -69,7 +71,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
             )}
             {showTranslation && (
               <p className="text-sm text-muted italic mt-1">
-                {verse.translation}
+                {pickLocalized<string>(verse, "translation", locale)}
               </p>
             )}
           </div>

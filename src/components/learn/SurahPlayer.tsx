@@ -1,6 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { pickLocalized } from "@/lib/content-i18n";
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Play, Pause, Volume2 } from "lucide-react";
@@ -14,6 +15,7 @@ interface SurahPlayerProps {
 
 export function SurahPlayer({ surah }: SurahPlayerProps) {
   const t = useTranslations("surahs");
+  const locale = useLocale();
   const [audioUrls, setAudioUrls] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -232,7 +234,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                   <ArabicText
                     arabic={verse.arabic}
                     transliteration={verse.transliteration}
-                    translation={verse.translation}
+                    translation={pickLocalized<string>(verse, "translation", locale)}
                   />
                 </div>
               </div>
