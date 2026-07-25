@@ -15,7 +15,8 @@
     "or": "or",
     "verseLabel": "Verse {number}",
     "switchToArabic": "العربية",
-    "switchToEnglish": "English"
+    "switchToEnglish": "English",
+    "language": "Language"
   },
   "nav": {
     "home": "Home",
@@ -230,5 +231,19 @@
     "east": "E",
     "south": "S",
     "west": "W"
+  },
+  "meta": {
+    "keywords": [
+      "new Muslim",
+      "revert",
+      "Islam guide",
+      "how to pray",
+      "Shahada",
+      "learn Islam",
+      "Quran for beginners",
+      "wudu",
+      "salah",
+      "Islamic prayer"
+    ]
   }
 }
