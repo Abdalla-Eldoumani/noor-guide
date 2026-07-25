@@ -395,6 +395,65 @@
     },
     "verified": true
   },
+  "shurut": [
+    {
+      "id": "salah-shart-1",
+      "description": "The time for that prayer has entered.",
+      "description_ar": "دخول وقت الصلاة.",
+      "description_fr": "Le temps de cette prière est entré.",
+      "source": "Quran 4:103",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-shart-2",
+      "description": "Being in a state of purity, with wudu or ghusl as required.",
+      "description_ar": "الطهارة من الحدث الأصغر والأكبر.",
+      "description_fr": "Être en état de pureté, par les ablutions ou le bain rituel selon le cas.",
+      "source": "Quran 5:6",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-shart-3",
+      "description": "The body, clothing, and place of prayer being free of impurity.",
+      "description_ar": "طهارة البدن والثوب والمكان من النجاسة.",
+      "description_fr": "Le corps, les vêtements et le lieu de prière exempts d'impureté.",
+      "source": "Quran 74:4",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-shart-4",
+      "description": "Covering the awrah: for men at least from the navel to the knees, for women the whole body except the face and hands.",
+      "description_ar": "ستر العورة: للرجل من السرة إلى الركبة على الأقل، وللمرأة جميع بدنها إلا الوجه والكفين.",
+      "description_fr": "Couvrir la 'awra : pour l'homme au minimum du nombril aux genoux, pour la femme tout le corps sauf le visage et les mains.",
+      "source": "Quran 7:31",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-shart-5",
+      "description": "Facing the qibla.",
+      "description_ar": "استقبال القبلة.",
+      "description_fr": "Se tourner vers la qibla.",
+      "source": "Quran 2:144",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-shart-6",
+      "description": "The intention, held in the heart.",
+      "description_ar": "النية بالقلب.",
+      "description_fr": "L'intention, formée dans le cœur.",
+      "source": "Sahih Bukhari 1",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "shurut_heading": "The conditions (shurut)",
+  "shurut_heading_ar": "شروط الصلاة",
+  "shurut_heading_fr": "Les conditions (chouroût)",
   "arkan": [
     {
       "id": "salah-rukn-1",

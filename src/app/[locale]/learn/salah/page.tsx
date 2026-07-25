@@ -1,6 +1,7 @@
 import {
   getSalahData,
   getSalahSteps,
+  getSalahShurut,
   getSalahArkan,
   getSalahWajibat,
   getSalahSunan,
@@ -37,6 +38,7 @@ export default async function SalahPage({
   const moduleData = getModuleById("salah");
   const data = getSalahData();
   const steps = getSalahSteps();
+  const shurut = getSalahShurut();
   const arkan = getSalahArkan();
   const wajibat = getSalahWajibat();
   const sunan = getSalahSunan();
@@ -58,6 +60,7 @@ export default async function SalahPage({
       <SalahClient
         data={data}
         steps={steps}
+        shurut={shurut}
         arkan={arkan}
         wajibat={wajibat}
         sunan={sunan}

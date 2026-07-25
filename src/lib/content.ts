@@ -83,6 +83,10 @@ export function getWuduSunan(): RulingItem[] {
   return wudu.sunan.filter((o) => o.verified === true);
 }
 
+export function getSalahShurut(): RulingItem[] {
+  return salah.shurut.filter((o) => o.verified === true);
+}
+
 export function getSalahArkan(): RulingItem[] {
   return salah.arkan.filter((o) => o.verified === true);
 }

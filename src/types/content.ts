@@ -247,6 +247,10 @@ export interface SalahData {
   tashahhud: SalahSection;
   salawat_ibrahimiyyah: SalahSection;
   tasleem: SalahSection;
+  shurut: RulingItem[];
+  shurut_heading: string;
+  shurut_heading_ar?: string;
+  shurut_heading_fr?: string;
   arkan: RulingItem[];
   arkan_heading: string;
   arkan_heading_ar?: string;

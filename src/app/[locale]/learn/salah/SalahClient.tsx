@@ -15,6 +15,7 @@ import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface SalahClientProps {
+  shurut: RulingItem[];
   arkan: RulingItem[];
   wajibat: RulingItem[];
   sunan: RulingItem[];
@@ -32,6 +33,7 @@ function pickRecitationTranslation(rec: Recitation, locale: string) {
 export function SalahClient({
   data,
   steps,
+  shurut,
   arkan,
   wajibat,
   sunan,
@@ -376,6 +378,13 @@ export function SalahClient({
           </RecitationBlockquote>
         </section>
       )}
+
+      {/* Conditions must hold before the prayer starts, so they come first */}
+      <RulingList
+        heading={pickLocalized<string>(data, "shurut_heading", locale) ?? data.shurut_heading}
+        items={shurut}
+        emphasis="required"
+      />
 
       {/* Pillars, required duties, and recommended acts */}
       <RulingList
