@@ -124,6 +124,60 @@
         "duas-travel",
         "duas-general"
       ]
+    },
+    {
+      "id": "taharah",
+      "order": 7,
+      "title_en": "Purity beyond wudu",
+      "title_ar": "الطهارة بعد الوضوء",
+      "title_fr": "La pureté au-delà des ablutions",
+      "description_en": "When a full bath is required, how to perform it, what to do when there is no water, and the rules during menstruation.",
+      "description_ar": "متى يجب الغسل وكيف يؤدى، وما العمل عند فقد الماء، وأحكام الحيض والنفاس.",
+      "description_fr": "Quand le bain rituel est obligatoire, comment l'accomplir, que faire en l'absence d'eau, et les règles durant les menstrues.",
+      "icon": "droplet",
+      "estimatedMinutes": 25,
+      "lessons": [
+        "taharah-ghusl-when",
+        "taharah-ghusl-how",
+        "taharah-tayammum",
+        "taharah-menstruation"
+      ]
+    },
+    {
+      "id": "prayer-practice",
+      "order": 8,
+      "title_en": "Prayer in practice",
+      "title_ar": "الصلاة في الواقع العملي",
+      "title_fr": "La prière en pratique",
+      "description_en": "When each prayer's window opens and closes, making up a prayer you missed, shortening and joining while travelling, and Friday prayer.",
+      "description_ar": "أوقات الصلوات، وقضاء الفوائت، والقصر والجمع في السفر، وصلاة الجمعة.",
+      "description_fr": "Quand s'ouvre et se ferme le temps de chaque prière, rattraper une prière manquée, raccourcir et joindre en voyage, et la prière du vendredi.",
+      "icon": "clock",
+      "estimatedMinutes": 25,
+      "lessons": [
+        "prayer-practice-windows",
+        "prayer-practice-qada",
+        "prayer-practice-travel",
+        "prayer-practice-jumuah"
+      ]
+    },
+    {
+      "id": "janazah",
+      "order": 9,
+      "title_en": "When a Muslim dies",
+      "title_ar": "أحكام الجنائز",
+      "title_fr": "Quand un musulman meurt",
+      "description_en": "What to do at the moment of death, washing and shrouding, the funeral prayer, and burial.",
+      "description_ar": "ما يُفعل عند الاحتضار، والغسل والتكفين، وصلاة الجنازة، والدفن.",
+      "description_fr": "Que faire au moment du décès, le lavage et le linceul, la prière funéraire, et l'enterrement.",
+      "icon": "moon",
+      "estimatedMinutes": 20,
+      "lessons": [
+        "janazah-at-death",
+        "janazah-preparation",
+        "janazah-funeral-prayer",
+        "janazah-burial"
+      ]
     }
   ]
 }
