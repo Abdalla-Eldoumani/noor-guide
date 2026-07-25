@@ -12,6 +12,15 @@ interface RulingListProps {
   emphasis?: "required" | "recommended";
 }
 
+// A ruling can rest on the Quran, on a named narration, or on consensus where
+// no single narration carries it. Consensus is labelled as such rather than
+// dressed up as a hadith citation.
+function sourceType(source: string): "quran" | "hadith" | "scholarly_consensus" {
+  if (source.startsWith("Quran")) return "quran";
+  if (source === "Scholarly consensus") return "scholarly_consensus";
+  return "hadith";
+}
+
 const TONE = {
   required: "border-s-primary-500 bg-primary-50/60 dark:bg-primary-500/10",
   recommended: "border-s-accent-400 bg-accent-50/50 dark:bg-accent-400/10",
@@ -48,7 +57,7 @@ export function RulingList({ heading, items, emphasis = "required" }: RulingList
                 )}
                 {item.source && (
                   <SourceReference
-                    type={item.source.startsWith("Quran") ? "quran" : "hadith"}
+                    type={sourceType(item.source)}
                     reference={item.source}
                   />
                 )}

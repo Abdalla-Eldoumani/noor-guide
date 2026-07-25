@@ -42,6 +42,17 @@ export function SourceReference({
         ? t("hadith")
         : t("consensus");
 
+  // For consensus the label already says everything; repeating the raw marker
+  // would print untranslated English next to the localized label.
+  if (type === "scholarly_consensus") {
+    return (
+      <span className={`source-ref ${className}`}>
+        <BookOpen size={12} aria-hidden="true" />
+        <span>{label}</span>
+      </span>
+    );
+  }
+
   const { slug, locator } = splitReference(reference);
   const collection = slug ? t(`collections.${slug}`) : null;
 
