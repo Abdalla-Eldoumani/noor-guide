@@ -81,10 +81,16 @@ Hadith text in all three languages is pulled from a single Encyclopedia of Trans
 Prophetic Hadiths entry, so the three languages carry the same meaning by construction
 rather than by review. `npm run fetch:scripture` populates it.
 
-One gap is open: `src/data/hadith-mapping.json` maps each cited hadith to its encyclopedia
-id, and it is not yet filled in. Until it is, hadith quotations render in the English
-translation the project authors selected, with the citation and grading localized. The
-mapping is deliberately left for a human to complete rather than guessed.
+Where no encyclopedia entry backs a citation, hadith quotations render in the English
+translation the project authors selected, with the citation and grading localized.
+
+Every citation in the content has an entry in `src/data/hadith-mapping.json` naming the
+narrator, the wording confirmed, the grading the collection carries, and the source the
+check was made against. All 92 have been checked; `npm run verify:citations` fails the
+build if one is added without an entry. Checking them found ten references pointing at the
+wrong narration and two resting on narrations graded da'if, all now corrected. Rulings that
+rest on the agreement of the schools rather than on a single narration say so instead of
+borrowing a citation.
 
 ## Scholarly review
 
