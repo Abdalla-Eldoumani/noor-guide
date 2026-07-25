@@ -1,20 +1,759 @@
 {
-  "Sahih Bukhari 1": null,
-  "Sahih Bukhari 168": null,
-  "Sahih Bukhari 3370": null,
-  "Sahih Bukhari 631": null,
-  "Sahih Bukhari 735": null,
-  "Sahih Bukhari 756": null,
-  "Sahih Bukhari 795": null,
-  "Sahih Bukhari 8": null,
-  "Sahih Bukhari 831": null,
-  "Sahih Muslim 225": null,
-  "Sahih Muslim 234": null,
-  "Sahih Muslim 401": null,
-  "Sahih Muslim 482": null,
-  "Sahih Muslim 582": null,
-  "Sahih Muslim 772": null,
-  "Sahih Muslim 8a": null,
-  "Sunan Abu Dawud 775": null,
-  "Sunan Abu Dawud 874": null
+  "_readme": "Verification record for every hadith citation in src/data/content. A hadeethencId is filled in only when narrator and wording were matched across two independent sources; the Encyclopedia is keyed by its own ids, so guessing one would risk attaching the wrong text to a citation. Entries marked pending have not been cross-checked yet.",
+  "citations": {
+    "Jami' at-Tirmidhi 1078": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Jami' at-Tirmidhi 31": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Quran 16:98": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Quran 22:77": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "bow and prostrate and worship your Lord"
+    },
+    "Quran 2:144": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Quran 2:222": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "do not approach them until they are pure"
+    },
+    "Quran 2:238": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Maintain with care the obligatory prayers"
+    },
+    "Quran 4:101": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "no blame upon you for shortening the prayer"
+    },
+    "Quran 4:103": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "prayer has been decreed upon the believers a decree of specified times"
+    },
+    "Quran 5:6": {
+      "usedIn": [
+        "salah-steps.json",
+        "taharah.json",
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Quran 62:9": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "when the adhan is called for the prayer on the day of Jumu'ah"
+    },
+    "Quran 74:4": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "And your clothing purify"
+    },
+    "Quran 7:31": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1": {
+      "usedIn": [
+        "salah-steps.json",
+        "taharah.json",
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Umar ibn al-Khattab",
+      "uscMsaReference": "Volume 1, Book 1, Hadith 1",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "The reward of deeds depends upon the intentions",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1081": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1090": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1224": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Buhaynah",
+      "uscMsaReference": "Volume 2, Book 22, Hadith 315",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "got up for the third rakah without sitting, then made the two corrective prostrations",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1226": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1245": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1253": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1264": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1265": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1294": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1315": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1333": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "uscMsaReference": "Volume 2, Book 23, Hadith 417",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "he said four Takbirs for An-Najashi's funeral prayer",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 1335": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 135": {
+      "usedIn": [
+        "salah-steps.json",
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 159": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Uthman ibn Affan",
+      "uscMsaReference": "Volume 1, Book 4, Hadith 161",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "washed hands thrice, rinsed mouth and nose, washed each limb thrice",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 168": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 248": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "uscMsaReference": "Volume 1, Book 5, Hadith 248",
+      "checkedAgainst": "quranx.com and hadeethenc.com",
+      "confirmedWording": "washed hands, performed ablution, poured water thrice over the head",
+      "hadeethencId": 3316,
+      "hadeethencGrade": "Authentic"
+    },
+    "Sahih Bukhari 249": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Maymunah",
+      "uscMsaReference": "Volume 1, Book 5, Hadith 249",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "washed off the discharge from his private parts, then poured water over his body",
+      "hadeethencId": 10032,
+      "hadeethencGrade": "Authentic"
+    },
+    "Sahih Bukhari 282": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 320": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 321": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Muadha, from Aishah",
+      "uscMsaReference": "Volume 1, Book 6, Hadith 318",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "he never ordered us to make up the prayers missed in menstruation",
+      "hadeethencId": null,
+      "note": "Covers prayer only. The fasting make-up rule was re-cited to Sahih Muslim 335."
+    },
+    "Sahih Bukhari 3370": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 344": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 347": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Ammar ibn Yasir",
+      "uscMsaReference": "Volume 1, Book 7, Hadith 340",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "stroked the earth with his hand once, passed hands over each other, then over his face",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 597": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Anas ibn Malik",
+      "uscMsaReference": "Volume 1, Book 10, Hadith 571",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "if anyone forgets a prayer he should pray it when he remembers",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 598": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 6251": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "uscMsaReference": "Volume 8, Book 74, Hadith 268",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "perform ablution properly, face the Qibla, say Takbir",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 631": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Malik ibn al-Huwayrith",
+      "uscMsaReference": "Volume 1, Book 11, Hadith 604",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "Pray as you have seen me praying",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 735": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 740": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 744": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 756": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ubadah ibn as-Samit",
+      "uscMsaReference": "Volume 1, Book 12, Hadith 723",
+      "checkedAgainst": "quranx.com and hadeethenc.com",
+      "confirmedWording": "no prayer for one who does not recite the Opening of the Book",
+      "hadeethencId": 5378,
+      "hadeethencGrade": "Authentic (Agreed upon)"
+    },
+    "Sahih Bukhari 776": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 780": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 789": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "uscMsaReference": "Volume 1, Book 12, Hadith 755",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "Takbir on bowing, Sami Allahu liman hamidah, Rabbana laka-l hamd",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 793": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "uscMsaReference": "Volume 1, Book 12, Hadith 759",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "bow with calmness, rise, prostrate calmly, sit with calmness",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 795": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 8": {
+      "usedIn": [
+        "pillars.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Umar",
+      "uscMsaReference": "Volume 1, Book 2, Hadith 7",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "Islam is based on five",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 812": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Abbas",
+      "uscMsaReference": "Volume 1, Book 12, Hadith 776",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "ordered to prostrate on seven bones",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 829": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 831": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 877": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 887": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Bukhari 934": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 1631": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 225": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "uscMsaReference": "Book 2, Hadith 435",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "prayer of none amongst you would be accepted in a state of impurity until he performs ablution",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 226": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 234": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 335": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Muadha, from Aishah",
+      "uscMsaReference": "Book 3, Hadith 662",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "we were ordered to complete the fasts, but were not ordered to complete the prayers",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 348": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 373": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 401": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 482": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 537": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Muawiyah ibn al-Hakam as-Sulami",
+      "uscMsaReference": "Book 4, Hadith 1094",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "talking to persons is not fitting during the prayer",
+      "hadeethencId": null,
+      "note": "Concerns speech only. It does not cover eating, drinking, or excessive movement; those items were re-cited to scholarly consensus."
+    },
+    "Sahih Muslim 571": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 580": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 582": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 612": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Amr",
+      "uscMsaReference": "Book 4, Hadith 1275",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "time windows for Fajr, Zuhr, Asr, Maghrib, and Isha",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 705": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 772": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 866": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 8a": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umar ibn al-Khattab",
+      "uscMsaReference": "Book 1, Hadith 1",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "faith in Allah, His angels, His Books, His Apostles, the Day of Judgment, Divine Decree",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 916": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 918": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 920": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sahih Muslim 963": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Awf ibn Malik",
+      "uscMsaReference": "Book 4, Hadith 2104",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "O Allah, forgive him, have mercy upon him",
+      "hadeethencId": null,
+      "note": "Covers the supplication only. The four takbirs were re-cited to Sahih Bukhari 1333."
+    },
+    "Sunan Abu Dawud 101": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 1067": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 134": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 203": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 311": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 3221": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 355": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 61": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 775": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 869": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Uqbah ibn Amir",
+      "uscMsaReference": "Book 3, Hadith 868",
+      "checkedAgainst": "quranx.com",
+      "confirmedWording": "Glory be to my mighty Lord in bowing, Glory be to my most high Lord in prostration",
+      "hadeethencId": null
+    },
+    "Sunan Abu Dawud 874": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan an-Nasa'i 1194": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    },
+    "Sunan an-Nasa'i 1989": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "pending",
+      "hadeethencId": null
+    }
+  }
 }
