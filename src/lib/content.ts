@@ -9,6 +9,7 @@ import type {
   WuduData,
   WuduStep,
   WuduBreaker,
+  RulingItem,
   SalahData,
   SurahsData,
   Surah,
@@ -72,6 +73,26 @@ export function getWuduSteps(): WuduStep[] {
 
 export function getWuduBreakers(): WuduBreaker[] {
   return wudu.what_breaks_wudu.filter((b) => b.verified === true);
+}
+
+export function getWuduObligations(): RulingItem[] {
+  return wudu.obligations.filter((o) => o.verified === true);
+}
+
+export function getWuduSunan(): RulingItem[] {
+  return wudu.sunan.filter((o) => o.verified === true);
+}
+
+export function getSalahArkan(): RulingItem[] {
+  return salah.arkan.filter((o) => o.verified === true);
+}
+
+export function getSalahWajibat(): RulingItem[] {
+  return salah.wajibat.filter((o) => o.verified === true);
+}
+
+export function getSalahSunan(): RulingItem[] {
+  return salah.sunan.filter((o) => o.verified === true);
 }
 
 // --- Salah ---

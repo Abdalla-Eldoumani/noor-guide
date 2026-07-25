@@ -119,6 +119,22 @@ export interface WuduStep {
   verified: boolean;
 }
 
+// One act in the obligatory / required / recommended groupings for wudu and
+// salah. `needs_scholarly_review` stays true until a qualified reviewer signs
+// the item off, because the counts differ between the Sunni schools.
+export interface RulingItem {
+  id: string;
+  description: string;
+  description_ar?: string;
+  description_fr?: string;
+  source?: string;
+  note?: string;
+  note_ar?: string;
+  note_fr?: string;
+  verified: boolean;
+  needs_scholarly_review?: boolean;
+}
+
 export interface WuduBreaker {
   id: string;
   description: string;
@@ -150,6 +166,17 @@ export interface WuduData {
     verified: boolean;
   };
   what_breaks_wudu: WuduBreaker[];
+  obligations: RulingItem[];
+  obligations_heading: string;
+  obligations_heading_ar?: string;
+  obligations_heading_fr?: string;
+  sunan: RulingItem[];
+  sunan_heading: string;
+  sunan_heading_ar?: string;
+  sunan_heading_fr?: string;
+  madhab_note: string;
+  madhab_note_ar?: string;
+  madhab_note_fr?: string;
 }
 
 // Salah Steps
@@ -220,6 +247,21 @@ export interface SalahData {
   tashahhud: SalahSection;
   salawat_ibrahimiyyah: SalahSection;
   tasleem: SalahSection;
+  arkan: RulingItem[];
+  arkan_heading: string;
+  arkan_heading_ar?: string;
+  arkan_heading_fr?: string;
+  wajibat: RulingItem[];
+  wajibat_heading: string;
+  wajibat_heading_ar?: string;
+  wajibat_heading_fr?: string;
+  sunan: RulingItem[];
+  sunan_heading: string;
+  sunan_heading_ar?: string;
+  sunan_heading_fr?: string;
+  madhab_note: string;
+  madhab_note_ar?: string;
+  madhab_note_fr?: string;
 }
 
 // Surahs
