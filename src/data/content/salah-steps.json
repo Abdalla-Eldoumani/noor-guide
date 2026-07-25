@@ -394,5 +394,266 @@
       "grade": "sahih"
     },
     "verified": true
-  }
+  },
+  "arkan": [
+    {
+      "id": "salah-rukn-1",
+      "description": "Standing for the obligatory prayer, if able.",
+      "description_ar": "القيام في الفريضة مع القدرة.",
+      "description_fr": "Se tenir debout pour la prière obligatoire, si on en est capable.",
+      "source": "Quran 2:238",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-2",
+      "description": "The opening takbir, saying Allahu akbar.",
+      "description_ar": "تكبيرة الإحرام.",
+      "description_fr": "Le takbîr d'ouverture, dire Allâhou akbar.",
+      "source": "Sahih Bukhari 6251",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-3",
+      "description": "Reciting Surah Al-Fatiha in every rakah.",
+      "description_ar": "قراءة الفاتحة في كل ركعة.",
+      "description_fr": "Réciter la sourate Al-Fâtiha à chaque rak'a.",
+      "source": "Sahih Bukhari 756",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-4",
+      "description": "Bowing (ruku).",
+      "description_ar": "الركوع.",
+      "description_fr": "L'inclinaison (roukoû').",
+      "source": "Quran 22:77",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-5",
+      "description": "Rising from bowing and standing upright.",
+      "description_ar": "الرفع من الركوع والاعتدال قائماً.",
+      "description_fr": "Se relever de l'inclinaison et se tenir droit.",
+      "source": "Sahih Bukhari 793",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-6",
+      "description": "Prostrating on the seven limbs.",
+      "description_ar": "السجود على الأعضاء السبعة.",
+      "description_fr": "Se prosterner sur les sept membres.",
+      "source": "Sahih Bukhari 812",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-7",
+      "description": "Rising from prostration and sitting between the two prostrations.",
+      "description_ar": "الرفع من السجود والجلوس بين السجدتين.",
+      "description_fr": "Se relever de la prosternation et s'asseoir entre les deux prosternations.",
+      "source": "Sahih Bukhari 793",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-8",
+      "description": "Stillness (tuma'ninah) in each of these positions.",
+      "description_ar": "الطمأنينة في كل ركن من هذه الأركان.",
+      "description_fr": "L'immobilité (touma'nîna) dans chacune de ces positions.",
+      "source": "Sahih Bukhari 793",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-9",
+      "description": "The final tashahhud, and sitting for it.",
+      "description_ar": "التشهد الأخير والجلوس له.",
+      "description_fr": "Le tachahhoud final, et l'assise qu'il requiert.",
+      "source": "Sahih Bukhari 831",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-10",
+      "description": "Sending blessings upon the Prophet in the final sitting.",
+      "description_ar": "الصلاة على النبي صلى الله عليه وسلم في التشهد الأخير.",
+      "description_fr": "Invoquer les bénédictions sur le Prophète lors de l'assise finale.",
+      "source": "Sahih Bukhari 3370",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-11",
+      "description": "The closing tasleem.",
+      "description_ar": "التسليم.",
+      "description_fr": "Le taslîm final.",
+      "source": "Sunan Abu Dawud 61",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-rukn-12",
+      "description": "Performing the pillars in their proper order.",
+      "description_ar": "ترتيب الأركان.",
+      "description_fr": "Accomplir les piliers dans leur ordre.",
+      "source": "Sahih Bukhari 793",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "arkan_heading": "The pillars (arkan)",
+  "arkan_heading_ar": "أركان الصلاة",
+  "arkan_heading_fr": "Les piliers (arkân)",
+  "wajibat": [
+    {
+      "id": "salah-wajib-1",
+      "description": "All the takbirs other than the opening takbir.",
+      "description_ar": "التكبيرات غير تكبيرة الإحرام.",
+      "description_fr": "Tous les takbîrs autres que le takbîr d'ouverture.",
+      "source": "Sahih Bukhari 789",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-2",
+      "description": "Saying sami' Allahu liman hamidah when rising from bowing.",
+      "description_ar": "قول سمع الله لمن حمده عند الرفع من الركوع.",
+      "description_fr": "Dire sami'a Allâhou liman hamidah en se relevant de l'inclinaison.",
+      "source": "Sahih Bukhari 789",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-3",
+      "description": "Saying rabbana wa lakal-hamd once standing.",
+      "description_ar": "قول ربنا ولك الحمد بعد الاعتدال.",
+      "description_fr": "Dire rabbanâ wa laka l-hamd une fois debout.",
+      "source": "Sahih Bukhari 789",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-4",
+      "description": "Saying subhana rabbiyal-azim once in bowing.",
+      "description_ar": "قول سبحان ربي العظيم في الركوع.",
+      "description_fr": "Dire soubhâna rabbiya l-'azîm dans l'inclinaison.",
+      "source": "Sunan Abu Dawud 869",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-5",
+      "description": "Saying subhana rabbiyal-a'la once in prostration.",
+      "description_ar": "قول سبحان ربي الأعلى في السجود.",
+      "description_fr": "Dire soubhâna rabbiya l-a'lâ dans la prosternation.",
+      "source": "Sunan Abu Dawud 869",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-6",
+      "description": "Asking forgiveness between the two prostrations.",
+      "description_ar": "قول رب اغفر لي بين السجدتين.",
+      "description_fr": "Demander pardon entre les deux prosternations.",
+      "source": "Sunan Abu Dawud 874",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-wajib-7",
+      "description": "The first tashahhud, and sitting for it.",
+      "description_ar": "التشهد الأول والجلوس له.",
+      "description_fr": "Le premier tachahhoud, et l'assise qu'il requiert.",
+      "source": "Sahih Bukhari 829",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "wajibat_heading": "The required duties (wajibat)",
+  "wajibat_heading_ar": "واجبات الصلاة",
+  "wajibat_heading_fr": "Les devoirs requis (wâjibât)",
+  "sunan": [
+    {
+      "id": "salah-sunnah-1",
+      "description": "The opening supplication after the first takbir.",
+      "description_ar": "دعاء الاستفتاح.",
+      "description_fr": "L'invocation d'ouverture après le premier takbîr.",
+      "source": "Sahih Bukhari 744",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-2",
+      "description": "Seeking refuge from Shaytan before reciting.",
+      "description_ar": "الاستعاذة قبل القراءة.",
+      "description_fr": "Chercher refuge contre Satan avant la récitation.",
+      "source": "Quran 16:98",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-3",
+      "description": "Reciting an additional surah after Al-Fatiha in the first two rakaat.",
+      "description_ar": "قراءة سورة بعد الفاتحة في الركعتين الأوليين.",
+      "description_fr": "Réciter une sourate après Al-Fâtiha dans les deux premières rak'ât.",
+      "source": "Sahih Bukhari 776",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-4",
+      "description": "Raising the hands at the opening takbir, at bowing, and on rising.",
+      "description_ar": "رفع اليدين عند تكبيرة الإحرام وعند الركوع وعند الرفع منه.",
+      "description_fr": "Lever les mains au takbîr d'ouverture, à l'inclinaison et en se relevant.",
+      "source": "Sahih Bukhari 735",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-5",
+      "description": "Placing the right hand over the left on the chest.",
+      "description_ar": "وضع اليد اليمنى على اليسرى على الصدر.",
+      "description_fr": "Poser la main droite sur la gauche, sur la poitrine.",
+      "source": "Sahih Bukhari 740",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-6",
+      "description": "Looking toward the place of prostration.",
+      "description_ar": "النظر إلى موضع السجود.",
+      "description_fr": "Regarder vers l'endroit de la prosternation.",
+      "source": "Sunan an-Nasa'i 1194",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-7",
+      "description": "Saying ameen aloud after Al-Fatiha in the audible prayers.",
+      "description_ar": "التأمين بعد الفاتحة في الصلاة الجهرية.",
+      "description_fr": "Dire âmîn à voix haute après Al-Fâtiha dans les prières à voix haute.",
+      "source": "Sahih Bukhari 780",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-sunnah-8",
+      "description": "Raising the index finger during the tashahhud.",
+      "description_ar": "الإشارة بالسبابة في التشهد.",
+      "description_fr": "Lever l'index pendant le tachahhoud.",
+      "source": "Sahih Muslim 580",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "sunan_heading": "The recommended acts (sunan)",
+  "sunan_heading_ar": "سنن الصلاة",
+  "sunan_heading_fr": "Les actes recommandés (sounan)",
+  "madhab_note": "The three groupings below follow the Hanbali arrangement, which is the one most beginner texts in English and French use because it separates the acts clearly. The Shafi'i school counts pillars and recommended acts but has no middle category; the Hanafi school divides them as obligations and required duties on a different count. The acts themselves are agreed on. Only the labelling differs, so follow whichever school your local mosque teaches.",
+  "madhab_note_ar": "التقسيم الثلاثي الآتي على ترتيب الحنابلة، وهو الأشهر في كتب المبتدئين بالإنجليزية والفرنسية لوضوح التفريق فيه. وأما الشافعية فيذكرون الأركان والسنن دون مرتبة وسطى، والحنفية يقسمونها إلى فرائض وواجبات بعدد مختلف. والأفعال نفسها متفق عليها، وإنما الخلاف في التسمية، فاتبع ما يُعلَّم في مسجدك.",
+  "madhab_note_fr": "Les trois groupes ci-dessous suivent la classification hanbalite, la plus employée dans les manuels pour débutants en anglais et en français car elle distingue clairement les actes. L'école chaféite compte des piliers et des actes recommandés sans catégorie intermédiaire ; l'école hanafite les répartit en obligations et devoirs requis selon un décompte différent. Les actes eux-mêmes font l'objet d'un consensus. Seule l'appellation diffère : suis l'enseignement de ta mosquée locale."
 }
