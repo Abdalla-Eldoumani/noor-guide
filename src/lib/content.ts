@@ -95,6 +95,14 @@ export function getSalahSunan(): RulingItem[] {
   return salah.sunan.filter((o) => o.verified === true);
 }
 
+export function getSujudAsSahw(): RulingItem[] {
+  return salah.sujud_as_sahw.filter((o) => o.verified === true);
+}
+
+export function getSalahNullifiers(): RulingItem[] {
+  return salah.nullifiers.filter((o) => o.verified === true);
+}
+
 // --- Salah ---
 export function getSalahData(): SalahData {
   return salah;

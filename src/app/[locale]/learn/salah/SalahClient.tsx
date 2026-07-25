@@ -18,6 +18,8 @@ interface SalahClientProps {
   arkan: RulingItem[];
   wajibat: RulingItem[];
   sunan: RulingItem[];
+  sahw: RulingItem[];
+  nullifiers: RulingItem[];
   data: SalahData;
   steps: SalahStep[];
   lessonIds: string[];
@@ -33,6 +35,8 @@ export function SalahClient({
   arkan,
   wajibat,
   sunan,
+  sahw,
+  nullifiers,
   lessonIds,
 }: SalahClientProps) {
   const pickModule = useLocalizedContent();
@@ -390,6 +394,24 @@ export function SalahClient({
         heading={pickLocalized<string>(data, "sunan_heading", locale) ?? data.sunan_heading}
         items={sunan}
         emphasis="recommended"
+      />
+
+      <RulingList
+        heading={
+          pickLocalized<string>(data, "sujud_as_sahw_heading", locale) ??
+          data.sujud_as_sahw_heading
+        }
+        items={sahw}
+        emphasis="recommended"
+      />
+
+      <RulingList
+        heading={
+          pickLocalized<string>(data, "nullifiers_heading", locale) ??
+          data.nullifiers_heading
+        }
+        items={nullifiers}
+        emphasis="required"
       />
 
       <p className="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4 text-sm text-muted dark:text-gray-400">

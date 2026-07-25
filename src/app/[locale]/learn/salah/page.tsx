@@ -4,6 +4,8 @@ import {
   getSalahArkan,
   getSalahWajibat,
   getSalahSunan,
+  getSujudAsSahw,
+  getSalahNullifiers,
   getLessonIdsForModule,
 } from "@/lib/content";
 import { getTranslations } from "next-intl/server";
@@ -38,6 +40,8 @@ export default async function SalahPage({
   const arkan = getSalahArkan();
   const wajibat = getSalahWajibat();
   const sunan = getSalahSunan();
+  const sahw = getSujudAsSahw();
+  const nullifiers = getSalahNullifiers();
   const lessonIds = getLessonIdsForModule("salah");
 
   return (
@@ -57,6 +61,8 @@ export default async function SalahPage({
         arkan={arkan}
         wajibat={wajibat}
         sunan={sunan}
+        sahw={sahw}
+        nullifiers={nullifiers}
         lessonIds={lessonIds}
       />
     </PageWrapper>

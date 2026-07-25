@@ -655,5 +655,105 @@
   "sunan_heading_fr": "Les actes recommandés (sounan)",
   "madhab_note": "The three groupings below follow the Hanbali arrangement, which is the one most beginner texts in English and French use because it separates the acts clearly. The Shafi'i school counts pillars and recommended acts but has no middle category; the Hanafi school divides them as obligations and required duties on a different count. The acts themselves are agreed on. Only the labelling differs, so follow whichever school your local mosque teaches.",
   "madhab_note_ar": "التقسيم الثلاثي الآتي على ترتيب الحنابلة، وهو الأشهر في كتب المبتدئين بالإنجليزية والفرنسية لوضوح التفريق فيه. وأما الشافعية فيذكرون الأركان والسنن دون مرتبة وسطى، والحنفية يقسمونها إلى فرائض وواجبات بعدد مختلف. والأفعال نفسها متفق عليها، وإنما الخلاف في التسمية، فاتبع ما يُعلَّم في مسجدك.",
-  "madhab_note_fr": "Les trois groupes ci-dessous suivent la classification hanbalite, la plus employée dans les manuels pour débutants en anglais et en français car elle distingue clairement les actes. L'école chaféite compte des piliers et des actes recommandés sans catégorie intermédiaire ; l'école hanafite les répartit en obligations et devoirs requis selon un décompte différent. Les actes eux-mêmes font l'objet d'un consensus. Seule l'appellation diffère : suis l'enseignement de ta mosquée locale."
+  "madhab_note_fr": "Les trois groupes ci-dessous suivent la classification hanbalite, la plus employée dans les manuels pour débutants en anglais et en français car elle distingue clairement les actes. L'école chaféite compte des piliers et des actes recommandés sans catégorie intermédiaire ; l'école hanafite les répartit en obligations et devoirs requis selon un décompte différent. Les actes eux-mêmes font l'objet d'un consensus. Seule l'appellation diffère : suis l'enseignement de ta mosquée locale.",
+  "sujud_as_sahw": [
+    {
+      "id": "sahw-1",
+      "description": "If you add an extra bowing, prostration, standing, or sitting by mistake.",
+      "description_ar": "إذا زاد المصلي ركوعاً أو سجوداً أو قياماً أو قعوداً سهواً.",
+      "description_fr": "Si tu ajoutes par erreur une inclinaison, une prosternation, une station debout ou une assise.",
+      "source": "Sahih Bukhari 1226",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "sahw-2",
+      "description": "If you leave out one of the required duties, such as the first tashahhud.",
+      "description_ar": "إذا ترك واجباً من واجبات الصلاة كالتشهد الأول.",
+      "description_fr": "Si tu omets l'un des devoirs requis, comme le premier tachahhoud.",
+      "source": "Sahih Bukhari 1224",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "sahw-3",
+      "description": "If you are uncertain how many rakaat you have prayed, build on what you are sure of.",
+      "description_ar": "إذا شك في عدد الركعات بنى على اليقين وهو الأقل.",
+      "description_fr": "Si tu doutes du nombre de rak'ât accomplies, retiens le nombre dont tu es certain.",
+      "source": "Sahih Muslim 571",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "sahw-4",
+      "description": "The prostration itself is two prostrations, made before or after the tasleem, then you say the tasleem.",
+      "description_ar": "وسجود السهو سجدتان قبل السلام أو بعده، ثم يسلّم.",
+      "description_fr": "La prosternation consiste en deux prosternations, avant ou après le taslîm, puis tu salues.",
+      "source": "Sahih Bukhari 1224",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "sujud_as_sahw_heading": "When you make a mistake (sujud as-sahw)",
+  "sujud_as_sahw_heading_ar": "سجود السهو",
+  "sujud_as_sahw_heading_fr": "En cas d'erreur (soujoûd as-sahw)",
+  "nullifiers": [
+    {
+      "id": "salah-void-1",
+      "description": "Losing your wudu during the prayer.",
+      "description_ar": "انتقاض الوضوء أثناء الصلاة.",
+      "description_fr": "Perdre ses ablutions pendant la prière.",
+      "source": "Sahih Bukhari 135",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-void-2",
+      "description": "Speaking deliberately, other than the words of the prayer.",
+      "description_ar": "الكلام العمد بغير ذكر الصلاة.",
+      "description_fr": "Parler délibérément, en dehors des formules de la prière.",
+      "source": "Sahih Muslim 537",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-void-3",
+      "description": "Turning away from the qibla without an excuse.",
+      "description_ar": "الانحراف عن القبلة بغير عذر.",
+      "description_fr": "Se détourner de la qibla sans excuse.",
+      "source": "Quran 2:144",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-void-4",
+      "description": "Eating or drinking during the prayer.",
+      "description_ar": "الأكل أو الشرب في الصلاة.",
+      "description_fr": "Manger ou boire pendant la prière.",
+      "source": "Sahih Muslim 537",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-void-5",
+      "description": "Leaving out one of the pillars deliberately.",
+      "description_ar": "ترك ركن من أركان الصلاة عمداً.",
+      "description_fr": "Omettre délibérément l'un des piliers.",
+      "source": "Sahih Bukhari 793",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "salah-void-6",
+      "description": "Excessive movement unrelated to the prayer.",
+      "description_ar": "كثرة الحركة التي ليست من الصلاة.",
+      "description_fr": "Des mouvements excessifs étrangers à la prière.",
+      "source": "Sahih Muslim 537",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "nullifiers_heading": "What invalidates the prayer",
+  "nullifiers_heading_ar": "مبطلات الصلاة",
+  "nullifiers_heading_fr": "Ce qui invalide la prière"
 }

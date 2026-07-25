@@ -259,6 +259,14 @@ export interface SalahData {
   sunan_heading: string;
   sunan_heading_ar?: string;
   sunan_heading_fr?: string;
+  sujud_as_sahw: RulingItem[];
+  sujud_as_sahw_heading: string;
+  sujud_as_sahw_heading_ar?: string;
+  sujud_as_sahw_heading_fr?: string;
+  nullifiers: RulingItem[];
+  nullifiers_heading: string;
+  nullifiers_heading_ar?: string;
+  nullifiers_heading_fr?: string;
   madhab_note: string;
   madhab_note_ar?: string;
   madhab_note_fr?: string;
