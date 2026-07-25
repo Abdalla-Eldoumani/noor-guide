@@ -20,9 +20,9 @@ The app is organized into six modules, meant to be taken in order:
 
 **2. Five Pillars of Islam.** An overview of Shahada, Salah, Zakah, Sawm, and Hajj. Links out to the detailed modules for prayer and other practices.
 
-**3. Wudu (Ablution).** A 10-step interactive guide to washing before prayer, based on Quran 5:6 and authentic Sunnah. Includes what breaks wudu and the dua to say after.
+**3. Wudu (Ablution).** A 10-step interactive guide to washing before prayer, based on Quran 5:6 and authentic Sunnah. Also sets out the three groupings a beginner needs in order to know whether their wudu counts: what is obligatory (fard), what is recommended (sunnah), and what nullifies it. Includes the dua to say after.
 
-**4. Salah (Prayer).** The most detailed module. Covers all five daily prayers, the number of rakaat for each, and walks through every position and recitation in a single rakah: standing, bowing, prostrating, sitting. Includes Tashahhud, Salawat Ibrahimiyyah, and Tasleem.
+**4. Salah (Prayer).** The most detailed module. Covers all five daily prayers, the number of rakaat for each, and walks through every position and recitation in a single rakah: standing, bowing, prostrating, sitting. Includes Tashahhud, Salawat Ibrahimiyyah, and Tasleem. It then separates the prayer into its pillars (arkan), its required duties (wajibat), and its recommended acts (sunan), so a reader who is told that Al-Fatiha is a pillar can see what that means and what the other pillars are. It also covers the prostration of forgetfulness for when you make a mistake, and what invalidates the prayer outright.
 
 **5. Essential Surahs.** The short surahs you need for prayer: Al-Fatiha, Al-Ikhlas, Al-Falaq, An-Nas, Al-Kawthar, and Al-Asr. Each has the Arabic text with full tashkeel, transliteration, English translation, and audio recitation by Mishary Alafasy (fetched from the Al Quran Cloud API). You can play individual verses or the entire surah.
 
@@ -75,6 +75,8 @@ script disagrees with the page.
 
 Scripture is handled differently from prose. The project never retranslates Quran or hadith.
 Quran text is Uthmani in Arabic, Saheeh International in English, and Hamidullah in French.
+The French for the six essential surahs is the published Hamidullah edition, fetched rather
+than translated.
 Hadith text in all three languages is pulled from a single Encyclopedia of Translated
 Prophetic Hadiths entry, so the three languages carry the same meaning by construction
 rather than by review. `npm run fetch:scripture` populates it.
@@ -83,6 +85,15 @@ One gap is open: `src/data/hadith-mapping.json` maps each cited hadith to its en
 id, and it is not yet filled in. Until it is, hadith quotations render in the English
 translation the project authors selected, with the citation and grading localized. The
 mapping is deliberately left for a human to complete rather than guessed.
+
+## Scholarly review
+
+The pillars, required duties, recommended acts, and nullifiers carry
+`needs_scholarly_review: true` in the content files. The acts themselves are agreed across
+the Sunni schools, but the way they are grouped and counted is not: the app follows the
+Hanbali arrangement because it separates the three tiers most clearly for a beginner, and
+says so in the lesson. A qualified reviewer should sign these off before the app is used in
+a classroom. Grep for `needs_scholarly_review` to get the full list.
 
 Transliteration and English back-translation are hidden on the Arabic locale, since a
 reader of the Arabic source does not need either.
