@@ -7,6 +7,8 @@ export type LessonLdInput = {
   id: string;
   title: string;
   description: string;
+  locale: string;
+  courseName: string;
   estimatedMinutes?: number;
 };
 
@@ -14,22 +16,26 @@ export function lessonJsonLd({
   id,
   title,
   description,
+  locale,
+  courseName,
   estimatedMinutes,
 }: LessonLdInput): Record<string, unknown> {
+  const localePath = locale === "en" ? "" : `/${locale}`;
+
   return {
     "@context": "https://schema.org",
     "@type": "LearningResource",
     name: title,
     description,
-    url: `${SITE_URL}/learn/${id}`,
-    inLanguage: "en",
+    url: `${SITE_URL}${localePath}/learn/${id}`,
+    inLanguage: locale,
     learningResourceType: "Lesson",
     educationalUse: "instruction",
     ...(estimatedMinutes ? { timeRequired: `PT${estimatedMinutes}M` } : {}),
     isPartOf: {
       "@type": "Course",
-      name: "Noor Guide Learning Path",
-      url: `${SITE_URL}/learn`,
+      name: courseName,
+      url: `${SITE_URL}${localePath}/learn`,
     },
   };
 }
