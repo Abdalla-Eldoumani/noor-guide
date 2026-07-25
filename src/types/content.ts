@@ -414,3 +414,28 @@ export interface NoorProgress {
   lastActiveAt: string;
   streakDays: number;
 }
+
+// A module built from an introduction plus a list of sections. Shared by the
+// modules added after the original six, all of which render through
+// `SectionedLesson`.
+export interface LessonSection {
+  id: string;
+  heading: string;
+  heading_ar?: string;
+  heading_fr?: string;
+  emphasis: "required" | "recommended";
+  items: RulingItem[];
+}
+
+export interface SectionedModule {
+  module_id: string;
+  title_en: string;
+  title_ar: string;
+  title_fr: string;
+  introduction: {
+    content_en: string;
+    content_ar?: string;
+    content_fr?: string;
+  };
+  sections: LessonSection[];
+}

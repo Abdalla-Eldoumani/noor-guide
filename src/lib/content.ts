@@ -10,6 +10,7 @@ import type {
   WuduStep,
   WuduBreaker,
   RulingItem,
+  SectionedModule,
   SalahData,
   SurahsData,
   Surah,
@@ -26,6 +27,9 @@ import type {
 import aqeedahJson from "@/data/content/aqeedah.json";
 import pillarsJson from "@/data/content/pillars.json";
 import wuduJson from "@/data/content/wudu-steps.json";
+import taharah from "@/data/content/taharah.json";
+import practice from "@/data/content/prayer-practice.json";
+import janazah from "@/data/content/janazah.json";
 import salahJson from "@/data/content/salah-steps.json";
 import surahsJson from "@/data/content/surahs.json";
 import duasJson from "@/data/content/duas-daily.json";
@@ -167,4 +171,17 @@ export function getModuleById(id: string): LearningModule | undefined {
 export function getLessonIdsForModule(moduleId: string): string[] {
   const mod = learningPath.modules.find((m) => m.id === moduleId);
   return mod ? mod.lessons : [];
+}
+
+// --- Modules added after the original six ---
+export function getTaharahData(): SectionedModule {
+  return taharah as SectionedModule;
+}
+
+export function getPrayerPracticeData(): SectionedModule {
+  return practice as SectionedModule;
+}
+
+export function getJanazahData(): SectionedModule {
+  return janazah as SectionedModule;
 }
