@@ -8,6 +8,7 @@ import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { Bookmark, BookmarkCheck } from "lucide-react";
 import type { DuasData, DuaCategory } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface DuasClientProps {
@@ -17,6 +18,7 @@ interface DuasClientProps {
 }
 
 export function DuasClient({ data, categories, lessonIds }: DuasClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tDuas = useTranslations("duas");
@@ -45,7 +47,7 @@ export function DuasClient({ data, categories, lessonIds }: DuasClientProps) {
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/surahs"
-      prevLabel="Essential Surahs"
+      prevLabel={pickModule(getModuleById("surahs"), "title")}
     >
       {/* Introduction */}
       <section>

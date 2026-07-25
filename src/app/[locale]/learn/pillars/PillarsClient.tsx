@@ -10,6 +10,7 @@ import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 import type { PillarsData, IslamPillar } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { useLocalizedContent } from "@/lib/content-i18n";
 
 interface PillarsClientProps {
@@ -19,6 +20,7 @@ interface PillarsClientProps {
 }
 
 export function PillarsClient({ data, pillars, lessonIds }: PillarsClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tPillars = useTranslations("pillars");
@@ -36,9 +38,9 @@ export function PillarsClient({ data, pillars, lessonIds }: PillarsClientProps) 
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/aqeedah"
-      prevLabel="Aqeedah"
+      prevLabel={pickModule(getModuleById("aqeedah"), "title")}
       nextHref="/learn/wudu"
-      nextLabel="How to Perform Wudu"
+      nextLabel={pickModule(getModuleById("wudu"), "title")}
     >
       {/* Introduction */}
       <section>

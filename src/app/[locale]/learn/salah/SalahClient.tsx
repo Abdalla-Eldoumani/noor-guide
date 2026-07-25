@@ -10,6 +10,7 @@ import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
 import type { SalahData, SalahStep, SalahSection, Recitation } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface SalahClientProps {
@@ -23,6 +24,7 @@ function pickRecitationTranslation(rec: Recitation, locale: string) {
 }
 
 export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tSalah = useTranslations("salah");
@@ -90,9 +92,9 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/wudu"
-      prevLabel="Wudu"
+      prevLabel={pickModule(getModuleById("wudu"), "title")}
       nextHref="/learn/surahs"
-      nextLabel="Essential Surahs"
+      nextLabel={pickModule(getModuleById("surahs"), "title")}
     >
       {/* Introduction */}
       <section>
@@ -154,11 +156,13 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
                     <td className="px-4 py-3">
                       <div>
                         <span className="font-semibold text-ink">
-                          {prayer.name_en}
+                          {pickLocalized<string>(prayer, "name", locale)}
                         </span>
-                        <span className="font-arabic text-sm text-muted ms-2">
-                          {prayer.name_ar}
-                        </span>
+                        {locale !== "ar" && (
+                          <span className="font-arabic text-sm text-muted ms-2">
+                            {prayer.name_ar}
+                          </span>
+                        )}
                       </div>
                     </td>
                     <td className="px-4 py-3 text-muted">{prayerTimeText}</td>

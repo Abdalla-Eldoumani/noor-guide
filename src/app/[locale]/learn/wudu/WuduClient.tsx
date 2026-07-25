@@ -9,6 +9,7 @@ import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { AlertCircle, Info } from "lucide-react";
 import type { WuduData, WuduStep, WuduBreaker } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface WuduClientProps {
@@ -19,6 +20,7 @@ interface WuduClientProps {
 }
 
 export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tWudu = useTranslations("wudu");
@@ -77,9 +79,9 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/pillars"
-      prevLabel="Five Pillars"
+      prevLabel={pickModule(getModuleById("pillars"), "title")}
       nextHref="/learn/salah"
-      nextLabel="How to Pray"
+      nextLabel={pickModule(getModuleById("salah"), "title")}
     >
       {/* Introduction */}
       <section>

@@ -7,6 +7,7 @@ import { HadithBlock } from "@/components/learn/HadithBlock";
 import { QuranVerse } from "@/components/learn/QuranVerse";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { AqeedahData, AqeedahPillar } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { useLocalizedContent } from "@/lib/content-i18n";
 
 interface AqeedahClientProps {
@@ -16,6 +17,7 @@ interface AqeedahClientProps {
 }
 
 export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tAqeedah = useTranslations("aqeedah");
@@ -40,7 +42,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       nextHref="/learn/pillars"
-      nextLabel="Five Pillars of Islam"
+      nextLabel={pickModule(getModuleById("pillars"), "title")}
     >
       {/* Introduction */}
       <section>

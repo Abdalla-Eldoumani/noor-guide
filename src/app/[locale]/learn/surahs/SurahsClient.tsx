@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import type { SurahsData, Surah } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 const SurahPlayer = dynamic(
@@ -35,6 +36,7 @@ interface SurahsClientProps {
 }
 
 export function SurahsClient({ data, surahs, lessonIds }: SurahsClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tSurahs = useTranslations("surahs");
@@ -50,9 +52,9 @@ export function SurahsClient({ data, surahs, lessonIds }: SurahsClientProps) {
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/salah"
-      prevLabel="How to Pray"
+      prevLabel={pickModule(getModuleById("salah"), "title")}
       nextHref="/learn/duas"
-      nextLabel="Daily Duas"
+      nextLabel={pickModule(getModuleById("duas"), "title")}
     >
       {/* Introduction */}
       <section>
