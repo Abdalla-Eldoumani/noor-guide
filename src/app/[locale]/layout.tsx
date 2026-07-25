@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Inter, Amiri, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -9,35 +8,8 @@ import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
 import { ThemeSync } from "@/components/ThemeProvider";
 import { routing } from "@/i18n/routing";
+import { fontClassFor } from "@/lib/fonts";
 import "@/styles/globals.css";
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const amiri = Amiri({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "700"],
-  variable: "--font-arabic",
-  display: "swap",
-});
-
-const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-ar-ui",
-  display: "swap",
-});
 
 const themeInitScript = `(function(){try{var s=JSON.parse(localStorage.getItem('noor-settings'));if(s&&s.theme==='dark')document.documentElement.classList.add('dark')}catch(e){}})()`;
 
@@ -110,7 +82,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={isArabic ? "rtl" : "ltr"}
-      className={`${plusJakarta.variable} ${inter.variable} ${amiri.variable} ${plexArabic.variable}`}
+      className={fontClassFor(locale)}
       suppressHydrationWarning
     >
       <body
