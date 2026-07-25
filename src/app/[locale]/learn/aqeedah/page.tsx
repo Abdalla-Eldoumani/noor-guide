@@ -1,16 +1,31 @@
 import { getAqeedahData, getAqeedahPillars, getLessonIdsForModule } from "@/lib/content";
+import { getTranslations } from "next-intl/server";
+import { getModuleById } from "@/lib/content";
+import { pickLocalized } from "@/lib/content-i18n";
+import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { lessonJsonLd } from "@/components/seo/lessonJsonLd";
 import { AqeedahClient } from "./AqeedahClient";
 
-export const metadata = {
-  title: "The Six Pillars of Iman | Noor Guide",
-  description:
-    "Learn the six foundational beliefs of Islam: belief in Allah, His angels, His books, His messengers, the Last Day, and Divine Decree.",
-};
 
-export default function AqeedahPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return moduleMetadata("aqeedah", locale);
+}
+
+export default async function AqeedahPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const tLearn = await getTranslations({ locale, namespace: "learn" });
+  const module = getModuleById("aqeedah");
   const data = getAqeedahData();
   const pillars = getAqeedahPillars();
   const lessonIds = getLessonIdsForModule("aqeedah");
@@ -20,8 +35,10 @@ export default function AqeedahPage() {
       <JsonLd
         data={lessonJsonLd({
           id: "aqeedah",
-          title: "The Six Pillars of Iman",
-          description: metadata.description,
+          title: pickLocalized<string>(module, "title", locale) ?? "",
+          description: pickLocalized<string>(module, "description", locale) ?? "",
+          locale,
+          courseName: tLearn("dashboardTitle"),
         })}
       />
       <AqeedahClient data={data} pillars={pillars} lessonIds={lessonIds} />

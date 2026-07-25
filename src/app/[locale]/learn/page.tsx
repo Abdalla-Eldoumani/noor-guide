@@ -1,28 +1,36 @@
+import { getTranslations } from "next-intl/server";
 import { getLearningModules } from "@/lib/content";
+import { pickLocalized } from "@/lib/content-i18n";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LearnDashboardClient } from "./LearnDashboardClient";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noorguide.app";
 
-export const metadata = {
-  title: "Learning Path | Noor Guide",
-  description:
-    "A step-by-step learning path for new Muslims covering beliefs, prayer, Quran, and daily life.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-export default function LearnPage() {
+export async function generateMetadata({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "learn" });
+  return { title: t("dashboardTitle"), description: t("dashboardIntro") };
+}
+
+export default async function LearnPage({ params }: Params) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "learn" });
+  const tSite = await getTranslations({ locale, namespace: "site" });
   const modules = getLearningModules();
+  const localePath = locale === "en" ? "" : `/${locale}`;
 
   const courseLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    name: "Noor Guide Learning Path",
-    description:
-      "A step-by-step path for new Muslims covering Islamic beliefs, the Five Pillars, ablution, prayer, essential surahs, and daily supplications.",
+    name: t("dashboardTitle"),
+    description: t("dashboardIntro"),
+    inLanguage: locale,
     provider: {
       "@type": "Organization",
-      name: "Noor Guide",
+      name: tSite("name"),
       url: SITE_URL,
     },
     hasCourseInstance: {
@@ -32,12 +40,12 @@ export default function LearnPage() {
     },
     hasPart: modules.map((mod) => ({
       "@type": "LearningResource",
-      name: mod.title_en,
-      description: mod.description_en,
-      url: `${SITE_URL}/learn/${mod.id}`,
+      name: pickLocalized<string>(mod, "title", locale),
+      description: pickLocalized<string>(mod, "description", locale),
+      url: `${SITE_URL}${localePath}/learn/${mod.id}`,
       timeRequired: `PT${mod.estimatedMinutes}M`,
       learningResourceType: "Lesson",
-      inLanguage: "en",
+      inLanguage: locale,
     })),
   };
 

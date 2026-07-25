@@ -1,16 +1,31 @@
 import { getSalahData, getSalahSteps, getLessonIdsForModule } from "@/lib/content";
+import { getTranslations } from "next-intl/server";
+import { getModuleById } from "@/lib/content";
+import { pickLocalized } from "@/lib/content-i18n";
+import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { lessonJsonLd } from "@/components/seo/lessonJsonLd";
 import { SalahClient } from "./SalahClient";
 
-export const metadata = {
-  title: "How to Pray Salah | Noor Guide",
-  description:
-    "Complete step-by-step guide to performing salah (Islamic prayer) as taught by the Prophet Muhammad ﷺ.",
-};
 
-export default function SalahPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return moduleMetadata("salah", locale);
+}
+
+export default async function SalahPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const tLearn = await getTranslations({ locale, namespace: "learn" });
+  const module = getModuleById("salah");
   const data = getSalahData();
   const steps = getSalahSteps();
   const lessonIds = getLessonIdsForModule("salah");
@@ -20,8 +35,10 @@ export default function SalahPage() {
       <JsonLd
         data={lessonJsonLd({
           id: "salah",
-          title: "How to Pray Salah",
-          description: metadata.description,
+          title: pickLocalized<string>(module, "title", locale) ?? "",
+          description: pickLocalized<string>(module, "description", locale) ?? "",
+          locale,
+          courseName: tLearn("dashboardTitle"),
         })}
       />
       <SalahClient data={data} steps={steps} lessonIds={lessonIds} />
