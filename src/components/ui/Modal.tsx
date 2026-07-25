@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useRef, useCallback, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
@@ -12,6 +14,7 @@ interface ModalProps {
 }
 
 export function Modal({ isOpen, onClose, title, children }: ModalProps) {
+  const t = useTranslations("common");
   const overlayRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -89,7 +92,7 @@ export function Modal({ isOpen, onClose, title, children }: ModalProps) {
             type="button"
             onClick={onClose}
             className="rounded-lg p-2.5 text-muted hover:text-ink hover:bg-gray-100 transition-colors"
-            aria-label="Close dialog"
+            aria-label={t("closeDialog")}
           >
             <X size={20} />
           </button>

@@ -1,10 +1,14 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 interface QiblaCompassProps {
   bearing: number;
 }
 
 export function QiblaCompass({ bearing }: QiblaCompassProps) {
+  const t = useTranslations("qibla");
+  const tCompass = useTranslations("compass");
   return (
     <div className="flex flex-col items-center gap-6">
       {/* Compass container */}
@@ -13,16 +17,16 @@ export function QiblaCompass({ bearing }: QiblaCompassProps) {
         <div className="absolute inset-0 rounded-full border-4 border-gray-200 bg-surface shadow-lg dark:border-gray-600 dark:bg-gray-800">
           {/* Cardinal direction markers */}
           <span className="absolute left-1/2 top-3 -translate-x-1/2 font-heading text-sm font-bold text-primary-500">
-            N
+            {tCompass("north")}
           </span>
           <span className="absolute right-3 top-1/2 -translate-y-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            E
+            {tCompass("east")}
           </span>
           <span className="absolute bottom-3 left-1/2 -translate-x-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            S
+            {tCompass("south")}
           </span>
           <span className="absolute left-3 top-1/2 -translate-y-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            W
+            {tCompass("west")}
           </span>
 
           {/* Degree tick marks (every 30 degrees) */}
@@ -74,7 +78,7 @@ export function QiblaCompass({ bearing }: QiblaCompassProps) {
           {bearing.toFixed(1)}&deg;
         </p>
         <p className="mt-1 text-sm text-muted dark:text-gray-400">
-          from North
+          {t("fromNorth")}
         </p>
       </div>
     </div>

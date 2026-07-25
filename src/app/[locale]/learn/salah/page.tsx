@@ -1,18 +1,49 @@
-import { getSalahData, getSalahSteps, getLessonIdsForModule } from "@/lib/content";
+import {
+  getSalahData,
+  getSalahSteps,
+  getSalahShurut,
+  getSalahArkan,
+  getSalahWajibat,
+  getSalahSunan,
+  getSujudAsSahw,
+  getSalahNullifiers,
+  getLessonIdsForModule,
+} from "@/lib/content";
+import { getTranslations } from "next-intl/server";
+import { getModuleById } from "@/lib/content";
+import { pickLocalized } from "@/lib/content-i18n";
+import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { lessonJsonLd } from "@/components/seo/lessonJsonLd";
 import { SalahClient } from "./SalahClient";
 
-export const metadata = {
-  title: "How to Pray Salah | Noor Guide",
-  description:
-    "Complete step-by-step guide to performing salah (Islamic prayer) as taught by the Prophet Muhammad ﷺ.",
-};
 
-export default function SalahPage() {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return moduleMetadata("salah", locale);
+}
+
+export default async function SalahPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const tLearn = await getTranslations({ locale, namespace: "learn" });
+  const moduleData = getModuleById("salah");
   const data = getSalahData();
   const steps = getSalahSteps();
+  const shurut = getSalahShurut();
+  const arkan = getSalahArkan();
+  const wajibat = getSalahWajibat();
+  const sunan = getSalahSunan();
+  const sahw = getSujudAsSahw();
+  const nullifiers = getSalahNullifiers();
   const lessonIds = getLessonIdsForModule("salah");
 
   return (
@@ -20,11 +51,23 @@ export default function SalahPage() {
       <JsonLd
         data={lessonJsonLd({
           id: "salah",
-          title: "How to Pray Salah",
-          description: metadata.description,
+          title: pickLocalized<string>(moduleData, "title", locale) ?? "",
+          description: pickLocalized<string>(moduleData, "description", locale) ?? "",
+          locale,
+          courseName: tLearn("dashboardTitle"),
         })}
       />
-      <SalahClient data={data} steps={steps} lessonIds={lessonIds} />
+      <SalahClient
+        data={data}
+        steps={steps}
+        shurut={shurut}
+        arkan={arkan}
+        wajibat={wajibat}
+        sunan={sunan}
+        sahw={sahw}
+        nullifiers={nullifiers}
+        lessonIds={lessonIds}
+      />
     </PageWrapper>
   );
 }

@@ -23,7 +23,12 @@ export function QuranVerse({
         translation={translation}
         size="lg"
       />
-      <SourceReference type="quran" reference={`Quran ${reference}`} />
+      {/* References are stored canonically as "Quran 2:255", but older content
+          used the bare "2:255". Normalise here so neither shape double-prefixes. */}
+      <SourceReference
+        type="quran"
+        reference={/^quran\b/i.test(reference) ? reference : `Quran ${reference}`}
+      />
     </RecitationBlockquote>
   );
 }

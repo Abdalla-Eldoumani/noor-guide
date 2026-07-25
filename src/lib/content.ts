@@ -9,6 +9,8 @@ import type {
   WuduData,
   WuduStep,
   WuduBreaker,
+  RulingItem,
+  SectionedModule,
   SalahData,
   SurahsData,
   Surah,
@@ -25,6 +27,9 @@ import type {
 import aqeedahJson from "@/data/content/aqeedah.json";
 import pillarsJson from "@/data/content/pillars.json";
 import wuduJson from "@/data/content/wudu-steps.json";
+import taharah from "@/data/content/taharah.json";
+import practice from "@/data/content/prayer-practice.json";
+import janazah from "@/data/content/janazah.json";
 import salahJson from "@/data/content/salah-steps.json";
 import surahsJson from "@/data/content/surahs.json";
 import duasJson from "@/data/content/duas-daily.json";
@@ -72,6 +77,38 @@ export function getWuduSteps(): WuduStep[] {
 
 export function getWuduBreakers(): WuduBreaker[] {
   return wudu.what_breaks_wudu.filter((b) => b.verified === true);
+}
+
+export function getWuduObligations(): RulingItem[] {
+  return wudu.obligations.filter((o) => o.verified === true);
+}
+
+export function getWuduSunan(): RulingItem[] {
+  return wudu.sunan.filter((o) => o.verified === true);
+}
+
+export function getSalahShurut(): RulingItem[] {
+  return salah.shurut.filter((o) => o.verified === true);
+}
+
+export function getSalahArkan(): RulingItem[] {
+  return salah.arkan.filter((o) => o.verified === true);
+}
+
+export function getSalahWajibat(): RulingItem[] {
+  return salah.wajibat.filter((o) => o.verified === true);
+}
+
+export function getSalahSunan(): RulingItem[] {
+  return salah.sunan.filter((o) => o.verified === true);
+}
+
+export function getSujudAsSahw(): RulingItem[] {
+  return salah.sujud_as_sahw.filter((o) => o.verified === true);
+}
+
+export function getSalahNullifiers(): RulingItem[] {
+  return salah.nullifiers.filter((o) => o.verified === true);
 }
 
 // --- Salah ---
@@ -134,4 +171,17 @@ export function getModuleById(id: string): LearningModule | undefined {
 export function getLessonIdsForModule(moduleId: string): string[] {
   const mod = learningPath.modules.find((m) => m.id === moduleId);
   return mod ? mod.lessons : [];
+}
+
+// --- Modules added after the original six ---
+export function getTaharahData(): SectionedModule {
+  return taharah as SectionedModule;
+}
+
+export function getPrayerPracticeData(): SectionedModule {
+  return practice as SectionedModule;
+}
+
+export function getJanazahData(): SectionedModule {
+  return janazah as SectionedModule;
 }

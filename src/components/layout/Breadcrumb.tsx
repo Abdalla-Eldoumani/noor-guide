@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ChevronRight } from "lucide-react";
 
@@ -20,6 +21,7 @@ function safeJsonLd(payload: unknown): string {
 }
 
 export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
+  const tLandmarks = useTranslations("landmarks");
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -32,7 +34,7 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className={className}>
+    <nav aria-label={tLandmarks("breadcrumb")} className={className}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}

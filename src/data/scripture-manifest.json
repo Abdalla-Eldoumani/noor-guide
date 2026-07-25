@@ -1,0 +1,76 @@
+{
+  "quran": {
+    "Quran 112:1-4": {
+      "ayahCount": 4,
+      "sha256": "b54a6e4f6d5df36ffd0204d1af289a3d677a89c496786ed789670c941afd7793",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 42:11": {
+      "ayahCount": 1,
+      "sha256": "f9879a2314fd8239a7ac3799cba15ede12bc3720da26c4a39f37a87886853dd4",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 50:17-18": {
+      "ayahCount": 2,
+      "sha256": "dd8f49e1ff308e77fa66f8fddbf6203e2b84ba71763dd59c73692d49db49ca21",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 3:3-4": {
+      "ayahCount": 2,
+      "sha256": "ee6329c8f4dc02c1c5a205d57e5a8cfa3f23e5526173d161359eeff0878742fa",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 33:40": {
+      "ayahCount": 1,
+      "sha256": "68032522c0fb85fccf856d77120f8ee66a19963708e726bc54e3999d2601a874",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 21:47": {
+      "ayahCount": 1,
+      "sha256": "60385e7d46d205063683307a00cd38e41d1fb0cef26d95c15a9972ef3d774e57",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 54:49": {
+      "ayahCount": 1,
+      "sha256": "59673c83ffcba3eb503d602a39de6f53d3c07b16fd95eb080277ef2fd3acee92",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    },
+    "Quran 2:183": {
+      "ayahCount": 1,
+      "sha256": "7d9115842a97092adabbb78b14c0be34e8c0160ef2bc55903db4300fe9d2883d",
+      "editions": {
+        "ar": "quran-uthmani",
+        "en": "en.sahih",
+        "fr": "fr.hamidullah"
+      }
+    }
+  }
+}

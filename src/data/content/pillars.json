@@ -2,14 +2,19 @@
   "module_id": "pillars",
   "title_en": "The Five Pillars of Islam",
   "title_ar": "أركان الإسلام",
+  "title_fr": "Les cinq piliers de l'islam",
   "introduction": {
     "content_en": "Islam is built upon five foundational practices. These are the actions that define a Muslim's life. The Prophet ﷺ described them clearly in an authentic hadith.",
     "content_ar": "بُني الإسلام على خمس عبادات أساسية، وهي الأعمال التي تشكل حياة المسلم. وقد بيّنها النبي ﷺ في حديث صحيح.",
+    "content_fr": "L'islam repose sur cinq pratiques fondamentales. Ce sont les actes qui structurent la vie du musulman. Le Prophète ﷺ les a clairement décrits dans un hadîth authentique.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Bukhari 8",
       "text_en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing prayer, giving zakat, fasting Ramadan, and pilgrimage to the House (Kaaba) for whoever is able.",
-      "grade": "sahih"
+      "text_ar": "بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالْحَجِّ، وَصَوْمِ رَمَضَانَ",
+      "text_fr": "L'islam est bâti sur cinq : l'attestation qu'il n'y a de divinité qu'Allah et que Mouhammad est le Messager d'Allah, l'accomplissement de la prière, l'acquittement de la zakât, le jeûne du Ramadan, et le pèlerinage à la Maison sacrée pour qui en a la capacité.",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "pillars": [
@@ -18,12 +23,16 @@
       "order": 1,
       "title_en": "Shahada — The Declaration of Faith",
       "title_ar": "الشهادة",
+      "title_fr": "La chahâda, l'attestation de foi",
       "description_en": "The shahada is the declaration that there is no god worthy of worship except Allah, and that Muhammad ﷺ is His messenger. This is the entry point into Islam. By saying it sincerely, a person becomes a Muslim.",
       "description_ar": "الشهادة هي الإقرار بأن لا إله يُعبد بحق إلا الله، وأن محمدًا ﷺ رسول الله. هي باب الدخول في الإسلام. من قالها بصدق فقد صار مسلمًا.",
+      "description_fr": "La chahâda est l'attestation qu'il n'y a de divinité digne d'adoration qu'Allah, et que Mouhammad ﷺ est Son messager. C'est la porte d'entrée dans l'islam. En la prononçant avec sincérité, une personne devient musulmane.",
       "content": {
         "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ",
         "transliteration": "Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadan rasulullah.",
-        "translation": "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah."
+        "translation": "I bear witness that there is no god but Allah, and I bear witness that Muhammad is the Messenger of Allah.",
+        "translation_fr": "J'atteste qu'il n'y a de divinité qu'Allah, et j'atteste que Mouhammad est le Messager d'Allah.",
+        "translation_provenance": "project"
       },
       "verified": true
     },
@@ -32,8 +41,10 @@
       "order": 2,
       "title_en": "Salah — The Five Daily Prayers",
       "title_ar": "الصلاة",
+      "title_fr": "La salât, les cinq prières quotidiennes",
       "description_en": "Muslims pray five times a day: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer is a direct connection between the servant and Allah — there is no intermediary.",
       "description_ar": "يصلي المسلم خمس مرات في اليوم: الفجر، والظهر، والعصر، والمغرب، والعشاء. الصلاة صلة مباشرة بين العبد وربه، لا واسطة فيها.",
+      "description_fr": "Les musulmans prient cinq fois par jour : Fajr (à l'aube), Dhuhr (à la mi-journée), 'Asr (l'après-midi), Maghrib (au coucher du soleil) et 'Ichâ (la nuit). La prière est un lien direct entre le serviteur et Allah, sans intermédiaire.",
       "link_to_module": "/learn/salah",
       "verified": true
     },
@@ -42,10 +53,13 @@
       "order": 3,
       "title_en": "Zakat — Charitable Giving",
       "title_ar": "الزكاة",
+      "title_fr": "La zakât, l'aumône obligatoire",
       "description_en": "Zakat is an obligatory annual charity of 2.5% of one's savings (above a minimum threshold called nisab) given to those in need. It purifies wealth and helps the community. It is only required if you have savings above the nisab threshold for a full year.",
       "description_ar": "الزكاة صدقة سنوية واجبة مقدارها 2.5٪ من مدخرات الإنسان التي تجاوزت حدًا أدنى يسمى النصاب، تُصرف للمستحقين. تُطهِّر المال وتنفع المجتمع. ولا تجب إلا على من بلغ ماله النصاب وحال عليه الحول.",
+      "description_fr": "La zakât est une aumône annuelle obligatoire de 2,5 % de l'épargne (au-delà d'un seuil minimal appelé nisâb), versée à ceux qui sont dans le besoin. Elle purifie les biens et soutient la communauté. Elle n'est due que si tu détiens une épargne supérieure au nisâb pendant une année complète.",
       "notes": "As a new Muslim, zakat becomes obligatory after you have held savings above the nisab for one full lunar year. Focus on learning prayer first.",
       "notes_ar": "بصفتك مسلمًا جديدًا، لا تجب عليك الزكاة إلا بعد أن يبلغ مالك النصاب ويمضي عليه عام هجري كامل. ركّز أولًا على تعلم الصلاة.",
+      "notes_fr": "En tant que nouveau musulman, la zakât ne devient obligatoire qu'après avoir détenu une épargne supérieure au nisâb pendant une année lunaire complète. Concentre-toi d'abord sur l'apprentissage de la prière.",
       "verified": true
     },
     {
@@ -53,11 +67,16 @@
       "order": 4,
       "title_en": "Sawm — Fasting in Ramadan",
       "title_ar": "الصيام",
+      "title_fr": "Le sawm, le jeûne du Ramadan",
       "description_en": "During the month of Ramadan (the 9th month of the Islamic calendar), Muslims fast from dawn to sunset — no food, drink, or intimate relations. Fasting teaches self-discipline, gratitude, and empathy for those who are less fortunate.",
       "description_ar": "في شهر رمضان، وهو الشهر التاسع في التقويم الهجري، يصوم المسلمون من طلوع الفجر إلى غروب الشمس، فيمتنعون عن الطعام والشراب والمعاشرة الزوجية. الصوم يربّي على ضبط النفس، والشكر، والتعاطف مع المحتاجين.",
+      "description_fr": "Pendant le mois de Ramadan (le neuvième mois du calendrier musulman), les musulmans jeûnent de l'aube au coucher du soleil : ni nourriture, ni boisson, ni rapports intimes. Le jeûne enseigne la maîtrise de soi, la gratitude et l'empathie envers les plus démunis.",
       "quran_reference": {
-        "reference": "2:183",
-        "translation": "O you who believe, fasting is prescribed for you as it was prescribed for those before you, that you may attain taqwa (God-consciousness)."
+        "reference": "Quran 2:183",
+        "translation": "O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous -",
+        "translation_fr": "O les croyants! On vous a prescrit aS-Siyâm comme on l'a prescrit à ceux d'avant vous, ainsi atteindrez-vous la piété,",
+        "translation_provenance": "fetched",
+        "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُتِبَ عَلَيْكُمُ ٱلصِّيَامُ كَمَا كُتِبَ عَلَى ٱلَّذِينَ مِن قَبْلِكُمْ لَعَلَّكُمْ تَتَّقُونَ"
       },
       "verified": true
     },
@@ -66,10 +85,13 @@
       "order": 5,
       "title_en": "Hajj — Pilgrimage to Makkah",
       "title_ar": "الحج",
+      "title_fr": "Le hajj, le pèlerinage à La Mecque",
       "description_en": "Once in a lifetime, every Muslim who is physically and financially able must perform the pilgrimage to Makkah. Hajj takes place in the 12th month of the Islamic calendar (Dhul Hijjah). It is a profound spiritual journey that unites Muslims from every corner of the world.",
       "description_ar": "يجب على كل مسلم قادر بدنيًا وماليًا أن يحج إلى مكة المكرمة مرة واحدة في عمره. يقع الحج في شهر ذي الحجة، وهو الشهر الثاني عشر من التقويم الهجري. وهو رحلة روحية عظيمة تجمع المسلمين من كل أنحاء الأرض.",
+      "description_fr": "Une fois dans sa vie, tout musulman qui en a la capacité physique et financière doit accomplir le pèlerinage à La Mecque. Le hajj a lieu au douzième mois du calendrier musulman (Dhoul Hijja). C'est un voyage spirituel profond qui rassemble les musulmans des quatre coins du monde.",
       "notes": "Hajj is only obligatory if you can afford it and are physically able. There is no rush — many Muslims save for years or decades before performing Hajj.",
       "notes_ar": "لا يجب الحج إلا على المستطيع ماليًا وبدنيًا. ولا داعي للعجلة، فكثير من المسلمين يدّخرون لسنوات قبل أداء الحج.",
+      "notes_fr": "Le hajj n'est obligatoire que si tu en as les moyens financiers et la capacité physique. Rien ne presse : beaucoup de musulmans épargnent des années, voire des décennies, avant de l'accomplir.",
       "verified": true
     }
   ]

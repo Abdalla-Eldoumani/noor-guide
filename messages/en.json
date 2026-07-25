@@ -15,7 +15,9 @@
     "or": "or",
     "verseLabel": "Verse {number}",
     "switchToArabic": "العربية",
-    "switchToEnglish": "English"
+    "switchToEnglish": "English",
+    "language": "Language",
+    "closeDialog": "Close dialog"
   },
   "nav": {
     "home": "Home",
@@ -35,7 +37,7 @@
     "featureFreeTitle": "Free, always",
     "featureFreeBody": "No accounts, no fees, no ads.",
     "modulesHeading": "Your learning journey",
-    "modulesSubheading": "Six modules to take you from the foundations of belief to daily practice.",
+    "modulesSubheading": "Nine modules to take you from the foundations of belief to daily practice.",
     "ctaBeginTitle": "Begin your journey",
     "ctaBeginBody": "Take the first step on a path of knowledge, peace, and purpose.",
     "ctaBeginButton": "Start learning",
@@ -206,10 +208,12 @@
     "resetCancel": "Cancel"
   },
   "notFound": {
-    "title": "Page not found",
-    "body": "The page you're looking for doesn't exist, or it may have moved. Let us guide you back.",
+    "title": "Page Not Found",
+    "body": "This page doesn't exist. Head back home or continue learning.",
     "ctaHome": "Go home",
-    "ctaContinue": "Continue learning"
+    "ctaContinue": "Continue learning",
+    "home": "Go Home",
+    "learn": "Continue Learning"
   },
   "footer": {
     "verifiedNote": "All content sourced from the Quran and authenticated Hadith collections.",
@@ -224,5 +228,63 @@
     "prayerTimes": "Prayer times",
     "qibla": "Qibla direction",
     "masjidFinder": "Find a mosque"
+  },
+  "compass": {
+    "north": "N",
+    "east": "E",
+    "south": "S",
+    "west": "W"
+  },
+  "meta": {
+    "keywords": [
+      "new Muslim",
+      "revert",
+      "Islam guide",
+      "how to pray",
+      "Shahada",
+      "learn Islam",
+      "Quran for beginners",
+      "wudu",
+      "salah",
+      "Islamic prayer"
+    ]
+  },
+  "sources": {
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "consensus": "Scholarly consensus",
+    "collections": {
+      "bukhari": "Sahih al-Bukhari",
+      "muslim": "Sahih Muslim",
+      "abudawud": "Sunan Abu Dawud",
+      "quran": "Quran",
+      "nasai": "Sunan an-Nasa'i",
+      "tirmidhi": "Jami' at-Tirmidhi"
+    },
+    "grades": {
+      "sahih": "Sahih",
+      "hasan": "Hasan"
+    }
+  },
+  "prayers": {
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha"
+  },
+  "player": {
+    "play": "Play",
+    "pause": "Pause",
+    "seek": "Seek audio"
+  },
+  "landmarks": {
+    "breadcrumb": "Breadcrumb",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "bottomNav": "Bottom navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "progress": "Progress"
   }
 }

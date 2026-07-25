@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 interface ProgressBarProps {
   value: number;
   max?: number;
@@ -13,6 +15,7 @@ export function ProgressBar({
   label,
   color = "bg-primary-500",
 }: ProgressBarProps) {
+  const tLandmarks = useTranslations("landmarks");
   const percent = max > 0 ? (value / max) * 100 : 0;
   const clamped = Math.max(0, Math.min(100, percent));
 
@@ -30,7 +33,7 @@ export function ProgressBar({
         aria-valuenow={clamped}
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-label={label || "Progress"}
+        aria-label={label || tLandmarks("progress")}
       >
         <div
           className={`h-full rounded-full transition-all duration-500 ease-out ${color}`}

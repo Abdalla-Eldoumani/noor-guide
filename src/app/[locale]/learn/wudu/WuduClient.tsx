@@ -3,22 +3,34 @@
 import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { HadithBlock } from "@/components/learn/HadithBlock";
+import { RulingList } from "@/components/learn/RulingList";
 import { StepByStep } from "@/components/learn/StepByStep";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { AlertCircle, Info } from "lucide-react";
-import type { WuduData, WuduStep, WuduBreaker } from "@/types/content";
+import type { WuduData, WuduStep, WuduBreaker, RulingItem } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface WuduClientProps {
+  obligations: RulingItem[];
+  sunan: RulingItem[];
   data: WuduData;
   steps: WuduStep[];
   breakers: WuduBreaker[];
   lessonIds: string[];
 }
 
-export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps) {
+export function WuduClient({
+  data,
+  steps,
+  breakers,
+  obligations,
+  sunan,
+  lessonIds,
+}: WuduClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tWudu = useTranslations("wudu");
@@ -77,9 +89,9 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/pillars"
-      prevLabel="Five Pillars"
+      prevLabel={pickModule(getModuleById("pillars"), "title")}
       nextHref="/learn/salah"
-      nextLabel="How to Pray"
+      nextLabel={pickModule(getModuleById("salah"), "title")}
     >
       {/* Introduction */}
       <section>
@@ -134,6 +146,23 @@ export function WuduClient({ data, steps, breakers, lessonIds }: WuduClientProps
           </RecitationBlockquote>
         </section>
       )}
+
+      {/* Obligatory acts, then recommended acts, then what nullifies them */}
+      <RulingList
+        heading={pickLocalized<string>(data, "obligations_heading", locale) ?? data.obligations_heading}
+        items={obligations}
+        emphasis="required"
+      />
+
+      <RulingList
+        heading={pickLocalized<string>(data, "sunan_heading", locale) ?? data.sunan_heading}
+        items={sunan}
+        emphasis="recommended"
+      />
+
+      <p className="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4 text-sm text-muted dark:text-gray-400">
+        {pickLocalized<string>(data, "madhab_note", locale) ?? data.madhab_note}
+      </p>
 
       {/* What breaks Wudu */}
       <section>

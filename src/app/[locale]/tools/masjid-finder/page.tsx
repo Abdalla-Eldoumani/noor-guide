@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { useSettings } from "@/hooks/useSettings";
 import { LocationPicker } from "@/components/tools/LocationPicker";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 export default function MasjidFinderPage() {
+  const t = useTranslations("masjidFinder");
+  const tCrumb = useTranslations("breadcrumb");
+  const tLocation = useTranslations("location");
+  const locale = useLocale();
   const { settings } = useSettings();
   const [location, setLocation] = useState(settings.location);
 
@@ -26,21 +31,27 @@ export default function MasjidFinderPage() {
     <PageWrapper>
       <Breadcrumb
         items={[
-          { label: "Home", href: "/" },
-          { label: "Tools", href: "/tools" },
-          { label: "Find a Mosque" },
+          { label: tCrumb("home"), href: "/" },
+          { label: tCrumb("tools"), href: "/tools" },
+          { label: tCrumb("masjidFinder") },
         ]}
       />
 
       <div className="mb-8">
         <h1 className="font-heading text-3xl font-bold text-ink dark:text-gray-100 sm:text-4xl">
-          Find a Mosque Near You
+          {t("title")}
         </h1>
-        <p className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
-          ابحث عن مسجد
-        </p>
+        {locale !== "ar" && (
+          <p
+            className="mt-2 font-arabic text-arabic-sm text-muted dark:text-gray-400"
+            dir="rtl"
+            lang="ar"
+          >
+            ابحث عن مسجد
+          </p>
+        )}
         <p className="mt-3 text-muted dark:text-gray-400">
-          Locate mosques in your area for congregational prayers and community support.
+          {t("subtitle")}
         </p>
       </div>
 
@@ -48,7 +59,7 @@ export default function MasjidFinderPage() {
       {!location ? (
         <div className="mb-8">
           <p className="mb-4 text-ink dark:text-gray-100">
-            Set your location to find mosques nearby.
+            {t("promptLocation")}
           </p>
           <LocationPicker onLocationSet={handleLocationSet} />
         </div>
@@ -66,7 +77,7 @@ export default function MasjidFinderPage() {
               onClick={() => setLocation(null)}
               className="text-sm text-muted underline hover:text-ink dark:text-gray-400 dark:hover:text-gray-200"
             >
-              Change location
+              {tLocation("change")}
             </button>
           </div>
 
@@ -87,10 +98,10 @@ export default function MasjidFinderPage() {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-                  Search on Google Maps
+                  {t("googleSearchTitle")}
                 </h3>
                 <p className="mt-1 text-sm text-muted dark:text-gray-400">
-                  Find mosques with reviews, directions, and prayer times
+                  {t("googleSearchBody")}
                 </p>
               </div>
             </a>
@@ -111,10 +122,10 @@ export default function MasjidFinderPage() {
               </div>
               <div>
                 <h3 className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-                  Search on OpenStreetMap
+                  {t("osmSearchTitle")}
                 </h3>
                 <p className="mt-1 text-sm text-muted dark:text-gray-400">
-                  Free, community-driven map of mosques worldwide
+                  {t("osmSearchBody")}
                 </p>
               </div>
             </a>
@@ -125,33 +136,15 @@ export default function MasjidFinderPage() {
       {/* Info section */}
       <div className="mt-10 rounded-2xl border border-gray-100 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-800/50">
         <h3 className="mb-3 font-heading text-sm font-semibold text-ink dark:text-gray-100">
-          Tips for Finding Your Local Mosque
+          {t("tipsHeading")}
         </h3>
         <ul className="space-y-2 text-sm text-muted dark:text-gray-400">
-          <li className="flex gap-2">
-            <span className="mt-1 text-primary-500">&#8226;</span>
-            <span>
-              Search for &quot;mosque&quot;, &quot;masjid&quot;, or &quot;Islamic center&quot; in your area
-            </span>
-          </li>
-          <li className="flex gap-2">
-            <span className="mt-1 text-primary-500">&#8226;</span>
-            <span>
-              Many mosques welcome new Muslims and have programs specifically for reverts
-            </span>
-          </li>
-          <li className="flex gap-2">
-            <span className="mt-1 text-primary-500">&#8226;</span>
-            <span>
-              Don&apos;t be shy to visit during prayer times. The community will be happy to help you
-            </span>
-          </li>
-          <li className="flex gap-2">
-            <span className="mt-1 text-primary-500">&#8226;</span>
-            <span>
-              Friday (Jumu&apos;ah) prayer is a great time for your first visit. Arrive early to meet people
-            </span>
-          </li>
+          {(["tip1", "tip2", "tip3", "tip4"] as const).map((key) => (
+            <li key={key} className="flex gap-2">
+              <span className="mt-1 text-primary-500">&#8226;</span>
+              <span>{t(key)}</span>
+            </li>
+          ))}
         </ul>
       </div>
     </PageWrapper>

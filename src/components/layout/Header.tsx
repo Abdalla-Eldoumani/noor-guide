@@ -9,6 +9,7 @@ import { LocaleSwitcher } from "./LocaleSwitcher";
 export default function Header() {
   const t = useTranslations("nav");
   const tSite = useTranslations("site");
+  const tLandmarks = useTranslations("landmarks");
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -59,7 +60,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden md:flex items-center gap-1" aria-label={tLandmarks("mainNav")}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -82,7 +83,7 @@ export default function Header() {
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
               className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-label={mobileOpen ? tLandmarks("closeMenu") : tLandmarks("openMenu")}
               aria-expanded={mobileOpen}
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -92,7 +93,7 @@ export default function Header() {
 
         {/* Mobile nav dropdown */}
         {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-100 dark:border-gray-800 pt-2" aria-label="Mobile navigation">
+          <nav className="md:hidden pb-4 border-t border-gray-100 dark:border-gray-800 pt-2" aria-label={tLandmarks("mobileNav")}>
             {navLinks.map((link) => (
               <Link
                 key={link.href}

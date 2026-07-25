@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { StepIndicator } from "@/components/ui/StepIndicator";
@@ -30,6 +31,7 @@ interface StepByStepProps {
 }
 
 export function StepByStep({ steps, moduleId }: StepByStepProps) {
+  const t = useTranslations("lesson");
   const [currentStep, setCurrentStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<number[]>([]);
 
@@ -60,7 +62,7 @@ export function StepByStep({ steps, moduleId }: StepByStepProps) {
 
       <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 space-y-4">
         <h3 className="font-heading text-xl font-semibold text-ink">
-          Step {currentStep + 1}: {step.title}
+          {t("stepIndicator", { current: currentStep + 1, total: steps.length })}: {step.title}
         </h3>
 
         <p className="text-ink leading-relaxed">{step.instruction}</p>
@@ -96,16 +98,16 @@ export function StepByStep({ steps, moduleId }: StepByStepProps) {
           onClick={goPrev}
           className={currentStep === 0 ? "invisible" : ""}
         >
-          Previous Step
+          {t("stepPrev")}
         </Button>
         <span className="text-sm text-muted">
-          {currentStep + 1} of {steps.length}
+          {t("stepIndicator", { current: currentStep + 1, total: steps.length })}
         </span>
         <Button
           variant={currentStep === steps.length - 1 ? "secondary" : "primary"}
           onClick={goNext}
         >
-          {currentStep === steps.length - 1 ? "Finish" : "Next Step"}
+          {currentStep === steps.length - 1 ? t("stepFinish") : t("stepNext")}
         </Button>
       </div>
     </div>

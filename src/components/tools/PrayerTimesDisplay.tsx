@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import type { AlAdhanTimings } from "@/types/api";
 
 interface PrayerTimesDisplayProps {
@@ -8,11 +10,11 @@ interface PrayerTimesDisplayProps {
 }
 
 const PRAYERS = [
-  { key: "Fajr" as const, name_en: "Fajr", name_ar: "الفجر" },
-  { key: "Dhuhr" as const, name_en: "Dhuhr", name_ar: "الظهر" },
-  { key: "Asr" as const, name_en: "Asr", name_ar: "العصر" },
-  { key: "Maghrib" as const, name_en: "Maghrib", name_ar: "المغرب" },
-  { key: "Isha" as const, name_en: "Isha", name_ar: "العشاء" },
+  { key: "Fajr" as const, messageKey: "fajr" },
+  { key: "Dhuhr" as const, messageKey: "dhuhr" },
+  { key: "Asr" as const, messageKey: "asr" },
+  { key: "Maghrib" as const, messageKey: "maghrib" },
+  { key: "Isha" as const, messageKey: "isha" },
 ];
 
 function formatTime(timeStr: string): string {
@@ -21,6 +23,8 @@ function formatTime(timeStr: string): string {
 }
 
 export function PrayerTimesDisplay({ timings, nextPrayer }: PrayerTimesDisplayProps) {
+  const t = useTranslations("prayers");
+  const tTimes = useTranslations("prayerTimes");
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
       {PRAYERS.map((prayer) => {
@@ -36,14 +40,11 @@ export function PrayerTimesDisplay({ timings, nextPrayer }: PrayerTimesDisplayPr
           >
             {isNext && (
               <span className="mb-2 inline-block rounded-full bg-accent-400 px-3 py-0.5 text-xs font-semibold text-white">
-                Next Prayer
+                {tTimes("nextPrayerLabel")}
               </span>
             )}
             <p className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-              {prayer.name_en}
-            </p>
-            <p className="font-arabic text-arabic-sm text-muted dark:text-gray-400" dir="rtl">
-              {prayer.name_ar}
+              {t(prayer.messageKey)}
             </p>
             <p
               className={`mt-3 font-heading text-2xl font-bold ${

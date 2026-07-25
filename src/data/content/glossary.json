@@ -1,28 +1,235 @@
 {
   "module_id": "glossary",
   "terms": [
-    { "id": "allah", "term_en": "Allah", "term_ar": "الله", "definition": "The Arabic word for God. The one and only Creator and Sustainer of all existence.", "definition_ar": "هو الاسم العَلَم لله تعالى، الإله الواحد، خالق كل شيء وقيّومه.", "verified": true },
-    { "id": "quran", "term_en": "Quran", "term_ar": "القرآن", "definition": "The holy book of Islam, the literal word of Allah revealed to Prophet Muhammad ﷺ through Angel Jibril over 23 years.", "definition_ar": "كتاب الإسلام المقدس، كلام الله المنزَّل على النبي محمد ﷺ بواسطة جبريل عليه السلام على مدى ثلاث وعشرين سنة.", "verified": true },
-    { "id": "hadith", "term_en": "Hadith", "term_ar": "الحديث", "definition": "A recorded saying, action, or approval of the Prophet Muhammad ﷺ. Collections graded as 'sahih' (authentic) are the most reliable.", "definition_ar": "ما رُوي عن النبي محمد ﷺ من قول أو فعل أو تقرير. وأوثق ما رُوي ما حُكم عليه بالصحة.", "verified": true },
-    { "id": "sunnah", "term_en": "Sunnah", "term_ar": "السنة", "definition": "The way of the Prophet Muhammad ﷺ — his practices, habits, and teachings that Muslims strive to follow.", "definition_ar": "هدي النبي محمد ﷺ في أقواله وأفعاله وأحواله، وهي الطريق الذي يسعى المسلمون لاتباعه.", "verified": true },
-    { "id": "salah", "term_en": "Salah", "term_ar": "الصلاة", "definition": "The five daily obligatory prayers. Also called salat or namaz in some cultures.", "definition_ar": "الصلوات الخمس المفروضة في اليوم. وتُسمى أيضًا (نماز) في بعض الثقافات.", "verified": true },
-    { "id": "wudu", "term_en": "Wudu", "term_ar": "الوضوء", "definition": "Ablution — the ritual washing performed before prayer to achieve a state of purity.", "definition_ar": "غسل أعضاء مخصوصة قبل الصلاة للتطهر، وهو شرط لصحة الصلاة.", "verified": true },
-    { "id": "rakah", "term_en": "Rakah", "term_ar": "ركعة", "definition": "A single unit or cycle of prayer. Each prayer consists of 2, 3, or 4 rakaat.", "definition_ar": "وحدة من وحدات الصلاة، تشتمل على القيام والركوع والسجود. وكل صلاة من اثنتين أو ثلاث أو أربع ركعات.", "verified": true },
-    { "id": "dua", "term_en": "Dua", "term_ar": "الدعاء", "definition": "Personal supplication or prayer to Allah. Can be made at any time, in any language.", "definition_ar": "مناجاة العبد لربه ودعاؤه إياه. يجوز في أي وقت وبأي لغة.", "verified": true },
-    { "id": "iman", "term_en": "Iman", "term_ar": "الإيمان", "definition": "Faith or belief. Specifically, belief in the six articles of faith.", "definition_ar": "التصديق والاعتقاد، وعلى وجه التحديد الإيمان بأركانه الستة.", "verified": true },
-    { "id": "tawhid", "term_en": "Tawhid", "term_ar": "التوحيد", "definition": "The Oneness of Allah — the most fundamental concept in Islam. Allah is One, with no partners.", "definition_ar": "إفراد الله بالوحدانية في ربوبيته وألوهيته وأسمائه وصفاته. أهم المعاني في الإسلام: الله واحد لا شريك له.", "verified": true },
-    { "id": "shahada", "term_en": "Shahada", "term_ar": "الشهادة", "definition": "The declaration of faith: 'There is no god but Allah, and Muhammad is the Messenger of Allah.'", "definition_ar": "الإقرار والشهادة بأن لا إله إلا الله وأن محمدًا رسول الله.", "verified": true },
-    { "id": "qibla", "term_en": "Qibla", "term_ar": "القبلة", "definition": "The direction of the Kaaba in Makkah, which Muslims face during prayer.", "definition_ar": "جهة الكعبة في مكة المكرمة، يستقبلها المسلمون في صلاتهم.", "verified": true },
-    { "id": "kaaba", "term_en": "Kaaba", "term_ar": "الكعبة", "definition": "The sacred cubic structure in Makkah. It was originally built by Prophet Ibrahim (Abraham) and his son Ismail.", "definition_ar": "البيت المكعّب المقدس في مكة المكرمة. بناه إبراهيم عليه السلام وابنه إسماعيل عليه السلام.", "verified": true },
-    { "id": "masjid", "term_en": "Masjid", "term_ar": "المسجد", "definition": "A mosque — the place of worship for Muslims. Literally means 'place of prostration'.", "definition_ar": "مكان عبادة المسلمين. ومعناه في اللغة: موضع السجود.", "verified": true },
-    { "id": "ummah", "term_en": "Ummah", "term_ar": "الأمة", "definition": "The global community of Muslims, regardless of nationality, ethnicity, or language.", "definition_ar": "جماعة المسلمين في العالم كله، على اختلاف أوطانهم وأعراقهم ولغاتهم.", "verified": true },
-    { "id": "haram", "term_en": "Haram", "term_ar": "حرام", "definition": "Forbidden or prohibited in Islam (e.g., consuming alcohol, pork, lying).", "definition_ar": "ما حرّمه الله ورسوله ﷺ، كشرب الخمر وأكل لحم الخنزير والكذب ونحوها.", "verified": true },
-    { "id": "halal", "term_en": "Halal", "term_ar": "حلال", "definition": "Permissible or lawful in Islam.", "definition_ar": "ما أباحه الله ورسوله ﷺ من الأفعال والأطعمة وغيرها.", "verified": true },
-    { "id": "jannah", "term_en": "Jannah", "term_ar": "الجنة", "definition": "Paradise — the eternal reward for righteous believers in the Hereafter.", "definition_ar": "دار الخلود في الآخرة، يجازي الله بها المؤمنين الصالحين.", "verified": true },
-    { "id": "taqwa", "term_en": "Taqwa", "term_ar": "التقوى", "definition": "God-consciousness or piety. Being aware of Allah in all your actions.", "definition_ar": "خشية الله ومراقبته في جميع الأقوال والأفعال، وامتثال أمره واجتناب نهيه.", "verified": true },
-    { "id": "dhikr", "term_en": "Dhikr", "term_ar": "الذكر", "definition": "Remembrance of Allah through repeating His names, phrases of praise, or Quran recitation.", "definition_ar": "ذكر الله بترديد أسمائه الحسنى وكلمات التسبيح والحمد، أو تلاوة القرآن.", "verified": true },
-    { "id": "sawm", "term_en": "Sawm", "term_ar": "الصوم", "definition": "Fasting — abstaining from food, drink, and intimate relations from dawn to sunset.", "definition_ar": "الإمساك عن الطعام والشراب والمعاشرة الزوجية من طلوع الفجر إلى غروب الشمس.", "verified": true },
-    { "id": "zakat", "term_en": "Zakat", "term_ar": "الزكاة", "definition": "Obligatory annual charity of 2.5% on qualifying wealth, given to those in need.", "definition_ar": "صدقة سنوية واجبة، مقدارها 2.5٪ من المال الذي بلغ النصاب، تُصرف للمستحقين.", "verified": true },
-    { "id": "hajj", "term_en": "Hajj", "term_ar": "الحج", "definition": "The annual pilgrimage to Makkah, obligatory once in a lifetime for those who are able.", "definition_ar": "الحج إلى مكة المكرمة في أوقات مخصوصة من العام. وهو واجب على كل مسلم قادر مرة واحدة في عمره.", "verified": true }
+    {
+      "id": "allah",
+      "term_en": "Allah",
+      "term_ar": "الله",
+      "term_fr": "Allah",
+      "definition": "The Arabic word for God. The one and only Creator and Sustainer of all existence.",
+      "definition_ar": "هو الاسم العَلَم لله تعالى، الإله الواحد، خالق كل شيء وقيّومه.",
+      "definition_fr": "Le mot arabe désignant Dieu. Le Créateur unique, Celui qui maintient toute existence.",
+      "verified": true
+    },
+    {
+      "id": "quran",
+      "term_en": "Quran",
+      "term_ar": "القرآن",
+      "term_fr": "Coran",
+      "definition": "The holy book of Islam, the literal word of Allah revealed to Prophet Muhammad ﷺ through Angel Jibril over 23 years.",
+      "definition_ar": "كتاب الإسلام المقدس، كلام الله المنزَّل على النبي محمد ﷺ بواسطة جبريل عليه السلام على مدى ثلاث وعشرين سنة.",
+      "definition_fr": "Le livre saint de l'islam, la parole même d'Allah révélée au Prophète Mouhammad ﷺ par l'ange Jibrîl sur vingt-trois ans.",
+      "verified": true
+    },
+    {
+      "id": "hadith",
+      "term_en": "Hadith",
+      "term_ar": "الحديث",
+      "term_fr": "Hadîth",
+      "definition": "A recorded saying, action, or approval of the Prophet Muhammad ﷺ. Collections graded as 'sahih' (authentic) are the most reliable.",
+      "definition_ar": "ما رُوي عن النبي محمد ﷺ من قول أو فعل أو تقرير. وأوثق ما رُوي ما حُكم عليه بالصحة.",
+      "definition_fr": "Une parole, un acte ou une approbation rapportés du Prophète Mouhammad ﷺ. Les recueils classés « sahîh » (authentiques) sont les plus fiables.",
+      "verified": true
+    },
+    {
+      "id": "sunnah",
+      "term_en": "Sunnah",
+      "term_ar": "السنة",
+      "term_fr": "Sunna",
+      "definition": "The way of the Prophet Muhammad ﷺ — his practices, habits, and teachings that Muslims strive to follow.",
+      "definition_ar": "هدي النبي محمد ﷺ في أقواله وأفعاله وأحواله، وهي الطريق الذي يسعى المسلمون لاتباعه.",
+      "definition_fr": "La voie du Prophète Mouhammad ﷺ : ses pratiques, ses habitudes et ses enseignements, que les musulmans s'efforcent de suivre.",
+      "verified": true
+    },
+    {
+      "id": "salah",
+      "term_en": "Salah",
+      "term_ar": "الصلاة",
+      "term_fr": "Salât",
+      "definition": "The five daily obligatory prayers. Also called salat or namaz in some cultures.",
+      "definition_ar": "الصلوات الخمس المفروضة في اليوم. وتُسمى أيضًا (نماز) في بعض الثقافات.",
+      "definition_fr": "Les cinq prières quotidiennes obligatoires. On dit aussi salat ou namaz selon les cultures.",
+      "verified": true
+    },
+    {
+      "id": "wudu",
+      "term_en": "Wudu",
+      "term_ar": "الوضوء",
+      "term_fr": "Wudû'",
+      "definition": "Ablution — the ritual washing performed before prayer to achieve a state of purity.",
+      "definition_ar": "غسل أعضاء مخصوصة قبل الصلاة للتطهر، وهو شرط لصحة الصلاة.",
+      "definition_fr": "Les ablutions : le lavage rituel accompli avant la prière pour se mettre en état de pureté.",
+      "verified": true
+    },
+    {
+      "id": "rakah",
+      "term_en": "Rakah",
+      "term_ar": "ركعة",
+      "term_fr": "Rak'a",
+      "definition": "A single unit or cycle of prayer. Each prayer consists of 2, 3, or 4 rakaat.",
+      "definition_ar": "وحدة من وحدات الصلاة، تشتمل على القيام والركوع والسجود. وكل صلاة من اثنتين أو ثلاث أو أربع ركعات.",
+      "definition_fr": "Une unité ou un cycle de prière. Chaque prière comporte 2, 3 ou 4 rak'ât.",
+      "verified": true
+    },
+    {
+      "id": "dua",
+      "term_en": "Dua",
+      "term_ar": "الدعاء",
+      "term_fr": "Dou'â'",
+      "definition": "Personal supplication or prayer to Allah. Can be made at any time, in any language.",
+      "definition_ar": "مناجاة العبد لربه ودعاؤه إياه. يجوز في أي وقت وبأي لغة.",
+      "definition_fr": "Invocation personnelle adressée à Allah. Elle peut être faite à tout moment et dans n'importe quelle langue.",
+      "verified": true
+    },
+    {
+      "id": "iman",
+      "term_en": "Iman",
+      "term_ar": "الإيمان",
+      "term_fr": "Îmân",
+      "definition": "Faith or belief. Specifically, belief in the six articles of faith.",
+      "definition_ar": "التصديق والاعتقاد، وعلى وجه التحديد الإيمان بأركانه الستة.",
+      "definition_fr": "La foi ou la croyance. Plus précisément, la croyance aux six piliers de la foi.",
+      "verified": true
+    },
+    {
+      "id": "tawhid",
+      "term_en": "Tawhid",
+      "term_ar": "التوحيد",
+      "term_fr": "Tawhîd",
+      "definition": "The Oneness of Allah — the most fundamental concept in Islam. Allah is One, with no partners.",
+      "definition_ar": "إفراد الله بالوحدانية في ربوبيته وألوهيته وأسمائه وصفاته. أهم المعاني في الإسلام: الله واحد لا شريك له.",
+      "definition_fr": "L'unicité d'Allah, la notion la plus fondamentale de l'islam. Allah est Un, sans associé.",
+      "verified": true
+    },
+    {
+      "id": "shahada",
+      "term_en": "Shahada",
+      "term_ar": "الشهادة",
+      "term_fr": "Chahâda",
+      "definition": "The declaration of faith: 'There is no god but Allah, and Muhammad is the Messenger of Allah.'",
+      "definition_ar": "الإقرار والشهادة بأن لا إله إلا الله وأن محمدًا رسول الله.",
+      "definition_fr": "L'attestation de foi : « Il n'y a de divinité qu'Allah, et Mouhammad est le Messager d'Allah. »",
+      "verified": true
+    },
+    {
+      "id": "qibla",
+      "term_en": "Qibla",
+      "term_ar": "القبلة",
+      "term_fr": "Qibla",
+      "definition": "The direction of the Kaaba in Makkah, which Muslims face during prayer.",
+      "definition_ar": "جهة الكعبة في مكة المكرمة، يستقبلها المسلمون في صلاتهم.",
+      "definition_fr": "La direction de la Ka'ba à La Mecque, vers laquelle les musulmans se tournent pour prier.",
+      "verified": true
+    },
+    {
+      "id": "kaaba",
+      "term_en": "Kaaba",
+      "term_ar": "الكعبة",
+      "term_fr": "Ka'ba",
+      "definition": "The sacred cubic structure in Makkah. It was originally built by Prophet Ibrahim (Abraham) and his son Ismail.",
+      "definition_ar": "البيت المكعّب المقدس في مكة المكرمة. بناه إبراهيم عليه السلام وابنه إسماعيل عليه السلام.",
+      "definition_fr": "L'édifice cubique sacré situé à La Mecque. Il fut édifié à l'origine par le prophète Ibrâhîm (Abraham) et son fils Ismâ'îl.",
+      "verified": true
+    },
+    {
+      "id": "masjid",
+      "term_en": "Masjid",
+      "term_ar": "المسجد",
+      "term_fr": "Masjid",
+      "definition": "A mosque — the place of worship for Muslims. Literally means 'place of prostration'.",
+      "definition_ar": "مكان عبادة المسلمين. ومعناه في اللغة: موضع السجود.",
+      "definition_fr": "Une mosquée, le lieu de prière des musulmans. Le mot signifie littéralement « lieu de prosternation ».",
+      "verified": true
+    },
+    {
+      "id": "ummah",
+      "term_en": "Ummah",
+      "term_ar": "الأمة",
+      "term_fr": "Oumma",
+      "definition": "The global community of Muslims, regardless of nationality, ethnicity, or language.",
+      "definition_ar": "جماعة المسلمين في العالم كله، على اختلاف أوطانهم وأعراقهم ولغاتهم.",
+      "definition_fr": "La communauté mondiale des musulmans, sans distinction de nationalité, d'origine ou de langue.",
+      "verified": true
+    },
+    {
+      "id": "haram",
+      "term_en": "Haram",
+      "term_ar": "حرام",
+      "term_fr": "Harâm",
+      "definition": "Forbidden or prohibited in Islam (e.g., consuming alcohol, pork, lying).",
+      "definition_ar": "ما حرّمه الله ورسوله ﷺ، كشرب الخمر وأكل لحم الخنزير والكذب ونحوها.",
+      "definition_fr": "Interdit en islam (par exemple consommer de l'alcool ou du porc, ou mentir).",
+      "verified": true
+    },
+    {
+      "id": "halal",
+      "term_en": "Halal",
+      "term_ar": "حلال",
+      "term_fr": "Halâl",
+      "definition": "Permissible or lawful in Islam.",
+      "definition_ar": "ما أباحه الله ورسوله ﷺ من الأفعال والأطعمة وغيرها.",
+      "definition_fr": "Permis et licite en islam.",
+      "verified": true
+    },
+    {
+      "id": "jannah",
+      "term_en": "Jannah",
+      "term_ar": "الجنة",
+      "term_fr": "Janna",
+      "definition": "Paradise — the eternal reward for righteous believers in the Hereafter.",
+      "definition_ar": "دار الخلود في الآخرة، يجازي الله بها المؤمنين الصالحين.",
+      "definition_fr": "Le Paradis, la récompense éternelle des croyants pieux dans l'au-delà.",
+      "verified": true
+    },
+    {
+      "id": "taqwa",
+      "term_en": "Taqwa",
+      "term_ar": "التقوى",
+      "term_fr": "Taqwâ",
+      "definition": "God-consciousness or piety. Being aware of Allah in all your actions.",
+      "definition_ar": "خشية الله ومراقبته في جميع الأقوال والأفعال، وامتثال أمره واجتناب نهيه.",
+      "definition_fr": "La piété, la conscience d'Allah. Être attentif à Allah dans chacun de ses actes.",
+      "verified": true
+    },
+    {
+      "id": "dhikr",
+      "term_en": "Dhikr",
+      "term_ar": "الذكر",
+      "term_fr": "Dhikr",
+      "definition": "Remembrance of Allah through repeating His names, phrases of praise, or Quran recitation.",
+      "definition_ar": "ذكر الله بترديد أسمائه الحسنى وكلمات التسبيح والحمد، أو تلاوة القرآن.",
+      "definition_fr": "Le rappel d'Allah, par la répétition de Ses noms, de formules de louange ou par la récitation du Coran.",
+      "verified": true
+    },
+    {
+      "id": "sawm",
+      "term_en": "Sawm",
+      "term_ar": "الصوم",
+      "term_fr": "Sawm",
+      "definition": "Fasting — abstaining from food, drink, and intimate relations from dawn to sunset.",
+      "definition_ar": "الإمساك عن الطعام والشراب والمعاشرة الزوجية من طلوع الفجر إلى غروب الشمس.",
+      "definition_fr": "Le jeûne : s'abstenir de nourriture, de boisson et de rapports intimes de l'aube au coucher du soleil.",
+      "verified": true
+    },
+    {
+      "id": "zakat",
+      "term_en": "Zakat",
+      "term_ar": "الزكاة",
+      "term_fr": "Zakât",
+      "definition": "Obligatory annual charity of 2.5% on qualifying wealth, given to those in need.",
+      "definition_ar": "صدقة سنوية واجبة، مقدارها 2.5٪ من المال الذي بلغ النصاب، تُصرف للمستحقين.",
+      "definition_fr": "Aumône annuelle obligatoire de 2,5 % sur les biens imposables, versée à ceux qui sont dans le besoin.",
+      "verified": true
+    },
+    {
+      "id": "hajj",
+      "term_en": "Hajj",
+      "term_ar": "الحج",
+      "term_fr": "Hajj",
+      "definition": "The annual pilgrimage to Makkah, obligatory once in a lifetime for those who are able.",
+      "definition_ar": "الحج إلى مكة المكرمة في أوقات مخصوصة من العام. وهو واجب على كل مسلم قادر مرة واحدة في عمره.",
+      "definition_fr": "Le pèlerinage annuel à La Mecque, obligatoire une fois dans la vie pour qui en a la capacité.",
+      "verified": true
+    }
   ]
 }

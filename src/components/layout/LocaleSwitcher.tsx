@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Languages } from "lucide-react";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
@@ -8,11 +8,13 @@ import { routing, type Locale } from "@/i18n/routing";
 const LABELS: Record<Locale, string> = {
   en: "English",
   ar: "العربية",
+  fr: "Français",
 };
 
 const SETTINGS_KEY = "noor-settings";
 
 export function LocaleSwitcher() {
+  const t = useTranslations("common");
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -38,15 +40,15 @@ export function LocaleSwitcher() {
   return (
     <label className="relative inline-flex items-center gap-1 text-sm text-muted dark:text-gray-400">
       <Languages size={16} className="pointer-events-none" aria-hidden="true" />
-      <span className="sr-only">Language</span>
+      <span className="sr-only">{t("language")}</span>
       <select
-        aria-label="Language"
+        aria-label={t("language")}
         value={locale}
         onChange={(e) => handleChange(e.target.value as Locale)}
         className="appearance-none bg-transparent pe-2 ps-1 py-1.5 rounded-md font-medium text-ink dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-500 focus-visible:outline-offset-2"
       >
         {routing.locales.map((l) => (
-          <option key={l} value={l}>
+          <option key={l} value={l} lang={l}>
             {LABELS[l as Locale]}
           </option>
         ))}

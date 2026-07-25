@@ -1,0 +1,1087 @@
+{
+  "_readme": "Verification record for every scripture citation in src/data/content, including the ones that carry no type tag: keying the collector on type == hadith once let seventeen citations sit unaccounted for. Each hadith was opened at sunnah.com under the number the content cites, because that is the numbering this project uses; cross-numbered editions of Sunan Abi Dawud in particular do not line up. Quran citations were read from the Saheeh International edition through AlQuran Cloud. npm run verify:citations gates the build on every citation having an entry and every entry still being cited.",
+  "citations": {
+    "Jami' at-Tirmidhi 1078": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The believer's soul is suspended by his debt until it is settled for him",
+      "grade": "Hasan (Darussalam)"
+    },
+    "Jami' at-Tirmidhi 31": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Uthman ibn Affan",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the Prophet would go through his beard",
+      "grade": "Hasan (Darussalam)",
+      "note": "Covers the beard alone. Running water between the fingers and toes is cited to Sunan Abi Dawud 142."
+    },
+    "Quran 112:1-4": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Say, \"He is Allah, [who is] One, Allah, the Eternal Refuge. He neither begets nor is born\""
+    },
+    "Quran 16:98": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "when you recite the Qur'an, seek refuge in Allah from Satan, the expelled"
+    },
+    "Quran 21:47": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "And We place the scales of justice for the Day of Resurrection, so no soul will be treated unjustly"
+    },
+    "Quran 21:87": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers"
+    },
+    "Quran 22:77": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "bow and prostrate and worship your Lord"
+    },
+    "Quran 2:144": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "So turn your face toward al-Masjid al-Haram"
+    },
+    "Quran 2:183": {
+      "usedIn": [
+        "pillars.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "decreed upon you is fasting as it was decreed upon those before you"
+    },
+    "Quran 2:222": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "do not approach them until they are pure"
+    },
+    "Quran 2:238": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Maintain with care the obligatory prayers"
+    },
+    "Quran 33:40": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Muhammad is not the father of any one of your men, but he is the Messenger of Allah and last of the prophets"
+    },
+    "Quran 3:3-4": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "He has sent down upon you the Book in truth, confirming what was before it"
+    },
+    "Quran 42:11": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "There is nothing like unto Him, and He is the Hearing, the Seeing"
+    },
+    "Quran 4:101": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "there is no blame upon you for shortening the prayer"
+    },
+    "Quran 4:103": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "prayer has been decreed upon the believers a decree of specified times"
+    },
+    "Quran 50:17-18": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "When the two receivers receive, seated on the right and on the left"
+    },
+    "Quran 54:49": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "Indeed, all things We created with predestination"
+    },
+    "Quran 5:6": {
+      "usedIn": [
+        "salah-steps.json",
+        "taharah.json",
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "wash your faces and your forearms to the elbows and wipe over your heads and wash your feet to the ankles"
+    },
+    "Quran 62:9": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "when the adhan is called for the prayer on the day of Jumu'ah"
+    },
+    "Quran 74:4": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "And your clothing purify"
+    },
+    "Quran 7:31": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "checkedAgainst": "AlQuran Cloud, Saheeh International edition",
+      "confirmedWording": "take your adornment at every masjid"
+    },
+    "Sahih Bukhari 1": {
+      "usedIn": [
+        "salah-steps.json",
+        "taharah.json",
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Umar ibn al-Khattab",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The reward of deeds depends upon the intentions",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1081": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Anas ibn Malik, reported by Yahya ibn Ishaq",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "we travelled with the Prophet from Medina to Mecca and offered two rakaat for every prayer",
+      "grade": "the collection carries no grading line",
+      "note": "Records a journey on which the prayer was shortened. The thresholds of distance and duration are inferences the schools differ over, which the item now says."
+    },
+    "Sahih Bukhari 1090": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the prayer in a journey was kept as it was, the prayers for non-travellers were completed",
+      "grade": "the collection carries no grading line",
+      "note": "Establishes the shortening of the four-unit prayers. That Maghrib stays three is by established practice."
+    },
+    "Sahih Bukhari 1224": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Buhaynah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "got up for the third rakah without sitting, then made the two corrective prostrations before the tasleem",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1226": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Mas'ud",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "offered five rakaat in the Zuhr prayer, then made two prostrations of sahw after the tasleem",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1245": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "went to the Musalla, the people stood behind him in rows, and he said four takbirs",
+      "grade": "the collection carries no grading line",
+      "note": "Describes standing in rows and the takbirs. That the prayer has no bowing and no prostration is agreed upon, which the item now says."
+    },
+    "Sahih Bukhari 1253": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umm Atiyyah al-Ansariyyah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Wash her thrice or five times or more, if you see it necessary",
+      "grade": "the collection carries no grading line",
+      "note": "Permits three, five, or more. It does not itself mandate an odd count, nor does it cover who may wash whom."
+    },
+    "Sahih Bukhari 1264": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "shrouded in three white Yemeni cotton cloths, with neither shirt nor turban",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1265": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Abbas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the man who died in ihram at Arafat: wash him, shroud him, do not perfume him, do not cover his head",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1294": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Mas'ud",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "He who slaps his cheeks and tears his clothes is not one of us",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1315": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Hurry up with the dead body",
+      "grade": "the collection carries no grading line",
+      "note": "Commands haste. Laying the body on its right side facing the qibla is the agreed practice, which the item now says."
+    },
+    "Sahih Bukhari 1335": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Talhah ibn Abdullah ibn Awf",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Ibn Abbas recited Al-Fatiha in the funeral prayer and said it is the Sunnah",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 1346": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Jabir ibn Abdullah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Bury them with their blood, said of the dead of Uhud, and he did not have them washed",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 135": {
+      "usedIn": [
+        "salah-steps.json",
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The prayer of a person who does hadath is not accepted till he performs ablution",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 159": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Humran, freed slave of Uthman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "poured water over his hands and washed them thrice, rinsed his mouth and nose, washed each limb thrice",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 168": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "used to like to start from the right side on wearing shoes, combing his hair and cleaning himself",
+      "grade": "the collection carries no grading line",
+      "note": "A general principle rather than a wudu-specific narration. It is the standard evidence for beginning with the right."
+    },
+    "Sahih Bukhari 248": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "started by washing his hands, performed ablution as for prayer, then poured water over his head",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 249": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Maymunah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "washed off the discharge from his private parts, then poured water over his body",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 282": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umm Salamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "a woman takes a bath if she notices a discharge after a wet dream",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 320": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "give up the prayers when the menses begin, and when it has finished take a bath and start praying",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 321": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Muadha, from Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "he never ordered us to make up the prayers missed in menstruation",
+      "grade": "the collection carries no grading line",
+      "note": "Covers prayer only. The fasting make-up rule is cited to Sahih Muslim 335."
+    },
+    "Sahih Bukhari 3370": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ka'b ibn Ujrah, reported by Abdur-Rahman ibn Abi Layla",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Allahumma salli ala Muhammad wa ala aali Muhammad",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 347": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Ammar ibn Yasir, reported by Shaqiq",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "struck the earth with his hands, passed them over each other, then wiped his face",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 597": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Anas ibn Malik",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "If anyone forgets a prayer he should pray that prayer when he remembers it",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 598": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Jabir ibn Abdullah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "on the day of al-Khandaq he prayed Asr after sunset and then prayed Maghrib",
+      "grade": "the collection carries no grading line",
+      "note": "The order of the make-up rests on this sequence: the missed Asr was prayed before the current Maghrib."
+    },
+    "Sahih Bukhari 6251": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "perform the ablution properly, face the Qibla, and say the Takbir",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 6307": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "I ask forgiveness of Allah and turn to Him in repentance more than seventy times a day",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 631": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Malik ibn al-Huwayrith",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Pray as you have seen me praying",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 6312": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "on waking: al-hamdu lillahi lladhi ahyana ba'da ma amatana wa ilayhi n-nushur",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 6324": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "on going to bed: bismika Allahumma amutu wa ahya",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 735": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Salim, from Abdullah ibn Umar",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "raised both hands on opening the prayer, on the takbir for bowing, and on rising from bowing",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 740": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Sahl ibn Sa'd",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The people were ordered to place the right hand on the left forearm in the prayer",
+      "grade": "the collection carries no grading line",
+      "note": "The narration says the forearm. Where the hands rest is a point the schools differ on, which the item now says."
+    },
+    "Sahih Bukhari 744": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "used to keep silent between the Takbir and the recitation for a short interval",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 756": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ubadah ibn as-Samit",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Whoever does not recite Al-Fatiha in his prayer, his prayer is invalid",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 776": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Abi Qatadah, from his father",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "used to recite Al-Fatiha followed by another surah in the first two rakaat",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 782": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Say Amen when the Imam says ghayri l-maghdubi alayhim wa la d-dalleen",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 789": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "said Takbir on starting and on bowing, then Sami Allahu liman hamidah on rising",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 793": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the man told to go back and pray, then taught to bow, rise, and prostrate with calmness",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 795": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when he said Sami Allahu liman hamidah he would say Rabbana wa laka l-hamd",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 8": {
+      "usedIn": [
+        "pillars.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Umar",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Islam is based on five",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 812": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Abbas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "I have been ordered to prostrate on seven bones",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 829": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Buhaynah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "stood after the second rakah without sitting, then made the two corrective prostrations",
+      "grade": "the collection carries no grading line",
+      "note": "The proof that the first tashahhud is an obligatory duty and not a pillar: leaving it is repaired by the prostration of forgetfulness."
+    },
+    "Sahih Bukhari 831": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Mas'ud, reported by Shaqiq ibn Salamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "at-Tahiyyatu lillahi wa s-salawatu wa t-tayyibat",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 877": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Umar",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Anyone of you attending the Friday prayers should take a bath",
+      "grade": "the collection carries no grading line",
+      "note": "Names the bath. Clean clothes, fragrance, and arriving early rest on other reports, which the item now says."
+    },
+    "Sahih Bukhari 887": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "I would have ordered them to clean their teeth with siwak for every prayer",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Bukhari 934": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when the Imam is delivering the Khutba and you tell your companion to be quiet, you have done an evil act",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 1631": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when a man dies his acts come to an end but three: recurring charity, knowledge people benefit from, and a pious child who prays for him",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 2017": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the name of Allah is mentioned over the food, and Shaytan finds it lawful when it is not",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 225": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah, reported by Hammam ibn Munabbih",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the prayer of one of you is not accepted in a state of impurity until he performs ablution",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 226": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Humran, freed slave of Uthman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "washed his hands thrice, rinsed mouth and nose, washed the face three times, the right arm then the left, wiped the head, the right foot then the left",
+      "grade": "the collection carries no grading line",
+      "note": "Establishes the order of the acts. Continuity between them is the inference of the jurists, not a wording in this narration."
+    },
+    "Sahih Muslim 234": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Uqbah ibn Amir",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "whoever performs the ablution well and then testifies, the eight gates of Paradise are opened for him",
+      "grade": "the collection carries no grading line",
+      "note": "Cited at sunnah.com as 234a."
+    },
+    "Sahih Muslim 2653b": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Amr ibn al-As",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Allah ordained the measures of the creation fifty thousand years before He created the heavens and the earth, as His Throne was upon water",
+      "grade": "the collection carries no grading line",
+      "note": "Was cited as Sahih Muslim 2653, which on sunnah.com resolves to a follow-on chain carrying no matn. The wording quoted is Abdullah ibn Amr's, which is 2653b."
+    },
+    "Sahih Muslim 335": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Muadha, from Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "we were ordered to complete the fasts, but were not ordered to complete the prayers",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 348": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "When a man has sexual intercourse bathing becomes obligatory, even if there is no emission",
+      "grade": "the collection carries no grading line",
+      "note": "Replaced Sahih Muslim 343, which teaches the opposite rule and is held by the majority to be abrogated."
+    },
+    "Sahih Muslim 373": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Aishah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The Messenger of Allah used to remember Allah at all moments",
+      "grade": "the collection carries no grading line",
+      "note": "Establishes that remembrance is open in every state. Reading a translation is the extension the jurists draw from it."
+    },
+    "Sahih Muslim 401": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Wa'il ibn Hujr",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "raised his hands at the beginning of the prayer, then placed his right hand over his left hand",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 482": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The nearest a servant comes to his Lord is when he is prostrating, so make supplication",
+      "grade": "the collection carries no grading line",
+      "note": "Concerns nearness and supplication in prostration, not the words said there. Those are cited to Sahih Muslim 772."
+    },
+    "Sahih Muslim 537": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Muawiyah ibn al-Hakam as-Sulami",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "talking to persons is not fitting during the prayer",
+      "grade": "the collection carries no grading line",
+      "note": "Concerns speech only. Eating, drinking, and excessive movement are cited to scholarly consensus."
+    },
+    "Sahih Muslim 571": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Sa'id al-Khudri",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "cast aside the doubt, build on what he is sure of, then make two prostrations",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 580": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Umar",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "raised his right finger, the one next to the thumb, and supplicated with it",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 582": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Amir ibn Sa'd, from his father",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "pronouncing the taslim on his right and on his left until the whiteness of his cheek was seen",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 612": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Amr",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the time windows for Fajr, Zuhr, Asr, Maghrib, and Isha",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 705": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Abbas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "observed the noon and afternoon prayers together, and the sunset and Isha prayers together",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 713": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Usayd al-Ansari",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when one of you enters the mosque let him say, O Allah open for me the doors of Your mercy",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 772": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "in bowing Subhana Rabbiyal-Azim, and in prostration Subhana Rabbiyal-A'la",
+      "grade": "the collection carries no grading line",
+      "note": "Carries both formulas in one narration, which is why the obligatory duties and the prostration step were moved to it from Sunan Abi Dawud 869 (graded da'if)."
+    },
+    "Sahih Muslim 861": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Umar",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "delivered the sermon standing, then sat, then stood for the second sermon",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 8a": {
+      "usedIn": [
+        "aqeedah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umar ibn al-Khattab, reported by Yahya ibn Ya'mur",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "faith in Allah, His angels, His Books, His Messengers, the Last Day, and the Divine Decree",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 916": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Sa'id al-Khudri",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Exhort to recite there is no god but Allah to those of you who are dying",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 918": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umm Salamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "We belong to Allah and to Him shall we return, O Allah reward me for my affliction",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 920": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umm Salamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "he closed the eyes of Abu Salamah and said, when the soul is taken away the sight follows it",
+      "grade": "the collection carries no grading line"
+    },
+    "Sahih Muslim 963": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Awf ibn Malik, reported by Jubayr ibn Nufayr",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "O Allah, forgive him, have mercy upon him, give him peace and absolve him",
+      "grade": "the collection carries no grading line",
+      "note": "Preserves the supplication. Placing it after the third takbir is the arrangement the schools agree on, which the item now says. Cited at sunnah.com as 963a and 963b."
+    },
+    "Sahih Muslim 976": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "I sought permission from Him to visit her grave, and He granted it to me",
+      "grade": "the collection carries no grading line",
+      "note": "Cited at sunnah.com as 976a."
+    },
+    "Sunan Abu Dawud 101": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Hurayrah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the ablution of a person who does not mention the name of Allah is not valid",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 142": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Laqit ibn Sabirah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Perform the ablution in full, run the fingers between the fingers, and snuff water well unless you are fasting",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 203": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ali ibn Abi Talib",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The eyes are the leather strap of the anus, so one who sleeps should perform ablution",
+      "grade": "Hasan (Al-Albani)",
+      "note": "Establishes that sleep breaks the ablution. That light dozing while seated does not is the qualification the jurists draw."
+    },
+    "Sunan Abu Dawud 311": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Umm Salamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "the woman with postnatal bleeding would refrain from prayer for forty days",
+      "grade": "Hasan Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 3221": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Uthman ibn Affan",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Seek forgiveness for your brother, and beg steadfastness for him, for he will be questioned now",
+      "grade": "Sahih (Al-Albani)",
+      "note": "Restored from Sunan Abi Dawud 3215, which in this numbering is the Uhud burial and not Uthman's report."
+    },
+    "Sunan Abu Dawud 332": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Dharr al-Ghifari",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "clean earth is ablution for a Muslim even for ten years, but when you find water let it touch your skin",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 355": {
+      "usedIn": [
+        "taharah.json"
+      ],
+      "status": "verified",
+      "narrator": "Qays ibn Asim",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "he came intending to embrace Islam and was commanded to bathe",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 4023": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Mu'adh ibn Anas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "praise be to Allah who has fed me with this food and provided it for me through no might or power of mine",
+      "grade": "the collection carries no grading line for this narration"
+    },
+    "Sunan Abu Dawud 5095": {
+      "usedIn": [
+        "duas-daily.json"
+      ],
+      "status": "verified",
+      "narrator": "Anas ibn Malik",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "when a man leaves his house and says, in the name of Allah, I trust in Allah, there is no might and no power but in Allah",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 61": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ali ibn Abi Talib",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "The key to prayer is purification, its beginning is takbir and its end is taslim",
+      "grade": "Hasan Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 775": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Sa'id al-Khudri",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Subhanaka Allahumma wa bihamdika wa tabaraka smuka wa ta'ala jadduka wa la ilaha ghayruk",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan Abu Dawud 874": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Hudhayfah ibn al-Yaman",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "and between the two prostrations he said, my Lord forgive me",
+      "grade": "Sahih (Al-Albani)"
+    },
+    "Sunan an-Nasa'i 102": {
+      "usedIn": [
+        "wudu-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Ibn Abbas",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "he wiped his head and his ears, the inside with his forefinger and the outside with his thumbs",
+      "grade": "Hasan (Darussalam)",
+      "note": "Replaced Sunan Abi Dawud 134, which carries the same act but is graded da'if."
+    },
+    "Sunan an-Nasa'i 1194": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "a companion of the Prophet, reported by Ubaydullah ibn Abdullah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "if any one of you is praying, let him not lift his gaze to the sky",
+      "grade": "Sahih (Darussalam)",
+      "note": "Forbids raising the gaze. It says nothing about the place of prostration, so the item was reworded to what it states."
+    },
+    "Sunan an-Nasa'i 1989": {
+      "usedIn": [
+        "janazah.json"
+      ],
+      "status": "verified",
+      "narrator": "Abu Umamah",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "recite Umm al-Qur'an quietly in the first takbir, then say three more takbirs, and the taslim after the last one",
+      "grade": "Sahih (Darussalam)",
+      "note": "States the recitation and the closing taslim. It does not mention blessings upon the Prophet after the second takbir, which is cited to scholarly consensus."
+    }
+  }
+}

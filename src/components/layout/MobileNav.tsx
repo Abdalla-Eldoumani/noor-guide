@@ -6,6 +6,7 @@ import { Home, BookOpen, Wrench, BarChart3 } from "lucide-react";
 
 export default function MobileNav() {
   const t = useTranslations("nav");
+  const tLandmarks = useTranslations("landmarks");
   const pathname = usePathname();
 
   const navItems = [
@@ -23,7 +24,7 @@ export default function MobileNav() {
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-40 bg-surface dark:bg-gray-900 dark:border-gray-800 border-t border-gray-100 md:hidden"
-      aria-label="Mobile bottom navigation"
+      aria-label={tLandmarks("bottomNav")}
     >
       <div className="flex items-center justify-around h-16">
         {navItems.map(({ href, label, icon: Icon }) => {

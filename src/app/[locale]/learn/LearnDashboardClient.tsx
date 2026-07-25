@@ -81,7 +81,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
                 {currentTitle}
               </h3>
               {locale !== "ar" && (
-                <p className="font-arabic text-sm text-muted">
+                <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted">
                   {currentModule.title_ar}
                 </p>
               )}
@@ -127,7 +127,7 @@ export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
                 {tLearn("glossaryTitle")}
               </h3>
               {locale !== "ar" && (
-                <p className="font-arabic text-sm text-muted dark:text-gray-400 mb-2" dir="rtl">
+                <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted dark:text-gray-400 mb-2">
                   مصطلحات إسلامية
                 </p>
               )}

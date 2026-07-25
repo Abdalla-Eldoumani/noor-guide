@@ -1,5 +1,8 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
+import { pickLocalized } from "@/lib/content-i18n";
+
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Play, Pause, Volume2 } from "lucide-react";
 import { ArabicText } from "@/components/ui/ArabicText";
@@ -11,6 +14,8 @@ interface SurahPlayerProps {
 }
 
 export function SurahPlayer({ surah }: SurahPlayerProps) {
+  const t = useTranslations("surahs");
+  const locale = useLocale();
   const [audioUrls, setAudioUrls] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,7 +48,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
       })
       .catch(() => {
         if (!cancelled) {
-          setError("Could not load audio. Please try again later.");
+          setError(t("audioError"));
           setLoading(false);
         }
       });
@@ -51,7 +56,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
     return () => {
       cancelled = true;
     };
-  }, [surah.number]);
+  }, [surah.number, t]);
 
   useEffect(() => {
     const audio = new Audio();
@@ -149,23 +154,23 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
         <div className="flex items-center justify-between">
           <div>
             <h3 className="font-heading text-lg font-semibold">
-              {surah.title_en}
+              {pickLocalized<string>(surah, "title", locale) ?? surah.title_en}
             </h3>
             <p className="text-primary-200 text-sm mt-0.5">
-              Surah {surah.number}
+              {t("surahNumberLabel", { number: surah.number })}
             </p>
           </div>
-          <p className="font-arabic text-arabic-lg">{surah.title_ar}</p>
+          {/* The heading already carries the Arabic name on `/ar`; repeating it
+              beside itself is the both-locales-at-once habit this project drops. */}
+          {locale !== "ar" && (
+            <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg">
+              {surah.title_ar}
+            </p>
+          )}
         </div>
       </div>
 
       <div className="p-6 space-y-4">
-        {surah.priority && (
-          <p className="text-sm font-medium text-primary-500 bg-primary-50 dark:bg-primary-900/30 rounded-lg px-3 py-2">
-            {surah.priority}
-          </p>
-        )}
-
         {/* Play All button */}
         {!loading && !error && audioUrls.length > 0 && (
           <button
@@ -178,13 +183,13 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
             ) : (
               <Volume2 size={18} />
             )}
-            {isPlaying && playAll ? "Stop" : "Play Entire Surah"}
+            {isPlaying && playAll ? t("stopPlayback") : t("playFullSurah")}
           </button>
         )}
 
         {loading && (
           <p className="text-sm text-muted text-center py-2">
-            Loading audio...
+            {t("loadingAudio")}
           </p>
         )}
         {error && (
@@ -213,8 +218,8 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                       className="relative w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors before:absolute before:inset-[-6px] before:content-['']"
                       aria-label={
                         isPlaying && playingIndex === i
-                          ? `Pause verse ${verse.verse}`
-                          : `Play verse ${verse.verse}`
+                          ? t("pauseVerseAria", { number: verse.verse })
+                          : t("playVerseAria", { number: verse.verse })
                       }
                     >
                       {isPlaying && playingIndex === i ? (
@@ -229,7 +234,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                   <ArabicText
                     arabic={verse.arabic}
                     transliteration={verse.transliteration}
-                    translation={verse.translation}
+                    translation={pickLocalized<string>(verse, "translation", locale)}
                   />
                 </div>
               </div>

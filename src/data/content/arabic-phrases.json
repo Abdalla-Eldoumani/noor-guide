@@ -2,84 +2,163 @@
   "module_id": "arabic-phrases",
   "title_en": "Essential Arabic Phrases",
   "title_ar": "عبارات إسلامية أساسية",
+  "title_fr": "Expressions arabes essentielles",
   "phrases": [
     {
-      "id": "bismillah", "phrase_ar": "بِسْمِ اللَّهِ", "transliteration": "Bismillah",
-      "translation": "In the name of Allah", "usage": "Said before eating, drinking, starting any task",
+      "id": "bismillah",
+      "phrase_ar": "بِسْمِ اللَّهِ",
+      "transliteration": "Bismillah",
+      "translation": "In the name of Allah",
+      "translation_fr": "Au nom d'Allah",
+      "usage": "Said before eating, drinking, starting any task",
       "usage_ar": "تُقال قبل الأكل والشرب، وعند البدء بأي عمل",
-      "verified": true
+      "usage_fr": "Se dit avant de manger, de boire, ou d'entreprendre quoi que ce soit",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "alhamdulillah", "phrase_ar": "الْحَمْدُ لِلَّهِ", "transliteration": "Al-hamdulillah",
-      "translation": "All praise is due to Allah", "usage": "Said to express gratitude, after sneezing, after eating",
+      "id": "alhamdulillah",
+      "phrase_ar": "الْحَمْدُ لِلَّهِ",
+      "transliteration": "Al-hamdulillah",
+      "translation": "All praise is due to Allah",
+      "translation_fr": "Louange à Allah",
+      "usage": "Said to express gratitude, after sneezing, after eating",
       "usage_ar": "تُقال شكرًا لله، وبعد العطاس، وبعد الفراغ من الطعام",
-      "verified": true
+      "usage_fr": "Se dit pour exprimer sa gratitude, après avoir éternué, après avoir mangé",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "subhanallah", "phrase_ar": "سُبْحَانَ اللَّهِ", "transliteration": "SubhanAllah",
-      "translation": "Glory be to Allah / How perfect is Allah", "usage": "Said to express awe or amazement at Allah's creation",
+      "id": "subhanallah",
+      "phrase_ar": "سُبْحَانَ اللَّهِ",
+      "transliteration": "SubhanAllah",
+      "translation": "Glory be to Allah / How perfect is Allah",
+      "translation_fr": "Gloire à Allah, pureté à Allah",
+      "usage": "Said to express awe or amazement at Allah's creation",
       "usage_ar": "تُقال تنزيهًا لله، وعند التعجب من خلقه ومشاهدة عظمته",
-      "verified": true
+      "usage_fr": "Se dit pour exprimer l'émerveillement devant la création d'Allah",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "allahu-akbar", "phrase_ar": "اللَّهُ أَكْبَرُ", "transliteration": "Allahu Akbar",
-      "translation": "Allah is the Greatest", "usage": "Said throughout prayer, and to express that Allah is greater than everything",
+      "id": "allahu-akbar",
+      "phrase_ar": "اللَّهُ أَكْبَرُ",
+      "transliteration": "Allahu Akbar",
+      "translation": "Allah is the Greatest",
+      "translation_fr": "Allah est le plus grand.",
+      "usage": "Said throughout prayer, and to express that Allah is greater than everything",
       "usage_ar": "تُقال في تكبيرات الصلاة، وللتعبير عن أن الله أكبر من كل شيء",
-      "verified": true
+      "usage_fr": "Se dit tout au long de la prière, et pour affirmer qu'Allah est plus grand que toute chose",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "inshallah", "phrase_ar": "إِنْ شَاءَ اللَّهُ", "transliteration": "In sha Allah",
-      "translation": "If Allah wills", "usage": "Said when speaking about future plans or intentions (Quran 18:23-24)",
+      "id": "inshallah",
+      "phrase_ar": "إِنْ شَاءَ اللَّهُ",
+      "transliteration": "In sha Allah",
+      "translation": "If Allah wills",
+      "translation_fr": "Si Allah le veut",
+      "usage": "Said when speaking about future plans or intentions (Quran 18:23-24)",
       "usage_ar": "تُقال عند الحديث عن أمور المستقبل والنوايا (سورة الكهف: 23-24)",
-      "verified": true
+      "usage_fr": "Se dit en évoquant un projet ou une intention future (Coran 18:23-24)",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "mashallah", "phrase_ar": "مَا شَاءَ اللَّهُ", "transliteration": "Ma sha Allah",
-      "translation": "What Allah has willed", "usage": "Said to express appreciation or admiration without envy",
+      "id": "mashallah",
+      "phrase_ar": "مَا شَاءَ اللَّهُ",
+      "transliteration": "Ma sha Allah",
+      "translation": "What Allah has willed",
+      "translation_fr": "Ce qu'Allah a voulu",
+      "usage": "Said to express appreciation or admiration without envy",
       "usage_ar": "تُقال للتعبير عن الإعجاب والاستحسان، وللحفظ من العين والحسد",
-      "verified": true
+      "usage_fr": "Se dit pour exprimer son admiration sans jalousie",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "assalamu-alaikum", "phrase_ar": "السَّلَامُ عَلَيْكُمْ", "transliteration": "As-salamu 'alaykum",
-      "translation": "Peace be upon you", "usage": "The Islamic greeting — say it to every Muslim you meet",
+      "id": "assalamu-alaikum",
+      "phrase_ar": "السَّلَامُ عَلَيْكُمْ",
+      "transliteration": "As-salamu 'alaykum",
+      "translation": "Peace be upon you",
+      "translation_fr": "Que la paix soit sur vous",
+      "usage": "The Islamic greeting — say it to every Muslim you meet",
       "usage_ar": "تحية الإسلام. ألقها على كل مسلم تلقاه",
-      "verified": true
+      "usage_fr": "La salutation islamique : adresse-la à tout musulman que tu rencontres",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "wa-alaikum-assalam", "phrase_ar": "وَعَلَيْكُمُ السَّلَامُ", "transliteration": "Wa 'alaykum as-salam",
-      "translation": "And upon you be peace", "usage": "The response to the Islamic greeting",
+      "id": "wa-alaikum-assalam",
+      "phrase_ar": "وَعَلَيْكُمُ السَّلَامُ",
+      "transliteration": "Wa 'alaykum as-salam",
+      "translation": "And upon you be peace",
+      "translation_fr": "Et que la paix soit sur toi",
+      "usage": "The response to the Islamic greeting",
       "usage_ar": "تُقال ردًّا على تحية الإسلام",
-      "verified": true
+      "usage_fr": "La réponse à la salutation islamique",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "jazakallah-khairan", "phrase_ar": "جَزَاكَ اللَّهُ خَيْرًا", "transliteration": "Jazak Allahu khayran",
-      "translation": "May Allah reward you with goodness", "usage": "Said to thank someone — the Islamic way of saying 'thank you'",
+      "id": "jazakallah-khairan",
+      "phrase_ar": "جَزَاكَ اللَّهُ خَيْرًا",
+      "transliteration": "Jazak Allahu khayran",
+      "translation": "May Allah reward you with goodness",
+      "translation_fr": "Qu'Allah te récompense en bien",
+      "usage": "Said to thank someone — the Islamic way of saying 'thank you'",
       "usage_ar": "تُقال شكرًا لمن أحسن إليك، وهي صيغة الشكر في الإسلام",
-      "verified": true
+      "usage_fr": "Se dit pour remercier quelqu'un : la manière islamique de dire merci",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "astaghfirullah", "phrase_ar": "أَسْتَغْفِرُ اللَّهَ", "transliteration": "Astaghfirullah",
-      "translation": "I seek forgiveness from Allah", "usage": "Said when seeking repentance or after making a mistake",
+      "id": "astaghfirullah",
+      "phrase_ar": "أَسْتَغْفِرُ اللَّهَ",
+      "transliteration": "Astaghfirullah",
+      "translation": "I seek forgiveness from Allah",
+      "translation_fr": "Je demande pardon à Allah",
+      "usage": "Said when seeking repentance or after making a mistake",
       "usage_ar": "تُقال طلبًا للمغفرة، وبعد التقصير أو الخطأ",
-      "verified": true
+      "usage_fr": "Se dit en demandant pardon ou après avoir commis une erreur",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "la-ilaha-illallah", "phrase_ar": "لَا إِلَٰهَ إِلَّا اللَّهُ", "transliteration": "La ilaha illallah",
-      "translation": "There is no god but Allah", "usage": "The most powerful statement of Tawhid (monotheism) — say it abundantly",
+      "id": "la-ilaha-illallah",
+      "phrase_ar": "لَا إِلَٰهَ إِلَّا اللَّهُ",
+      "transliteration": "La ilaha illallah",
+      "translation": "There is no god but Allah",
+      "translation_fr": "Il n'y a de divinité qu'Allah",
+      "usage": "The most powerful statement of Tawhid (monotheism) — say it abundantly",
       "usage_ar": "أعظم كلمة في التوحيد. أكثر من قولها وذكرها",
-      "verified": true
+      "usage_fr": "La plus forte affirmation du tawhîd (l'unicité) : répète-la abondamment",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "sallallahu-alayhi-wasallam", "phrase_ar": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ", "transliteration": "Sallallahu 'alayhi wa sallam (ﷺ)",
-      "translation": "May Allah's peace and blessings be upon him", "usage": "Said after mentioning the Prophet Muhammad's name — this is a sign of love and respect",
+      "id": "sallallahu-alayhi-wasallam",
+      "phrase_ar": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
+      "transliteration": "Sallallahu 'alayhi wa sallam (ﷺ)",
+      "translation": "May Allah's peace and blessings be upon him",
+      "translation_fr": "Que la paix et les bénédictions d'Allah soient sur lui",
+      "usage": "Said after mentioning the Prophet Muhammad's name — this is a sign of love and respect",
       "usage_ar": "تُقال بعد ذكر اسم النبي محمد ﷺ، وهي علامة الحب والإجلال له",
-      "verified": true
+      "usage_fr": "Se dit après avoir mentionné le nom du Prophète Mouhammad, en signe d'amour et de respect",
+      "verified": true,
+      "translation_provenance": "project"
     },
     {
-      "id": "inna-lillahi", "phrase_ar": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ", "transliteration": "Inna lillahi wa inna ilayhi raji'un",
-      "translation": "Indeed, we belong to Allah and to Him we shall return", "usage": "Said upon hearing news of someone's death or any calamity (Quran 2:156)",
+      "id": "inna-lillahi",
+      "phrase_ar": "إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ",
+      "transliteration": "Inna lillahi wa inna ilayhi raji'un",
+      "translation": "Indeed, we belong to Allah and to Him we shall return",
+      "translation_fr": "Nous appartenons à Allah et c'est à Lui que nous retournons",
+      "usage": "Said upon hearing news of someone's death or any calamity (Quran 2:156)",
       "usage_ar": "تُقال عند سماع خبر موت أحد، أو عند نزول مصيبة (سورة البقرة: 156)",
-      "verified": true
+      "usage_fr": "Se dit en apprenant un décès ou tout malheur (Coran 2:156)",
+      "verified": true,
+      "translation_provenance": "project"
     }
   ]
 }

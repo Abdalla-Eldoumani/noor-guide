@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter, Amiri, IBM_Plex_Sans_Arabic } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -54,43 +54,41 @@ export const viewport: Viewport = {
   ],
 };
 
-export const metadata: Metadata = {
-  title: {
-    default: "Noor Guide | Learn Islam Step by Step",
-    template: "%s | Noor Guide",
-  },
-  description:
-    "A free, step-by-step guide for new Muslims. Learn the basics of Islam: beliefs, prayer, Quran, and daily supplications, backed by authentic sources.",
-  keywords: [
-    "new Muslim",
-    "revert",
-    "Islam guide",
-    "how to pray",
-    "Shahada",
-    "learn Islam",
-    "Quran for beginners",
-    "wudu",
-    "salah",
-    "Islamic prayer",
-  ],
-  openGraph: {
-    title: "Noor Guide | Learn Islam Step by Step",
-    description:
-      "A free, step-by-step guide for new Muslims. Learn beliefs, prayer, Quran, and daily supplications backed by authentic sources.",
-    siteName: "Noor Guide",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Noor Guide | Learn Islam Step by Step",
-    description:
-      "A free, step-by-step guide for new Muslims. Learn beliefs, prayer, Quran, and daily supplications.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "site" });
+  const tMeta = await getTranslations({ locale, namespace: "meta" });
+  const name = t("name");
+  const defaultTitle = `${name} | ${t("subtitle")}`;
+
+  return {
+    title: {
+      default: defaultTitle,
+      // Pages supply their own bare title; the site name is appended here and
+      // must not be repeated in the page metadata.
+      template: `%s | ${name}`,
+    },
+    description: t("description"),
+    keywords: tMeta.raw("keywords") as string[],
+    openGraph: {
+      title: defaultTitle,
+      description: t("description"),
+      siteName: name,
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: defaultTitle,
+      description: t("description"),
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -105,6 +103,7 @@ export default async function LocaleLayout({
   }
   setRequestLocale(locale);
   const messages = await getMessages();
+  const tCommon = await getTranslations({ locale, namespace: "common" });
   const isArabic = locale === "ar";
 
   return (
@@ -124,9 +123,9 @@ export default async function LocaleLayout({
           <ThemeSync />
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-primary-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:start-2 focus:z-50 focus:bg-primary-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium"
           >
-            Skip to main content
+            {tCommon("skipToContent")}
           </a>
           <Header />
           <main id="main-content" className="flex-1 pb-20 md:pb-0">

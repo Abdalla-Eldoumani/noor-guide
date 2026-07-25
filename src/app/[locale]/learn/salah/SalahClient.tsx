@@ -3,16 +3,24 @@
 import { useLocale, useTranslations } from "next-intl";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { HadithBlock } from "@/components/learn/HadithBlock";
+import { RulingList } from "@/components/learn/RulingList";
 import { StepByStep } from "@/components/learn/StepByStep";
 import { PrayerPosition } from "@/components/learn/PrayerPosition";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
 import { Info } from "lucide-react";
-import type { SalahData, SalahStep, SalahSection, Recitation } from "@/types/content";
+import type { SalahData, SalahStep, SalahSection, Recitation, RulingItem } from "@/types/content";
+import { getModuleById } from "@/lib/content";
 import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface SalahClientProps {
+  shurut: RulingItem[];
+  arkan: RulingItem[];
+  wajibat: RulingItem[];
+  sunan: RulingItem[];
+  sahw: RulingItem[];
+  nullifiers: RulingItem[];
   data: SalahData;
   steps: SalahStep[];
   lessonIds: string[];
@@ -22,7 +30,18 @@ function pickRecitationTranslation(rec: Recitation, locale: string) {
   return pickLocalized<string>(rec, "translation", locale) ?? rec.translation;
 }
 
-export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
+export function SalahClient({
+  data,
+  steps,
+  shurut,
+  arkan,
+  wajibat,
+  sunan,
+  sahw,
+  nullifiers,
+  lessonIds,
+}: SalahClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tSalah = useTranslations("salah");
@@ -90,9 +109,9 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       prevHref="/learn/wudu"
-      prevLabel="Wudu"
+      prevLabel={pickModule(getModuleById("wudu"), "title")}
       nextHref="/learn/surahs"
-      nextLabel="Essential Surahs"
+      nextLabel={pickModule(getModuleById("surahs"), "title")}
     >
       {/* Introduction */}
       <section>
@@ -154,11 +173,13 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
                     <td className="px-4 py-3">
                       <div>
                         <span className="font-semibold text-ink">
-                          {prayer.name_en}
+                          {pickLocalized<string>(prayer, "name", locale)}
                         </span>
-                        <span className="font-arabic text-sm text-muted ms-2">
-                          {prayer.name_ar}
-                        </span>
+                        {locale !== "ar" && (
+                          <span dir="rtl" lang="ar" className="font-arabic text-sm text-muted ms-2">
+                            {prayer.name_ar}
+                          </span>
+                        )}
                       </div>
                     </td>
                     <td className="px-4 py-3 text-muted">{prayerTimeText}</td>
@@ -263,7 +284,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.tashahhud)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.tashahhud.title_ar}
             </p>
           )}
@@ -300,7 +321,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.salawat_ibrahimiyyah)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.salawat_ibrahimiyyah.title_ar}
             </p>
           )}
@@ -334,7 +355,7 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
             {renderSectionTitle(data.tasleem)}
           </h2>
           {locale !== "ar" && (
-            <p className="font-arabic text-sm text-muted mb-3">
+            <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted mb-3">
               {data.tasleem.title_ar}
             </p>
           )}
@@ -357,6 +378,54 @@ export function SalahClient({ data, steps, lessonIds }: SalahClientProps) {
           </RecitationBlockquote>
         </section>
       )}
+
+      {/* Conditions must hold before the prayer starts, so they come first */}
+      <RulingList
+        heading={pickLocalized<string>(data, "shurut_heading", locale) ?? data.shurut_heading}
+        items={shurut}
+        emphasis="required"
+      />
+
+      {/* Pillars, required duties, and recommended acts */}
+      <RulingList
+        heading={pickLocalized<string>(data, "arkan_heading", locale) ?? data.arkan_heading}
+        items={arkan}
+        emphasis="required"
+      />
+
+      <RulingList
+        heading={pickLocalized<string>(data, "wajibat_heading", locale) ?? data.wajibat_heading}
+        items={wajibat}
+        emphasis="required"
+      />
+
+      <RulingList
+        heading={pickLocalized<string>(data, "sunan_heading", locale) ?? data.sunan_heading}
+        items={sunan}
+        emphasis="recommended"
+      />
+
+      <RulingList
+        heading={
+          pickLocalized<string>(data, "sujud_as_sahw_heading", locale) ??
+          data.sujud_as_sahw_heading
+        }
+        items={sahw}
+        emphasis="recommended"
+      />
+
+      <RulingList
+        heading={
+          pickLocalized<string>(data, "nullifiers_heading", locale) ??
+          data.nullifiers_heading
+        }
+        items={nullifiers}
+        emphasis="required"
+      />
+
+      <p className="rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4 text-sm text-muted dark:text-gray-400">
+        {pickLocalized<string>(data, "madhab_note", locale) ?? data.madhab_note}
+      </p>
     </LessonContent>
   );
 }

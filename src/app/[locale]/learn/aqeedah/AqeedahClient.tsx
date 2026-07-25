@@ -7,7 +7,8 @@ import { HadithBlock } from "@/components/learn/HadithBlock";
 import { QuranVerse } from "@/components/learn/QuranVerse";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import type { AqeedahData, AqeedahPillar } from "@/types/content";
-import { useLocalizedContent } from "@/lib/content-i18n";
+import { getModuleById } from "@/lib/content";
+import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
 
 interface AqeedahClientProps {
   data: AqeedahData;
@@ -16,6 +17,7 @@ interface AqeedahClientProps {
 }
 
 export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) {
+  const pickModule = useLocalizedContent();
   const t = useLocalizedContent();
   const locale = useLocale();
   const tAqeedah = useTranslations("aqeedah");
@@ -40,7 +42,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
       title={lessonTitle}
       titleAr={locale === "ar" ? undefined : data.title_ar}
       nextHref="/learn/pillars"
-      nextLabel="Five Pillars of Islam"
+      nextLabel={pickModule(getModuleById("pillars"), "title")}
     >
       {/* Introduction */}
       <section>
@@ -83,7 +85,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                       {pillarTitle}
                     </h3>
                     {locale !== "ar" && (
-                      <p className="font-arabic text-sm text-muted">
+                      <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted">
                         {pillar.title_ar}
                       </p>
                     )}
@@ -123,7 +125,7 @@ export function AqeedahClient({ data, pillars, lessonIds }: AqeedahClientProps) 
                       reference={ref.reference}
                       arabic={ref.arabic}
                       transliteration={ref.transliteration}
-                      translation={ref.translation}
+                      translation={pickLocalized<string>(ref, "translation", locale) ?? ref.translation}
                     />
                   ))}
 

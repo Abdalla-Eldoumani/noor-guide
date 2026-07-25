@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useProgress } from "@/hooks/useProgress";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Button } from "@/components/ui/Button";
@@ -28,6 +29,9 @@ export function LessonContent({
   nextHref,
   nextLabel,
 }: LessonContentProps) {
+  const t = useTranslations("lesson");
+  const tCrumb = useTranslations("breadcrumb");
+  const tCommon = useTranslations("common");
   const { markComplete, isComplete } = useProgress();
 
   // Use the lesson IDs from learning-path.json if provided, otherwise fall back to moduleId
@@ -38,8 +42,8 @@ export function LessonContent({
     <div className="max-w-3xl mx-auto">
       <Breadcrumb
         items={[
-          { label: "Home", href: "/" },
-          { label: "Learn", href: "/learn" },
+          { label: tCrumb("home"), href: "/" },
+          { label: tCrumb("learn"), href: "/learn" },
           { label: title },
         ]}
       />
@@ -47,7 +51,7 @@ export function LessonContent({
       <div className="mt-6 mb-8">
         <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">{title}</h1>
         {titleAr && (
-          <p className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
+          <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
             {titleAr}
           </p>
         )}
@@ -60,7 +64,7 @@ export function LessonContent({
           {completed ? (
             <div className="flex items-center gap-2 text-green-600 font-medium">
               <CheckCircle className="w-5 h-5" />
-              <span>You have completed this lesson</span>
+              <span>{t("alreadyComplete")}</span>
             </div>
           ) : (
             <Button
@@ -68,7 +72,7 @@ export function LessonContent({
               size="lg"
               onClick={() => idsToTrack.forEach((id) => markComplete(id))}
             >
-              Mark as Complete
+              {t("markComplete")}
             </Button>
           )}
         </div>
@@ -76,8 +80,8 @@ export function LessonContent({
         <div className="flex items-center justify-between">
           <div>
             {prevHref && (
-              <Button variant="ghost" href={prevHref} icon={<ArrowLeft className="w-4 h-4" />}>
-                {prevLabel || "Previous"}
+              <Button variant="ghost" href={prevHref} icon={<ArrowLeft className="w-4 h-4 rtl:rotate-180" />}>
+                {prevLabel || tCommon("previous")}
               </Button>
             )}
           </div>
@@ -85,8 +89,8 @@ export function LessonContent({
             {nextHref && (
               <Button variant="secondary" href={nextHref}>
                 <span className="flex items-center gap-2">
-                  {nextLabel || "Next"}
-                  <ArrowRight className="w-4 h-4" />
+                  {nextLabel || tCommon("next")}
+                  <ArrowRight className="w-4 h-4 rtl:rotate-180" />
                 </span>
               </Button>
             )}

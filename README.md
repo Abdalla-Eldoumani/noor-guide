@@ -4,6 +4,8 @@ Noor (نور) means "light" in Arabic. This is a free web app that helps new Mus
 
 No sign-ups. No payments. No ads. Just open it and start learning.
 
+Available in English, Arabic, and French.
+
 ## Who is this for?
 
 - Someone who just took their Shahada and doesn't know where to start
@@ -12,21 +14,21 @@ No sign-ups. No payments. No ads. Just open it and start learning.
 
 ## What you can learn
 
-The app is organized into six modules, meant to be taken in order:
+The app is organized into nine modules, meant to be taken in order:
 
 **1. Aqeedah (Beliefs).** The six pillars of Iman: belief in Allah, the Angels, the Books, the Prophets, the Day of Judgment, and Divine Decree. Each pillar includes Quran references and relevant hadith.
 
 **2. Five Pillars of Islam.** An overview of Shahada, Salah, Zakah, Sawm, and Hajj. Links out to the detailed modules for prayer and other practices.
 
-**3. Wudu (Ablution).** A 10-step interactive guide to washing before prayer, based on Quran 5:6 and authentic Sunnah. Includes what breaks wudu and the dua to say after.
+**3. Wudu (Ablution).** A 10-step interactive guide to washing before prayer, based on Quran 5:6 and authentic Sunnah. Also sets out the three groupings a beginner needs in order to know whether their wudu counts: what is obligatory (fard), what is recommended (sunnah), and what nullifies it. Includes the dua to say after.
 
-**4. Salah (Prayer).** The most detailed module. Covers all five daily prayers, the number of rakaat for each, and walks through every position and recitation in a single rakah: standing, bowing, prostrating, sitting. Includes Tashahhud, Salawat Ibrahimiyyah, and Tasleem.
+**4. Salah (Prayer).** The most detailed module. Covers all five daily prayers, the number of rakaat for each, and walks through every position and recitation in a single rakah: standing, bowing, prostrating, sitting. Includes Tashahhud, Salawat Ibrahimiyyah, and Tasleem. It then separates the prayer into its pillars (arkan), its required duties (wajibat), and its recommended acts (sunan), so a reader who is told that Al-Fatiha is a pillar can see what that means and what the other pillars are. It also covers the prostration of forgetfulness for when you make a mistake, and what invalidates the prayer outright.
 
 **5. Essential Surahs.** The short surahs you need for prayer: Al-Fatiha, Al-Ikhlas, Al-Falaq, An-Nas, Al-Kawthar, and Al-Asr. Each has the Arabic text with full tashkeel, transliteration, English translation, and audio recitation by Mishary Alafasy (fetched from the Al Quran Cloud API). You can play individual verses or the entire surah.
 
 **6. Daily Duas.** Supplications for waking up, sleeping, eating, leaving the house, entering the mosque, and more. All with Arabic, transliteration, translation, and source references.
 
-There's also a **glossary** with 22 Islamic terms and 13 common Arabic phrases explained in plain English.
+There's also a **glossary** with 23 Islamic terms and 13 common Arabic phrases, explained in whichever language you are reading in.
 
 ## Tools
 
@@ -58,16 +60,61 @@ This is the most important part of the project. Every piece of religious content
 
 The content follows Sunni Islam (Ahl as-Sunnah wal-Jamaa'ah). Where differences exist between madhabs, the most common position is presented with a note that variations exist.
 
-## Arabic locale
+## Languages
 
-The site runs under English (`/`) and Arabic (`/ar`), powered by `next-intl` with `localePrefix: "as-needed"`. Translations live at `messages/en.json` and `messages/ar.json`; both were hand-authored, not machine-translated. The header includes a language switcher that swaps locales while preserving the current path and writes the choice to `localStorage` so return visits land on the right prefix.
+The site runs in English (`/`), Arabic (`/ar`), and French (`/fr`), powered by `next-intl`
+with `localePrefix: "as-needed"`. The language switcher preserves your current page and
+writes the choice to `localStorage`, so return visits land on the right prefix.
 
-Religious content (Quran translations, hadith, duas in `src/data/content/*.json`) and the project's authored educational instructional prose render the same on both locales. Only UI chrome (navigation, buttons, page intros, breadcrumbs, footer) is localized for the initial Arabic launch. See `docs/I18N.md` for the full plan.
+Every user-visible string reaches all three languages: navigation, lesson prose, step
+instructions, glossary definitions, tooltips, error messages, page titles, and the
+accessibility skip link. This is enforced, not just intended. `npm run verify:i18n` fails
+the build on any key that is missing, empty, or left as English in another catalogue, and
+`npm run verify:locales` renders every page in every language and reports any text whose
+script disagrees with the page.
+
+Scripture is handled differently from prose. The project never retranslates Quran or hadith.
+Quran text is Uthmani in Arabic, Saheeh International in English, and Hamidullah in French.
+The French for the six essential surahs is the published Hamidullah edition, fetched rather
+than translated.
+`npm run fetch:scripture` writes every cited Quran passage into the content from those
+editions, for the whole cited range in all three languages, so the Arabic and the two
+translations can never describe different passages. Hadith is not fetched: its Arabic is
+read from the collection by hand and recorded in the verification record, and the English
+and French renderings are the project's own and marked `translation_provenance: "project"`.
+
+Every citation in the content has an entry in `src/data/hadith-mapping.json` naming the
+narrator, the wording confirmed, the grading the collection carries, and the source the
+check was made against. **All 109 have been checked**, and `npm run verify:citations` fails
+the build if one is added without an entry.
+
+Checking them found ten references pointing at the wrong narration and two resting on
+narrations graded da'if, all corrected. Seventeen more were not being counted at all,
+because the collector keyed on a `type` tag those nodes did not carry; they are counted and
+checked now. Rulings that rest on the agreement of the schools rather than on a single
+narration say so instead of borrowing a citation.
+
+## Scholarly review
+
+The pillars, required duties, recommended acts, and nullifiers carry
+`needs_scholarly_review: true` in the content files. The acts themselves are agreed across
+the Sunni schools, but the way they are grouped and counted is not: the app follows the
+Hanbali arrangement because it separates the three tiers most clearly for a beginner, and
+says so in the lesson. A qualified reviewer should sign these off before the app is used in
+a classroom. Grep for `needs_scholarly_review` to get the full list.
+
+Transliteration and English back-translation are hidden on the Arabic locale, since a
+reader of the Arabic source does not need either.
+
+French follows the transliteration conventions used in French-speaking madrassahs
+(Abou Bakr, Aïcha, wudû', chahâda) so the text reads correctly aloud.
+
+See `docs/I18N.md` for how the pieces fit together and how to add a fourth language.
 
 ## Tech stack
 
-- Next.js 14.2.35 with App Router (static site generation, locale routing)
-- React 18.3.1, TypeScript 5.9.3
+- Next.js 16.2.4 with App Router and Turbopack (static site generation, locale routing)
+- React 19.2.5, TypeScript 5.9.3
 - Tailwind CSS 4.2.4 with class-based dark mode (`@theme` CSS-first config)
 - `next-intl` 4.11.0 for routing and message dictionaries
 - `lucide-react` 0.400.0 for icons
@@ -83,11 +130,26 @@ All dependencies are pinned to exact versions in `package.json`.
 ```bash
 git clone https://github.com/Abdalla-Eldoumani/noor-guide.git
 cd noor-guide
-npm install
+npm ci
 npm run dev
 ```
 
-Then open `http://localhost:3000`.
+Then open `http://localhost:3000`. Arabic is at `/ar`, French at `/fr`.
+
+Before opening a pull request:
+
+```bash
+npm run verify:i18n   # locale parity; also runs automatically before build
+npm run lint
+npm run type-check
+npm run build
+```
+
+To check for language leaking across locales, start the dev server and run:
+
+```bash
+LOCALES=ar,fr node scripts/verify-locales.mjs http://localhost:3000 / /learn /tools
+```
 
 ## Deploying
 
@@ -112,6 +174,8 @@ Push to GitHub, import into Vercel, and deploy. No environment variables or API 
 | `/tools/masjid-finder` | Mosque locator |
 | `/progress` | Your learning progress |
 
+Every route exists in all three languages: `/learn/salah`, `/ar/learn/salah`, `/fr/learn/salah`.
+
 ## Project structure
 
 ```
@@ -128,6 +192,12 @@ src/
 ├── lib/                 # content.ts, storage.ts, prayer-times.ts, quran-api.ts, qibla.ts, progress.ts
 ├── styles/              # globals.css with Tailwind layers and a print stylesheet
 └── types/               # TypeScript interfaces for content and API responses
+
+scripts/
+├── verify-i18n.mjs      # static locale parity, gates the build
+├── verify-locales.mjs   # render-time locale scan
+├── fetch-scripture.mjs  # writes the cited Quran passages from published editions
+└── i18n-allowlist.json  # reviewable exceptions for both verifiers
 ```
 
 ## License

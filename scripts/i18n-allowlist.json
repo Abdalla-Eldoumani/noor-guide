@@ -1,0 +1,24 @@
+{
+  "ar": [
+    "English",
+    "Français"
+  ],
+  "fr": [
+    "العربية"
+  ],
+  "sameAsEnglish": [
+    "site.name",
+    "common.switchToArabic",
+    "common.switchToEnglish",
+    "home.estimatedMinutes",
+    "compass.north",
+    "compass.east",
+    "compass.south",
+    "sources.grades.hasan",
+    "prayers.fajr",
+    "prayers.dhuhr",
+    "prayers.maghrib",
+    "player.pause"
+  ],
+  "contentExempt": []
+}

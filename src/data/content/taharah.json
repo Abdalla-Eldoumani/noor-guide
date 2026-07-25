@@ -1,0 +1,229 @@
+{
+  "module_id": "taharah",
+  "title_en": "Purity beyond wudu",
+  "title_ar": "الطهارة بعد الوضوء",
+  "title_fr": "La pureté au-delà des ablutions",
+  "introduction": {
+    "content_en": "Wudu is not always enough. After certain events a full bath is required before you can pray, and when water is unavailable or would harm you there is a substitute. This module covers the three situations a beginner meets first.",
+    "content_ar": "لا يكفي الوضوء في كل حال، فبعد أمور معيّنة يلزم الغسل قبل الصلاة، وإذا تعذّر الماء أو كان استعماله ضارًّا فثمّ بديل. وهذه الوحدة تتناول الحالات الثلاث التي يواجهها المبتدئ أولاً.",
+    "content_fr": "Les ablutions ne suffisent pas toujours. Après certains événements, un bain complet est requis avant de pouvoir prier, et lorsque l'eau est indisponible ou nuisible, il existe un substitut. Ce module couvre les trois situations qu'un débutant rencontre en premier."
+  },
+  "sections": [
+    {
+      "id": "ghusl-when",
+      "heading": "When a full bath (ghusl) is required",
+      "heading_ar": "متى يجب الغسل",
+      "heading_fr": "Quand le bain rituel (ghousl) est obligatoire",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "ghusl-when-1",
+          "description": "After sexual intercourse, whether or not there is discharge.",
+          "description_ar": "بعد الجماع، أنزل أو لم يُنزل.",
+          "description_fr": "Après un rapport sexuel, qu'il y ait eu émission ou non.",
+          "source": "Sahih Muslim 348",
+          "verified": true,
+          "needs_scholarly_review": true,
+          "note": "Reported with the wording that bathing is obligatory even without emission. An earlier narration tying it to emission alone is held by the majority to have been abrogated.",
+          "note_ar": "ورد بلفظ وجوب الغسل وإن لم يُنزل. وأما ما ورد من تعليقه بالإنزال فمنسوخ عند الجمهور.",
+          "note_fr": "Rapporté avec la formulation selon laquelle le bain est obligatoire même sans émission. Une narration antérieure le liant à la seule émission est tenue pour abrogée par la majorité."
+        },
+        {
+          "id": "ghusl-when-2",
+          "description": "After the discharge of semen, whether awake or in sleep.",
+          "description_ar": "بعد خروج المني في اليقظة أو النوم.",
+          "description_fr": "Après l'émission de sperme, éveillé ou pendant le sommeil.",
+          "source": "Sahih Bukhari 282",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-when-3",
+          "description": "At the end of menstruation.",
+          "description_ar": "عند انقطاع دم الحيض.",
+          "description_fr": "À la fin des menstrues.",
+          "source": "Quran 2:222",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-when-4",
+          "description": "At the end of postnatal bleeding.",
+          "description_ar": "عند انقطاع دم النفاس.",
+          "description_fr": "À la fin des lochies.",
+          "source": "Sunan Abu Dawud 311",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-when-5",
+          "description": "On accepting Islam.",
+          "description_ar": "عند الدخول في الإسلام.",
+          "description_fr": "Au moment d'embrasser l'islam.",
+          "source": "Sunan Abu Dawud 355",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "ghusl-how",
+      "heading": "How to perform ghusl",
+      "heading_ar": "صفة الغسل",
+      "heading_fr": "Comment accomplir le ghousl",
+      "emphasis": "required",
+      "items": [
+        {
+          "id": "ghusl-how-1",
+          "description": "Form the intention in your heart.",
+          "description_ar": "النية بالقلب.",
+          "description_fr": "Forme l'intention dans ton cœur.",
+          "source": "Sahih Bukhari 1",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-how-2",
+          "description": "Wash both hands, then wash the private parts.",
+          "description_ar": "غسل الكفين ثم غسل الفرج.",
+          "description_fr": "Lave les deux mains, puis les parties intimes.",
+          "source": "Sahih Bukhari 249",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-how-3",
+          "description": "Perform a complete wudu.",
+          "description_ar": "الوضوء وضوءًا كاملاً.",
+          "description_fr": "Accomplis des ablutions complètes.",
+          "source": "Sahih Bukhari 248",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-how-4",
+          "description": "Pour water over the head three times, working it to the roots of the hair.",
+          "description_ar": "إفاضة الماء على الرأس ثلاثًا حتى يبلغ أصول الشعر.",
+          "description_fr": "Verse de l'eau sur la tête trois fois, jusqu'aux racines des cheveux.",
+          "source": "Sahih Bukhari 248",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "ghusl-how-5",
+          "description": "Pour water over the whole body, starting with the right side, making sure no part is left dry.",
+          "description_ar": "إفاضة الماء على سائر الجسد مبتدئًا بالميامن، بحيث لا يبقى موضع لم يصبه الماء.",
+          "description_fr": "Verse de l'eau sur tout le corps en commençant par la droite, sans laisser aucune partie sèche.",
+          "source": "Sahih Bukhari 248",
+          "note": "Beginning with the right is the Prophet's general practice rather than a wording in this narration.",
+          "note_ar": "البدء باليمين من هديه العام صلى الله عليه وسلم، وليس لفظا في هذا الحديث.",
+          "note_fr": "Commencer par la droite relève de sa pratique générale et non d'une formulation de ce hadith.",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "tayammum",
+      "heading": "Tayammum, when there is no water",
+      "heading_ar": "التيمم عند فقد الماء",
+      "heading_fr": "Le tayammoum, en l'absence d'eau",
+      "emphasis": "recommended",
+      "items": [
+        {
+          "id": "tayammum-1",
+          "description": "It is permitted when no water is available, when the water is needed for drinking, or when using it would cause or worsen illness.",
+          "description_ar": "يُشرع عند عدم وجود الماء، أو الحاجة إليه للشرب، أو خوف الضرر أو زيادة المرض باستعماله.",
+          "description_fr": "Il est permis en l'absence d'eau, lorsque l'eau est nécessaire pour boire, ou lorsque son usage causerait ou aggraverait une maladie.",
+          "source": "Quran 5:6",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "tayammum-2",
+          "description": "Strike both palms once on clean earth or dust.",
+          "description_ar": "ضرب الكفين ضربة واحدة على صعيد طاهر.",
+          "description_fr": "Frappe les deux paumes une fois sur une terre ou une poussière pure.",
+          "source": "Sahih Bukhari 347",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "tayammum-3",
+          "description": "Wipe the face with both hands.",
+          "description_ar": "مسح الوجه بالكفين.",
+          "description_fr": "Essuie le visage avec les deux mains.",
+          "source": "Sahih Bukhari 347",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "tayammum-4",
+          "description": "Wipe the back of each hand with the other palm.",
+          "description_ar": "مسح ظاهر كل كف بباطن الأخرى.",
+          "description_fr": "Essuie le dos de chaque main avec la paume de l'autre.",
+          "source": "Sahih Bukhari 347",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "tayammum-5",
+          "description": "It replaces both wudu and ghusl, and ends as soon as water becomes usable again.",
+          "description_ar": "ويقوم مقام الوضوء والغسل، وينتهي حكمه متى قدر على استعمال الماء.",
+          "description_fr": "Il remplace les ablutions et le ghousl, et cesse dès que l'eau redevient utilisable.",
+          "source": "Sunan Abu Dawud 332",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    },
+    {
+      "id": "menstruation",
+      "heading": "Menstruation and postnatal bleeding",
+      "heading_ar": "أحكام الحيض والنفاس",
+      "heading_fr": "Menstrues et lochies",
+      "emphasis": "recommended",
+      "items": [
+        {
+          "id": "hayd-1",
+          "description": "Prayer is not performed during this time, and it is not made up afterwards.",
+          "description_ar": "لا تُصلّى الصلاة في هذه المدة ولا تُقضى بعدها.",
+          "description_fr": "La prière n'est pas accomplie durant cette période, et elle n'est pas rattrapée ensuite.",
+          "source": "Sahih Bukhari 321",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "hayd-2",
+          "description": "Fasting is not performed during this time, but the missed days are made up later.",
+          "description_ar": "ولا يُصام فيها، لكن تُقضى الأيام بعد ذلك.",
+          "description_fr": "Le jeûne n'est pas accompli durant cette période, mais les jours manqués sont rattrapés plus tard.",
+          "source": "Sahih Muslim 335",
+          "note": "This difference between prayer and fasting is reported from Aisha and is the position of the four schools.",
+          "note_ar": "وهذا الفرق بين الصلاة والصيام ثابت عن عائشة رضي الله عنها وعليه المذاهب الأربعة.",
+          "note_fr": "Cette différence entre la prière et le jeûne est rapportée d'Aïcha et constitue la position des quatre écoles.",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "hayd-3",
+          "description": "Remembrance of Allah, supplication, and reading translations remain open at all times.",
+          "description_ar": "ويبقى الذكر والدعاء وقراءة الترجمة مباحًا في كل حال.",
+          "description_fr": "Le rappel d'Allah, l'invocation et la lecture des traductions restent permis en tout temps.",
+          "source": "Sahih Muslim 373",
+          "verified": true,
+          "needs_scholarly_review": true
+        },
+        {
+          "id": "hayd-4",
+          "description": "When the bleeding ends, perform ghusl and resume praying.",
+          "description_ar": "فإذا انقطع الدم اغتسلت واستأنفت الصلاة.",
+          "description_fr": "Lorsque le saignement cesse, accomplis le ghousl et reprends la prière.",
+          "source": "Sahih Bukhari 320",
+          "verified": true,
+          "needs_scholarly_review": true
+        }
+      ]
+    }
+  ]
+}

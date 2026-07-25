@@ -2,14 +2,19 @@
   "module_id": "wudu",
   "title_en": "Wudu: How to Perform Ablution",
   "title_ar": "الوضوء",
+  "title_fr": "Le wudû' : comment accomplir les ablutions",
   "introduction": {
     "content_en": "Before praying, a Muslim must be in a state of ritual purity. Wudu (ablution) is the washing of specific body parts as taught by the Prophet Muhammad ﷺ. It is a prerequisite for prayer: your salah is not valid without it.",
     "content_ar": "قبل الصلاة، يجب على المسلم أن يكون على طهارة. الوضوء غسل أعضاء مخصوصة كما علّمنا النبي محمد ﷺ، وهو شرط للصلاة: لا تصح صلاتك بدونه.",
+    "content_fr": "Avant de prier, le musulman doit être en état de pureté rituelle. Le wudû' (les ablutions) consiste à laver certaines parties du corps selon l'enseignement du Prophète Mouhammad ﷺ. C'est une condition de la prière : ta salât n'est pas valide sans lui.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Muslim 225",
       "text_en": "The Prophet ﷺ said: 'Allah does not accept the prayer of any one of you if he is in a state of impurity until he performs wudu.'",
-      "grade": "sahih"
+      "text_ar": "لاَ تُقْبَلُ صَلاَةُ أَحَدِكُمْ إِذَا أَحْدَثَ حَتَّى يَتَوَضَّأَ",
+      "text_fr": "Le Prophète ﷺ dit : « Allah n'accepte pas la prière de l'un d'entre vous s'il est en état d'impureté, jusqu'à ce qu'il fasse les ablutions. »",
+      "grade": "sahih",
+      "translation_provenance": "project"
     }
   },
   "prerequisites": [
@@ -22,17 +27,29 @@
     "أن تكون النية في القلب لأداء الوضوء",
     "إزالة كل ما يمنع وصول الماء إلى البشرة، كطلاء الأظافر والمكياج الكثيف ونحوهما"
   ],
+  "prerequisites_fr": [
+    "L'eau doit être propre et pure (tâhir)",
+    "L'intention (niyya) d'accomplir les ablutions doit être dans le cœur",
+    "Retire tout ce qui empêche l'eau d'atteindre la peau (vernis à ongles, maquillage épais, etc.)"
+  ],
   "steps": [
     {
       "id": "wudu-step-1",
       "order": 1,
       "title_en": "Intention (Niyyah)",
       "title_ar": "النية",
+      "title_fr": "L'intention (niyya)",
       "instruction_en": "Make the intention in your heart to perform wudu for the sake of Allah. The intention is in the heart, not spoken aloud.",
       "instruction_ar": "انوِ في قلبك أداء الوضوء لله تعالى. النية محلها القلب، ولا تُتلفظ بها بلسان.",
+      "instruction_fr": "Forme dans ton cœur l'intention d'accomplir les ablutions pour Allah. L'intention se situe dans le cœur, elle ne se prononce pas à voix haute.",
       "notes": "The Prophet ﷺ never instructed verbal intention for wudu. It is purely in the heart.",
       "notes_ar": "لم يأمر النبي ﷺ بالتلفظ بالنية في الوضوء، فالنية كلها في القلب.",
-      "source": { "type": "hadith", "reference": "Sahih Bukhari 1", "grade": "sahih" },
+      "notes_fr": "Le Prophète ﷺ n'a jamais enseigné de formuler l'intention à voix haute pour les ablutions. Elle est purement intérieure.",
+      "source": {
+        "type": "hadith",
+        "reference": "Sahih Bukhari 1",
+        "grade": "sahih"
+      },
       "verified": true
     },
     {
@@ -40,12 +57,16 @@
       "order": 2,
       "title_en": "Say Bismillah",
       "title_ar": "بسم الله",
+      "title_fr": "Dire Bismillah",
       "instruction_en": "Say 'Bismillah' (In the name of Allah) before beginning.",
       "instruction_ar": "قل: بسم الله، قبل البدء بالوضوء.",
+      "instruction_fr": "Dis « Bismillah » (au nom d'Allah) avant de commencer.",
       "content": {
         "arabic": "بِسْمِ اللَّهِ",
         "transliteration": "Bismillah",
-        "translation": "In the name of Allah"
+        "translation": "In the name of Allah",
+        "translation_fr": "Au nom d'Allah",
+        "translation_provenance": "project"
       },
       "verified": true
     },
@@ -54,12 +75,19 @@
       "order": 3,
       "title_en": "Wash the Hands",
       "title_ar": "غسل اليدين",
+      "title_fr": "Laver les mains",
       "instruction_en": "Wash both hands up to the wrists three times, starting with the right hand. Make sure water reaches between the fingers.",
       "instruction_ar": "اغسل يديك إلى الرسغين ثلاث مرات، تبدأ باليمنى. واحرص على وصول الماء بين الأصابع.",
+      "instruction_fr": "Lave les deux mains jusqu'aux poignets trois fois, en commençant par la main droite. Veille à ce que l'eau passe entre les doigts.",
       "repetitions": 3,
       "notes": "Always start with the right side. The Prophet ﷺ loved starting with the right in all things.",
       "notes_ar": "ابدأ دائمًا باليمين. كان النبي ﷺ يُعجبه التيمن في شأنه كله.",
-      "source": { "type": "hadith", "reference": "Sahih Bukhari 168", "grade": "sahih" },
+      "notes_fr": "Commence toujours par le côté droit. Le Prophète ﷺ aimait commencer par la droite en toute chose.",
+      "source": {
+        "type": "hadith",
+        "reference": "Sahih Bukhari 168",
+        "grade": "sahih"
+      },
       "verified": true
     },
     {
@@ -67,8 +95,10 @@
       "order": 4,
       "title_en": "Rinse the Mouth",
       "title_ar": "المضمضة",
+      "title_fr": "Se rincer la bouche",
       "instruction_en": "Take water into your mouth with your right hand, swish it around thoroughly, and spit it out. Do this three times.",
       "instruction_ar": "خذ الماء في فمك بيدك اليمنى، ومضمض به فاك جيدًا، ثم أخرجه. كرّر ذلك ثلاث مرات.",
+      "instruction_fr": "Prends de l'eau dans ta bouche avec la main droite, rince bien, puis recrache. Fais-le trois fois.",
       "repetitions": 3,
       "verified": true
     },
@@ -77,8 +107,10 @@
       "order": 5,
       "title_en": "Rinse the Nose",
       "title_ar": "الاستنشاق والاستنثار",
+      "title_fr": "Se rincer le nez",
       "instruction_en": "Sniff water into your nose with your right hand, then blow it out with your left hand. Do this three times.",
       "instruction_ar": "استنشق الماء بأنفك بيدك اليمنى، ثم استنثره بيدك اليسرى. كرّر ذلك ثلاث مرات.",
+      "instruction_fr": "Aspire de l'eau par le nez avec la main droite, puis expulse-la avec la main gauche. Fais-le trois fois.",
       "repetitions": 3,
       "verified": true
     },
@@ -87,12 +119,18 @@
       "order": 6,
       "title_en": "Wash the Face",
       "title_ar": "غسل الوجه",
+      "title_fr": "Laver le visage",
       "instruction_en": "Wash your entire face three times. The face extends from the hairline to the chin, and from ear to ear. Make sure water covers every part.",
       "instruction_ar": "اغسل وجهك كاملًا ثلاث مرات. حدّ الوجه من منابت الشعر إلى الذقن، ومن الأذن إلى الأذن. واحرص على أن يعمّ الماء جميع أجزائه.",
+      "instruction_fr": "Lave tout le visage trois fois. Le visage s'étend de la racine des cheveux au menton, et d'une oreille à l'autre. Veille à ce que l'eau couvre chaque partie.",
       "repetitions": 3,
       "notes": "Men with beards should run wet fingers through the beard.",
       "notes_ar": "من كان له لحية فليُخلّلها بأصابعه المبتلة.",
-      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "notes_fr": "Les hommes portant la barbe passent leurs doigts mouillés à travers la barbe.",
+      "source": {
+        "type": "quran",
+        "reference": "Quran 5:6"
+      },
       "verified": true
     },
     {
@@ -100,12 +138,18 @@
       "order": 7,
       "title_en": "Wash the Arms",
       "title_ar": "غسل اليدين إلى المرفقين",
+      "title_fr": "Laver les bras",
       "instruction_en": "Wash the right arm from fingertips to the elbow (including the elbow) three times. Then wash the left arm the same way three times.",
       "instruction_ar": "اغسل يدك اليمنى من رؤوس الأصابع إلى المرفق، ويُدخَل المرفق، ثلاث مرات. ثم اغسل اليسرى مثل ذلك ثلاث مرات.",
+      "instruction_fr": "Lave le bras droit du bout des doigts jusqu'au coude inclus, trois fois. Puis lave le bras gauche de la même manière, trois fois.",
       "repetitions": 3,
       "notes": "Always start with the right arm before the left.",
       "notes_ar": "ابدأ دائمًا باليد اليمنى قبل اليسرى.",
-      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "notes_fr": "Commence toujours par le bras droit avant le gauche.",
+      "source": {
+        "type": "quran",
+        "reference": "Quran 5:6"
+      },
       "verified": true
     },
     {
@@ -113,10 +157,15 @@
       "order": 8,
       "title_en": "Wipe the Head",
       "title_ar": "مسح الرأس",
+      "title_fr": "Essuyer la tête",
       "instruction_en": "With wet hands, wipe over your head from the front (hairline) to the back, and then bring your hands back to the front. This is done once.",
       "instruction_ar": "بلّ يديك ثم امسح بهما رأسك من مقدّمته إلى مؤخرته، ثم ردّهما إلى المقدمة. ويُفعل ذلك مرة واحدة.",
+      "instruction_fr": "Avec les mains humides, passe-les sur la tête de l'avant (racine des cheveux) vers l'arrière, puis ramène-les vers l'avant. Cela se fait une seule fois.",
       "repetitions": 1,
-      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "source": {
+        "type": "quran",
+        "reference": "Quran 5:6"
+      },
       "verified": true
     },
     {
@@ -124,8 +173,10 @@
       "order": 9,
       "title_en": "Wipe the Ears",
       "title_ar": "مسح الأذنين",
+      "title_fr": "Essuyer les oreilles",
       "instruction_en": "With wet fingers, wipe the inside of your ears with your index fingers and the outside with your thumbs. This is done once.",
       "instruction_ar": "بأصابع مبلّلة، امسح داخل أذنيك بالسبابتين وظاهرهما بالإبهامين. ويُفعل ذلك مرة واحدة.",
+      "instruction_fr": "Avec les doigts humides, essuie l'intérieur des oreilles avec les index et l'extérieur avec les pouces. Cela se fait une seule fois.",
       "repetitions": 1,
       "verified": true
     },
@@ -134,12 +185,18 @@
       "order": 10,
       "title_en": "Wash the Feet",
       "title_ar": "غسل القدمين",
+      "title_fr": "Laver les pieds",
       "instruction_en": "Wash the right foot up to and including the ankle three times, making sure water goes between the toes. Then wash the left foot the same way.",
       "instruction_ar": "اغسل قدمك اليمنى إلى الكعبين، ويُدخَل الكعبان، ثلاث مرات، واحرص على وصول الماء بين أصابع القدم. ثم اغسل اليسرى مثل ذلك.",
+      "instruction_fr": "Lave le pied droit jusqu'à la cheville incluse, trois fois, en veillant à ce que l'eau passe entre les orteils. Puis lave le pied gauche de la même manière.",
       "repetitions": 3,
       "notes": "Use your little finger to wash between the toes.",
       "notes_ar": "استعن بإصبعك الصغرى لتخليل ما بين أصابع القدم.",
-      "source": { "type": "quran", "reference": "Quran 5:6" },
+      "notes_fr": "Utilise ton auriculaire pour laver entre les orteils.",
+      "source": {
+        "type": "quran",
+        "reference": "Quran 5:6"
+      },
       "verified": true
     }
   ],
@@ -147,13 +204,211 @@
     "arabic": "أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
     "transliteration": "Ashhadu an la ilaha illallahu wahdahu la sharika lahu, wa ashhadu anna Muhammadan abduhu wa rasuluh.",
     "translation": "I bear witness that there is no god but Allah alone, with no partner, and I bear witness that Muhammad is His servant and messenger.",
-    "source": { "type": "hadith", "reference": "Sahih Muslim 234", "grade": "sahih" },
-    "verified": true
+    "translation_fr": "J'atteste qu'il n'y a de divinité qu'Allah, Seul et sans associé, et j'atteste que Mouhammad est Son serviteur et Son messager.",
+    "source": {
+      "type": "hadith",
+      "reference": "Sahih Muslim 234",
+      "grade": "sahih"
+    },
+    "verified": true,
+    "translation_provenance": "project"
   },
   "what_breaks_wudu": [
-    { "id": "breaker-1", "description": "Anything that exits from the private parts (urine, stool, gas)", "description_ar": "كل ما يخرج من السبيلين كالبول والغائط والريح", "source": "Sahih Bukhari 135", "verified": true },
-    { "id": "breaker-2", "description": "Deep sleep (light dozing while seated does not break wudu)", "description_ar": "النوم العميق، أما النعاس الخفيف وأنت جالس فلا ينقض الوضوء", "source": "Sunan Abu Dawud 203", "verified": true },
-    { "id": "breaker-3", "description": "Loss of consciousness", "description_ar": "زوال العقل بإغماء أو نحوه", "verified": true },
-    { "id": "breaker-4", "description": "Bleeding from a wound (difference of opinion among scholars: some say it breaks wudu, some say it doesn't)", "description_ar": "الدم الخارج من جرح، وفيه خلاف بين العلماء: بعضهم يرى أنه ينقض الوضوء وبعضهم لا يرى ذلك.", "notes": "This is a point of scholarly difference. To be safe, renew your wudu.", "notes_ar": "هذه مسألة فيها خلاف بين العلماء. والأحوط أن تعيد الوضوء.", "verified": true }
-  ]
+    {
+      "id": "breaker-1",
+      "description": "Anything that exits from the private parts (urine, stool, gas)",
+      "description_ar": "كل ما يخرج من السبيلين كالبول والغائط والريح",
+      "description_fr": "Tout ce qui sort des parties intimes (urine, selles, gaz)",
+      "source": "Sahih Bukhari 135",
+      "verified": true
+    },
+    {
+      "id": "breaker-2",
+      "description": "Deep sleep (light dozing while seated does not break wudu)",
+      "description_ar": "النوم العميق، أما النعاس الخفيف وأنت جالس فلا ينقض الوضوء",
+      "description_fr": "Le sommeil profond (somnoler légèrement en position assise n'annule pas les ablutions)",
+      "source": "Sunan Abu Dawud 203",
+      "verified": true
+    },
+    {
+      "id": "breaker-3",
+      "description": "Loss of consciousness",
+      "description_ar": "زوال العقل بإغماء أو نحوه",
+      "description_fr": "La perte de connaissance",
+      "verified": true
+    },
+    {
+      "id": "breaker-4",
+      "description": "Bleeding from a wound (difference of opinion among scholars: some say it breaks wudu, some say it doesn't)",
+      "description_ar": "الدم الخارج من جرح، وفيه خلاف بين العلماء: بعضهم يرى أنه ينقض الوضوء وبعضهم لا يرى ذلك.",
+      "description_fr": "Le saignement d'une plaie (divergence entre les savants : certains disent que cela annule les ablutions, d'autres non)",
+      "notes": "This is a point of scholarly difference. To be safe, renew your wudu.",
+      "notes_ar": "هذه مسألة فيها خلاف بين العلماء. والأحوط أن تعيد الوضوء.",
+      "notes_fr": "C'est un point de divergence entre les savants. Par précaution, refais tes ablutions.",
+      "verified": true
+    }
+  ],
+  "obligations": [
+    {
+      "id": "wudu-fard-1",
+      "description": "The intention (niyyah), held in the heart before beginning.",
+      "description_ar": "النية بالقلب قبل الشروع.",
+      "description_fr": "L'intention (niyya), formée dans le cœur avant de commencer.",
+      "source": "Sahih Bukhari 1",
+      "verified": true,
+      "needs_scholarly_review": true,
+      "note": "The intention is never spoken aloud. Scholars differ on whether it is a condition or a pillar; either way it must be present.",
+      "note_ar": "لا تُلفظ النية باللسان. واختلف العلماء أهي شرط أم ركن، وعلى كل حال لا بد من وجودها.",
+      "note_fr": "L'intention ne se prononce jamais à voix haute. Les savants divergent sur son statut de condition ou de pilier ; dans les deux cas elle doit être présente."
+    },
+    {
+      "id": "wudu-fard-2",
+      "description": "Washing the whole face once, from the hairline to the chin and from ear to ear.",
+      "description_ar": "غسل الوجه مرة، من منابت الشعر إلى الذقن ومن الأذن إلى الأذن.",
+      "description_fr": "Laver tout le visage une fois, de la racine des cheveux au menton et d'une oreille à l'autre.",
+      "source": "Quran 5:6",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-fard-3",
+      "description": "Washing both arms up to and including the elbows.",
+      "description_ar": "غسل اليدين إلى المرفقين مع المرفقين.",
+      "description_fr": "Laver les deux bras jusqu'aux coudes, coudes inclus.",
+      "source": "Quran 5:6",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-fard-4",
+      "description": "Wiping the head with wet hands.",
+      "description_ar": "مسح الرأس باليدين المبلولتين.",
+      "description_fr": "Essuyer la tête avec les mains humides.",
+      "source": "Quran 5:6",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-fard-5",
+      "description": "Washing both feet up to and including the ankles.",
+      "description_ar": "غسل الرجلين إلى الكعبين مع الكعبين.",
+      "description_fr": "Laver les deux pieds jusqu'aux chevilles, chevilles incluses.",
+      "source": "Quran 5:6",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-fard-6",
+      "description": "Performing them in the order given in the verse, without a long pause between them.",
+      "description_ar": "الترتيب كما ورد في الآية، والموالاة بين الأعضاء.",
+      "description_fr": "Les accomplir dans l'ordre donné par le verset, sans longue interruption entre eux.",
+      "source": "Sahih Muslim 226",
+      "verified": true,
+      "needs_scholarly_review": true,
+      "note": "The Hanbali and Shafi'i schools treat order and continuity as obligatory. The Hanafi school treats them as strongly recommended.",
+      "note_ar": "يرى الحنابلة والشافعية وجوب الترتيب والموالاة، ويراهما الحنفية سنة مؤكدة.",
+      "note_fr": "Les écoles hanbalite et chaféite considèrent l'ordre et la continuité comme obligatoires. L'école hanafite les tient pour fortement recommandés."
+    }
+  ],
+  "obligations_heading": "What is obligatory (fard)",
+  "obligations_heading_ar": "فرائض الوضوء",
+  "obligations_heading_fr": "Ce qui est obligatoire (fard)",
+  "sunan": [
+    {
+      "id": "wudu-sunnah-1",
+      "description": "Saying Bismillah before beginning.",
+      "description_ar": "التسمية عند البدء.",
+      "description_fr": "Dire Bismillah avant de commencer.",
+      "source": "Sunan Abu Dawud 101",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-2",
+      "description": "Using the siwak or brushing the teeth.",
+      "description_ar": "السواك.",
+      "description_fr": "Utiliser le siwak ou se brosser les dents.",
+      "source": "Sahih Bukhari 887",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-3",
+      "description": "Washing the hands three times before starting.",
+      "description_ar": "غسل الكفين ثلاثاً قبل البدء.",
+      "description_fr": "Laver les mains trois fois avant de commencer.",
+      "source": "Sahih Bukhari 159",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-4",
+      "description": "Rinsing the mouth and the nose three times each.",
+      "description_ar": "المضمضة والاستنشاق ثلاثاً.",
+      "description_fr": "Se rincer la bouche et le nez trois fois chacun.",
+      "source": "Sahih Bukhari 159",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-5",
+      "description": "Running wet fingers through the beard.",
+      "description_ar": "تخليل اللحية.",
+      "description_fr": "Passer les doigts mouillés dans la barbe.",
+      "source": "Jami' at-Tirmidhi 31",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-10",
+      "description": "Running water between the fingers and between the toes.",
+      "description_ar": "تخليل الأصابع في اليدين والرجلين.",
+      "description_fr": "Faire passer l'eau entre les doigts et entre les orteils.",
+      "source": "Sunan Abu Dawud 142",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-6",
+      "description": "Beginning with the right side before the left.",
+      "description_ar": "التيامن، أي البدء بالميامن.",
+      "description_fr": "Commencer par le côté droit avant le gauche.",
+      "source": "Sahih Bukhari 168",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-7",
+      "description": "Washing each part three times rather than once.",
+      "description_ar": "تكرار الغسل ثلاثاً.",
+      "description_fr": "Laver chaque partie trois fois plutôt qu'une seule.",
+      "source": "Sahih Bukhari 159",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-8",
+      "description": "Wiping the ears with the same water used for the head.",
+      "description_ar": "مسح الأذنين بماء الرأس.",
+      "description_fr": "Essuyer les oreilles avec l'eau utilisée pour la tête.",
+      "source": "Sunan an-Nasa'i 102",
+      "verified": true,
+      "needs_scholarly_review": true
+    },
+    {
+      "id": "wudu-sunnah-9",
+      "description": "Saying the supplication after completing the wudu.",
+      "description_ar": "الدعاء بعد الفراغ من الوضوء.",
+      "description_fr": "Dire l'invocation après avoir terminé les ablutions.",
+      "source": "Sahih Muslim 234",
+      "verified": true,
+      "needs_scholarly_review": true
+    }
+  ],
+  "sunan_heading": "What is recommended (sunnah)",
+  "sunan_heading_ar": "سنن الوضوء",
+  "sunan_heading_fr": "Ce qui est recommandé (sunna)",
+  "madhab_note": "The two groupings below are the obligatory acts (fard) and the recommended acts (sunnah). The schools agree on the acts themselves and differ on how many of them count as obligatory: the Hanafi school names four, while the Maliki, Shafi'i, and Hanbali schools add the intention and, between them, the order and continuity. Follow whichever school your local mosque teaches.",
+  "madhab_note_ar": "المجموعتان الآتيتان هما الفرائض والسنن. والأفعال نفسها متفق عليها، وإنما الخلاف في عدد ما يُعدّ فرضًا: فالحنفية يعدّونها أربعة، والمالكية والشافعية والحنابلة يزيدون النية، ومنهم من يزيد الترتيب والموالاة. فاتبع ما يُعلَّم في مسجدك.",
+  "madhab_note_fr": "Les deux groupes ci-dessous sont les actes obligatoires (fard) et les actes recommandés (sunna). Les écoles s'accordent sur les actes eux-mêmes et divergent sur le nombre de ceux qui sont obligatoires : l'école hanafite en compte quatre, tandis que les écoles malikite, chafiite et hanbalite y ajoutent l'intention et, selon les cas, l'ordre et la continuité. Suivez l'école enseignée dans votre mosquée."
 }
