@@ -2,9 +2,11 @@
   "module_id": "aqeedah",
   "title_en": "The Six Pillars of Iman (Faith)",
   "title_ar": "أركان الإيمان",
+  "title_fr": "Les six piliers de l'îmân (la foi)",
   "introduction": {
     "content_en": "Iman (faith) is the foundation of being a Muslim. The Prophet Muhammad ﷺ defined faith when the Angel Jibril (Gabriel) asked him about it. These six beliefs are what every Muslim holds in their heart.",
     "content_ar": "الإيمان هو أساس كونك مسلمًا. عرّف النبي محمد ﷺ الإيمان حين سأله جبريل عليه السلام عنه. هذه الأركان الستة هي ما يعتقده كل مسلم في قلبه.",
+    "content_fr": "L'îmân (la foi) est le fondement de l'appartenance à l'islam. Le Prophète Mouhammad ﷺ a défini la foi lorsque l'ange Jibrîl l'a interrogé à ce sujet. Ces six croyances sont celles que tout musulman porte dans son cœur.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Muslim 8a",
@@ -18,8 +20,10 @@
       "order": 1,
       "title_en": "Belief in Allah",
       "title_ar": "الإيمان بالله",
+      "title_fr": "La croyance en Allah",
       "description_en": "To believe that Allah is the One and Only God. He has no partners, no children, no parents. He is the Creator of everything, the Sustainer of all existence, and the Only One worthy of worship. This is called Tawhid — the Oneness of God.",
       "description_ar": "أن تؤمن بأن الله هو الإله الواحد الأحد. لا شريك له، ولا ولد، ولا والد. هو خالق كل شيء، وقيوم الوجود كله، والمستحق وحده للعبادة. هذا هو التوحيد: إفراد الله بالألوهية.",
+      "description_fr": "Croire qu'Allah est le Dieu unique. Il n'a ni associé, ni enfant, ni parents. Il est le Créateur de toute chose, Celui qui maintient toute existence, et le Seul digne d'être adoré. C'est ce qu'on appelle le tawhîd, l'unicité de Dieu.",
       "key_points": [
         "Allah is One (Ahad) — there is no god but Him",
         "He was not born, nor does He have children (Quran 112:3)",
@@ -35,6 +39,14 @@
         "يعلم كل شيء، ويرى كل شيء، ويسمع كل شيء",
         "هو خالق كل شيء (الأنعام: 102)",
         "لا يستحق العبادة سواه: لا أولياء، ولا أنبياء، ولا أصنام"
+      ],
+      "key_points_fr": [
+        "Allah est Un (Ahad) : il n'y a de divinité que Lui",
+        "Il n'a pas été engendré et n'a pas d'enfants (Coran 112:3)",
+        "Rien dans la création ne Lui ressemble (Coran 42:11)",
+        "Il sait tout, voit tout, entend tout",
+        "Il est le Créateur de toute chose (Coran 6:102)",
+        "Lui seul mérite d'être adoré : ni saints, ni prophètes, ni idoles"
       ],
       "quran_references": [
         {
@@ -57,8 +69,10 @@
       "order": 2,
       "title_en": "Belief in the Angels",
       "title_ar": "الإيمان بالملائكة",
+      "title_fr": "La croyance aux anges",
       "description_en": "Angels are beings created by Allah from light. They do not have free will — they obey Allah completely. We cannot see them, but we believe in them because Allah and His Messenger ﷺ told us about them.",
       "description_ar": "الملائكة خلق خلقهم الله من نور. ليس لهم اختيار في معصيته، بل يطيعون الله طاعة كاملة. لا نراهم، لكنا نؤمن بهم لأن الله ورسوله ﷺ أخبرانا عنهم.",
+      "description_fr": "Les anges sont des créatures qu'Allah a créées de lumière. Ils n'ont pas de libre arbitre : ils obéissent à Allah en toute chose. Nous ne pouvons pas les voir, mais nous croyons en eux parce qu'Allah et Son Messager ﷺ nous ont informés à leur sujet.",
       "key_points": [
         "Angels are created from light",
         "They do not disobey Allah — they have no free will to sin",
@@ -77,6 +91,15 @@
         "مالك عليه السلام: خازن النار",
         "لكل إنسان مَلَكان يكتبان حسناته وسيئاته"
       ],
+      "key_points_fr": [
+        "Les anges sont créés de lumière",
+        "Ils ne désobéissent pas à Allah : ils n'ont pas le libre arbitre de pécher",
+        "Jibrîl (Gabriel) transmettait les révélations d'Allah aux prophètes",
+        "Mîkâ'îl (Michel) est chargé de la pluie et de la subsistance",
+        "Isrâfîl soufflera dans la trompe le Jour du Jugement",
+        "Mâlik est le gardien de l'Enfer",
+        "Chaque personne a deux anges qui consignent ses bonnes et ses mauvaises actions"
+      ],
       "quran_references": [
         {
           "reference": "50:17-18",
@@ -92,8 +115,10 @@
       "order": 3,
       "title_en": "Belief in the Revealed Books",
       "title_ar": "الإيمان بالكتب",
+      "title_fr": "La croyance aux Livres révélés",
       "description_en": "Allah sent divine books to guide humanity through His prophets. We believe in all of them, but the Quran is the final and preserved revelation that supersedes all previous scriptures.",
       "description_ar": "أنزل الله الكتب السماوية على أنبيائه ليهدي بها الناس. نؤمن بها جميعًا، والقرآن هو آخرها وأحفظها وقد نسخ ما قبله.",
+      "description_fr": "Allah a envoyé des Livres révélés pour guider l'humanité par l'intermédiaire de Ses prophètes. Nous croyons en chacun d'eux, mais le Coran est la révélation finale et préservée, qui abroge toutes les Écritures précédentes.",
       "key_points": [
         "The Suhuf (Scrolls) — revealed to Prophet Ibrahim (Abraham)",
         "The Zabur (Psalms) — revealed to Prophet Dawud (David)",
@@ -112,6 +137,15 @@
         "القرآن هو الكتاب الوحيد المحفوظ بنصه الأصلي",
         "الكتب السابقة طرأ عليها التحريف بأيدي الناس"
       ],
+      "key_points_fr": [
+        "Les Suhuf (Feuillets), révélés au prophète Ibrâhîm (Abraham)",
+        "Le Zabûr (Psaumes), révélé au prophète Dâwoud (David)",
+        "La Tawrâh (Torah), révélée au prophète Moûsâ (Moïse)",
+        "L'Injîl (Évangile), révélé au prophète 'Îsâ (Jésus)",
+        "Le Coran, révélé au prophète Mouhammad ﷺ, la révélation finale",
+        "Le Coran est la seule Écriture préservée dans sa forme originelle",
+        "Les Écritures antérieures ont été altérées au fil du temps par des mains humaines"
+      ],
       "quran_references": [
         {
           "reference": "3:3-4",
@@ -127,8 +161,10 @@
       "order": 4,
       "title_en": "Belief in the Messengers",
       "title_ar": "الإيمان بالرسل",
+      "title_fr": "La croyance aux messagers",
       "description_en": "Allah sent prophets and messengers to every nation throughout history to guide people to worship Him alone. We believe in all of them without distinction. Muhammad ﷺ is the final messenger.",
       "description_ar": "أرسل الله أنبياءه ورسله إلى كل أمة عبر التاريخ ليدعوا الناس إلى عبادته وحده. نؤمن بهم جميعًا، لا نفرّق بين أحد منهم. ومحمد ﷺ هو خاتم المرسلين.",
+      "description_fr": "Allah a envoyé des prophètes et des messagers à chaque nation au fil de l'histoire, afin de guider les hommes vers Son adoration exclusive. Nous croyons en eux tous sans distinction. Mouhammad ﷺ est le dernier des messagers.",
       "key_points": [
         "Allah sent prophets to every nation (Quran 16:36)",
         "25 prophets are mentioned by name in the Quran",
@@ -147,6 +183,15 @@
         "نُجلّ كل الأنبياء، ولا نفرّق بين أحد منهم في الإيمان بهم",
         "نؤمن بعيسى عليه السلام نبيًا كريمًا، وُلد من غير أب بمعجزة، لكنه ليس إلهًا ولا ابن إله"
       ],
+      "key_points_fr": [
+        "Allah a envoyé des prophètes à chaque nation (Coran 16:36)",
+        "Vingt-cinq prophètes sont nommés dans le Coran",
+        "Tous les prophètes ont enseigné le même message central : adorer Allah seul",
+        "Parmi eux : Adam, Noûh (Noé), Ibrâhîm (Abraham), Moûsâ (Moïse), 'Îsâ (Jésus)",
+        "Mouhammad ﷺ est le Sceau des prophètes, le dernier des messagers",
+        "Nous respectons tous les prophètes de manière égale et ne faisons aucune distinction entre eux dans la croyance",
+        "Les musulmans croient en 'Îsâ (Jésus) comme un grand prophète, né miraculeusement, mais non comme Dieu ni comme fils de Dieu"
+      ],
       "quran_references": [
         {
           "reference": "33:40",
@@ -162,8 +207,10 @@
       "order": 5,
       "title_en": "Belief in the Day of Judgment",
       "title_ar": "الإيمان باليوم الآخر",
+      "title_fr": "La croyance au Jour du Jugement",
       "description_en": "This life is temporary. There will come a Day when all of creation will be resurrected and held accountable for their deeds. The righteous will enter Paradise, and the wicked will face punishment.",
       "description_ar": "هذه الحياة فانية. ويأتي يوم يُبعث فيه الخلق كلهم ويُحاسبون على أعمالهم. الصالحون يدخلون الجنة، والظالمون يلقون العذاب.",
+      "description_fr": "Cette vie est temporaire. Viendra un Jour où toute la création sera ressuscitée et devra rendre compte de ses actes. Les pieux entreront au Paradis, et les injustes connaîtront le châtiment.",
       "key_points": [
         "This worldly life is a test (Quran 67:2)",
         "Every soul will taste death (Quran 3:185)",
@@ -184,6 +231,16 @@
         "النار عقاب الكافرين والمعتدين",
         "الله أحكم الحاكمين، فلا يُظلم أحد شيئًا"
       ],
+      "key_points_fr": [
+        "Cette vie d'ici-bas est une épreuve (Coran 67:2)",
+        "Toute âme goûtera à la mort (Coran 3:185)",
+        "Tous les hommes seront ressuscités et rassemblés devant Allah",
+        "Chacun recevra son livre d'actions, dans la main droite (les bonnes) ou dans la main gauche (les mauvaises)",
+        "Les actions seront pesées dans la Balance (al-Mîzân)",
+        "Le Paradis (al-Janna) est la récompense des croyants",
+        "L'Enfer (Jahannam) est le châtiment des mécréants et des injustes",
+        "Allah est le Juste absolu : nulle âme ne sera lésée"
+      ],
       "quran_references": [
         {
           "reference": "21:47",
@@ -199,8 +256,10 @@
       "order": 6,
       "title_en": "Belief in Divine Decree (Qadr)",
       "title_ar": "الإيمان بالقدر",
+      "title_fr": "La croyance au destin (al-qadar)",
       "description_en": "Everything that happens — good or bad — is by the knowledge, will, and creation of Allah. He wrote everything in the Preserved Tablet before creation. This does not mean we have no choice — we make choices, but Allah already knows what we will choose.",
       "description_ar": "كل ما يقع، خيره وشره، فهو بعلم الله ومشيئته وخلقه. كتب الله كل شيء في اللوح المحفوظ قبل أن يخلق الخلق. وهذا لا يعني أن لا اختيار لنا، بل نختار، والله يعلم سلفًا ما نختار.",
+      "description_fr": "Tout ce qui arrive, en bien comme en mal, procède de la science, de la volonté et de la création d'Allah. Il a tout inscrit dans la Table gardée avant la création. Cela ne signifie pas que nous n'avons aucun choix : nous choisissons, mais Allah sait déjà ce que nous choisirons.",
       "key_points": [
         "Allah knows everything that was, is, and will be",
         "Everything is written in the Preserved Tablet (Al-Lawh Al-Mahfuz)",
@@ -216,6 +275,14 @@
         "للإنسان مشيئة واختيار يبتلى بهما",
         "الخير والشر كلاهما من قضاء الله، ونحن مسؤولون عن أعمالنا",
         "الإيمان بالقدر يبعث الطمأنينة: ما أصابك لم يكن ليخطئك، وما أخطأك لم يكن ليصيبك"
+      ],
+      "key_points_fr": [
+        "Allah sait tout ce qui a été, ce qui est et ce qui sera",
+        "Tout est inscrit dans la Table gardée (al-Lawh al-Mahfoûz)",
+        "Rien n'arrive sinon par la volonté d'Allah",
+        "Nous conservons le libre arbitre : nous sommes éprouvés par nos choix",
+        "Le bien comme le mal relèvent du décret d'Allah, mais nous sommes responsables de nos actes",
+        "La croyance au qadar apporte la sérénité : ce qui t'était destiné ne te manquera pas"
       ],
       "quran_references": [
         {
