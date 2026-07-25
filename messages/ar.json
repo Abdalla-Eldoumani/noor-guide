@@ -16,7 +16,8 @@
     "verseLabel": "الآية {number}",
     "switchToArabic": "العربية",
     "switchToEnglish": "English",
-    "language": "اللغة"
+    "language": "اللغة",
+    "closeDialog": "إغلاق النافذة"
   },
   "nav": {
     "home": "الرئيسية",
@@ -260,5 +261,17 @@
       "sahih": "صحيح",
       "hasan": "حسن"
     }
+  },
+  "prayers": {
+    "fajr": "الفجر",
+    "dhuhr": "الظهر",
+    "asr": "العصر",
+    "maghrib": "المغرب",
+    "isha": "العشاء"
+  },
+  "player": {
+    "play": "تشغيل",
+    "pause": "إيقاف مؤقت",
+    "seek": "تحريك موضع الصوت"
   }
 }

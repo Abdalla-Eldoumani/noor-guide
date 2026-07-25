@@ -14,7 +14,11 @@
     "compass.north",
     "compass.east",
     "compass.south",
-    "sources.grades.hasan"
+    "sources.grades.hasan",
+    "prayers.fajr",
+    "prayers.dhuhr",
+    "prayers.maghrib",
+    "player.pause"
   ],
   "contentExempt": [
     "text"

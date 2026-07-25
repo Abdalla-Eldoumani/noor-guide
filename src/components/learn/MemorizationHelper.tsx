@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Eye, EyeOff } from "lucide-react";
 import type { Verse } from "@/types/content";
@@ -10,6 +11,7 @@ interface MemorizationHelperProps {
 }
 
 export function MemorizationHelper({ verses }: MemorizationHelperProps) {
+  const t = useTranslations("lesson");
   const [showTransliteration, setShowTransliteration] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
 
@@ -17,7 +19,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
     <div className="bg-cream rounded-xl border border-gray-200 p-6 space-y-4">
       <div className="flex items-center justify-between">
         <h4 className="font-heading font-semibold text-ink">
-          Memorization Practice
+          {t("memorizationTitle")}
         </h4>
         <div className="flex gap-2">
           <Button
@@ -31,7 +33,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
               ) : (
                 <Eye className="w-3.5 h-3.5" />
               )}
-              Transliteration
+              {t("transliteration")}
             </span>
           </Button>
           <Button
@@ -45,7 +47,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
               ) : (
                 <Eye className="w-3.5 h-3.5" />
               )}
-              Translation
+              {t("translation")}
             </span>
           </Button>
         </div>
@@ -75,8 +77,7 @@ export function MemorizationHelper({ verses }: MemorizationHelperProps) {
       </div>
 
       <p className="text-xs text-muted">
-        Try reading the Arabic first, then reveal the transliteration to check
-        your pronunciation.
+        {t("memorizationHelper")}
       </p>
     </div>
   );

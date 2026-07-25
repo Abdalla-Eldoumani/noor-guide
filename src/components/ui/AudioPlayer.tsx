@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { Play, Pause } from "lucide-react";
 import { useAudioPlayer } from "@/hooks/useAudioPlayer";
 
@@ -17,6 +19,7 @@ function formatTime(seconds: number): string {
 }
 
 export function AudioPlayer({ src, label, className = "" }: AudioPlayerProps) {
+  const t = useTranslations("player");
   const { isPlaying, currentTime, duration, toggle, seek, currentUrl } = useAudioPlayer();
 
   const isThisPlaying = isPlaying && currentUrl === src;
@@ -29,7 +32,7 @@ export function AudioPlayer({ src, label, className = "" }: AudioPlayerProps) {
         type="button"
         onClick={() => toggle(src)}
         className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary-500 text-white hover:bg-primary-600 transition-colors"
-        aria-label={isThisPlaying ? "Pause" : "Play"}
+        aria-label={isThisPlaying ? t("pause") : t("play")}
       >
         {isThisPlaying ? <Pause size={16} /> : <Play size={16} className="ml-0.5" />}
       </button>
@@ -45,7 +48,7 @@ export function AudioPlayer({ src, label, className = "" }: AudioPlayerProps) {
           value={isThisPlaying || currentUrl === src ? currentTime : 0}
           onChange={(e) => seek(Number(e.target.value))}
           className="w-full h-1.5 rounded-full appearance-none bg-primary-200 accent-primary-500 cursor-pointer"
-          aria-label="Seek audio"
+          aria-label={t("seek")}
         />
       </div>
 

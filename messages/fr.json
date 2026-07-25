@@ -16,7 +16,8 @@
     "verseLabel": "Verset {number}",
     "switchToArabic": "العربية",
     "switchToEnglish": "English",
-    "language": "Langue"
+    "language": "Langue",
+    "closeDialog": "Fermer la fenêtre"
   },
   "nav": {
     "home": "Accueil",
@@ -260,5 +261,17 @@
       "sahih": "Sahîh",
       "hasan": "Hasan"
     }
+  },
+  "prayers": {
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "'Asr",
+    "maghrib": "Maghrib",
+    "isha": "'Ichâ"
+  },
+  "player": {
+    "play": "Lecture",
+    "pause": "Pause",
+    "seek": "Déplacer la lecture"
   }
 }

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Play, Pause, Volume2 } from "lucide-react";
 import { ArabicText } from "@/components/ui/ArabicText";
@@ -11,6 +13,7 @@ interface SurahPlayerProps {
 }
 
 export function SurahPlayer({ surah }: SurahPlayerProps) {
+  const t = useTranslations("surahs");
   const [audioUrls, setAudioUrls] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -43,7 +46,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
       })
       .catch(() => {
         if (!cancelled) {
-          setError("Could not load audio. Please try again later.");
+          setError(t("audioError"));
           setLoading(false);
         }
       });
@@ -51,7 +54,7 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
     return () => {
       cancelled = true;
     };
-  }, [surah.number]);
+  }, [surah.number, t]);
 
   useEffect(() => {
     const audio = new Audio();
@@ -178,13 +181,13 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
             ) : (
               <Volume2 size={18} />
             )}
-            {isPlaying && playAll ? "Stop" : "Play Entire Surah"}
+            {isPlaying && playAll ? t("stopPlayback") : t("playFullSurah")}
           </button>
         )}
 
         {loading && (
           <p className="text-sm text-muted text-center py-2">
-            Loading audio...
+            {t("loadingAudio")}
           </p>
         )}
         {error && (
@@ -213,8 +216,8 @@ export function SurahPlayer({ surah }: SurahPlayerProps) {
                       className="relative w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors before:absolute before:inset-[-6px] before:content-['']"
                       aria-label={
                         isPlaying && playingIndex === i
-                          ? `Pause verse ${verse.verse}`
-                          : `Play verse ${verse.verse}`
+                          ? t("pauseVerseAria", { number: verse.verse })
+                          : t("playVerseAria", { number: verse.verse })
                       }
                     >
                       {isPlaying && playingIndex === i ? (
