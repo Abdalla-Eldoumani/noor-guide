@@ -66,6 +66,9 @@
           "description": "The body is washed an odd number of times by people of the same sex, except that a spouse may wash a spouse.",
           "description_ar": "يُغسّل الميت وترًا ويتولاه من كان من جنسه، ويجوز أن يغسّل أحد الزوجين الآخر.",
           "description_fr": "Le corps est lavé un nombre impair de fois par des personnes du même sexe, sauf qu'un époux peut laver son conjoint.",
+          "note": "The narration permits three, five, or more washings. That the count is odd, and that the washer is of the same sex except between spouses, are the agreed practice rather than wording in this narration.",
+          "note_ar": "أذن الحديث بالغسل ثلاثًا أو خمسًا أو أكثر. وأما كون العدد وترًا، وكون الغاسل من جنس الميت إلا بين الزوجين، فهو العمل المتفق عليه لا لفظ في هذا الحديث.",
+          "note_fr": "Le hadith autorise trois lavages, cinq ou davantage. Que le nombre soit impair, et que celui qui lave soit du même sexe sauf entre époux, relève de la pratique reconnue et non d'une formulation de ce hadith.",
           "source": "Sahih Bukhari 1253",
           "verified": true,
           "needs_scholarly_review": true
