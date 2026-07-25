@@ -1,0 +1,264 @@
+{
+  "site": {
+    "name": "Noor Guide",
+    "subtitle": "Ton chemin vers la lumière",
+    "tagline": "Un guide progressif et bienveillant pour les nouveaux musulmans, appuyé sur des sources authentiques.",
+    "description": "Apprends les bases de l'islam à ton rythme : la croyance, la prière, le Coran et les invocations quotidiennes, à partir de sources vérifiées."
+  },
+  "common": {
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "skipToContent": "Aller au contenu principal",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "loading": "Chargement",
+    "or": "ou",
+    "verseLabel": "Verset {number}",
+    "switchToArabic": "العربية",
+    "switchToEnglish": "English",
+    "language": "Langue"
+  },
+  "nav": {
+    "home": "Accueil",
+    "learn": "Apprendre",
+    "tools": "Outils",
+    "progress": "Progression"
+  },
+  "home": {
+    "heroLine1": "Bienvenue sur ton",
+    "heroHighlight": "chemin vers la lumière",
+    "ctaShahada": "Je viens de prononcer la chahâda, commencer à apprendre",
+    "ctaExploring": "Je découvre l'islam",
+    "featureStepByStepTitle": "Étape par étape",
+    "featureStepByStepBody": "Apprends progressivement, à ton rythme.",
+    "featureSourcesTitle": "Sources authentiques",
+    "featureSourcesBody": "Chaque enseignement est appuyé par le Coran et des hadîths authentifiés.",
+    "featureFreeTitle": "Gratuit, pour toujours",
+    "featureFreeBody": "Sans compte, sans frais, sans publicité.",
+    "modulesHeading": "Ton parcours d'apprentissage",
+    "modulesSubheading": "Six modules pour te mener des fondements de la croyance à la pratique quotidienne.",
+    "ctaBeginTitle": "Commence ton chemin",
+    "ctaBeginBody": "Fais le premier pas sur une voie de savoir, de paix et de sens.",
+    "ctaBeginButton": "Commencer à apprendre",
+    "estimatedMinutes": "{minutes} min"
+  },
+  "learn": {
+    "dashboardTitle": "Ton parcours d'apprentissage",
+    "dashboardIntro": "Suis ce parcours pour apprendre l'essentiel de l'islam à ton rythme. Chaque module s'appuie sur le précédent.",
+    "overallProgress": "Progression globale",
+    "lessonsCompleted": "{completed} leçons sur {total}",
+    "continueTitle": "Reprends où tu t'es arrêté",
+    "continueButton": "Continuer",
+    "glossaryTitle": "Glossaire islamique",
+    "glossaryBody": "Une référence des termes islamiques essentiels et des expressions arabes que tu rencontreras sur ton chemin.",
+    "statusComplete": "Terminé",
+    "statusInProgress": "En cours",
+    "statusNotStarted": "Pas commencé"
+  },
+  "lesson": {
+    "markComplete": "Marquer comme terminé",
+    "alreadyComplete": "Tu as terminé cette leçon",
+    "navPrev": "Précédent",
+    "navNext": "Suivant",
+    "stepIndicator": "Étape {current} sur {total}",
+    "stepPrev": "Étape précédente",
+    "stepNext": "Étape suivante",
+    "stepFinish": "Terminer",
+    "sourceQuran": "Coran",
+    "sourceHadith": "Hadîth",
+    "sourceConsensus": "Consensus des savants",
+    "memorizationTitle": "Exercice de mémorisation",
+    "memorizationHelper": "Essaie d'abord de lire l'arabe, puis affiche la translittération pour vérifier ta prononciation.",
+    "transliteration": "Translittération",
+    "translation": "Traduction"
+  },
+  "aqeedah": {
+    "keyPoints": "Points essentiels"
+  },
+  "pillars": {
+    "learnMore": "En savoir plus"
+  },
+  "wudu": {
+    "prereqHeading": "Avant de commencer",
+    "stepsHeading": "Les étapes des ablutions",
+    "duaHeading": "Invocation après les ablutions",
+    "breakersHeading": "Ce qui annule les ablutions",
+    "repeat": "Répéter {count} fois"
+  },
+  "salah": {
+    "prereqHeading": "Avant de prier",
+    "fivePrayersHeading": "Les cinq prières quotidiennes",
+    "tableHeaderPrayer": "Prière",
+    "tableHeaderTime": "Moment",
+    "tableHeaderFardh": "Fard",
+    "tableHeaderSunnahBefore": "Sunna avant",
+    "tableHeaderSunnahAfter": "Sunna après",
+    "rakahHeading": "Les étapes d'une rak'a",
+    "rakahSubheading": "Chaque unité de prière suit ces étapes. Le nombre de rak'ât varie selon la prière ; voir le tableau ci-dessus.",
+    "positionStanding": "Debout",
+    "positionBowing": "Inclinaison",
+    "positionProstrating": "Prosternation",
+    "positionSitting": "Assis",
+    "whenLabel": "Quand",
+    "additionalRecitations": "Récitations supplémentaires",
+    "whileRising": "En se relevant",
+    "onceStanding": "Une fois debout",
+    "sayThisTimes": "Dis ceci {count} fois."
+  },
+  "surahs": {
+    "startHere": "Commence ici",
+    "playFullSurah": "Écouter la sourate entière",
+    "stopPlayback": "Arrêter",
+    "loadingAudio": "Chargement de l'audio",
+    "audioError": "Impossible de charger l'audio. Réessaie plus tard.",
+    "playVerseAria": "Écouter le verset {number}",
+    "pauseVerseAria": "Mettre en pause le verset {number}",
+    "surahNumberLabel": "Sourate {number}"
+  },
+  "duas": {
+    "bookmarkAdd": "Ajouter cette invocation aux favoris",
+    "bookmarkRemove": "Retirer des favoris",
+    "context": {
+      "beforeEating": "Avant de manger",
+      "afterEating": "Après avoir mangé",
+      "seekingForgiveness": "Demander le pardon",
+      "inDistress": "En cas de détresse ou de difficulté"
+    }
+  },
+  "glossary": {
+    "title": "Glossaire islamique",
+    "subtitle": "Les termes islamiques essentiels et les expressions arabes du quotidien.",
+    "searchPlaceholder": "Rechercher un terme ou une expression",
+    "termsHeading": "Termes islamiques ({count})",
+    "phrasesHeading": "Expressions arabes essentielles ({count})",
+    "noTermsMatch": "Aucun terme ne correspond à ta recherche.",
+    "noPhrasesMatch": "Aucune expression ne correspond à ta recherche."
+  },
+  "tools": {
+    "title": "Outils pratiques",
+    "subtitle": "Des outils pour t'accompagner dans ton adoration quotidienne.",
+    "prayerTimesTitle": "Horaires de prière",
+    "prayerTimesBody": "Des horaires de prière précis pour ta position, selon des méthodes de calcul reconnues.",
+    "qiblaTitle": "Direction de la qibla",
+    "qiblaBody": "Trouve la direction de la Ka'ba à La Mecque depuis n'importe où dans le monde.",
+    "masjidFinderTitle": "Trouver une mosquée",
+    "masjidFinderBody": "Repère les mosquées près de chez toi pour la prière en groupe et la vie communautaire."
+  },
+  "location": {
+    "setHeading": "Définis ta position",
+    "useMyLocation": "Utiliser ma position",
+    "detecting": "Localisation en cours",
+    "manualPlaceholder": "Saisis les coordonnées (ex. : 40.7128, -74.0060)",
+    "set": "Valider",
+    "manualHelp": "Saisis les coordonnées sous la forme latitude, longitude.",
+    "change": "Changer de position",
+    "errorPermissionDenied": "L'accès à la position a été refusé. Active la localisation dans les paramètres de ton navigateur, ou saisis les coordonnées manuellement.",
+    "errorUnavailable": "Impossible de déterminer ta position. Réessaie ou saisis les coordonnées manuellement.",
+    "errorTimeout": "La demande de position a expiré. Réessaie ou saisis les coordonnées manuellement.",
+    "errorUnsupported": "La géolocalisation n'est pas prise en charge par ton navigateur. Saisis les coordonnées manuellement."
+  },
+  "prayerTimes": {
+    "title": "Horaires de prière",
+    "subtitle": "Consulte les horaires des cinq prières quotidiennes pour ta position.",
+    "promptLocation": "Pour afficher les horaires de prière, nous avons besoin de connaître ta position.",
+    "calculationMethod": "Méthode de calcul",
+    "loading": "Chargement des horaires de prière",
+    "errorRetry": "Vérifie ta connexion internet et réessaie.",
+    "nextPrayerLabel": "Prochaine prière",
+    "footerNote": "Les horaires sont calculés à partir de ta position et de la méthode choisie. Ils peuvent différer légèrement de ceux de ta mosquée. Autant que possible, suis le calendrier de ta mosquée locale."
+  },
+  "qibla": {
+    "title": "Direction de la qibla",
+    "subtitle": "Trouve la direction de la qibla, la Ka'ba à La Mecque, depuis ta position.",
+    "promptLocation": "Pour trouver la direction de la qibla, nous avons besoin de connaître ta position.",
+    "fromNorth": "par rapport au nord",
+    "directionStatement": "La qibla depuis ta position est à {bearing}° du nord.",
+    "aboutHeading": "À propos de la qibla",
+    "aboutBody": "La qibla est la direction vers laquelle les musulmans se tournent pendant la prière : la Ka'ba, dans la Mosquée sacrée (Al-Masjid Al-Harâm) à La Mecque. Pour plus de précision, utilise une boussole physique afin de t'aligner sur l'angle indiqué ci-dessus."
+  },
+  "masjidFinder": {
+    "title": "Trouve une mosquée près de chez toi",
+    "subtitle": "Repère les mosquées de ta région pour la prière en groupe et la vie communautaire.",
+    "promptLocation": "Définis ta position pour trouver les mosquées à proximité.",
+    "googleSearchTitle": "Rechercher sur Google Maps",
+    "googleSearchBody": "Trouve des mosquées avec avis, itinéraires et horaires de prière.",
+    "osmSearchTitle": "Rechercher sur OpenStreetMap",
+    "osmSearchBody": "Carte libre et communautaire des mosquées du monde entier.",
+    "tipsHeading": "Conseils pour trouver ta mosquée locale",
+    "tip1": "Cherche « mosquée », « masjid » ou « centre islamique » dans ta région.",
+    "tip2": "Beaucoup de mosquées accueillent les nouveaux musulmans et proposent des programmes pour les convertis.",
+    "tip3": "N'hésite pas à venir aux heures de prière. La communauté sera heureuse de t'aider.",
+    "tip4": "La prière du vendredi (joumou'a) est un bon moment pour une première visite. Arrive tôt pour rencontrer du monde.",
+    "directions": "Obtenir l'itinéraire"
+  },
+  "progress": {
+    "title": "Ta progression",
+    "subtitle": "Suis ton parcours d'apprentissage des fondements de l'islam.",
+    "lessonsCompletedLabel": "Leçons terminées",
+    "streakLabel": "Jours d'affilée",
+    "startedLabel": "Commencé le",
+    "notStarted": "Pas commencé",
+    "overallProgress": "Progression globale",
+    "moduleProgressHeading": "Progression par module",
+    "moduleComplete": "Terminé",
+    "resetButton": "Réinitialiser toute la progression",
+    "resetConfirmBody": "Cela effacera toute ta progression. Es-tu sûr ?",
+    "resetConfirmYes": "Oui, tout réinitialiser",
+    "resetCancel": "Annuler"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "body": "La page que tu cherches n'existe pas, ou elle a peut-être été déplacée. Laisse-nous te remettre sur la voie.",
+    "ctaHome": "Retour à l'accueil",
+    "ctaContinue": "Continuer à apprendre"
+  },
+  "footer": {
+    "verifiedNote": "Tout le contenu provient du Coran et de recueils de hadîths authentifiés.",
+    "copyright": "© {year} Noor Guide. Gratuit et open source."
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "learn": "Apprendre",
+    "tools": "Outils",
+    "progress": "Progression",
+    "glossary": "Glossaire",
+    "prayerTimes": "Horaires de prière",
+    "qibla": "Direction de la qibla",
+    "masjidFinder": "Trouver une mosquée"
+  },
+  "compass": {
+    "north": "N",
+    "east": "E",
+    "south": "S",
+    "west": "O"
+  },
+  "meta": {
+    "keywords": [
+      "nouveau musulman",
+      "converti",
+      "guide islam",
+      "comment prier",
+      "chahâda",
+      "apprendre l'islam",
+      "Coran pour débutants",
+      "ablutions",
+      "prière",
+      "prière musulmane"
+    ]
+  },
+  "sources": {
+    "quran": "Coran",
+    "hadith": "Hadîth",
+    "consensus": "Consensus des savants",
+    "collections": {
+      "bukhari": "Sahîh al-Boukhârî",
+      "muslim": "Sahîh Mouslim",
+      "abudawud": "Sounan Abou Dâwoud",
+      "quran": "Coran"
+    },
+    "grades": {
+      "sahih": "Sahîh",
+      "hasan": "Hasan"
+    }
+  }
+}
