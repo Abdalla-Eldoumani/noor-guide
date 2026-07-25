@@ -24,43 +24,50 @@
           "verse": 1,
           "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
           "transliteration": "Bismillahir-Rahmanir-Rahim",
-          "translation": "In the name of Allah, the Most Gracious, the Most Merciful"
+          "translation": "In the name of Allah, the Most Gracious, the Most Merciful",
+          "translation_fr": "Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux."
         },
         {
           "verse": 2,
           "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
           "transliteration": "Al-hamdu lillahi Rabbil-'alamin",
-          "translation": "All praise is due to Allah, Lord of all the worlds"
+          "translation": "All praise is due to Allah, Lord of all the worlds",
+          "translation_fr": "Louange à Allah, Seigneur de l'univers."
         },
         {
           "verse": 3,
           "arabic": "الرَّحْمَٰنِ الرَّحِيمِ",
           "transliteration": "Ar-Rahmanir-Rahim",
-          "translation": "The Most Gracious, the Most Merciful"
+          "translation": "The Most Gracious, the Most Merciful",
+          "translation_fr": "Le Tout Miséricordieux, le Très Miséricordieux,"
         },
         {
           "verse": 4,
           "arabic": "مَالِكِ يَوْمِ الدِّينِ",
           "transliteration": "Maliki yawmid-Din",
-          "translation": "Master of the Day of Judgment"
+          "translation": "Master of the Day of Judgment",
+          "translation_fr": "Maître du Jour de la rétribution."
         },
         {
           "verse": 5,
           "arabic": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
           "transliteration": "Iyyaka na'budu wa iyyaka nasta'in",
-          "translation": "You alone we worship, and You alone we ask for help"
+          "translation": "You alone we worship, and You alone we ask for help",
+          "translation_fr": "C'est Toi [Seul] que nous adorons, et c'est Toi [Seul] dont nous implorons secours."
         },
         {
           "verse": 6,
           "arabic": "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
           "transliteration": "Ihdinas-siratal-mustaqim",
-          "translation": "Guide us to the straight path"
+          "translation": "Guide us to the straight path",
+          "translation_fr": "Guide-nous dans le droit chemin,"
         },
         {
           "verse": 7,
           "arabic": "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
           "transliteration": "Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim walad-dallin",
-          "translation": "The path of those upon whom You have bestowed favor, not of those who have earned anger nor of those who are astray"
+          "translation": "The path of those upon whom You have bestowed favor, not of those who have earned anger nor of those who are astray",
+          "translation_fr": "le chemin de ceux que Tu as comblés de faveurs, non pas de ceux qui ont encouru Ta colère, ni des égarés."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/1/ar.alafasy",
@@ -80,25 +87,29 @@
           "verse": 1,
           "arabic": "قُلْ هُوَ اللَّهُ أَحَدٌ",
           "transliteration": "Qul Huwa Allahu Ahad",
-          "translation": "Say: He is Allah, the One"
+          "translation": "Say: He is Allah, the One",
+          "translation_fr": "Dis: «Il est Allah, Unique."
         },
         {
           "verse": 2,
           "arabic": "اللَّهُ الصَّمَدُ",
           "transliteration": "Allahu As-Samad",
-          "translation": "Allah, the Eternal Refuge"
+          "translation": "Allah, the Eternal Refuge",
+          "translation_fr": "Allah, Le Seul à être imploré pour ce que nous désirons."
         },
         {
           "verse": 3,
           "arabic": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
           "transliteration": "Lam yalid wa lam yulad",
-          "translation": "He neither begets nor is born"
+          "translation": "He neither begets nor is born",
+          "translation_fr": "Il n'a jamais engendré, n'a pas été engendré non plus."
         },
         {
           "verse": 4,
           "arabic": "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ",
           "transliteration": "Wa lam yakun lahu kufuwan ahad",
-          "translation": "Nor is there to Him any equivalent"
+          "translation": "Nor is there to Him any equivalent",
+          "translation_fr": "Et nul n'est égal à Lui»."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/112/ar.alafasy",
@@ -118,31 +129,36 @@
           "verse": 1,
           "arabic": "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ",
           "transliteration": "Qul a'udhu bi-Rabbil-falaq",
-          "translation": "Say: I seek refuge in the Lord of daybreak"
+          "translation": "Say: I seek refuge in the Lord of daybreak",
+          "translation_fr": "Dis: «Je cherche protection auprès du Seigneur de l'aube naissante,"
         },
         {
           "verse": 2,
           "arabic": "مِن شَرِّ مَا خَلَقَ",
           "transliteration": "Min sharri ma khalaq",
-          "translation": "From the evil of that which He created"
+          "translation": "From the evil of that which He created",
+          "translation_fr": "contre le mal des êtres qu'Il a créés,"
         },
         {
           "verse": 3,
           "arabic": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
           "transliteration": "Wa min sharri ghasiqin idha waqab",
-          "translation": "And from the evil of darkness when it settles"
+          "translation": "And from the evil of darkness when it settles",
+          "translation_fr": "contre le mal de l'obscurité quand elle s'approfondit,"
         },
         {
           "verse": 4,
           "arabic": "وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ",
           "transliteration": "Wa min sharrin-naffathati fil-'uqad",
-          "translation": "And from the evil of the blowers in knots"
+          "translation": "And from the evil of the blowers in knots",
+          "translation_fr": "contre le mal de celles qui soufflent [les sorcières] sur les nœuds,"
         },
         {
           "verse": 5,
           "arabic": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
           "transliteration": "Wa min sharri hasidin idha hasad",
-          "translation": "And from the evil of an envier when he envies"
+          "translation": "And from the evil of an envier when he envies",
+          "translation_fr": "et contre le mal de l'envieux quand il envie»."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/113/ar.alafasy",
@@ -162,37 +178,43 @@
           "verse": 1,
           "arabic": "قُلْ أَعُوذُ بِرَبِّ النَّاسِ",
           "transliteration": "Qul a'udhu bi-Rabbin-nas",
-          "translation": "Say: I seek refuge in the Lord of mankind"
+          "translation": "Say: I seek refuge in the Lord of mankind",
+          "translation_fr": "Dis: «Je cherche protection auprès du Seigneur des hommes."
         },
         {
           "verse": 2,
           "arabic": "مَلِكِ النَّاسِ",
           "transliteration": "Malikin-nas",
-          "translation": "The King of mankind"
+          "translation": "The King of mankind",
+          "translation_fr": "Le Souverain des hommes,"
         },
         {
           "verse": 3,
           "arabic": "إِلَٰهِ النَّاسِ",
           "transliteration": "Ilahin-nas",
-          "translation": "The God of mankind"
+          "translation": "The God of mankind",
+          "translation_fr": "Dieu des hommes,"
         },
         {
           "verse": 4,
           "arabic": "مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ",
           "transliteration": "Min sharril-waswasil-khannas",
-          "translation": "From the evil of the retreating whisperer"
+          "translation": "From the evil of the retreating whisperer",
+          "translation_fr": "contre le mal du mauvais conseiller, furtif,"
         },
         {
           "verse": 5,
           "arabic": "الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ",
           "transliteration": "Alladhi yuwaswisu fi sudurin-nas",
-          "translation": "Who whispers in the breasts of mankind"
+          "translation": "Who whispers in the breasts of mankind",
+          "translation_fr": "qui souffle le mal dans les poitrines des hommes,"
         },
         {
           "verse": 6,
           "arabic": "مِنَ الْجِنَّةِ وَالنَّاسِ",
           "transliteration": "Minal-jinnati wan-nas",
-          "translation": "From among the jinn and mankind"
+          "translation": "From among the jinn and mankind",
+          "translation_fr": "qu'il (le conseiller) soit un djinn, ou un être humain»."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/114/ar.alafasy",
@@ -212,19 +234,22 @@
           "verse": 1,
           "arabic": "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ",
           "transliteration": "Inna a'taynakal-kawthar",
-          "translation": "Indeed, We have granted you Al-Kawthar (abundance)"
+          "translation": "Indeed, We have granted you Al-Kawthar (abundance)",
+          "translation_fr": "Nous t'avons certes, accordé l'Abondance."
         },
         {
           "verse": 2,
           "arabic": "فَصَلِّ لِرَبِّكَ وَانْحَرْ",
           "transliteration": "Fasalli li-Rabbika wanhar",
-          "translation": "So pray to your Lord and sacrifice"
+          "translation": "So pray to your Lord and sacrifice",
+          "translation_fr": "Accomplis la Salât pour ton Seigneur et sacrifie."
         },
         {
           "verse": 3,
           "arabic": "إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ",
           "transliteration": "Inna shani'aka huwal-abtar",
-          "translation": "Indeed, your enemy — he is the one cut off"
+          "translation": "Indeed, your enemy — he is the one cut off",
+          "translation_fr": "Celui qui te hait sera certes, sans postérité."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/108/ar.alafasy",
@@ -244,23 +269,29 @@
           "verse": 1,
           "arabic": "وَالْعَصْرِ",
           "transliteration": "Wal-'Asr",
-          "translation": "By time"
+          "translation": "By time",
+          "translation_fr": "Par le Temps!"
         },
         {
           "verse": 2,
           "arabic": "إِنَّ الْإِنسَانَ لَفِي خُسْرٍ",
           "transliteration": "Innal-insana lafi khusr",
-          "translation": "Indeed, mankind is in loss"
+          "translation": "Indeed, mankind is in loss",
+          "translation_fr": "L'homme est certes, en perdition,"
         },
         {
           "verse": 3,
           "arabic": "إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ",
           "transliteration": "Illal-ladhina amanu wa 'amilus-salihati wa tawasaw bil-haqqi wa tawasaw bis-sabr",
-          "translation": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience"
+          "translation": "Except for those who have believed and done righteous deeds and advised each other to truth and advised each other to patience",
+          "translation_fr": "sauf ceux qui croient et accomplissent les bonnes œuvres, s'enjoignent mutuellement la vérité et s'enjoignent mutuellement l'endurance."
         }
       ],
       "audio_api_url": "http://api.alquran.cloud/v1/surah/103/ar.alafasy",
       "verified": true
     }
-  ]
+  ],
+  "translation_sources": {
+    "fr": "Muhammad Hamidullah, via the AlQuran Cloud fr.hamidullah edition"
+  }
 }
