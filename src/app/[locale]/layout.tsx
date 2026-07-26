@@ -38,6 +38,9 @@ export async function generateMetadata({
   const defaultTitle = `${name} | ${t("subtitle")}`;
 
   return {
+    // Without this, every absolute OG and Twitter image URL resolves against
+    // the build-time localhost default.
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://noorguide.app"),
     title: {
       default: defaultTitle,
       // Pages supply their own bare title; the site name is appended here and
