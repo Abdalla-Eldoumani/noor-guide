@@ -1,4 +1,4 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import {
   Heart,
@@ -11,10 +11,19 @@ import { getLearningModules } from "@/lib/content";
 import { MODULE_GLYPHS, GlyphBook } from "@/components/ui/Glyphs";
 import { pickLocalized } from "@/lib/content-i18n";
 
-export default async function HomePage() {
+// Taking the locale from `params` rather than reading it back out of request
+// state is what lets this page prerender. `getLocale()` here made the busiest
+// route in the app server-render on every visit.
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const modules = getLearningModules();
-  const locale = await getLocale();
-  const tHome = await getTranslations("home");
+  const tHome = await getTranslations({ locale, namespace: "home" });
 
   return (
     <>

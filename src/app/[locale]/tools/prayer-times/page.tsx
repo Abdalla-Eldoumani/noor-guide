@@ -29,6 +29,9 @@ export default function PrayerTimesPage() {
 
   return (
     <PageWrapper>
+      {/* Prayer times come from AlAdhan as soon as a location is chosen. */}
+      <link rel="preconnect" href="https://api.aladhan.com" />
+
       <Breadcrumb
         items={[
           { label: tCrumb("home"), href: "/" },

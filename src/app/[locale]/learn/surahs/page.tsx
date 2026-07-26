@@ -32,6 +32,11 @@ export default async function SurahsPage({
 
   return (
     <PageWrapper>
+      {/* The recitation is fetched from AlQuran Cloud and streamed from
+          cdn.islamic.network, so warm both connections while the page paints. */}
+      <link rel="preconnect" href="https://api.alquran.cloud" />
+      <link rel="preconnect" href="https://cdn.islamic.network" crossOrigin="" />
+
       <JsonLd
         data={lessonJsonLd({
           id: "surahs",
