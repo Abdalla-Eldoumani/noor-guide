@@ -15,7 +15,7 @@ interface LessonContentProps {
   nav: ModuleNav;
   title: string;
   titleAr?: string;
-  // Wudu and salah follow one school's arrangement; say so before the reader starts.
+  // These lessons set out acts on which the schools differ in detail; say so before the reader starts.
   schoolsNote?: boolean;
   children: ReactNode;
 }
