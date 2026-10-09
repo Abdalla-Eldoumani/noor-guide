@@ -9,33 +9,18 @@ interface CachedAudio {
   audioUrls: string[];
 }
 
-export async function fetchSurahAudio(
-  surahNumber: number
-): Promise<string[]> {
+// Per-verse recitation by Mishary Alafasy. The list is cached, so the API is
+// asked once per surah; the files themselves come from cdn.islamic.network.
+export async function fetchSurahAudio(surahNumber: number): Promise<string[]> {
   const cacheKey = `${CACHE_PREFIX}${surahNumber}`;
-
-  // Check cache
   const cached = getItem<CachedAudio | null>(cacheKey, null);
-  if (cached && cached.audioUrls.length > 0) {
-    return cached.audioUrls;
-  }
+  if (cached && cached.audioUrls.length > 0) return cached.audioUrls;
 
-  // Fetch from API
-  const url = `${API_BASE}/surah/${surahNumber}/ar.alafasy`;
-  const res = await fetch(url);
-
-  if (!res.ok) {
-    if (cached) return cached.audioUrls;
-    throw new Error(`Quran API error: ${res.status}`);
-  }
+  const res = await fetch(`${API_BASE}/surah/${surahNumber}/ar.alafasy`);
+  if (!res.ok) throw new Error(`Quran API error: ${res.status}`);
 
   const json: QuranSurahResponse = await res.json();
-  const audioUrls = json.data.ayahs
-    .map((a) => a.audio)
-    .filter((u): u is string => !!u);
-
-  // Cache
+  const audioUrls = json.data.ayahs.map((a) => a.audio).filter((u): u is string => !!u);
   setItem(cacheKey, { surahNumber, audioUrls } satisfies CachedAudio);
-
   return audioUrls;
 }
