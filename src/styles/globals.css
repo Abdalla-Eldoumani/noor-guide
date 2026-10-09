@@ -108,6 +108,13 @@
     line-height: 2;
   }
 
+  /* A title never ends on one stray word. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-fajr);
     outline-offset: 3px;
