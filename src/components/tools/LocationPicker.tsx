@@ -1,138 +1,84 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useId, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useGeolocation } from "@/hooks/useGeolocation";
-import { useSettings } from "@/hooks/useSettings";
+import { parseCoordinates, type GeoErrorCode, type GeoPosition } from "@/lib/geolocation";
+import { Button } from "@/components/ui/Button";
+
+const ERROR_KEYS: Record<GeoErrorCode, string> = {
+  PERMISSION_DENIED: "errorPermissionDenied",
+  POSITION_UNAVAILABLE: "errorUnavailable",
+  TIMEOUT: "errorTimeout",
+  NOT_SUPPORTED: "errorUnsupported",
+};
 
 interface LocationPickerProps {
-  onLocationSet: (location: { lat: number; lng: number; name: string }) => void;
+  onLocationSet: (location: GeoPosition) => void;
+  // Offered when a location is already saved and the reader is changing it.
+  onCancel?: () => void;
 }
 
-export function LocationPicker({ onLocationSet }: LocationPickerProps) {
+export function LocationPicker({ onLocationSet, onCancel }: LocationPickerProps) {
   const t = useTranslations("location");
-  const tCommon = useTranslations("common");
-  const { position, loading, error, requestLocation } = useGeolocation();
-  const { setLocation } = useSettings();
-  const [manualInput, setManualInput] = useState("");
-  const [showManual, setShowManual] = useState(false);
-  const handledPosition = useRef(false);
+  const { loading, error, requestLocation } = useGeolocation(onLocationSet);
+  const [manual, setManual] = useState("");
+  const [invalid, setInvalid] = useState(false);
+  const inputId = useId();
+  const helpId = useId();
 
-  const handleUseMyLocation = () => {
-    handledPosition.current = false;
-    requestLocation();
-  };
-
-  // When position arrives from geolocation, save and notify parent
-  useEffect(() => {
-    if (position && !loading && !handledPosition.current) {
-      handledPosition.current = true;
-      const loc = {
-        lat: position.lat,
-        lng: position.lng,
-        name: `${position.lat.toFixed(4)}, ${position.lng.toFixed(4)}`,
-      };
-      setLocation(loc);
-      onLocationSet(loc);
-    }
-  }, [position, loading, setLocation, onLocationSet]);
-
-  const handleManualSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!manualInput.trim()) return;
-
-    // Try to parse as "lat, lng" format
-    const parts = manualInput.split(",").map((s) => s.trim());
-    if (parts.length === 2) {
-      const lat = parseFloat(parts[0]);
-      const lng = parseFloat(parts[1]);
-      if (!isNaN(lat) && !isNaN(lng) && lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180) {
-        const loc = { lat, lng, name: manualInput.trim() };
-        setLocation(loc);
-        onLocationSet(loc);
-        return;
-      }
-    }
-
-    // Use the input as a display name with no coords — prompt to use geolocation
-    setShowManual(true);
+  const submit = (event: React.FormEvent) => {
+    event.preventDefault();
+    const parsed = parseCoordinates(manual);
+    setInvalid(!parsed);
+    if (parsed) onLocationSet(parsed);
   };
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-surface p-6 dark:border-gray-700 dark:bg-gray-800">
-      <h3 className="mb-4 font-heading text-lg font-semibold text-ink dark:text-gray-100">
-        {t("setHeading")}
-      </h3>
+    <div className="space-y-5 rounded-panel border border-rule px-5 py-5 sm:px-6">
+      <h2 className="font-prose text-subsection font-semibold text-ink">{t("setHeading")}</h2>
 
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <button
-          onClick={handleUseMyLocation}
-          disabled={loading}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-50"
-        >
-          {loading ? (
-            <>
-              <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-              </svg>
-              {t("detecting")}
-            </>
-          ) : (
-            <>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-                <line x1="12" y1="2" x2="12" y2="6" />
-                <line x1="12" y1="18" x2="12" y2="22" />
-                <line x1="2" y1="12" x2="6" y2="12" />
-                <line x1="18" y1="12" x2="22" y2="12" />
-              </svg>
-              {t("useMyLocation")}
-            </>
-          )}
-        </button>
-
-        <span className="text-center text-sm text-muted dark:text-gray-400">{tCommon("or")}</span>
-
-        <form onSubmit={handleManualSubmit} className="flex flex-1 gap-2">
-          <input
-            type="text"
-            value={manualInput}
-            onChange={(e) => setManualInput(e.target.value)}
-            placeholder={t("manualPlaceholder")}
-            aria-label={t("manualPlaceholder")}
-            className="flex-1 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-ink placeholder:text-gray-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder:text-gray-500"
-          />
-          <button
-            type="submit"
-            className="rounded-xl border border-primary-500 px-4 py-3 text-sm font-medium text-primary-500 transition-colors hover:bg-primary-50 dark:hover:bg-primary-500/10"
-          >
-            {t("set")}
-          </button>
-        </form>
+      <div className="space-y-2">
+        <Button onClick={requestLocation} disabled={loading}>
+          {loading ? t("detecting") : t("useMyLocation")}
+        </Button>
+        {error && (
+          <p role="alert" className="font-ui text-ui text-clay">
+            {t(ERROR_KEYS[error])}
+          </p>
+        )}
       </div>
 
-      {error && (
-        <div className="mt-4 rounded-xl bg-red-50 p-4 text-sm text-red-700 dark:bg-red-900/20 dark:text-red-400">
-          {error.code === "PERMISSION_DENIED" && (
-            <p>{t("errorPermissionDenied")}</p>
-          )}
-          {error.code === "POSITION_UNAVAILABLE" && (
-            <p>{t("errorUnavailable")}</p>
-          )}
-          {error.code === "TIMEOUT" && (
-            <p>{t("errorTimeout")}</p>
-          )}
-          {error.code === "NOT_SUPPORTED" && (
-            <p>{t("errorUnsupported")}</p>
-          )}
+      <form onSubmit={submit} className="space-y-2" noValidate>
+        <label htmlFor={inputId} className="block font-ui text-ui text-ink">
+          {t("manualLabel")}
+        </label>
+        <div className="flex gap-2">
+          <input
+            id={inputId}
+            type="text"
+            dir="ltr"
+            autoComplete="off"
+            spellCheck={false}
+            value={manual}
+            onChange={(e) => setManual(e.target.value)}
+            aria-invalid={invalid}
+            aria-describedby={helpId}
+            className="min-h-11 min-w-0 flex-1 rounded-control border border-ink-2 bg-paper px-3 font-ui text-ui text-ink placeholder:text-ink-2"
+          />
+          <Button type="submit" variant="outline">
+            {t("set")}
+          </Button>
         </div>
-      )}
-
-      {showManual && (
-        <p className="mt-3 text-sm text-muted dark:text-gray-400">
-          {t("manualHelp")}
+        <p id={helpId} className={`font-ui text-caption ${invalid ? "text-clay" : "text-ink-2"}`}>
+          {invalid ? t("manualInvalid") : t("manualHelp")}
         </p>
+      </form>
+
+      {onCancel && (
+        <Button variant="quiet" onClick={onCancel} className="-ms-4">
+          {t("cancel")}
+        </Button>
       )}
     </div>
   );
