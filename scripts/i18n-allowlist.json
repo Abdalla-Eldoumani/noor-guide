@@ -8,17 +8,14 @@
   ],
   "sameAsEnglish": [
     "site.name",
-    "common.switchToArabic",
-    "common.switchToEnglish",
-    "home.estimatedMinutes",
+    "path.minutes",
     "compass.north",
     "compass.east",
     "compass.south",
     "sources.grades.hasan",
     "prayers.fajr",
     "prayers.dhuhr",
-    "prayers.maghrib",
-    "player.pause"
+    "prayers.maghrib"
   ],
   "contentExempt": []
 }
