@@ -1,60 +1,44 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { fetchPrayerTimes, getNextPrayer } from "@/lib/prayer-times";
-import type { AlAdhanTimings } from "@/types/api";
+import { useEffect, useState } from "react";
+import { useNow } from "next-intl";
+import { fetchPrayerTimes, getNextPrayer, PrayerTimesError, type PrayerDay } from "@/lib/prayer-times";
 
-interface UsePrayerTimesResult {
-  timings: AlAdhanTimings | null;
-  nextPrayer: string | null;
-  loading: boolean;
-  error: string | null;
+interface Result {
+  key: string;
+  day: PrayerDay | null;
+  error: PrayerTimesError["kind"] | null;
 }
 
-export function usePrayerTimes(
-  lat: number | null,
-  lng: number | null,
-  method: number = 2
-): UsePrayerTimesResult {
-  const [timings, setTimings] = useState<AlAdhanTimings | null>(null);
-  const [nextPrayer, setNextPrayer] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+export function usePrayerTimes(lat: number | null, lng: number | null, method: number) {
+  const key = lat === null || lng === null ? null : `${lat},${lng},${method}`;
+  const [result, setResult] = useState<Result | null>(null);
+  // Re-renders once a minute so the next prayer moves on by itself.
+  const now = useNow({ updateInterval: 60000 });
 
   useEffect(() => {
-    if (lat === null || lng === null) return;
-
+    if (key === null || lat === null || lng === null) return;
     let cancelled = false;
-    setLoading(true);
-    setError(null);
-
     fetchPrayerTimes(lat, lng, method)
-      .then((t) => {
-        if (cancelled) return;
-        setTimings(t);
-        setNextPrayer(getNextPrayer(t));
+      .then((day) => {
+        if (!cancelled) setResult({ key, day, error: null });
       })
-      .catch((e) => {
-        if (cancelled) return;
-        setError(e instanceof Error ? e.message : "Failed to load prayer times");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
+      .catch((e: unknown) => {
+        if (!cancelled) setResult({ key, day: null, error: e instanceof PrayerTimesError ? e.kind : "network" });
       });
-
     return () => {
       cancelled = true;
     };
-  }, [lat, lng, method]);
+  }, [key, lat, lng, method]);
 
-  // Update next prayer every minute
-  useEffect(() => {
-    if (!timings) return;
-    const interval = setInterval(() => {
-      setNextPrayer(getNextPrayer(timings));
-    }, 60000);
-    return () => clearInterval(interval);
-  }, [timings]);
+  // A result for an earlier location or method does not count.
+  const current = result && result.key === key ? result : null;
+  const day = current?.day ?? null;
 
-  return { timings, nextPrayer, loading, error };
+  return {
+    day,
+    nextPrayer: day ? getNextPrayer(day.timings, now, day.timezone) : null,
+    loading: key !== null && current === null,
+    error: current?.error ?? null,
+  };
 }
