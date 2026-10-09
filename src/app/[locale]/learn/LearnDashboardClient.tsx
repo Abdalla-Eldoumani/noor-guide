@@ -1,143 +1,44 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { useProgress } from "@/hooks/useProgress";
-import { LessonCard } from "@/components/learn/LessonCard";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Button } from "@/components/ui/Button";
-import { BookOpen, ArrowRight, BookA } from "lucide-react";
-import type { LearningModule } from "@/types/content";
-import { pickLocalized } from "@/lib/content-i18n";
+import type { ModuleSummary } from "@/lib/content";
 
-interface LearnDashboardClientProps {
-  modules: LearningModule[];
-}
-
-export function LearnDashboardClient({ modules }: LearnDashboardClientProps) {
+// Shown once the reader has started: how far along they are and where to pick
+// up. Before that the contents below are the whole page.
+export function LearnDashboardClient({ rows }: { rows: ModuleSummary[] }) {
+  const t = useTranslations("learn");
   const { progress } = useProgress();
-  const locale = useLocale();
-  const tLearn = useTranslations("learn");
-  const tNav = useTranslations("nav");
 
-  const totalLessons = modules.reduce((sum, m) => sum + m.lessons.length, 0);
-  const completedTotal = progress.completedLessons.length;
-  const overallPercent =
-    totalLessons === 0
-      ? 0
-      : Math.round((completedTotal / totalLessons) * 100);
+  if (!progress.startedAt) return null;
 
-  // Find the first incomplete module for "continue" link
-  const currentModule = modules.find((m) =>
-    m.lessons.some((l) => !progress.completedLessons.includes(l))
+  const total = rows.reduce((sum, row) => sum + row.lessons.length, 0);
+  const done = rows.reduce(
+    (sum, row) => sum + row.lessons.filter((id) => progress.completedLessons.includes(id)).length,
+    0,
   );
-
-  const currentTitle = currentModule
-    ? (pickLocalized<string>(currentModule, "title", locale) ?? currentModule.title_en)
-    : "";
+  const unfinished = (row: ModuleSummary) => row.lessons.some((id) => !progress.completedLessons.includes(id));
+  const resume =
+    rows.find((row) => row.id === progress.currentLesson && unfinished(row)) ?? rows.find(unfinished);
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <Breadcrumb
-        items={[{ label: tNav("home"), href: "/" }, { label: tNav("learn") }]}
-      />
-
-      <div className="mt-6 mb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <BookOpen className="w-8 h-8 text-primary-500" />
-          <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">
-            {tLearn("dashboardTitle")}
-          </h1>
-        </div>
-        <p className="text-muted">{tLearn("dashboardIntro")}</p>
+    <div className="mt-8 space-y-4 rounded-panel border border-rule px-5 py-5 sm:px-6">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 font-ui text-ui">
+        <span className="text-ink">{t("overallProgress")}</span>
+        <span className="text-ink-2">{t("lessonsCompleted", { completed: done, total })}</span>
       </div>
-
-      {/* Overall progress */}
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-5 mb-8">
-        <div className="flex items-center justify-between mb-3">
-          <span className="font-heading font-semibold text-ink">
-            {tLearn("overallProgress")}
-          </span>
-          <span className="text-sm text-muted">
-            {tLearn("lessonsCompleted", {
-              completed: completedTotal,
-              total: totalLessons,
-            })}
-          </span>
-        </div>
-        <ProgressBar value={overallPercent} />
-      </div>
-
-      {/* Continue where you left off */}
-      {currentModule && completedTotal > 0 && (
-        <div className="bg-primary-50 dark:bg-primary-500/10 rounded-xl p-5 mb-8">
-          <p className="text-sm font-medium text-primary-600 dark:text-primary-300 mb-2">
-            {tLearn("continueTitle")}
+      <ProgressBar value={total ? (done / total) * 100 : 0} label={t("overallProgress")} />
+      {resume && (
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+          <p className="text-small text-ink">
+            <span className="block font-ui text-caption text-ink-2">{t("continueTitle")}</span>
+            {resume.title}
           </p>
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-                {currentTitle}
-              </h3>
-              {locale !== "ar" && (
-                <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted">
-                  {currentModule.title_ar}
-                </p>
-              )}
-            </div>
-            <Button variant="primary" size="sm" href={`/learn/${currentModule.id}`}>
-              <span className="flex items-center gap-1.5">
-                {tLearn("continueButton")}
-                <ArrowRight className="w-4 h-4 rtl:rotate-180" />
-              </span>
-            </Button>
-          </div>
+          <Button href={`/learn/${resume.id}`}>{t("continueButton")}</Button>
         </div>
       )}
-
-      {/* Module roadmap */}
-      <div className="space-y-4">
-        {modules.map((module) => {
-          const moduleLessonsCompleted = module.lessons.filter((l) =>
-            progress.completedLessons.includes(l)
-          ).length;
-
-          return (
-            <LessonCard
-              key={module.id}
-              module={module}
-              completedLessons={moduleLessonsCompleted}
-              totalLessons={module.lessons.length}
-            />
-          );
-        })}
-
-        {/* Glossary */}
-        <Link
-          href="/learn/glossary"
-          className="block rounded-2xl border border-gray-200 bg-surface p-5 transition-all hover:border-primary-300 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:hover:border-primary-500"
-        >
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-100 flex items-center justify-center text-accent-600 dark:bg-accent-900/30 dark:text-accent-400">
-              <BookA className="w-6 h-6" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-                {tLearn("glossaryTitle")}
-              </h3>
-              {locale !== "ar" && (
-                <p dir="rtl" lang="ar" className="font-arabic text-sm text-muted dark:text-gray-400 mb-2">
-                  مصطلحات إسلامية
-                </p>
-              )}
-              <p className="text-sm text-muted dark:text-gray-400">
-                {tLearn("glossaryBody")}
-              </p>
-            </div>
-          </div>
-        </Link>
-      </div>
     </div>
   );
 }
