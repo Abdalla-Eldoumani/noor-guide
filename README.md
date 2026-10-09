@@ -46,7 +46,7 @@ The content follows Sunni Islam (Ahl as-Sunnah wal-Jama'ah).
 
 ### Scholarly review
 
-The 114 rulings in the wudu, salah, purity, prayer-in-practice and janazah lists carry `needs_scholarly_review: true` until a qualified reviewer signs them off, and none has been signed off yet. The schools of Islamic law differ on some of these acts and on how they are grouped and counted. The wudu and salah lessons say so at the top, and the salah lesson names the Hanbali arrangement it follows. Grep for `needs_scholarly_review` for the full list.
+The 114 rulings in the wudu, salah, purity, prayer-in-practice and janazah lists carry `needs_scholarly_review: true` until a qualified reviewer signs them off, and none has been signed off yet. The schools of Islamic law differ on some of these acts and on how they are grouped and counted. Each of those lessons says so at the top, and the salah lesson names the Hanbali arrangement it follows. Grep for `needs_scholarly_review` for the full list.
 
 ## Languages
 
