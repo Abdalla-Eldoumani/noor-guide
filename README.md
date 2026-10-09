@@ -1,129 +1,76 @@
 # Noor Guide
 
-Noor (نور) means "light" in Arabic. This is a free web app that helps new Muslims learn the basics of their faith, from beliefs to prayer to daily supplications, at their own pace.
+Noor (نور) means "light" in Arabic. Noor Guide is a free website for new Muslims and for anyone learning about Islam: first lessons in belief, purification, prayer, the short surahs and daily supplications, taken in order and at your own pace.
 
-No sign-ups. No payments. No ads. Just open it and start learning.
+There is no account, no payment and no advertising. It runs in English, Arabic and French.
 
-Available in English, Arabic, and French.
+Live site: https://noor-guide-dusky.vercel.app
 
-## Who is this for?
+## What is in it
 
-- Someone who just took their Shahada and doesn't know where to start
-- Someone curious about Islam who wants to understand the fundamentals
-- A born Muslim looking to revisit the basics
+Nine parts, meant to be read in order:
 
-## What you can learn
+1. **What Muslims believe.** The six articles of faith, with the Quran passages and hadith they rest on.
+2. **The five pillars of Islam.** Shahada, prayer, zakat, fasting and hajj, with links to the parts that go deeper.
+3. **Wudu.** A step-by-step guide to ablution, what is obligatory and what is recommended, what breaks it, and the du'a after it.
+4. **Salah.** The five daily prayers and their rakaat, every position and recitation of one rakah, the tashahhud, the salawat and the tasleem, then the conditions, pillars, required duties, recommended acts, the prostration of forgetfulness and what invalidates the prayer.
+5. **Essential surahs.** Al-Fatiha, Al-Ikhlas, Al-Falaq, An-Nas, Al-Kawthar and Al-Asr, verse by verse, with recitation audio by Mishary Alafasy and a memorisation panel.
+6. **Daily du'as.** For waking, sleeping, eating, leaving the house and entering the mosque, and for forgiveness and distress.
+7. **Purity beyond wudu.** When ghusl is required and how to do it, tayammum, and menstruation and postnatal bleeding.
+8. **Prayer in practice.** When each prayer's time begins and ends, a prayer you missed, praying while travelling, and Friday prayer.
+9. **When a Muslim dies.** The moment of death, washing and shrouding, the funeral prayer, and burial.
 
-The app is organized into nine modules, meant to be taken in order:
-
-**1. Aqeedah (Beliefs).** The six pillars of Iman: belief in Allah, the Angels, the Books, the Prophets, the Day of Judgment, and Divine Decree. Each pillar includes Quran references and relevant hadith.
-
-**2. Five Pillars of Islam.** An overview of Shahada, Salah, Zakah, Sawm, and Hajj. Links out to the detailed modules for prayer and other practices.
-
-**3. Wudu (Ablution).** A 10-step interactive guide to washing before prayer, based on Quran 5:6 and authentic Sunnah. Also sets out the three groupings a beginner needs in order to know whether their wudu counts: what is obligatory (fard), what is recommended (sunnah), and what nullifies it. Includes the dua to say after.
-
-**4. Salah (Prayer).** The most detailed module. Covers all five daily prayers, the number of rakaat for each, and walks through every position and recitation in a single rakah: standing, bowing, prostrating, sitting. Includes Tashahhud, Salawat Ibrahimiyyah, and Tasleem. It then separates the prayer into its pillars (arkan), its required duties (wajibat), and its recommended acts (sunan), so a reader who is told that Al-Fatiha is a pillar can see what that means and what the other pillars are. It also covers the prostration of forgetfulness for when you make a mistake, and what invalidates the prayer outright.
-
-**5. Essential Surahs.** The short surahs you need for prayer: Al-Fatiha, Al-Ikhlas, Al-Falaq, An-Nas, Al-Kawthar, and Al-Asr. Each has the Arabic text with full tashkeel, transliteration, English translation, and audio recitation by Mishary Alafasy (fetched from the Al Quran Cloud API). You can play individual verses or the entire surah.
-
-**6. Daily Duas.** Supplications for waking up, sleeping, eating, leaving the house, entering the mosque, and more. All with Arabic, transliteration, translation, and source references.
-
-There's also a **glossary** with 23 Islamic terms and 13 common Arabic phrases, explained in whichever language you are reading in.
+There is also a glossary of 23 terms and 13 everyday phrases.
 
 ## Tools
 
-- **Prayer Times.** Enter your location and get accurate prayer times using the AlAdhan API. Supports multiple calculation methods (ISNA, MWL, Umm Al-Qura, Egyptian).
-- **Qibla Finder.** Uses your device's GPS to calculate the direction of the Kaaba from wherever you are. Pure math, no API needed.
-- **Mosque Finder.** Helps you locate nearby mosques using map search.
+- **Prayer times** for your location from the AlAdhan API, with five calculation methods to choose from.
+- **Qibla direction**, worked out on the device from your coordinates and measured from true north.
+- **Find a mosque**, which opens Google Maps or OpenStreetMap at your location.
 
-## Progress tracking
+Your location stays in your browser. It is rounded to two decimals (about a kilometre) before it is saved or sent; only those rounded coordinates go to api.aladhan.com, and to the map site if you open one.
 
-Your progress is saved in your browser's `localStorage`. Mark lessons as complete, and the app tracks what you've finished, shows progress bars per module, and picks up where you left off. No account needed; the trade-off is that progress lives on the specific browser you used.
+## Progress
 
-## Design
+Progress is kept in the browser's `localStorage`: the parts you have finished, the part you are on, the day you started and how many days in a row you have studied. Nothing leaves the browser, so progress does not follow you to another device.
 
-The app uses a warm, calming color palette:
+## Content
 
-- Deep forest green (`#2D6A4F`) as the primary color
-- Warm gold (`#D4A574`) as an accent
-- Cream background (`#FEFCF3`)
+Every piece of religious content comes from the JSON files in `src/data/content/`. Nothing is generated at runtime. The loader in `src/lib/content.ts` filters every list on `verified === true`, so an unreviewed item never renders.
 
-Three font families: Plus Jakarta Sans for headings, Inter for body text, and Amiri for Arabic script. All Arabic text renders right-to-left at a minimum of 24px for readability.
+- **Quran.** The eight passages cited in the lessons use the Uthmani text from AlQuran Cloud; the six surahs use the simple (imla'i) script from quran.com. English meanings are Saheeh International and French meanings are Muhammad Hamidullah, and the page names the translation wherever it shows one. `npm run fetch:scripture` writes the cited passages from those editions.
+- **Hadith.** Each one names its collection and number. The English and French renderings of hadith, du'as and the words said in prayer are the project's own and are marked `translation_provenance: "project"`; the site labels them as its own translation.
+- **Citations.** Every citation has an entry in `src/data/hadith-mapping.json` recording the narrator, the wording confirmed, the grading and the source checked. `npm run verify:citations` fails the build if a citation has no entry or an entry is no longer cited.
 
-Dark mode is supported and respects your system preference.
+The content follows Sunni Islam (Ahl as-Sunnah wal-Jama'ah).
 
-No photos of people or faces anywhere. The app uses geometric patterns and abstract elements only, following Islamic guidelines.
+### Scholarly review
 
-## Content integrity
-
-This is the most important part of the project. Every piece of religious content comes from pre-verified JSON files in `src/data/content/`. Nothing is generated on the fly. Every Quran verse, hadith, dua, and instruction has a source reference (Quran chapter:verse, Sahih Bukhari number, Sahih Muslim number, etc.). Any content item that hasn't been verified is automatically filtered out and never rendered.
-
-The content follows Sunni Islam (Ahl as-Sunnah wal-Jamaa'ah). Where differences exist between madhabs, the most common position is presented with a note that variations exist.
+The 114 rulings in the wudu, salah, purity, prayer-in-practice and janazah lists carry `needs_scholarly_review: true` until a qualified reviewer signs them off, and none has been signed off yet. The schools of Islamic law differ on some of these acts and on how they are grouped and counted. The wudu and salah lessons say so at the top, and the salah lesson names the Hanbali arrangement it follows. Grep for `needs_scholarly_review` for the full list.
 
 ## Languages
 
-The site runs in English (`/`), Arabic (`/ar`), and French (`/fr`), powered by `next-intl`
-with `localePrefix: "as-needed"`. The language switcher preserves your current page and
-writes the choice to `localStorage`, so return visits land on the right prefix.
+English is served at `/`, Arabic at `/ar` and French at `/fr`, through `next-intl` with `localePrefix: "as-needed"`. The language menu keeps you on the same page, and next-intl remembers the choice in its `NEXT_LOCALE` cookie.
 
-Every user-visible string reaches all three languages: navigation, lesson prose, step
-instructions, glossary definitions, tooltips, error messages, page titles, and the
-accessibility skip link. This is enforced, not just intended. `npm run verify:i18n` fails
-the build on any key that is missing, empty, or left as English in another catalogue, and
-`npm run verify:locales` renders every page in every language and reports any text whose
-script disagrees with the page.
+Interface text lives in `messages/{en,ar,fr}.json`; lesson text lives beside the content as `_ar` and `_fr` fields. `npm run verify:i18n` runs before every build and fails on a missing, empty or untranslated key, or a content field without all three languages. `scripts/verify-locales.mjs` scans rendered pages for text in the wrong script. On `/ar` the transliteration and translations are hidden, since an Arabic reader has the source.
 
-Scripture is handled differently from prose. The project never retranslates Quran or hadith.
-Quran text is Uthmani in Arabic, Saheeh International in English, and Hamidullah in French.
-The French for the six essential surahs is the published Hamidullah edition, fetched rather
-than translated.
-`npm run fetch:scripture` writes every cited Quran passage into the content from those
-editions, for the whole cited range in all three languages, so the Arabic and the two
-translations can never describe different passages. Hadith is not fetched: its Arabic is
-read from the collection by hand and recorded in the verification record, and the English
-and French renderings are the project's own and marked `translation_provenance: "project"`.
+See `docs/I18N.md` for the details and for adding a fourth language.
 
-Every citation in the content has an entry in `src/data/hadith-mapping.json` naming the
-narrator, the wording confirmed, the grading the collection carries, and the source the
-check was made against. **All 109 have been checked**, and `npm run verify:citations` fails
-the build if one is added without an entry.
+## Design
 
-Checking them found ten references pointing at the wrong narration and two resting on
-narrations graded da'if, all corrected. Seventeen more were not being counted at all,
-because the collector keyed on a `type` tag those nodes did not carry; they are counted and
-checked now. Rulings that rest on the agreement of the schools rather than on a single
-narration say so instead of borrowing a citation.
-
-## Scholarly review
-
-The pillars, required duties, recommended acts, and nullifiers carry
-`needs_scholarly_review: true` in the content files. The acts themselves are agreed across
-the Sunni schools, but the way they are grouped and counted is not: the app follows the
-Hanbali arrangement because it separates the three tiers most clearly for a beginner, and
-says so in the lesson. A qualified reviewer should sign these off before the app is used in
-a classroom. Grep for `needs_scholarly_review` to get the full list.
-
-Transliteration and English back-translation are hidden on the Arabic locale, since a
-reader of the Arabic source does not need either.
-
-French follows the transliteration conventions used in French-speaking madrassahs
-(Abou Bakr, Aïcha, wudû', chahâda) so the text reads correctly aloud.
-
-See `docs/I18N.md` for how the pieces fit together and how to add a fourth language.
+The site is set like a small first-lessons book: one column, rules instead of cards, and a contents page for the path. Literata sets headings and lesson text, IBM Plex Sans sets labels and controls, Amiri sets the Quran and Arabic display text, and Noto Naskh Arabic sets the Arabic interface. Colours follow the reader's light or dark system setting. There are no photographs; the only ornament is a girih star band on the home page.
 
 ## Tech stack
 
-- Next.js 16.2.4 with App Router and Turbopack (static site generation, locale routing)
-- React 19.2.5, TypeScript 5.9.3
-- Tailwind CSS 4.2.4 with class-based dark mode (`@theme` CSS-first config)
-- `next-intl` 4.11.0 for routing and message dictionaries
-- `lucide-react` 0.400.0 for icons
-- `localStorage` (no database, no backend)
-- AlAdhan API for prayer times (free, no key required)
-- Al Quran Cloud API for Quran audio (free, no key required)
+- Next.js 16.4.0 (App Router, Turbopack), every page prerendered
+- React 19.3.0, TypeScript 5.9.3
+- Tailwind CSS 4.3.3, configured in CSS (`src/styles/globals.css`)
+- next-intl 4.14.9
+- lucide-react 0.400.0 for a few interface icons
+- AlAdhan API for prayer times and AlQuran Cloud for recitation audio, both free and keyless
 - Deployed on Vercel
 
-All dependencies are pinned to exact versions in `package.json`.
+Dependencies are pinned to exact versions.
 
 ## Running locally
 
@@ -139,65 +86,69 @@ Then open `http://localhost:3000`. Arabic is at `/ar`, French at `/fr`.
 Before opening a pull request:
 
 ```bash
-npm run verify:i18n   # locale parity; also runs automatically before build
 npm run lint
 npm run type-check
-npm run build
+npm run build          # runs verify:i18n and verify:citations first
 ```
 
-To check for language leaking across locales, start the dev server and run:
+To scan rendered pages for text in the wrong language, start a server and pass it the routes:
 
 ```bash
-LOCALES=ar,fr node scripts/verify-locales.mjs http://localhost:3000 / /learn /tools
+LOCALES=ar,fr node scripts/verify-locales.mjs http://localhost:3000 / /learn /learn/salah /tools
 ```
 
 ## Deploying
 
-Push to GitHub, import into Vercel, and deploy. No environment variables or API keys to configure. The optional `NEXT_PUBLIC_SITE_URL` env variable is read by `sitemap.ts` and `robots.ts` if you want canonical URLs.
+Import the repository into Vercel and deploy; there are no keys to configure. `NEXT_PUBLIC_SITE_URL` overrides the site address used in metadata, the sitemap, robots.txt and structured data, which otherwise defaults to the live host above.
 
 ## Routes
 
 | Path | Page |
 |------|------|
-| `/` | Landing page |
-| `/learn` | Learning dashboard |
-| `/learn/aqeedah` | Beliefs and creed |
-| `/learn/pillars` | Five Pillars overview |
-| `/learn/wudu` | Ablution guide |
-| `/learn/salah` | Prayer guide |
-| `/learn/surahs` | Essential surahs with audio |
-| `/learn/duas` | Daily supplications |
-| `/learn/glossary` | Islamic terms and phrases |
-| `/tools` | Tools index |
-| `/tools/prayer-times` | Prayer times by location |
+| `/` | Home |
+| `/learn` | The path, with your progress |
+| `/learn/aqeedah` | What Muslims believe |
+| `/learn/pillars` | The five pillars |
+| `/learn/wudu` | Wudu |
+| `/learn/salah` | Salah |
+| `/learn/surahs` | Essential surahs, with audio |
+| `/learn/duas` | Daily du'as |
+| `/learn/taharah` | Purity beyond wudu |
+| `/learn/prayer-practice` | Prayer in practice |
+| `/learn/janazah` | When a Muslim dies |
+| `/learn/glossary` | Terms and phrases |
+| `/tools` | Tools |
+| `/tools/prayer-times` | Prayer times |
 | `/tools/qibla` | Qibla direction |
-| `/tools/masjid-finder` | Mosque locator |
-| `/progress` | Your learning progress |
+| `/tools/masjid-finder` | Find a mosque |
+| `/progress` | Your progress |
 
-Every route exists in all three languages: `/learn/salah`, `/ar/learn/salah`, `/fr/learn/salah`.
+Every route also exists under `/ar` and `/fr`.
 
 ## Project structure
 
 ```
 src/
-├── app/                 # All pages and routes
+├── app/[locale]/        # pages; lesson pages render on the server
 ├── components/
-│   ├── ui/              # Button, Card, ProgressBar, ArabicText, AudioPlayer, RecitationBlockquote, StarOctagram, Modal
-│   ├── layout/          # Header, Footer, MobileNav, Breadcrumb, PageWrapper
-│   ├── learn/           # LessonContent, StepByStep, SurahPlayer, QuranVerse, HadithBlock
-│   └── tools/           # LocationPicker, PrayerTimesDisplay, QiblaCompass, MasjidCard
-├── config/              # PRAYER_METHODS and other configuration constants
-├── data/content/        # 9 verified JSON files with all Islamic content (read-only)
-├── hooks/               # useProgress, useSettings, useLocalStorage, usePrayerTimes
-├── lib/                 # content.ts, storage.ts, prayer-times.ts, quran-api.ts, qibla.ts, progress.ts
-├── styles/              # globals.css with Tailwind layers and a print stylesheet
-└── types/               # TypeScript interfaces for content and API responses
+│   ├── layout/          # Header, Footer, MobileNav, Breadcrumb, LocaleSwitcher
+│   ├── learn/           # LessonContent, StepByStep, RulingList, SurahPlayer, PathContents
+│   ├── tools/           # LocationPicker, LocationBar, PrayerTimesDisplay, QiblaCompass
+│   ├── seo/             # JSON-LD helpers
+│   └── ui/              # ArabicText, Button, Glyphs, SourceReference, StatusMark
+├── config/              # prayer calculation methods
+├── data/                # religious content (content/*.json) and the citation record
+├── hooks/               # useLocalStorage, useProgress, useSettings, usePrayerTimes
+├── lib/                 # content loader, site URL, prayer times, qibla, storage
+├── styles/              # globals.css: colour tokens, type scale, dark values
+└── types/
 
 scripts/
-├── verify-i18n.mjs      # static locale parity, gates the build
+├── verify-i18n.mjs      # locale parity, gates the build
+├── verify-citations.mjs # every citation has a verification entry, gates the build
 ├── verify-locales.mjs   # render-time locale scan
 ├── fetch-scripture.mjs  # writes the cited Quran passages from published editions
-└── i18n-allowlist.json  # reviewable exceptions for both verifiers
+└── i18n-allowlist.json  # reviewable exceptions for the verifiers
 ```
 
 ## License
