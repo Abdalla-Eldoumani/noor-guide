@@ -1,163 +1,168 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
+/* One closed palette and type scale. Tailwind's defaults are cleared so a
+   stray gray-500 or text-sm fails to build into anything rather than drifting
+   off the system. Dark values follow the reader's system setting below. */
 @theme {
-  /* Primary: deep Islamic green */
-  --color-primary-50: #F0FDF4;
-  --color-primary-100: #DCFCE7;
-  --color-primary-200: #BBF7D0;
-  --color-primary-300: #86EFAC;
-  --color-primary-400: #4ADE80;
-  --color-primary-500: #2D6A4F;
-  --color-primary-600: #1B4332;
-  --color-primary-700: #14532D;
-  --color-primary-800: #0F3D22;
-  --color-primary-900: #052E16;
+  --color-*: initial;
+  --color-paper: #faf7f0;
+  --color-wash: #f1ebde;
+  --color-ink: #1e2433;
+  --color-ink-2: #4a5268;
+  --color-rule: #e3dccb;
+  --color-fajr: #2f5d8a;
+  --color-ochre: #b7791f;
+  --color-sage: #5e7d63;
+  --color-clay: #9b3d2c;
+  --color-transparent: transparent;
 
-  /* Accent: warm gold */
-  --color-accent-50: #FFFBEB;
-  --color-accent-100: #FEF3C7;
-  --color-accent-200: #FDE68A;
-  --color-accent-300: #FCD34D;
-  --color-accent-400: #D4A574;
-  --color-accent-500: #C49A6C;
-  --color-accent-600: #B08D5B;
-  --color-accent-700: #92400E;
+  --font-*: initial;
+  --font-prose: var(--type-prose);
+  --font-ui: var(--type-ui);
+  --font-quran: var(--font-amiri), "Amiri", serif;
 
-  /* Surface and text */
-  --color-cream: #FEFCF3;
-  --color-surface: #FFFFFF;
-  --color-ink: #1A1A2E;
-  --color-muted: #6B7280;
+  --text-*: initial;
+  --text-display: 2.75rem;
+  --text-display--line-height: 3.25rem;
+  --text-display-sm: 2.125rem;
+  --text-display-sm--line-height: 2.625rem;
+  --text-title: 2.25rem;
+  --text-title--line-height: 2.75rem;
+  --text-title-sm: 1.875rem;
+  --text-title-sm--line-height: 2.375rem;
+  --text-section: 1.625rem;
+  --text-section--line-height: 2.125rem;
+  --text-subsection: 1.25rem;
+  --text-subsection--line-height: 1.75rem;
+  --text-body: 1.125rem;
+  --text-body--line-height: 1.875rem;
+  --text-small: 1rem;
+  --text-small--line-height: 1.625rem;
+  --text-ui: 0.9375rem;
+  --text-ui--line-height: 1.375rem;
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.25rem;
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1rem;
+  --text-quran: 1.75rem;
+  --text-quran--line-height: 3.5rem;
+  --text-quran-sm: 1.5rem;
+  --text-quran-sm--line-height: 3rem;
+  --text-arabic: 1.25rem;
+  --text-arabic--line-height: 2rem;
 
-  /* Type families */
-  --font-heading: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-arabic: "Amiri", "Noto Naskh Arabic", serif;
-  --font-ar-ui: "IBM Plex Sans Arabic", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --radius-*: initial;
+  --radius-control: 4px;
+  --radius-panel: 6px;
 
-  /* Arabic font sizes with generous line-height */
-  --text-arabic-sm: 1.25rem;
-  --text-arabic-sm--line-height: 2rem;
-  --text-arabic-base: 1.5rem;
-  --text-arabic-base--line-height: 2.5rem;
-  --text-arabic-lg: 1.875rem;
-  --text-arabic-lg--line-height: 3rem;
-  --text-arabic-xl: 2.25rem;
-  --text-arabic-xl--line-height: 3.5rem;
+  --shadow-*: initial;
 
-  /* Fluid type scale via clamp(min, base + viewport, max) */
-  --text-display: clamp(2.25rem, 1.5rem + 2.5vw, 3.75rem);
-  --text-display--line-height: 1.1;
-  --text-h1: clamp(1.875rem, 1.5rem + 1.25vw, 2.5rem);
-  --text-h1--line-height: 1.2;
-  --text-h2: clamp(1.375rem, 1.125rem + 0.75vw, 1.75rem);
-  --text-h2--line-height: 1.3;
-  --text-h3: clamp(1.125rem, 1rem + 0.375vw, 1.375rem);
-  --text-h3--line-height: 1.4;
+  --container-book: 42rem;
+
+  --ease-calm: cubic-bezier(0.2, 0, 0, 1);
 }
 
 @layer base {
+  :root {
+    color-scheme: light dark;
+    --type-prose: var(--font-literata), Georgia, var(--font-amiri), serif;
+    --type-ui: var(--font-plex), system-ui, sans-serif, var(--font-amiri);
+  }
+
+  :root:lang(ar) {
+    --type-prose: var(--font-naskh), var(--font-amiri), serif;
+    --type-ui: var(--font-naskh), system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-paper: #12161f;
+      --color-wash: #1a1f2a;
+      --color-ink: #ece7dc;
+      --color-ink-2: #a9b0c0;
+      --color-rule: #2a3140;
+      --color-fajr: #8fb4db;
+      --color-ochre: #d9a441;
+      --color-sage: #8fb096;
+      --color-clay: #e39a87;
+    }
+  }
+
   html {
-    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
-    background: var(--color-cream);
+    background: var(--color-paper);
     color: var(--color-ink);
-    font-family: var(--font-body);
+    font-family: var(--font-prose);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-optical-sizing: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .dark body,
-  html.dark body {
-    background: rgb(17 24 39); /* gray-900 */
-    color: rgb(243 244 246); /* gray-100 */
+  :lang(ar) body {
+    line-height: 2;
   }
 
-  /* Arabic text defaults */
-  [dir="rtl"] {
-    font-family: var(--font-arabic);
-    line-height: 2;
+  :focus-visible {
+    outline: 2px solid var(--color-fajr);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-ochre) 30%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
   }
 }
 
 @layer components {
-  /* Arabic text block styling */
-  .arabic-text {
-    @apply font-arabic text-arabic-base leading-loose;
-    direction: rtl;
-    unicode-bidi: embed;
+  /* An inline link in running text. */
+  .text-link {
+    color: var(--color-fajr);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-thickness 150ms var(--ease-calm);
+  }
+  .text-link:hover {
+    text-decoration-thickness: 2px;
   }
 
-  .arabic-text-lg {
-    @apply font-arabic text-arabic-lg leading-loose;
-    direction: rtl;
-    unicode-bidi: embed;
+  .translit {
+    font-family: var(--font-literata-italic), Georgia, serif;
+    font-style: italic;
+    color: var(--color-ink-2);
   }
 
-  /* Transliteration styling */
-  .transliteration {
-    @apply font-mono text-sm text-muted italic;
+  .oldstyle {
+    font-variant-numeric: oldstyle-nums proportional-nums;
   }
 
-  /* Source reference badge */
-  .source-ref {
-    @apply inline-flex items-center gap-1 text-xs text-primary-500 bg-primary-50
-           dark:text-primary-300 dark:bg-primary-500/10
-           px-2 py-0.5 rounded-full font-medium;
-  }
-
-  /* Card component base */
-  .card {
-    @apply bg-surface rounded-2xl border border-gray-100 p-6
-           shadow-sm transition-shadow hover:shadow-md
-           dark:bg-gray-800 dark:border-gray-700;
-  }
-
-  /* Step indicator */
-  .step-circle {
-    @apply w-10 h-10 rounded-full flex items-center justify-center
-           text-sm font-bold transition-colors;
-  }
-
-  .step-circle-active {
-    @apply bg-primary-500 text-white;
-  }
-
-  .step-circle-complete {
-    @apply bg-primary-100 text-primary-600;
-  }
-
-  .step-circle-pending {
-    @apply bg-gray-100 text-gray-400;
-  }
-}
-
-@layer utilities {
-  /* Ensure Arabic text has minimum readable size */
-  .min-arabic-size {
-    min-font-size: 1.25rem;
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Dark-mode color tokens. Components that explicitly override with
-     dark:text-* classes still win because of cascade order. */
-  .dark .text-ink {
-    color: rgb(243 244 246); /* gray-100 */
-  }
-  .dark .text-muted {
-    color: rgb(156 163 175); /* gray-400 */
+  /* Dot leaders between a title and its page reference. */
+  .leader {
+    flex: 1 1 1.5rem;
+    min-width: 1.5rem;
+    align-self: flex-end;
+    height: 0.6em;
+    margin-bottom: 0.45em;
+    background-image: radial-gradient(circle, var(--color-ink-2) 0.7px, transparent 1.1px);
+    background-size: 7px 4px;
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    opacity: 0.55;
   }
 }
 
@@ -165,42 +170,12 @@
   header,
   footer,
   nav,
-  button,
-  [role="navigation"] {
+  button {
     display: none !important;
   }
 
   body {
     background: #fff !important;
     color: #000 !important;
-  }
-
-  a[href]:not([href^="#"])::after {
-    content: " (" attr(href) ")";
-    font-size: 0.85em;
-    color: #555;
-    word-break: break-all;
-  }
-
-  blockquote {
-    border-color: #888 !important;
-    page-break-inside: avoid;
-  }
-
-  .arabic-text,
-  .arabic-text-lg {
-    page-break-inside: avoid;
-  }
-
-  h1,
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  img,
-  svg {
-    max-width: 100%;
-    page-break-inside: avoid;
   }
 }
