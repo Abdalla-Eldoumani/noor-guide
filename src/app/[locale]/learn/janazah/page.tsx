@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import { getJanazahData, getLessonIdsForModule, getModuleById } from "@/lib/content";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getJanazahData, getModuleById, getModuleNav } from "@/lib/content";
 import { pickLocalized } from "@/lib/content-i18n";
 import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
@@ -16,9 +16,8 @@ export async function generateMetadata({ params }: Params) {
 
 export default async function JanazahPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const data = getJanazahData();
-  const lessonIds = getLessonIdsForModule("janazah");
   const moduleData = getModuleById("janazah");
 
   return (
@@ -32,12 +31,7 @@ export default async function JanazahPage({ params }: Params) {
           courseName: tLearn("dashboardTitle"),
         })}
       />
-      <SectionedLesson
-        data={data}
-        lessonIds={lessonIds}
-      prevHref="/learn/prayer-practice"
-      prevModuleId="prayer-practice"
-      />
+      <SectionedLesson data={getJanazahData()} nav={getModuleNav("janazah", locale)} />
     </PageWrapper>
   );
 }
