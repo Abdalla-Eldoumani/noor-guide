@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import { getTaharahData, getLessonIdsForModule, getModuleById } from "@/lib/content";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getTaharahData, getModuleById, getModuleNav } from "@/lib/content";
 import { pickLocalized } from "@/lib/content-i18n";
 import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
@@ -16,9 +16,8 @@ export async function generateMetadata({ params }: Params) {
 
 export default async function TaharahPage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const data = getTaharahData();
-  const lessonIds = getLessonIdsForModule("taharah");
   const moduleData = getModuleById("taharah");
 
   return (
@@ -32,14 +31,7 @@ export default async function TaharahPage({ params }: Params) {
           courseName: tLearn("dashboardTitle"),
         })}
       />
-      <SectionedLesson
-        data={data}
-        lessonIds={lessonIds}
-      prevHref="/learn/duas"
-      prevModuleId="duas"
-      nextHref="/learn/prayer-practice"
-      nextModuleId="prayer-practice"
-      />
+      <SectionedLesson data={getTaharahData()} nav={getModuleNav("taharah", locale)} />
     </PageWrapper>
   );
 }
