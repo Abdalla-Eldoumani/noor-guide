@@ -1,8 +1,6 @@
-// Returns a JSON-LD payload describing a single lesson page as a
-// schema.org LearningResource that is part of the Noor Guide Course.
+import { absoluteUrl } from "@/lib/site";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noorguide.app";
-
+// A lesson page as a schema.org LearningResource inside the course.
 export type LessonLdInput = {
   id: string;
   title: string;
@@ -20,14 +18,12 @@ export function lessonJsonLd({
   courseName,
   estimatedMinutes,
 }: LessonLdInput): Record<string, unknown> {
-  const localePath = locale === "en" ? "" : `/${locale}`;
-
   return {
     "@context": "https://schema.org",
     "@type": "LearningResource",
     name: title,
     description,
-    url: `${SITE_URL}${localePath}/learn/${id}`,
+    url: absoluteUrl(locale, `/learn/${id}`),
     inLanguage: locale,
     learningResourceType: "Lesson",
     educationalUse: "instruction",
@@ -35,7 +31,7 @@ export function lessonJsonLd({
     isPartOf: {
       "@type": "Course",
       name: courseName,
-      url: `${SITE_URL}${localePath}/learn`,
+      url: absoluteUrl(locale, "/learn"),
     },
   };
 }
