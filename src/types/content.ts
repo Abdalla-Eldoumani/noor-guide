@@ -1,10 +1,16 @@
-// Types for all content JSON schemas
+// Types for the content JSON. Locale siblings (`_ar`, `_fr`) are read by
+// `pickLocalized`, so only the fields the code names directly are listed.
+
+// Where an English rendering came from: a published edition fetched from an
+// API, or the project's own translation.
+export type Provenance = "fetched" | "project";
 
 export interface QuranReference {
   reference: string;
   arabic: string;
   transliteration: string;
   translation: string;
+  translation_provenance?: Provenance;
 }
 
 export interface HadithSource {
@@ -13,6 +19,7 @@ export interface HadithSource {
   text_en?: string;
   text_ar?: string;
   grade: "sahih" | "hasan" | "n/a";
+  translation_provenance?: Provenance;
 }
 
 export interface QuranSource {
@@ -27,6 +34,7 @@ export interface ContentSource {
   text_en?: string;
   text_ar?: string;
   grade?: "sahih" | "hasan" | "n/a";
+  translation_provenance?: Provenance;
 }
 
 // Aqeedah (Six Pillars of Iman)
@@ -45,6 +53,7 @@ export interface AqeedahPillar {
     text_ar?: string;
     reference: string;
     grade: string;
+    translation_provenance?: Provenance;
   };
   verified: boolean;
 }
@@ -74,6 +83,7 @@ export interface IslamPillar {
     transliteration: string;
     translation: string;
     translation_ar?: string;
+    translation_provenance?: Provenance;
   };
   link_to_module?: string;
   notes?: string;
@@ -114,6 +124,7 @@ export interface WuduStep {
     transliteration: string;
     translation: string;
     translation_ar?: string;
+    translation_provenance?: Provenance;
   };
   source?: ContentSource;
   verified: boolean;
@@ -162,6 +173,7 @@ export interface WuduData {
     transliteration: string;
     translation: string;
     translation_ar?: string;
+    translation_provenance?: Provenance;
     source: ContentSource;
     verified: boolean;
   };
@@ -185,6 +197,7 @@ export interface Recitation {
   transliteration: string;
   translation: string;
   translation_ar?: string;
+  translation_provenance?: Provenance;
 }
 
 export interface SalahStep {
@@ -293,7 +306,6 @@ export interface Surah {
   priority: string;
   priority_ar?: string;
   verses: Verse[];
-  audio_api_url: string;
   verified: boolean;
 }
 
@@ -304,10 +316,9 @@ export interface SurahsData {
   introduction: {
     content_en: string;
     content_ar?: string;
-    notes: string;
-    notes_ar?: string;
   };
   surahs: Surah[];
+  translation_sources: Record<string, string>;
 }
 
 // Duas
@@ -325,6 +336,7 @@ export interface Dua {
     reference: string;
     grade: string;
   };
+  translation_provenance?: Provenance;
   verified: boolean;
 }
 
@@ -370,6 +382,7 @@ export interface ArabicPhrase {
   translation_ar?: string;
   usage: string;
   usage_ar?: string;
+  translation_provenance?: Provenance;
   verified: boolean;
 }
 
@@ -401,14 +414,14 @@ export interface LearningPathData {
 
 // localStorage schemas
 export interface NoorSettings {
-  theme: "light" | "dark";
-  language: "en";
   prayerMethod: number;
-  location: { lat: number; lng: number; name: string } | null;
+  // Rounded to two decimals before it is stored or sent anywhere.
+  location: { lat: number; lng: number } | null;
 }
 
 export interface NoorProgress {
   completedLessons: string[];
+  // The module the reader last opened.
   currentLesson: string | null;
   startedAt: string;
   lastActiveAt: string;
@@ -423,7 +436,6 @@ export interface LessonSection {
   heading: string;
   heading_ar?: string;
   heading_fr?: string;
-  emphasis: "required" | "recommended";
   items: RulingItem[];
 }
 
