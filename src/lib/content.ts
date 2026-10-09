@@ -1,5 +1,5 @@
-// Content loader: single gateway for all religious content
-// Every accessor filters verified === true
+// Server-side reads of the religious content. Client components receive what
+// they need as props, so none of this JSON ends up in a browser bundle.
 
 import type {
   AqeedahData,
@@ -12,6 +12,7 @@ import type {
   RulingItem,
   SectionedModule,
   SalahData,
+  SalahStep,
   SurahsData,
   Surah,
   DuasData,
@@ -23,13 +24,14 @@ import type {
   LearningPathData,
   LearningModule,
 } from "@/types/content";
+import { pickLocalized } from "@/lib/content-i18n";
 
 import aqeedahJson from "@/data/content/aqeedah.json";
 import pillarsJson from "@/data/content/pillars.json";
 import wuduJson from "@/data/content/wudu-steps.json";
-import taharah from "@/data/content/taharah.json";
-import practice from "@/data/content/prayer-practice.json";
-import janazah from "@/data/content/janazah.json";
+import taharahJson from "@/data/content/taharah.json";
+import practiceJson from "@/data/content/prayer-practice.json";
+import janazahJson from "@/data/content/janazah.json";
 import salahJson from "@/data/content/salah-steps.json";
 import surahsJson from "@/data/content/surahs.json";
 import duasJson from "@/data/content/duas-daily.json";
@@ -37,7 +39,6 @@ import glossaryJson from "@/data/content/glossary.json";
 import phrasesJson from "@/data/content/arabic-phrases.json";
 import learningPathJson from "@/data/content/learning-path.json";
 
-// Cast the raw JSON to our typed interfaces
 const aqeedah = aqeedahJson as unknown as AqeedahData;
 const pillars = pillarsJson as unknown as PillarsData;
 const wudu = wuduJson as unknown as WuduData;
@@ -48,13 +49,16 @@ const glossary = glossaryJson as unknown as GlossaryData;
 const phrases = phrasesJson as unknown as ArabicPhrasesData;
 const learningPath = learningPathJson as unknown as LearningPathData;
 
+const verifiedOnly = <T extends { verified: boolean }>(items: T[]): T[] =>
+  items.filter((item) => item.verified === true);
+
 // --- Aqeedah ---
 export function getAqeedahData(): AqeedahData {
   return aqeedah;
 }
 
 export function getAqeedahPillars(): AqeedahPillar[] {
-  return aqeedah.pillars.filter((p) => p.verified === true);
+  return verifiedOnly(aqeedah.pillars);
 }
 
 // --- Five Pillars ---
@@ -63,7 +67,7 @@ export function getPillarsData(): PillarsData {
 }
 
 export function getIslamPillars(): IslamPillar[] {
-  return pillars.pillars.filter((p) => p.verified === true);
+  return verifiedOnly(pillars.pillars);
 }
 
 // --- Wudu ---
@@ -72,43 +76,19 @@ export function getWuduData(): WuduData {
 }
 
 export function getWuduSteps(): WuduStep[] {
-  return wudu.steps.filter((s) => s.verified === true);
+  return verifiedOnly(wudu.steps);
 }
 
 export function getWuduBreakers(): WuduBreaker[] {
-  return wudu.what_breaks_wudu.filter((b) => b.verified === true);
+  return verifiedOnly(wudu.what_breaks_wudu);
 }
 
 export function getWuduObligations(): RulingItem[] {
-  return wudu.obligations.filter((o) => o.verified === true);
+  return verifiedOnly(wudu.obligations);
 }
 
 export function getWuduSunan(): RulingItem[] {
-  return wudu.sunan.filter((o) => o.verified === true);
-}
-
-export function getSalahShurut(): RulingItem[] {
-  return salah.shurut.filter((o) => o.verified === true);
-}
-
-export function getSalahArkan(): RulingItem[] {
-  return salah.arkan.filter((o) => o.verified === true);
-}
-
-export function getSalahWajibat(): RulingItem[] {
-  return salah.wajibat.filter((o) => o.verified === true);
-}
-
-export function getSalahSunan(): RulingItem[] {
-  return salah.sunan.filter((o) => o.verified === true);
-}
-
-export function getSujudAsSahw(): RulingItem[] {
-  return salah.sujud_as_sahw.filter((o) => o.verified === true);
-}
-
-export function getSalahNullifiers(): RulingItem[] {
-  return salah.nullifiers.filter((o) => o.verified === true);
+  return verifiedOnly(wudu.sunan);
 }
 
 // --- Salah ---
@@ -116,8 +96,32 @@ export function getSalahData(): SalahData {
   return salah;
 }
 
-export function getSalahSteps() {
-  return salah.steps_of_one_rakah.filter((s) => s.verified === true);
+export function getSalahSteps(): SalahStep[] {
+  return verifiedOnly(salah.steps_of_one_rakah);
+}
+
+export function getSalahShurut(): RulingItem[] {
+  return verifiedOnly(salah.shurut);
+}
+
+export function getSalahArkan(): RulingItem[] {
+  return verifiedOnly(salah.arkan);
+}
+
+export function getSalahWajibat(): RulingItem[] {
+  return verifiedOnly(salah.wajibat);
+}
+
+export function getSalahSunan(): RulingItem[] {
+  return verifiedOnly(salah.sunan);
+}
+
+export function getSujudAsSahw(): RulingItem[] {
+  return verifiedOnly(salah.sujud_as_sahw);
+}
+
+export function getSalahNullifiers(): RulingItem[] {
+  return verifiedOnly(salah.nullifiers);
 }
 
 // --- Surahs ---
@@ -126,11 +130,7 @@ export function getSurahsData(): SurahsData {
 }
 
 export function getSurahs(): Surah[] {
-  return surahs.surahs.filter((s) => s.verified === true);
-}
-
-export function getSurahById(id: string): Surah | undefined {
-  return surahs.surahs.find((s) => s.id === id && s.verified === true);
+  return verifiedOnly(surahs.surahs);
 }
 
 // --- Duas ---
@@ -139,27 +139,42 @@ export function getDuasData(): DuasData {
 }
 
 export function getDuaCategories(): DuaCategory[] {
-  return duas.categories.map((cat) => ({
-    ...cat,
-    duas: cat.duas.filter((d) => d.verified === true),
-  }));
+  return duas.categories.map((cat) => ({ ...cat, duas: verifiedOnly(cat.duas) }));
 }
 
 // --- Glossary ---
 export function getGlossaryTerms(): GlossaryTerm[] {
-  return glossary.terms.filter((t) => t.verified === true);
+  return verifiedOnly(glossary.terms);
 }
 
-// --- Arabic Phrases ---
 export function getArabicPhrases(): ArabicPhrase[] {
-  return phrases.phrases.filter((p) => p.verified === true);
+  return verifiedOnly(phrases.phrases);
 }
 
-// --- Learning Path ---
-export function getLearningPath(): LearningPathData {
-  return learningPath;
+// --- Modules built from an introduction plus sections ---
+function withVerifiedItems(data: SectionedModule): SectionedModule {
+  return {
+    ...data,
+    sections: data.sections.map((section) => ({
+      ...section,
+      items: verifiedOnly(section.items),
+    })),
+  };
 }
 
+export function getTaharahData(): SectionedModule {
+  return withVerifiedItems(taharahJson as SectionedModule);
+}
+
+export function getPrayerPracticeData(): SectionedModule {
+  return withVerifiedItems(practiceJson as SectionedModule);
+}
+
+export function getJanazahData(): SectionedModule {
+  return withVerifiedItems(janazahJson as SectionedModule);
+}
+
+// --- Learning path ---
 export function getLearningModules(): LearningModule[] {
   return learningPath.modules;
 }
@@ -169,19 +184,59 @@ export function getModuleById(id: string): LearningModule | undefined {
 }
 
 export function getLessonIdsForModule(moduleId: string): string[] {
-  const mod = learningPath.modules.find((m) => m.id === moduleId);
-  return mod ? mod.lessons : [];
+  return getModuleById(moduleId)?.lessons ?? [];
 }
 
-// --- Modules added after the original six ---
-export function getTaharahData(): SectionedModule {
-  return taharah as SectionedModule;
+export interface ModuleSummary {
+  id: string;
+  number: number;
+  title: string;
+  titleAr: string;
+  lessons: string[];
+  minutes: number;
 }
 
-export function getPrayerPracticeData(): SectionedModule {
-  return practice as SectionedModule;
+export function getModuleSummaries(locale: string): ModuleSummary[] {
+  return learningPath.modules.map((m, index) => ({
+    id: m.id,
+    number: index + 1,
+    title: pickLocalized<string>(m, "title", locale) ?? m.title_en,
+    titleAr: m.title_ar,
+    lessons: m.lessons,
+    minutes: m.estimatedMinutes,
+  }));
 }
 
-export function getJanazahData(): SectionedModule {
-  return janazah as SectionedModule;
+export interface ModuleNavLink {
+  href: string;
+  title: string;
+}
+
+export interface ModuleNav {
+  moduleId: string;
+  number: number;
+  total: number;
+  lessonIds: string[];
+  prev?: ModuleNavLink;
+  next?: ModuleNavLink;
+}
+
+// Previous and next follow the order of the learning path, so adding a module
+// to learning-path.json links it in without touching any page.
+export function getModuleNav(moduleId: string, locale: string): ModuleNav {
+  const modules = learningPath.modules;
+  const index = modules.findIndex((m) => m.id === moduleId);
+  const link = (m?: LearningModule): ModuleNavLink | undefined =>
+    m && {
+      href: `/learn/${m.id}`,
+      title: pickLocalized<string>(m, "title", locale) ?? m.title_en,
+    };
+  return {
+    moduleId,
+    number: index + 1,
+    total: modules.length,
+    lessonIds: modules[index]?.lessons ?? [],
+    prev: link(modules[index - 1]),
+    next: link(modules[index + 1]),
+  };
 }
