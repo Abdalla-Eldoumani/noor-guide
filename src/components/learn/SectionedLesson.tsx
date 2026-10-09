@@ -15,6 +15,7 @@ export function SectionedLesson({ data, nav }: { data: SectionedModule; nav: Mod
       nav={nav}
       title={pickLocalized<string>(data, "title", locale) ?? data.title_en}
       titleAr={locale === "ar" ? undefined : data.title_ar}
+      schoolsNote
     >
       <p className="text-body text-ink">
         {pickLocalized<string>(data.introduction, "content", locale) ?? data.introduction.content_en}
