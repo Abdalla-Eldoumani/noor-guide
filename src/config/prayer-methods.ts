@@ -1,15 +1,9 @@
-// AlAdhan calculation method ids — see https://aladhan.com/calculation-methods
-export type PrayerMethod = {
-  id: number;
-  name: string;
-};
-
-export const PRAYER_METHODS: PrayerMethod[] = [
-  { id: 2, name: "Islamic Society of North America (ISNA)" },
-  { id: 3, name: "Muslim World League (MWL)" },
-  { id: 4, name: "Umm Al-Qura University, Makkah" },
-  { id: 5, name: "Egyptian General Authority of Survey" },
-  { id: 1, name: "University of Islamic Sciences, Karachi" },
-];
-
-export const DEFAULT_PRAYER_METHOD = 2;
+// AlAdhan calculation method ids (https://aladhan.com/calculation-methods),
+// with the message key that names each one.
+export const PRAYER_METHODS = [
+  { id: 2, key: "isna" },
+  { id: 3, key: "mwl" },
+  { id: 4, key: "ummAlQura" },
+  { id: 5, key: "egypt" },
+  { id: 1, key: "karachi" },
+] as const;
