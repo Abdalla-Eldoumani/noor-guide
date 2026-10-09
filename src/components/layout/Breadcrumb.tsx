@@ -30,8 +30,9 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
           return (
+            // The separator trails its item, so a wrapped line starts with a
+            // page name rather than a slash.
             <li key={item.label} className="flex items-center gap-2">
-              {index > 0 && <span aria-hidden="true">/</span>}
               {isLast || !item.href ? (
                 <span aria-current={isLast ? "page" : undefined}>{item.label}</span>
               ) : (
@@ -42,6 +43,7 @@ export function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
                   {item.label}
                 </Link>
               )}
+              {!isLast && <span aria-hidden="true">/</span>}
             </li>
           );
         })}
