@@ -1,49 +1,27 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Home, BookOpen, ArrowRight } from "lucide-react";
 import { StarOctagram } from "@/components/ui/StarOctagram";
 
 export default function NotFound() {
   const t = useTranslations("notFound");
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4">
-      <div className="max-w-md w-full text-center">
-        <div className="mx-auto mb-8 w-32 h-32 relative text-primary-500 dark:text-primary-300">
-          <StarOctagram size={128} className="absolute inset-0" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="font-heading text-3xl font-bold text-primary-600 dark:text-primary-200">
-              404
-            </span>
-          </div>
-        </div>
-
-        <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">
-          {t("title")}
-        </h1>
-
-        <p className="mt-4 text-muted dark:text-gray-400 leading-relaxed">
-          {t("body")}
-        </p>
-
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 bg-primary-500 text-white px-6 py-3 rounded-xl font-heading font-semibold hover:bg-primary-600 transition-colors"
-          >
-            <Home size={18} />
+    <div className="mx-auto w-full max-w-book px-5 pt-16 sm:px-8 sm:pt-24">
+      <StarOctagram size={56} className="text-ochre" />
+      <h1 className="mt-6 font-prose text-title-sm font-semibold text-ink sm:text-title">{t("title")}</h1>
+      <p className="mt-3 max-w-prose text-body text-ink-2">{t("body")}</p>
+      <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-ui text-ui">
+        <li>
+          <Link href="/" className="text-link inline-flex min-h-11 items-center">
             {t("home")}
           </Link>
-          <Link
-            href="/learn"
-            className="inline-flex items-center gap-2 border-2 border-primary-500 text-primary-500 px-6 py-3 rounded-xl font-heading font-semibold hover:bg-primary-50 transition-colors dark:hover:bg-primary-900/20"
-          >
-            <BookOpen size={18} />
+        </li>
+        <li>
+          <Link href="/learn" className="text-link inline-flex min-h-11 items-center">
             {t("learn")}
-            <ArrowRight size={16} />
           </Link>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }
