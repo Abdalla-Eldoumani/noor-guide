@@ -1,13 +1,10 @@
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import type { Provenance } from "@/types/content";
 
-// Reads a field from a content object that may have `_en`, `_ar`, etc.
-// siblings, returning the locale-specific value when present and falling back
-// to English otherwise. The convention covers two field-naming styles in the
-// content JSON:
-//   1. Suffixed: title_en + title_ar  -> picks `title_${locale}` then `title_en`
-//   2. Bare-named: key_points + key_points_ar -> picks `key_points_${locale}` then `key_points`
-// When neither is available, returns undefined so callers can decide how to
-// surface the gap (typically `?? ""`).
+// Reads a field that may have locale siblings, falling back to English. Two
+// naming styles exist in the content JSON:
+//   1. Suffixed: title_en + title_ar picks `title_${locale}`, then `title_en`
+//   2. Bare: key_points + key_points_ar picks `key_points_${locale}`, then `key_points`
 export function pickLocalized<T = string>(
   obj: object | null | undefined,
   field: string,
@@ -26,13 +23,20 @@ export function pickLocalized<T = string>(
   return undefined;
 }
 
-// Client-side hook variant. Returns a `pick(obj, field)` function bound to the
-// active locale. Use inside any `"use client"` component within
-// `NextIntlClientProvider`.
 export function useLocalizedContent() {
   const locale = useLocale();
-  return <T = string>(
-    obj: object | null | undefined,
-    field: string,
-  ): T | undefined => pickLocalized<T>(obj, field, locale);
+  return <T = string>(obj: object | null | undefined, field: string): T | undefined =>
+    pickLocalized<T>(obj, field, locale);
+}
+
+// Names where an English or French rendering came from. Every fetched
+// rendering in the content is the Qur'an, in Saheeh International or
+// Hamidullah; the rest are the project's own. Arabic readers see no rendering.
+export function useTranslationCredit() {
+  const t = useTranslations("sources");
+  const locale = useLocale();
+  return (provenance?: Provenance): string | undefined => {
+    if (locale === "ar" || !provenance) return undefined;
+    return provenance === "fetched" ? t("creditQuran") : t("creditProject");
+  };
 }
