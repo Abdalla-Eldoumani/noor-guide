@@ -1,17 +1,13 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { BookOpen } from "lucide-react";
 
 interface SourceReferenceProps {
   type: "quran" | "hadith" | "scholarly_consensus";
   reference: string;
-  className?: string;
 }
 
-// Content stores references as an English collection name followed by a
-// locator, for example "Sahih Bukhari 6312" or "Quran 5:6". Splitting the two
-// lets the collection name be translated while the locator stays a numeral.
+// Content stores a reference as an English collection name and a locator, such
+// as "Sahih Bukhari 6312" or "Quran 5:6". Splitting them lets the name be
+// translated while the locator stays as written.
 const COLLECTION_SLUGS: Record<string, string> = {
   "sahih bukhari": "bukhari",
   "sahih al-bukhari": "bukhari",
@@ -29,42 +25,25 @@ function splitReference(reference: string): { slug?: string; locator: string } {
   return { slug: COLLECTION_SLUGS[name.trim().toLowerCase()], locator };
 }
 
-export function SourceReference({
-  type,
-  reference,
-  className = "",
-}: SourceReferenceProps) {
+export function SourceReference({ type, reference }: SourceReferenceProps) {
   const t = useTranslations("sources");
-  const label =
-    type === "quran"
-      ? t("quran")
-      : type === "hadith"
-        ? t("hadith")
-        : t("consensus");
 
-  // For consensus the label already says everything; repeating the raw marker
-  // would print untranslated English next to the localized label.
   if (type === "scholarly_consensus") {
-    return (
-      <span className={`source-ref ${className}`}>
-        <BookOpen size={12} aria-hidden="true" />
-        <span>{label}</span>
-      </span>
-    );
+    return <p className="font-ui text-caption text-ink-2">{t("consensus")}</p>;
   }
 
   const { slug, locator } = splitReference(reference);
-  const collection = slug ? t(`collections.${slug}`) : null;
-
   return (
-    <span className={`source-ref ${className}`}>
-      <BookOpen size={12} aria-hidden="true" />
-      <span>
-        {label}: {collection ? `${collection} ` : ""}
-        <span dir="ltr">{collection ? locator : reference}</span>
-      </span>
-    </span>
+    <p className="font-ui text-caption text-ink-2">
+      {slug ? (
+        <>
+          {t(`collections.${slug}`)} <span dir="ltr">{locator}</span>
+        </>
+      ) : (
+        <span dir="ltr" lang="en">
+          {reference}
+        </span>
+      )}
+    </p>
   );
 }
-
-export default SourceReference;
