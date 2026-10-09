@@ -2,7 +2,7 @@
   "site": {
     "name": "Noor Guide",
     "subtitle": "Premières leçons d'islam",
-    "description": "Apprends les fondements de l'islam à ton rythme : la croyance, la prière, le Coran et les invocations du quotidien, avec la source de chaque enseignement."
+    "description": "Apprends les fondements de l'islam à ton rythme\u00a0: la croyance, la prière, le Coran et les invocations du quotidien, avec la source de chaque enseignement."
   },
   "common": {
     "skipToContent": "Aller au contenu principal",
@@ -30,7 +30,7 @@
     "sourcesHeading": "À propos des sources",
     "sourcesQuran": "L'arabe du Coran est cité d'après des éditions publiées du texte, avec sa sourate et son verset. Son sens est rendu par la traduction de Muhammad Hamidullah.",
     "sourcesHadith": "Chaque hadîth indique son recueil et son numéro pour que tu puisses le retrouver. Les traductions des hadîths, des invocations et des paroles de la prière sont les nôtres, sauf mention contraire.",
-    "sourcesReview": "La plupart des règles n'ont pas encore été vérifiées par un savant : avant de t'appuyer sur un détail, demande à un imam ou à un enseignant près de chez toi. Quand les écoles juridiques divergent, les leçons le signalent."
+    "sourcesReview": "La plupart des règles n'ont pas encore été vérifiées par un savant\u00a0: avant de t'appuyer sur un détail, demande à un imam ou à un enseignant près de chez toi. Quand les écoles juridiques divergent, les leçons le signalent."
   },
   "path": {
     "lessons": "{count, plural, one {# leçon} other {# leçons}}",
@@ -41,12 +41,12 @@
   },
   "learn": {
     "dashboardTitle": "Ton parcours",
-    "dashboardIntro": "Prends les parties dans l'ordre : chacune s'appuie sur la précédente. Ta progression reste dans ce navigateur.",
+    "dashboardIntro": "Prends les parties dans l'ordre\u00a0: chacune s'appuie sur la précédente. Ta progression reste dans ce navigateur.",
     "overallProgress": "Progression globale",
     "lessonsCompleted": "{completed} leçons sur {total}",
     "continueTitle": "Reprends où tu t'es arrêté",
     "continueButton": "Continuer",
-    "glossaryLead": "Un mot que tu ne connais pas ?",
+    "glossaryLead": "Un mot que tu ne connais pas\u00a0?",
     "glossaryLink": "Le glossaire explique les termes et expressions courants."
   },
   "lesson": {
@@ -57,7 +57,7 @@
     "alreadyComplete": "Tu as terminé cette partie.",
     "pagerLabel": "Autres parties",
     "stepsLabel": "Étapes",
-    "stepButton": "Étape {number} : {title}",
+    "stepButton": "Étape {number}\u00a0: {title}",
     "stepIndicator": "Étape {current} sur {total}",
     "stepPrev": "Étape précédente",
     "stepNext": "Étape suivante",
@@ -89,12 +89,12 @@
     "tableHeaderSunnahBefore": "Sunna avant",
     "tableHeaderSunnahAfter": "Sunna après",
     "rakahHeading": "Les étapes d'une rak'a",
-    "rakahSubheading": "Chaque unité de prière suit ces étapes. Le nombre de rak'ât varie selon la prière ; voir le tableau ci-dessus.",
+    "rakahSubheading": "Chaque unité de prière suit ces étapes. Le nombre de rak'ât varie selon la prière\u00a0; voir le tableau ci-dessus.",
     "positionStanding": "Debout",
     "positionBowing": "Inclinaison",
     "positionProstrating": "Prosternation",
     "positionSitting": "Assis",
-    "whenLabel": "Quand : {when}",
+    "whenLabel": "Quand\u00a0: {when}",
     "whileRising": "En se relevant",
     "onceStanding": "Une fois debout",
     "sayThisTimes": "Dis ceci {count} fois."
@@ -143,9 +143,9 @@
     "manualHelp": "Par exemple 51.05, -114.07. Deux décimales suffisent.",
     "manualInvalid": "Saisis une latitude entre -90 et 90 et une longitude entre -180 et 180, séparées par une virgule.",
     "cancel": "Garder la position enregistrée",
-    "current": "Position :",
+    "current": "Position\u00a0:",
     "change": "Changer",
-    "privacy": "Ta position reste dans ce navigateur ; des coordonnées arrondies sont envoyées à <host>api.aladhan.com</host> pour les horaires de prière et à la carte que tu ouvres pour chercher une mosquée, et la qibla est calculée sur cet appareil.",
+    "privacy": "Ta position reste dans ce navigateur\u00a0; des coordonnées arrondies sont envoyées à <host>api.aladhan.com</host> pour les horaires de prière et à la carte que tu ouvres pour chercher une mosquée, et la qibla est calculée sur cet appareil.",
     "errorPermissionDenied": "L'accès à la position a été refusé. Active la localisation dans les paramètres de ton navigateur, ou saisis les coordonnées manuellement.",
     "errorUnavailable": "Impossible de déterminer ta position. Réessaie ou saisis les coordonnées manuellement.",
     "errorTimeout": "La demande de position a expiré. Réessaie ou saisis les coordonnées manuellement.",
@@ -160,7 +160,7 @@
     "errorService": "Le service des horaires de prière n'a pas répondu comme prévu.",
     "errorRetry": "Vérifie ta connexion et recharge la page.",
     "nextPrayerLabel": "Prochaine",
-    "staleNote": "Impossible de joindre le service ; voici les horaires enregistrés pour le {date}.",
+    "staleNote": "Impossible de joindre le service\u00a0; voici les horaires enregistrés pour le {date}.",
     "timezoneNote": "Heures locales de <zone>{timezone}</zone>.",
     "footerNote": "Les horaires sont calculés à partir de ta position et de la méthode choisie. Ils peuvent différer légèrement de ceux de ta mosquée. Autant que possible, suis le calendrier de ta mosquée locale."
   },
@@ -185,7 +185,7 @@
     "directionStatement": "La qibla est à {bearing}° du nord.",
     "trueNorthNote": "Angle mesuré depuis le nord géographique. La boussole d'un téléphone indique le nord magnétique, qui peut s'en écarter de plusieurs degrés selon l'endroit.",
     "aboutHeading": "À propos de la qibla",
-    "aboutBody": "La qibla est la direction vers laquelle les musulmans se tournent pendant la prière : la Ka'ba, dans la Mosquée sacrée (al-Masjid al-Harâm) à La Mecque."
+    "aboutBody": "La qibla est la direction vers laquelle les musulmans se tournent pendant la prière\u00a0: la Ka'ba, dans la Mosquée sacrée (al-Masjid al-Harâm) à La Mecque."
   },
   "compass": {
     "north": "N",
@@ -201,7 +201,7 @@
     "osmSearchTitle": "Rechercher sur OpenStreetMap",
     "osmSearchBody": "Une carte libre faite par celles et ceux qui l'utilisent.",
     "tipsHeading": "Conseils pour trouver ta mosquée locale",
-    "tip1": "Cherche « mosquée », « masjid » ou « centre islamique » dans ta région.",
+    "tip1": "Cherche «\u00a0mosquée\u00a0», «\u00a0masjid\u00a0» ou «\u00a0centre islamique\u00a0» dans ta région.",
     "tip2": "Beaucoup de mosquées accueillent les nouveaux musulmans et proposent des programmes pour les convertis.",
     "tip3": "N'hésite pas à venir aux heures de prière. La communauté sera heureuse de t'aider.",
     "tip4": "La prière du vendredi (joumou'a) est un bon moment pour une première visite. Arrive tôt pour rencontrer du monde."
@@ -230,7 +230,7 @@
     "learn": "Aller au parcours"
   },
   "footer": {
-    "sourcesNote": "Chaque leçon cite ses sources : une sourate et un verset, un recueil de hadîths et un numéro, ou le consensus des savants.",
+    "sourcesNote": "Chaque leçon cite ses sources\u00a0: une sourate et un verset, un recueil de hadîths et un numéro, ou le consensus des savants.",
     "copyright": "© {year} Noor Guide. Gratuit et open source."
   },
   "breadcrumb": {
@@ -257,7 +257,7 @@
       "sahih": "Sahîh",
       "hasan": "Hasan"
     },
-    "creditQuran": "Traduction : Muhammad Hamidullah",
+    "creditQuran": "Traduction\u00a0: Muhammad Hamidullah",
     "creditProject": "Notre traduction"
   },
   "landmarks": {
