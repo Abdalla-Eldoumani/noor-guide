@@ -1,63 +1,41 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-
+import { PRAYER_KEYS } from "@/lib/prayer-times";
 import type { AlAdhanTimings } from "@/types/api";
 
-interface PrayerTimesDisplayProps {
-  timings: AlAdhanTimings;
-  nextPrayer: string | null;
-}
+// AlAdhan returns "05:23" or, for some zones, "05:23 (EET)".
+const clock = (value: string) => value.split(" ")[0];
 
-const PRAYERS = [
-  { key: "Fajr" as const, messageKey: "fajr" },
-  { key: "Dhuhr" as const, messageKey: "dhuhr" },
-  { key: "Asr" as const, messageKey: "asr" },
-  { key: "Maghrib" as const, messageKey: "maghrib" },
-  { key: "Isha" as const, messageKey: "isha" },
-];
-
-function formatTime(timeStr: string): string {
-  // AlAdhan returns times like "05:23 (EET)" — strip the timezone part
-  return timeStr.split(" ")[0];
-}
-
-export function PrayerTimesDisplay({ timings, nextPrayer }: PrayerTimesDisplayProps) {
+export function PrayerTimesDisplay({ timings, nextPrayer }: { timings: AlAdhanTimings; nextPrayer: string | null }) {
   const t = useTranslations("prayers");
   const tTimes = useTranslations("prayerTimes");
+
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-      {PRAYERS.map((prayer) => {
-        const isNext = nextPrayer === prayer.key;
+    <ol className="border-y border-rule">
+      {PRAYER_KEYS.map((key) => {
+        const isNext = nextPrayer === key;
         return (
-          <div
-            key={prayer.key}
-            className={`rounded-2xl border p-5 text-center transition-all ${
-              isNext
-                ? "border-accent-400 bg-accent-50 shadow-md dark:border-accent-400 dark:bg-accent-400/10"
-                : "border-gray-200 bg-surface dark:border-gray-700 dark:bg-gray-800"
+          <li
+            key={key}
+            className={`-mx-3 flex items-baseline gap-3 border-b border-rule px-3 py-3.5 last:border-b-0 ${
+              isNext ? "bg-wash" : ""
             }`}
           >
+            <span className={`text-body text-ink ${isNext ? "font-semibold" : ""}`}>{t(key.toLowerCase())}</span>
             {isNext && (
-              <span className="mb-2 inline-block rounded-full bg-accent-400 px-3 py-0.5 text-xs font-semibold text-white">
+              <span className="inline-flex items-center gap-1.5 font-ui text-caption text-ink-2">
+                <span aria-hidden="true" className="size-2 rounded-full bg-ochre" />
                 {tTimes("nextPrayerLabel")}
               </span>
             )}
-            <p className="font-heading text-lg font-semibold text-ink dark:text-gray-100">
-              {t(prayer.messageKey)}
-            </p>
-            <p
-              className={`mt-3 font-heading text-2xl font-bold ${
-                isNext
-                  ? "text-accent-600 dark:text-accent-300"
-                  : "text-primary-500 dark:text-primary-300"
-              }`}
-            >
-              {formatTime(timings[prayer.key])}
-            </p>
-          </div>
+            <span aria-hidden="true" className="leader" />
+            <span dir="ltr" className={`font-ui text-body tabular-nums text-ink ${isNext ? "font-semibold" : ""}`}>
+              {clock(timings[key])}
+            </span>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 }
