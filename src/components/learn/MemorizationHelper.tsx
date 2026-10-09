@@ -1,86 +1,65 @@
 "use client";
 
-import { useState } from "react";
-import { useLocale, useTranslations } from "next-intl";
-import { pickLocalized } from "@/lib/content-i18n";
-import { Button } from "@/components/ui/Button";
+import { useId, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Eye, EyeOff } from "lucide-react";
-import type { Verse } from "@/types/content";
 
-interface MemorizationHelperProps {
-  verses: Verse[];
+interface MemorizationVerse {
+  verse: number;
+  arabic: string;
+  transliteration: string;
+  translation: string;
 }
 
-export function MemorizationHelper({ verses }: MemorizationHelperProps) {
+// Reading the Arabic first and checking against the Latin afterwards. Arabic
+// readers have no use for it, so the page leaves it out on `/ar`.
+export function MemorizationHelper({ verses }: { verses: MemorizationVerse[] }) {
   const t = useTranslations("lesson");
-  const locale = useLocale();
+  const headingId = useId();
   const [showTransliteration, setShowTransliteration] = useState(false);
   const [showTranslation, setShowTranslation] = useState(false);
 
+  const toggles = [
+    { label: t("transliteration"), on: showTransliteration, set: setShowTransliteration },
+    { label: t("translation"), on: showTranslation, set: setShowTranslation },
+  ];
+
   return (
-    <div className="bg-cream rounded-xl border border-gray-200 p-6 space-y-4">
-      <div className="flex items-center justify-between">
-        <h4 className="font-heading font-semibold text-ink">
+    <section aria-labelledby={headingId} className="rounded-panel border border-rule px-5 py-5 sm:px-6">
+      <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <h3 id={headingId} className="font-prose text-subsection font-semibold text-ink">
           {t("memorizationTitle")}
-        </h4>
-        <div className="flex gap-2">
-          <Button
-            variant={showTransliteration ? "secondary" : "outline"}
-            size="sm"
-            onClick={() => setShowTransliteration(!showTransliteration)}
-          >
-            <span className="flex items-center gap-1.5">
-              {showTransliteration ? (
-                <EyeOff className="w-3.5 h-3.5" />
-              ) : (
-                <Eye className="w-3.5 h-3.5" />
-              )}
-              {t("transliteration")}
-            </span>
-          </Button>
-          <Button
-            variant={showTranslation ? "secondary" : "outline"}
-            size="sm"
-            onClick={() => setShowTranslation(!showTranslation)}
-          >
-            <span className="flex items-center gap-1.5">
-              {showTranslation ? (
-                <EyeOff className="w-3.5 h-3.5" />
-              ) : (
-                <Eye className="w-3.5 h-3.5" />
-              )}
-              {t("translation")}
-            </span>
-          </Button>
+        </h3>
+        <div className="flex flex-wrap gap-2">
+          {toggles.map(({ label, on, set }) => (
+            <button
+              key={label}
+              type="button"
+              aria-pressed={on}
+              onClick={() => set(!on)}
+              className={`inline-flex min-h-11 items-center gap-2 rounded-control border px-3 font-ui text-ui transition-colors duration-150 ${
+                on ? "border-fajr bg-fajr text-paper" : "border-fajr text-fajr hover:bg-fajr/10"
+              }`}
+            >
+              {on ? <EyeOff size={16} aria-hidden="true" /> : <Eye size={16} aria-hidden="true" />}
+              {label}
+            </button>
+          ))}
         </div>
       </div>
+      <p className="mt-2 font-ui text-caption text-ink-2">{t("memorizationHelper")}</p>
 
-      <div className="space-y-3">
+      <ol className="mt-5 space-y-4">
         {verses.map((verse) => (
-          <div
-            key={verse.verse}
-            className="border-b border-gray-100 pb-3 last:border-0 last:pb-0"
-          >
-            <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg text-right text-ink leading-loose">
+          <li key={verse.verse} className="space-y-1 border-b border-rule pb-4 last:border-0 last:pb-0">
+            <p lang="ar" dir="rtl" className="font-quran text-quran-sm text-ink sm:text-quran">
               {verse.arabic}
             </p>
-            {showTransliteration && (
-              <p className="font-mono text-sm text-muted mt-1">
-                {verse.transliteration}
-              </p>
-            )}
-            {showTranslation && (
-              <p className="text-sm text-muted italic mt-1">
-                {pickLocalized<string>(verse, "translation", locale)}
-              </p>
-            )}
-          </div>
+            {showTransliteration && <p className="translit text-small">{verse.transliteration}</p>}
+            {showTranslation && <p className="text-small text-ink">{verse.translation}</p>}
+          </li>
         ))}
-      </div>
-
-      <p className="text-xs text-muted">
-        {t("memorizationHelper")}
-      </p>
-    </div>
+      </ol>
+    </section>
   );
 }
