@@ -42,7 +42,7 @@
       "title_en": "Salah: The Five Daily Prayers",
       "title_ar": "الصلاة",
       "title_fr": "La salât, les cinq prières quotidiennes",
-      "description_en": "Muslims pray five times a day: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer is a direct connection between the servant and Allah — there is no intermediary.",
+      "description_en": "Muslims pray five times a day: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer is a direct connection between the servant and Allah; there is no intermediary.",
       "description_ar": "يصلي المسلم خمس مرات في اليوم: الفجر، والظهر، والعصر، والمغرب، والعشاء. الصلاة صلة مباشرة بين العبد وربه، لا واسطة فيها.",
       "description_fr": "Les musulmans prient cinq fois par jour : Fajr (à l'aube), Dhuhr (à la mi-journée), 'Asr (l'après-midi), Maghrib (au coucher du soleil) et 'Ichâ (la nuit). La prière est un lien direct entre le serviteur et Allah, sans intermédiaire.",
       "link_to_module": "/learn/salah",
@@ -68,7 +68,7 @@
       "title_en": "Sawm: Fasting in Ramadan",
       "title_ar": "الصيام",
       "title_fr": "Le sawm, le jeûne du Ramadan",
-      "description_en": "During the month of Ramadan (the 9th month of the Islamic calendar), Muslims fast from dawn to sunset — no food, drink, or intimate relations. Fasting teaches self-discipline, gratitude, and empathy for those who are less fortunate.",
+      "description_en": "During the month of Ramadan (the 9th month of the Islamic calendar), Muslims fast from dawn to sunset: no food, drink, or intimate relations. Fasting teaches self-discipline, gratitude, and empathy for those who are less fortunate.",
       "description_ar": "في شهر رمضان، وهو الشهر التاسع في التقويم الهجري، يصوم المسلمون من طلوع الفجر إلى غروب الشمس، فيمتنعون عن الطعام والشراب والمعاشرة الزوجية. الصوم يربّي على ضبط النفس، والشكر، والتعاطف مع المحتاجين.",
       "description_fr": "Pendant le mois de Ramadan (le neuvième mois du calendrier musulman), les musulmans jeûnent de l'aube au coucher du soleil : ni nourriture, ni boisson, ni rapports intimes. Le jeûne enseigne la maîtrise de soi, la gratitude et l'empathie envers les plus démunis.",
       "quran_reference": {
@@ -89,7 +89,7 @@
       "description_en": "Once in a lifetime, every Muslim who is physically and financially able must perform the pilgrimage to Makkah. Hajj takes place in the 12th month of the Islamic calendar (Dhul Hijjah). It is a profound spiritual journey that unites Muslims from every corner of the world.",
       "description_ar": "يجب على كل مسلم قادر بدنيًا وماليًا أن يحج إلى مكة المكرمة مرة واحدة في عمره. يقع الحج في شهر ذي الحجة، وهو الشهر الثاني عشر من التقويم الهجري. وهو رحلة روحية عظيمة تجمع المسلمين من كل أنحاء الأرض.",
       "description_fr": "Une fois dans sa vie, tout musulman qui en a la capacité physique et financière doit accomplir le pèlerinage à La Mecque. Le hajj a lieu au douzième mois du calendrier musulman (Dhoul Hijja). C'est un voyage spirituel profond qui rassemble les musulmans des quatre coins du monde.",
-      "notes": "Hajj is only obligatory if you can afford it and are physically able. There is no rush — many Muslims save for years or decades before performing Hajj.",
+      "notes": "Hajj is only obligatory if you can afford it and are physically able. There is no rush. Many Muslims save for years or decades before performing Hajj.",
       "notes_ar": "لا يجب الحج إلا على المستطيع ماليًا وبدنيًا. ولا داعي للعجلة، فكثير من المسلمين يدّخرون لسنوات قبل أداء الحج.",
       "notes_fr": "Le hajj n'est obligatoire que si tu en as les moyens financiers et la capacité physique. Rien ne presse : beaucoup de musulmans épargnent des années, voire des décennies, avant de l'accomplir.",
       "verified": true
