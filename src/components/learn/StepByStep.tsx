@@ -1,23 +1,27 @@
 "use client";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useEffect, useRef, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { SourceReference } from "@/components/ui/SourceReference";
-import { StepIndicator } from "@/components/ui/StepIndicator";
 import { Button } from "@/components/ui/Button";
 import { RecitationBlockquote } from "@/components/ui/RecitationBlockquote";
-import { Info } from "lucide-react";
+import { PrayerPosition, type Posture } from "@/components/learn/PrayerPosition";
 
-interface StepData {
+export interface StepRecitation {
+  label?: string;
+  arabic: string;
+  transliteration: string;
+  translation: string;
+  credit?: string;
+}
+
+export interface StepData {
   id: string;
   title: string;
   instruction: string;
-  arabicContent?: {
-    arabic: string;
-    transliteration: string;
-    translation: string;
-  };
+  position?: { posture: Posture; label: string };
+  recitations?: StepRecitation[];
   notes?: string;
   source?: {
     type: "quran" | "hadith" | "scholarly_consensus";
@@ -25,90 +29,121 @@ interface StepData {
   };
 }
 
-interface StepByStepProps {
-  steps: StepData[];
-  moduleId: string;
-}
-
-export function StepByStep({ steps, moduleId }: StepByStepProps) {
+export function StepByStep({ steps }: { steps: StepData[] }) {
   const t = useTranslations("lesson");
-  const [currentStep, setCurrentStep] = useState(0);
-  const [completedSteps, setCompletedSteps] = useState<number[]>([]);
+  const locale = useLocale();
+  const number = new Intl.NumberFormat(locale);
+  const [current, setCurrent] = useState(0);
+  const [completed, setCompleted] = useState<Set<number>>(() => new Set());
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const moved = useRef(false);
 
-  const step = steps[currentStep];
+  // Move focus to the new step after the reader changes it, never on load.
+  useEffect(() => {
+    if (moved.current) headingRef.current?.focus();
+  }, [current]);
 
-  const goNext = () => {
-    if (!completedSteps.includes(currentStep)) {
-      setCompletedSteps((prev) => [...prev, currentStep]);
-    }
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1);
-    }
+  const goTo = (index: number) => {
+    moved.current = true;
+    setCurrent(index);
   };
 
-  const goPrev = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
+  const finishCurrent = () => {
+    setCompleted((prev) => new Set(prev).add(current));
+    if (current < steps.length - 1) goTo(current + 1);
   };
+
+  const step = steps[current];
+  const isLast = current === steps.length - 1;
 
   return (
-    <div className="space-y-6">
-      <StepIndicator
-        steps={steps.map((s) => ({ label: s.title }))}
-        currentStep={currentStep}
-        completedSteps={completedSteps}
-      />
+    <div className="space-y-5">
+      <ol className="flex flex-wrap gap-1.5" aria-label={t("stepsLabel")}>
+        {steps.map((s, index) => {
+          const isCurrent = index === current;
+          const isDone = completed.has(index);
+          return (
+            <li key={s.id}>
+              <button
+                type="button"
+                onClick={() => goTo(index)}
+                aria-current={isCurrent ? "step" : undefined}
+                aria-label={t("stepButton", { number: index + 1, title: s.title })}
+                className={`flex size-11 items-center justify-center rounded-full font-ui text-ui transition-colors duration-150 ${
+                  isCurrent
+                    ? "border-2 border-ochre font-semibold text-ink"
+                    : isDone
+                      ? "border border-sage text-sage"
+                      : "border border-rule text-ink-2 hover:border-ink-2"
+                }`}
+              >
+                {isDone && !isCurrent ? (
+                  <svg
+                    viewBox="0 0 20 20"
+                    width="18"
+                    height="18"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+                  </svg>
+                ) : (
+                  number.format(index + 1)
+                )}
+              </button>
+            </li>
+          );
+        })}
+      </ol>
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 space-y-4">
-        <h3 className="font-heading text-xl font-semibold text-ink">
-          {t("stepIndicator", { current: currentStep + 1, total: steps.length })}: {step.title}
+      <section className="space-y-4 rounded-panel border border-rule px-5 py-6 sm:px-7">
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+          <p className="font-ui text-caption text-ink-2">
+            {t("stepIndicator", { current: current + 1, total: steps.length })}
+          </p>
+          {step.position && <PrayerPosition posture={step.position.posture} label={step.position.label} />}
+        </div>
+
+        <h3
+          ref={headingRef}
+          tabIndex={-1}
+          className="font-prose text-subsection font-semibold text-ink outline-none"
+        >
+          {step.title}
         </h3>
 
-        <p className="text-ink leading-relaxed">{step.instruction}</p>
+        <p className="text-body text-ink">{step.instruction}</p>
 
-        {step.arabicContent && (
-          <RecitationBlockquote>
+        {step.recitations?.map((rec, index) => (
+          <RecitationBlockquote key={index}>
+            {rec.label && <p className="font-ui text-caption text-ink-2">{rec.label}</p>}
             <ArabicText
-              arabic={step.arabicContent.arabic}
-              transliteration={step.arabicContent.transliteration}
-              translation={step.arabicContent.translation}
+              arabic={rec.arabic}
+              transliteration={rec.transliteration}
+              translation={rec.translation}
+              credit={rec.credit}
             />
           </RecitationBlockquote>
-        )}
+        ))}
 
-        {step.notes && (
-          <div className="flex gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-800 dark:text-blue-300 rounded-lg p-4 text-sm">
-            <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
-            <p>{step.notes}</p>
-          </div>
-        )}
+        {step.notes && <p className="text-small text-ink-2">{step.notes}</p>}
 
-        {step.source && (
-          <SourceReference
-            type={step.source.type}
-            reference={step.source.reference}
-          />
-        )}
-      </div>
+        {step.source && <SourceReference type={step.source.type} reference={step.source.reference} />}
+      </section>
 
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3">
         <Button
           variant="outline"
-          onClick={goPrev}
-          className={currentStep === 0 ? "invisible" : ""}
+          onClick={() => goTo(current - 1)}
+          className={current === 0 ? "invisible" : ""}
         >
           {t("stepPrev")}
         </Button>
-        <span className="text-sm text-muted">
-          {t("stepIndicator", { current: currentStep + 1, total: steps.length })}
-        </span>
-        <Button
-          variant={currentStep === steps.length - 1 ? "secondary" : "primary"}
-          onClick={goNext}
-        >
-          {currentStep === steps.length - 1 ? t("stepFinish") : t("stepNext")}
-        </Button>
+        <Button onClick={finishCurrent}>{isLast ? t("stepFinish") : t("stepNext")}</Button>
       </div>
     </div>
   );
