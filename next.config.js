@@ -26,7 +26,6 @@ const csp = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  // next dev would otherwise write an agent instructions block into the repo.
   agentRules: false,
   turbopack: {
     root: __dirname,
