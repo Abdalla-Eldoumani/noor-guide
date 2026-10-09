@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
+import { absoluteUrl } from "@/lib/site";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noorguide.app";
+type Frequency = MetadataRoute.Sitemap[number]["changeFrequency"];
 
-const ROUTES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }[] = [
+const ROUTES: { path: string; changeFrequency: Frequency; priority: number }[] = [
   { path: "/", changeFrequency: "monthly", priority: 1.0 },
   { path: "/learn", changeFrequency: "monthly", priority: 0.9 },
   { path: "/learn/aqeedah", changeFrequency: "yearly", priority: 0.8 },
@@ -22,25 +24,14 @@ const ROUTES: { path: string; changeFrequency: MetadataRoute.Sitemap[number]["ch
   { path: "/progress", changeFrequency: "monthly", priority: 0.5 },
 ];
 
-// One entry per English (default-locale) URL. The `alternates.languages` block
-// declares every other locale so search engines can pick the right one.
-const ALTERNATE_LOCALES = ["ar", "fr"] as const;
-
+// One entry per default-locale URL; the other locales are declared as
+// alternates so search engines can serve the right one.
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return ROUTES.map(({ path, changeFrequency, priority }) => {
-    const enUrl = path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;
-    const languages: Record<string, string> = { en: enUrl, "x-default": enUrl };
-    for (const locale of ALTERNATE_LOCALES) {
-      languages[locale] =
-        path === "/" ? `${SITE_URL}/${locale}` : `${SITE_URL}/${locale}${path}`;
-    }
-    return {
-      url: enUrl,
-      lastModified: now,
-      changeFrequency,
-      priority,
-      alternates: { languages },
-    };
+    const url = absoluteUrl(routing.defaultLocale, path);
+    const languages: Record<string, string> = { "x-default": url };
+    for (const locale of routing.locales) languages[locale] = absoluteUrl(locale, path);
+    return { url, lastModified: now, changeFrequency, priority, alternates: { languages } };
   });
 }
