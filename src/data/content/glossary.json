@@ -36,7 +36,7 @@
       "term_en": "Sunnah",
       "term_ar": "السنة",
       "term_fr": "Sunna",
-      "definition": "The way of the Prophet Muhammad ﷺ — his practices, habits, and teachings that Muslims strive to follow.",
+      "definition": "The way of the Prophet Muhammad ﷺ: his practices, habits, and teachings that Muslims strive to follow.",
       "definition_ar": "هدي النبي محمد ﷺ في أقواله وأفعاله وأحواله، وهي الطريق الذي يسعى المسلمون لاتباعه.",
       "definition_fr": "La voie du Prophète Mouhammad ﷺ : ses pratiques, ses habitudes et ses enseignements, que les musulmans s'efforcent de suivre.",
       "verified": true
@@ -56,7 +56,7 @@
       "term_en": "Wudu",
       "term_ar": "الوضوء",
       "term_fr": "Wudû'",
-      "definition": "Ablution — the ritual washing performed before prayer to achieve a state of purity.",
+      "definition": "Ablution: the ritual washing performed before prayer to achieve a state of purity.",
       "definition_ar": "غسل أعضاء مخصوصة قبل الصلاة للتطهر، وهو شرط لصحة الصلاة.",
       "definition_fr": "Les ablutions : le lavage rituel accompli avant la prière pour se mettre en état de pureté.",
       "verified": true
@@ -96,7 +96,7 @@
       "term_en": "Tawhid",
       "term_ar": "التوحيد",
       "term_fr": "Tawhîd",
-      "definition": "The Oneness of Allah — the most fundamental concept in Islam. Allah is One, with no partners.",
+      "definition": "The Oneness of Allah, the most fundamental concept in Islam. Allah is One, with no partners.",
       "definition_ar": "إفراد الله بالوحدانية في ربوبيته وألوهيته وأسمائه وصفاته. أهم المعاني في الإسلام: الله واحد لا شريك له.",
       "definition_fr": "L'unicité d'Allah, la notion la plus fondamentale de l'islam. Allah est Un, sans associé.",
       "verified": true
@@ -136,7 +136,7 @@
       "term_en": "Masjid",
       "term_ar": "المسجد",
       "term_fr": "Masjid",
-      "definition": "A mosque — the place of worship for Muslims. Literally means 'place of prostration'.",
+      "definition": "A mosque: the place of worship for Muslims. Literally means 'place of prostration'.",
       "definition_ar": "مكان عبادة المسلمين. ومعناه في اللغة: موضع السجود.",
       "definition_fr": "Une mosquée, le lieu de prière des musulmans. Le mot signifie littéralement « lieu de prosternation ».",
       "verified": true
@@ -176,7 +176,7 @@
       "term_en": "Jannah",
       "term_ar": "الجنة",
       "term_fr": "Janna",
-      "definition": "Paradise — the eternal reward for righteous believers in the Hereafter.",
+      "definition": "Paradise: the eternal reward for righteous believers in the Hereafter.",
       "definition_ar": "دار الخلود في الآخرة، يجازي الله بها المؤمنين الصالحين.",
       "definition_fr": "Le Paradis, la récompense éternelle des croyants pieux dans l'au-delà.",
       "verified": true
@@ -206,7 +206,7 @@
       "term_en": "Sawm",
       "term_ar": "الصوم",
       "term_fr": "Sawm",
-      "definition": "Fasting — abstaining from food, drink, and intimate relations from dawn to sunset.",
+      "definition": "Fasting: abstaining from food, drink, and intimate relations from dawn to sunset.",
       "definition_ar": "الإمساك عن الطعام والشراب والمعاشرة الزوجية من طلوع الفجر إلى غروب الشمس.",
       "definition_fr": "Le jeûne : s'abstenir de nourriture, de boisson et de rapports intimes de l'aube au coucher du soleil.",
       "verified": true
