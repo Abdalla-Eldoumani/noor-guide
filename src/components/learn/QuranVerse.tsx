@@ -7,24 +7,18 @@ interface QuranVerseProps {
   arabic: string;
   transliteration: string;
   translation: string;
+  credit?: string;
 }
 
-export function QuranVerse({
-  reference,
-  arabic,
-  transliteration,
-  translation,
-}: QuranVerseProps) {
+export function QuranVerse({ reference, arabic, transliteration, translation, credit }: QuranVerseProps) {
   return (
     <RecitationBlockquote>
       <ArabicText
         arabic={arabic}
         transliteration={transliteration}
         translation={translation}
-        size="lg"
+        credit={credit}
       />
-      {/* References are stored canonically as "Quran 2:255", but older content
-          used the bare "2:255". Normalise here so neither shape double-prefixes. */}
       <SourceReference
         type="quran"
         reference={/^quran\b/i.test(reference) ? reference : `Quran ${reference}`}
