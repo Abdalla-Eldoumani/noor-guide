@@ -1,41 +1,50 @@
-import { Plus_Jakarta_Sans, Inter, Amiri, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { Literata, IBM_Plex_Sans, Amiri, Noto_Naskh_Arabic } from "next/font/google";
 
-// Declared once and shared. The locale layout and the root not-found boundary
-// both build the document shell, and two separate declarations of the same
-// family would emit two preload links for the same file.
+// Literata sets headings and lesson prose, with its real italic for
+// transliteration. Plex sets labels and controls. Amiri sets the Qur'an and
+// Arabic display text, and Noto Naskh Arabic sets the Arabic interface.
 
-export const plusJakarta = Plus_Jakarta_Sans({
+export const literata = Literata({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
+  axes: ["opsz"],
+  variable: "--font-literata",
   display: "swap",
 });
 
-export const inter = Inter({
+// Only transliteration is italic, and only lessons have it, so the italic is
+// fetched when a page uses it rather than preloaded everywhere.
+export const literataItalic = Literata({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
+  style: "italic",
+  axes: ["opsz"],
+  variable: "--font-literata-italic",
+  display: "swap",
+  preload: false,
+});
+
+export const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  variable: "--font-plex",
   display: "swap",
 });
 
 export const amiri = Amiri({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "700"],
-  variable: "--font-arabic",
+  subsets: ["arabic"],
+  weight: ["400"],
+  variable: "--font-amiri",
   display: "swap",
 });
 
-export const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-ar-ui",
+// Preloading it would make every English and French page download it too.
+export const naskh = Noto_Naskh_Arabic({
+  subsets: ["arabic"],
+  variable: "--font-naskh",
   display: "swap",
+  preload: false,
 });
 
-// The Latin faces are dead weight on Arabic and the Arabic UI face is dead
-// weight everywhere else, so each locale loads only what it renders.
 export function fontClassFor(locale: string): string {
   return locale === "ar"
-    ? `${amiri.variable} ${plexArabic.variable}`
-    : `${plusJakarta.variable} ${inter.variable} ${amiri.variable}`;
+    ? `${naskh.variable} ${amiri.variable}`
+    : `${literata.variable} ${literataItalic.variable} ${plexSans.variable} ${amiri.variable}`;
 }
