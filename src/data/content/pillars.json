@@ -21,7 +21,7 @@
     {
       "id": "pillar-shahada",
       "order": 1,
-      "title_en": "Shahada — The Declaration of Faith",
+      "title_en": "Shahada: The Declaration of Faith",
       "title_ar": "الشهادة",
       "title_fr": "La chahâda, l'attestation de foi",
       "description_en": "The shahada is the declaration that there is no god worthy of worship except Allah, and that Muhammad ﷺ is His messenger. This is the entry point into Islam. By saying it sincerely, a person becomes a Muslim.",
@@ -39,7 +39,7 @@
     {
       "id": "pillar-salah",
       "order": 2,
-      "title_en": "Salah — The Five Daily Prayers",
+      "title_en": "Salah: The Five Daily Prayers",
       "title_ar": "الصلاة",
       "title_fr": "La salât, les cinq prières quotidiennes",
       "description_en": "Muslims pray five times a day: Fajr (dawn), Dhuhr (noon), Asr (afternoon), Maghrib (sunset), and Isha (night). Prayer is a direct connection between the servant and Allah — there is no intermediary.",
@@ -51,7 +51,7 @@
     {
       "id": "pillar-zakat",
       "order": 3,
-      "title_en": "Zakat — Charitable Giving",
+      "title_en": "Zakat: Charitable Giving",
       "title_ar": "الزكاة",
       "title_fr": "La zakât, l'aumône obligatoire",
       "description_en": "Zakat is an obligatory annual charity of 2.5% of one's savings (above a minimum threshold called nisab) given to those in need. It purifies wealth and helps the community. It is only required if you have savings above the nisab threshold for a full year.",
@@ -65,7 +65,7 @@
     {
       "id": "pillar-sawm",
       "order": 4,
-      "title_en": "Sawm — Fasting in Ramadan",
+      "title_en": "Sawm: Fasting in Ramadan",
       "title_ar": "الصيام",
       "title_fr": "Le sawm, le jeûne du Ramadan",
       "description_en": "During the month of Ramadan (the 9th month of the Islamic calendar), Muslims fast from dawn to sunset — no food, drink, or intimate relations. Fasting teaches self-discipline, gratitude, and empathy for those who are less fortunate.",
@@ -83,7 +83,7 @@
     {
       "id": "pillar-hajj",
       "order": 5,
-      "title_en": "Hajj — Pilgrimage to Makkah",
+      "title_en": "Hajj: Pilgrimage to Makkah",
       "title_ar": "الحج",
       "title_fr": "Le hajj, le pèlerinage à La Mecque",
       "description_en": "Once in a lifetime, every Muslim who is physically and financially able must perform the pilgrimage to Makkah. Hajj takes place in the 12th month of the Islamic calendar (Dhul Hijjah). It is a profound spiritual journey that unites Muslims from every corner of the world.",
