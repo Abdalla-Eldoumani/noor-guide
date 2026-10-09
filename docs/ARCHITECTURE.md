@@ -1,65 +1,61 @@
 # Architecture
 
-This document describes how Noor Guide is built and how the moving parts fit together. It is meant for someone who has cloned the repo and wants a mental model before reading the code.
+How Noor Guide is put together, for someone who has cloned the repository and wants a map before reading the code.
 
 ## High level
 
-Noor Guide is a static Next.js site. There is no backend. Every page renders to HTML at build time and hydrates with React on the client for interactivity. The Next.js App Router lives under `src/app/`, and every route is a file or directory there. State that needs to survive a refresh lives in the user's browser via `localStorage`. External calls happen at runtime in the user's browser (AlAdhan for prayer times, Al Quran Cloud for surah audio); the build itself never touches a network beyond the public package registry.
+Noor Guide is a static Next.js site with no backend. Every page is prerendered at build time for each of the three locales (51 pages) and hydrates in the browser where a page needs interaction. The App Router lives under `src/app/`; everything user-facing sits in the `[locale]` segment. What must survive a refresh (progress, settings, bookmarks) is kept in the reader's `localStorage`. The only runtime network calls are made from the browser: AlAdhan for prayer times, and AlQuran Cloud plus cdn.islamic.network for recitation audio, the latter only after the reader presses play.
 
 ## The data layer
 
-All Islamic content lives as JSON in `src/data/content/`. There are nine files there: `aqeedah.json`, `pillars.json`, `wudu-steps.json`, `salah-steps.json`, `surahs.json`, `duas-daily.json`, `arabic-phrases.json`, `glossary.json`, and `learning-path.json`. They are the single source of truth for every Quran verse, hadith, dua, and instruction the app displays. None of them are generated. None are produced by AI. They were authored and reviewed against authentic sources by the project's authors.
+All religious content is JSON in `src/data/content/`, twelve files: `learning-path.json` (the nine modules, their order and their lesson ids), one file per module (`aqeedah`, `pillars`, `wudu-steps`, `salah-steps`, `surahs`, `duas-daily`, `taharah`, `prayer-practice`, `janazah`), `glossary.json` and `arabic-phrases.json`. They are the single source of every Quran passage, hadith, du'a and instruction on the site.
 
-Every accessor in `src/lib/content.ts` is a thin function that loads the JSON, filters by `verified === true`, and returns a typed result. That filter is the safety net. It exists so an item that has not been reviewed cannot accidentally render to a user. The repository convention is that AI agents do not edit `src/data/content/*.json`; if an issue is discovered, the human authors patch it. The convention is enforced by repository rules, not by tooling, but the `verified` filter at the gateway means that even if unverified data slipped into a JSON file, it would not reach a user.
+`src/lib/content.ts` is the only reader. Every list it returns is filtered on `verified === true`, including the sections of the three newer modules, so an item that has not been reviewed cannot render. The file is imported by server code only: pages and server components read from it and hand client components the strings they need as props, which keeps the content JSON out of the browser bundles. `getModuleNav` derives each module's number and its previous and next modules from `learning-path.json`, so a new module is linked in by adding it there.
 
-Because every page calls into the same gateway, adding a new piece of pre-verified religious content is a two-step process: (1) the human authors add the item to the relevant JSON file with `"verified": true` and a `source` reference, and (2) if the item belongs to a new lesson type, an accessor in `src/lib/content.ts` and a route under `src/app/[locale]/learn/` are added to render it. Step 1 is exclusive to humans; step 2 can be assisted by an agent.
+`src/data/hadith-mapping.json` records, for every citation, the narrator, the wording confirmed, the grading and the source checked. `scripts/verify-citations.mjs` gates the build on it. `src/data/scripture-manifest.json` pins the editions and hashes of the cited Quran passages that `scripts/fetch-scripture.mjs` writes.
 
 ## Routes and rendering
 
-The route structure is flat. Top-level routes are `/`, `/learn`, `/learn/<module>`, `/learn/glossary`, `/tools`, `/tools/<tool>`, and `/progress`. Each route is a server component by default. Anything that needs hooks or browser APIs (audio, geolocation, theme detection, `localStorage`) is split into a sibling client component and imported. The convention is `page.tsx` (server) plus an optional `<Module>Client.tsx` (client) inside the same folder.
+Routes are `/`, `/learn`, `/learn/<module>`, `/learn/glossary`, `/tools`, `/tools/<tool>` and `/progress`, each under `/ar` and `/fr` as well. Pages are server components. A lesson page renders the whole lesson on the server and nests the few interactive pieces as client components: `LessonContent` (progress and the mark-as-done button), `StepByStep`, `SurahPlayer`, `MemorizationHelper` and `BookmarkToggle`. The glossary search, the progress page and the three tools are client components fed by a server page that sets the title and metadata.
 
-Pages are pre-rendered at build time. The build emits 50 prerendered HTML files: 17 routes in each of the three locales, with hashed JS bundles for the interactive parts. There is no on-demand server rendering; every visit is served from the CDN. This means anything that requires the user's local context (their location for prayer times, their `localStorage` progress) happens after hydration on the client.
+Unmatched URLs under a locale render the localized not-found view from `src/app/[locale]/[...rest]/page.tsx`. `src/proxy.ts` is the next-intl middleware. The Open Graph card in `src/app/[locale]/opengraph-image.tsx` is rendered by Satori, which lays out with flexbox only and cannot shape Arabic, so every multi-child element sets `display: flex` and the Arabic site uses the English card.
+
+`src/lib/site.ts` holds `SITE_URL` (from `NEXT_PUBLIC_SITE_URL`, defaulting to the live host) and the helpers that build locale-prefixed URLs for metadata, the sitemap, robots.txt and JSON-LD.
 
 ## Browser persistence
 
-Three keys exist in `localStorage`:
+`src/hooks/useLocalStorage.ts` keeps one store per key behind `useSyncExternalStore`. A write goes to `localStorage` at once (not inside a React state update, so it survives the component unmounting), every component reading the key re-renders, and other tabs pick it up through the `storage` event. Stored values are merged over the defaults, so data from older versions keeps working. If storage is unavailable, values live in memory for the session.
 
-- **`noor-settings`** holds the user's theme, locale, prayer-time calculation method, and last-known location. Read and written through `useSettings`.
-- **`noor-progress`** holds completed lessons, the current lesson, day streak, and the timestamp of the last activity. Read through `useProgress` and `src/lib/progress.ts`.
-- **`noor-bookmarks`** is an array of content ids the user has bookmarked.
+- **`noor-settings`**: the prayer calculation method and the location, rounded to two decimals before it is stored (`useSettings`). Older full-precision values are rounded on first read.
+- **`noor-progress`**: completed lesson ids, the module last opened, the start date, the last active time and the day streak (`useProgress`). Opening a module counts as a day of study; `src/lib/progress.ts` buckets days at local midnight.
+- **`noor-bookmarks`**: saved du'a ids.
+- **`noor-prayer-times-cache`** and **`noor-quran-audio-<n>`**: response caches.
 
-The streak math in `src/lib/progress.ts` is bucketed by local-midnight day boundaries. When a lesson completes, the prior `lastActiveAt` is captured before being overwritten, and `computeStreak` compares the local day of the prior timestamp with the local day of now. Same local day means no change; one day forward means +1; anything else resets to 1. Local-midnight bucketing is what lets a session at 23:55 followed by 00:05 the next day count as a +1 streak instead of being missed because the wall-clock difference was only ten minutes.
+## Prayer times, qibla and the mosque finder
 
-Theme flash is prevented by a tiny inline script in `src/app/[locale]/layout.tsx` that runs before React hydrates. It reads `noor-settings.theme` from `localStorage` and adds the `dark` class to `<html>` if needed. After hydration, the `ThemeSync` client component keeps the class in step with settings.
+`src/lib/prayer-times.ts` asks `api.aladhan.com/v1/timings/<DD-MM-YYYY>` with rounded coordinates and the chosen method, and caches the day per location and method. If the service cannot be reached, a cached day for the same place is shown and labelled with its date. The next prayer is computed in the location's own time zone, which AlAdhan returns, so typed-in coordinates for another city still mark the right prayer.
 
-## i18n
-
-Translation files live at `messages/en.json`, `messages/ar.json`, and `messages/fr.json` in the repository root. They are authored by hand, not machine-translated. They are wired through `next-intl` with `localePrefix: "as-needed"`, so English is served unprefixed, Arabic at `/ar`, and French at `/fr`. The active locale is persisted in `noor-settings.language`, so a returning visitor lands on the right prefix. See [I18N.md](I18N.md).
-
-The educational instructional prose embedded in the JSON content files (the `description_en`, `instruction_en`, `content_en`, `key_points`, and `notes` fields) is intentionally not retranslated as part of any locale pass. Religious content (Quran translations, hadith translations, dua translations) is also not retranslated, since those came in pre-verified. See `docs/I18N.md` for the full localization plan.
+`src/lib/qibla.ts` computes the great-circle bearing to the Kaaba on the device; the compass in `QiblaCompass.tsx` is drawn from that bearing and measures from true north. The mosque finder only builds outbound Google Maps and OpenStreetMap links.
 
 ## Design system
 
-The visual language sits entirely in `src/styles/globals.css`, using Tailwind v4's CSS-first `@theme` block; there is no `tailwind.config.js`. Colors are a `primary` ramp (forest greens 50-900), an `accent` ramp (warm golds 50-700), `cream`, `surface`, `ink`, and `muted`. Fonts are loaded via `next/font/google` in `src/app/[locale]/layout.tsx`: Plus Jakarta Sans for headings, Inter for body, and Amiri for Arabic. A JetBrains Mono token is declared in the theme block but no font is loaded for it. Custom Arabic font sizes (`text-arabic-sm` through `text-arabic-xl`) ensure Quranic text never renders below 24px.
+Everything visual is defined in `src/styles/globals.css`. The `@theme` block clears Tailwind's default palette, type scale, radii and shadows and defines a closed set: colour tokens (`paper`, `wash`, `ink`, `ink-2`, `rule`, `fajr`, `ochre`, `sage`, `clay`), a named type scale (`text-display` down to `text-micro`, plus `text-quran` and `text-arabic`), two radii and one width for the book column. The dark values of the same tokens sit under `@media (prefers-color-scheme: dark)`, so the site follows the reader's system setting with no stored theme and no class toggling.
 
-`globals.css` adds a few component classes that compose Tailwind utilities: `.card`, `.source-ref`, `.arabic-text`, `.arabic-text-lg`, `.transliteration`, and the four `.step-circle*` variants. Two utility classes (`scrollbar-hide` and `min-arabic-size`) round out the file. A `@media print` block at the bottom hides navigation chrome, expands link targets, and applies page-break hints so a lesson printed to paper still reads cleanly.
+Fonts load through `next/font/google` in `src/lib/fonts.ts`: Literata (headings and prose, with italic for transliteration), IBM Plex Sans (labels and controls), Amiri (Quran and Arabic display) and Noto Naskh Arabic (the Arabic interface, not preloaded so the other locales skip it). `font-prose` and `font-ui` resolve through `--type-prose` and `--type-ui`, which switch to Noto Naskh Arabic under `:lang(ar)`; `font-quran` is Amiri everywhere.
 
-Two conventional UI patterns exist that lessons compose against. `<RecitationBlockquote>` (in `src/components/ui/`) wraps a recitation in an indented blockquote with a gold leading rule; it replaces an older flat-fill callout pattern. `<StarOctagram>` is a small Rub el-Hizb (eight-point star) component used as an authored geometric mark on the 404 page and available for any future quiet decorative role.
+The hand-drawn glyphs for the modules and tools are in `src/components/ui/Glyphs.tsx`, and the four prayer postures are drawn in `PrayerPosition.tsx`. Motion is limited to colour transitions of 150 ms and the accordion chevron, and stops under `prefers-reduced-motion`.
 
-Dark mode is class-based, configured through the `@theme` block in `src/styles/globals.css`. The `dark` class on `<html>` is set by the inline script described above. Components opt in with `dark:*` modifiers on the relevant utilities.
+## Adding a module
 
-## Adding a new component
-
-Place generic UI primitives under `src/components/ui/`. Place layout chrome under `src/components/layout/`. Place lesson UI under `src/components/learn/`. Place tool UI under `src/components/tools/`. Server components are the default; only add `"use client"` if the component needs `useState`, `useEffect`, browser APIs, or interactive event handlers. Use the existing typography classes (`font-heading`, `font-body`, `font-arabic`), the existing color tokens, and `dark:*` variants for every text-on-background combination. Avoid em dashes anywhere in code, comments, copy, or commit messages.
-
-## Adding a new content item
-
-Religious content additions are exclusive to the human authors. The flow is: (1) edit the relevant file under `src/data/content/`, (2) add the `source` reference (Quran chapter:verse or hadith collection + number), (3) include `arabic_text` and `transliteration` where applicable, and (4) set `"verified": true`. Items missing `verified: true` are filtered out at the gateway in `src/lib/content.ts` and never render. If a new lesson type is needed, add a new accessor to `src/lib/content.ts` and a route under `src/app/[locale]/learn/`; both can be done by an agent once the JSON shape is settled.
-
-## External APIs
-
-Two free public APIs are called from the browser. `src/lib/prayer-times.ts` wraps the AlAdhan endpoint at `api.aladhan.com/v1/timings/<DD-MM-YYYY>`, caching the result in `localStorage` per day-location-method tuple. `src/lib/quran-api.ts` wraps `api.alquran.cloud/v1/surah/<n>/ar.alafasy` for audio URLs, also cached per surah. Both fall back to stale cache on network failure. Neither requires an API key.
+1. Add the content JSON under `src/data/content/` with `"verified": true` on every item and a source on every ruling.
+2. Add the module to `learning-path.json` with its lesson ids and minutes.
+3. Add an accessor to `src/lib/content.ts` and a page under `src/app/[locale]/learn/<id>/`; a module made of an introduction and sections can render through `SectionedLesson`.
+4. Add a glyph to `MODULE_GLYPHS` and the route to `src/app/sitemap.ts`.
 
 ## Build and verification
 
-`npm run dev` runs the development server. `npm run build` prerenders every route in every locale; there is no `output: "export"`, so it is a normal Next build served statically. `npm run type-check` runs `tsc --noEmit`. `ANALYZE=true npm run build` produces a bundle analyzer report via `@next/bundle-analyzer`. The default function timeout assumed by Vercel does not apply because every route is static.
+- `npm run dev` runs the development server.
+- `npm run build` runs `verify:i18n` and `verify:citations`, then prerenders every route in every locale.
+- `npm run lint` and `npm run type-check` run ESLint and `tsc --noEmit`.
+- `node scripts/fetch-scripture.mjs --check` compares the cited Quran passages with the published editions.
+- `ANALYZE=true npm run build` adds a bundle analyzer report.
