@@ -1,204 +1,103 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import {
-  Heart,
-  ArrowRight,
-  Clock,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
-import { getLearningModules } from "@/lib/content";
-import { MODULE_GLYPHS, GlyphBook } from "@/components/ui/Glyphs";
-import { pickLocalized } from "@/lib/content-i18n";
+import { getModuleSummaries } from "@/lib/content";
+import { PathContents } from "@/components/learn/PathContents";
+import { ToolRows } from "@/components/tools/ToolRows";
 
-// Taking the locale from `params` rather than reading it back out of request
-// state is what lets this page prerender. `getLocale()` here made the busiest
-// route in the app server-render on every visit.
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+const DOORS = [
+  { href: "/learn", key: "shahada" },
+  { href: "/learn/aqeedah", key: "exploring" },
+] as const;
+
+// Taking the locale from `params` rather than request state is what lets this
+// page prerender.
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-
-  const modules = getLearningModules();
-  const tHome = await getTranslations({ locale, namespace: "home" });
+  const t = await getTranslations({ locale, namespace: "home" });
+  const rows = getModuleSummaries(locale);
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-primary-50/60 to-cream dark:from-gray-900 dark:to-gray-950"
-          aria-hidden="true"
-        />
-        <svg
-          className="absolute inset-0 h-full w-full text-primary-500/[0.07] dark:text-primary-300/[0.06]"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern
-              id="hero-girih"
-              width="56"
-              height="56"
-              patternUnits="userSpaceOnUse"
-            >
-              <g transform="translate(28 28)" fill="none" stroke="currentColor" strokeWidth="1">
-                <rect x="-11" y="-11" width="22" height="22" />
-                <rect x="-11" y="-11" width="22" height="22" transform="rotate(45)" />
-              </g>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#hero-girih)" />
-        </svg>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
-          <h1 className="text-display font-heading font-bold text-ink dark:text-gray-100">
-            {tHome("heroLine1")}{" "}
-            <span className="text-primary-500 dark:text-primary-300">
-              {tHome("heroHighlight")}
-            </span>
-          </h1>
-          <p
-            dir="rtl"
-            lang="ar"
-            className="mt-4 font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 opacity-80"
-          >
-            نور
-          </p>
-
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/learn"
-              className="inline-flex items-center gap-2 bg-primary-500 text-white px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-500 transition-colors"
-            >
-              {tHome("ctaShahada")}
-              <ArrowRight size={20} className="rtl:rotate-180" />
-            </Link>
-            <Link
-              href="/learn/aqeedah"
-              className="inline-flex items-center gap-2 border-2 border-primary-500 text-primary-500 dark:border-primary-400 dark:text-primary-300 px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-50 dark:hover:bg-primary-500/10 transition-colors"
-            >
-              {tHome("ctaExploring")}
-            </Link>
-          </div>
-        </div>
+    <div className="mx-auto w-full max-w-book px-5 sm:px-8">
+      <section className="pt-12 sm:pt-20">
+        <h1 className="text-balance font-prose text-display-sm font-medium text-ink sm:text-display">
+          {t("title")}
+        </h1>
+        <p className="mt-5 max-w-prose text-body text-ink-2">{t("subline")}</p>
       </section>
 
-      {/* Features */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="text-center p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
-              <Sparkles size={24} />
-            </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-              {tHome("featureStepByStepTitle")}
-            </h3>
-            <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              {tHome("featureStepByStepBody")}
-            </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
-              <ShieldCheck size={24} />
-            </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-              {tHome("featureSourcesTitle")}
-            </h3>
-            <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              {tHome("featureSourcesBody")}
-            </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 mb-4">
-              <Heart size={24} />
-            </div>
-            <h3 className="font-heading font-semibold text-ink dark:text-gray-100">
-              {tHome("featureFreeTitle")}
-            </h3>
-            <p className="mt-1 text-sm text-muted dark:text-gray-400">
-              {tHome("featureFreeBody")}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Learning Modules */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-h1 font-heading font-bold text-ink dark:text-gray-100 text-center">
-          {tHome("modulesHeading")}
-        </h2>
-        <p className="mt-3 text-muted dark:text-gray-400 text-center max-w-xl mx-auto">
-          {tHome("modulesSubheading")}
-        </p>
-
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {modules.map((mod) => {
-            const Glyph = MODULE_GLYPHS[mod.icon] ?? GlyphBook;
-            const moduleTitle =
-              pickLocalized<string>(mod, "title", locale) ?? mod.title_en;
-            const moduleDescription =
-              pickLocalized<string>(mod, "description", locale) ?? mod.description_en;
-            return (
-              <Link
-                key={mod.id}
-                href={`/learn/${mod.id}`}
-                className="card group block"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-primary-50 text-primary-500 dark:bg-primary-500/10 dark:text-primary-300 shrink-0 group-hover:bg-primary-100 dark:group-hover:bg-primary-500/20 transition-colors">
-                    <Glyph size={22} />
-                  </div>
-                  <div className="min-w-0">
-                    <h3 className="font-heading font-semibold text-ink dark:text-gray-100 group-hover:text-primary-500 dark:group-hover:text-primary-300 transition-colors">
-                      {moduleTitle}
-                    </h3>
-                    {locale !== "ar" && (
-                      <p
-                        dir="rtl"
-                        lang="ar"
-                        className="font-arabic text-sm text-muted dark:text-gray-400 mt-0.5"
-                      >
-                        {mod.title_ar}
-                      </p>
-                    )}
-                  </div>
-                </div>
-                <p className="mt-3 text-sm text-muted dark:text-gray-400 line-clamp-2">
-                  {moduleDescription}
-                </p>
-                <div className="mt-4 flex items-center gap-1.5 text-xs text-muted dark:text-gray-500">
-                  <Clock size={14} />
-                  <span>
-                    {tHome("estimatedMinutes", { minutes: mod.estimatedMinutes })}
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <div className="bg-gradient-to-br from-primary-600 to-primary-500 rounded-3xl p-10 sm:p-14 text-white">
-          <h2 className="text-h1 font-heading font-bold">
-            {tHome("ctaBeginTitle")}
-          </h2>
-          <p className="mt-3 text-primary-100 max-w-md mx-auto">
-            {tHome("ctaBeginBody")}
-          </p>
+      <section aria-label={t("doorsLabel")} className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2">
+        {DOORS.map((door) => (
           <Link
-            href="/learn"
-            className="mt-8 inline-flex items-center gap-2 bg-white text-primary-600 px-7 py-3.5 rounded-xl font-heading font-semibold text-lg hover:bg-primary-50 transition-colors"
+            key={door.key}
+            href={door.href}
+            className="group flex flex-col rounded-panel border border-rule px-5 py-5 transition-colors duration-150 hover:border-fajr sm:px-6 sm:py-6"
           >
-            {tHome("ctaBeginButton")}
-            <ArrowRight size={20} className="rtl:rotate-180" />
+            <span className="font-prose text-subsection font-semibold text-ink group-hover:text-fajr">
+              {t(`${door.key}Title`)}
+            </span>
+            <span className="mt-2 text-small text-ink-2">{t(`${door.key}Body`)}</span>
+            <span aria-hidden="true" className="mt-4 font-ui text-ui text-fajr">
+              {t(`${door.key}Action`)}
+              <span className="ms-1.5 inline-block rtl:-scale-x-100">→</span>
+            </span>
           </Link>
+        ))}
+      </section>
+
+      <section aria-labelledby="path-heading" className="mt-16 sm:mt-20">
+        <h2 id="path-heading" className="font-prose text-section font-semibold text-ink">
+          {t("pathHeading")}
+        </h2>
+        <p className="mt-2 text-small text-ink-2">{t("pathIntro")}</p>
+        <div className="mt-6">
+          <PathContents rows={rows} />
         </div>
       </section>
-    </>
+
+      <section aria-labelledby="tools-heading" className="mt-16 sm:mt-20">
+        <h2 id="tools-heading" className="font-prose text-section font-semibold text-ink">
+          {t("toolsHeading")}
+        </h2>
+        <div className="mt-6">
+          <ToolRows />
+        </div>
+      </section>
+
+      <section aria-labelledby="sources-heading" className="mt-16 sm:mt-20">
+        <GirihBand />
+        <h2 id="sources-heading" className="mt-10 font-prose text-section font-semibold text-ink">
+          {t("sourcesHeading")}
+        </h2>
+        <div className="mt-4 max-w-prose space-y-4 text-body text-ink">
+          <p>{t("sourcesQuran")}</p>
+          <p>{t("sourcesHadith")}</p>
+          <p>{t("sourcesReview")}</p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// The site's one ornament: a strip of the eight-pointed girih tile.
+function GirihBand() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="block h-8 w-full text-rule"
+      // Whole tiles only where round() is supported, so the band never ends on half a star.
+      style={{ width: "round(down, 100%, 32px)" }}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern id="girih-band" width="32" height="32" patternUnits="userSpaceOnUse">
+          <g transform="translate(16 16)" fill="none" stroke="currentColor" strokeWidth="1">
+            <rect x="-10" y="-10" width="20" height="20" />
+            <rect x="-10" y="-10" width="20" height="20" transform="rotate(45)" />
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#girih-band)" />
+    </svg>
   );
 }
