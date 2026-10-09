@@ -1,247 +1,155 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { pickLocalized } from "@/lib/content-i18n";
-
-import { useState, useEffect, useRef, useCallback } from "react";
-import { Play, Pause, Volume2 } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 import { ArabicText } from "@/components/ui/ArabicText";
 import { fetchSurahAudio } from "@/lib/quran-api";
-import type { Surah } from "@/types/content";
 
-interface SurahPlayerProps {
-  surah: Surah;
+interface PlayerVerse {
+  verse: number;
+  arabic: string;
+  transliteration: string;
+  translation: string;
 }
 
-export function SurahPlayer({ surah }: SurahPlayerProps) {
+interface SurahPlayerProps {
+  surahNumber: number;
+  verses: PlayerVerse[];
+}
+
+// Nothing is requested until the reader presses play, so opening the page
+// sends nothing to the recitation service.
+export function SurahPlayer({ surahNumber, verses }: SurahPlayerProps) {
   const t = useTranslations("surahs");
   const locale = useLocale();
-  const [audioUrls, setAudioUrls] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const number = new Intl.NumberFormat(locale);
+  const [playing, setPlaying] = useState<number | null>(null);
   const [playAll, setPlayAll] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const playAllRef = useRef(false);
-  const playingIndexRef = useRef<number | null>(null);
+  const urlsRef = useRef<string[] | null>(null);
+  const stateRef = useRef({ index: -1, all: false });
 
-  useEffect(() => {
-    playAllRef.current = playAll;
-  }, [playAll]);
+  const stop = useCallback(() => {
+    audioRef.current?.pause();
+    stateRef.current = { index: -1, all: false };
+    setPlaying(null);
+    setPlayAll(false);
+  }, []);
 
-  useEffect(() => {
-    playingIndexRef.current = playingIndex;
-  }, [playingIndex]);
-
-  useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    setError(null);
-
-    fetchSurahAudio(surah.number)
-      .then((urls) => {
-        if (!cancelled) {
-          setAudioUrls(urls);
-          setLoading(false);
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setError(t("audioError"));
-          setLoading(false);
-        }
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [surah.number, t]);
+  const playAt = useCallback(async (index: number) => {
+    const audio = audioRef.current;
+    const url = urlsRef.current?.[index];
+    if (!audio || !url) return false;
+    audio.src = url;
+    stateRef.current.index = index;
+    try {
+      await audio.play();
+      setPlaying(index);
+      return true;
+    } catch {
+      return false;
+    }
+  }, []);
 
   useEffect(() => {
     const audio = new Audio();
     audioRef.current = audio;
-
+    const onEnded = () => {
+      const { index, all } = stateRef.current;
+      if (all && index + 1 < (urlsRef.current?.length ?? 0)) void playAt(index + 1);
+      else stop();
+    };
+    audio.addEventListener("ended", onEnded);
     return () => {
       audio.pause();
-      audio.src = "";
-    };
-  }, []);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    const onEnded = () => {
-      if (
-        playAllRef.current &&
-        playingIndexRef.current !== null &&
-        playingIndexRef.current < audioUrls.length - 1
-      ) {
-        const nextIndex = playingIndexRef.current + 1;
-        audio.src = audioUrls[nextIndex];
-        audio.load();
-        audio
-          .play()
-          .then(() => {
-            setPlayingIndex(nextIndex);
-            setIsPlaying(true);
-          })
-          .catch(() => {});
-      } else {
-        setIsPlaying(false);
-        setPlayingIndex(null);
-        setPlayAll(false);
-      }
-    };
-
-    audio.addEventListener("ended", onEnded);
-
-    return () => {
       audio.removeEventListener("ended", onEnded);
+      audioRef.current = null;
     };
-  }, [audioUrls]);
+  }, [playAt, stop]);
 
-  const playVerse = useCallback(
-    (index: number) => {
-      const audio = audioRef.current;
-      if (!audio || !audioUrls[index]) return;
-
-      audio.src = audioUrls[index];
-      audio.load();
-      audio
-        .play()
-        .then(() => {
-          setPlayingIndex(index);
-          setIsPlaying(true);
-        })
-        .catch(() => {});
-    },
-    [audioUrls]
-  );
-
-  const stopPlayback = useCallback(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.pause();
-    audio.currentTime = 0;
-    setIsPlaying(false);
-    setPlayingIndex(null);
-    setPlayAll(false);
-  }, []);
-
-  const handlePlayAll = () => {
-    if (isPlaying) {
-      stopPlayback();
-    } else {
-      setPlayAll(true);
-      playVerse(0);
+  const start = async (index: number, all: boolean) => {
+    if (!urlsRef.current) {
+      setStatus("loading");
+      try {
+        urlsRef.current = await fetchSurahAudio(surahNumber);
+      } catch {
+        setStatus("error");
+        return;
+      }
     }
-  };
-
-  const handleVersePlay = (index: number) => {
-    if (isPlaying && playingIndex === index) {
-      stopPlayback();
+    stateRef.current = { index, all };
+    setPlayAll(all);
+    if (await playAt(index)) {
+      setStatus("idle");
     } else {
-      setPlayAll(false);
-      playVerse(index);
+      setStatus("error");
+      stop();
     }
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-      <div className="bg-primary-600 text-white px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="font-heading text-lg font-semibold">
-              {pickLocalized<string>(surah, "title", locale) ?? surah.title_en}
-            </h3>
-            <p className="text-primary-200 text-sm mt-0.5">
-              {t("surahNumberLabel", { number: surah.number })}
-            </p>
-          </div>
-          {/* The heading already carries the Arabic name on `/ar`; repeating it
-              beside itself is the both-locales-at-once habit this project drops. */}
-          {locale !== "ar" && (
-            <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg">
-              {surah.title_ar}
-            </p>
-          )}
-        </div>
+    <div className="space-y-5">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <button
+          type="button"
+          onClick={() => (playAll ? stop() : void start(0, true))}
+          className="inline-flex min-h-11 items-center gap-2 rounded-control border border-fajr px-4 font-ui text-ui font-medium text-fajr transition-colors duration-150 hover:bg-fajr/10"
+        >
+          {playAll ? <Pause size={16} aria-hidden="true" /> : <Play size={16} aria-hidden="true" />}
+          {playAll ? t("stopPlayback") : t("playFullSurah")}
+        </button>
+        <p role="status" className="font-ui text-caption text-ink-2">
+          {status === "loading" && t("loadingAudio")}
+          {status === "error" && <span className="text-clay">{t("audioError")}</span>}
+        </p>
       </div>
 
-      <div className="p-6 space-y-4">
-        {/* Play All button */}
-        {!loading && !error && audioUrls.length > 0 && (
-          <button
-            type="button"
-            onClick={handlePlayAll}
-            className="flex items-center gap-2 bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 px-4 py-2.5 rounded-lg font-medium text-sm hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors w-full justify-center"
-          >
-            {isPlaying && playAll ? (
-              <Pause size={18} />
-            ) : (
-              <Volume2 size={18} />
-            )}
-            {isPlaying && playAll ? t("stopPlayback") : t("playFullSurah")}
-          </button>
-        )}
-
-        {loading && (
-          <p className="text-sm text-muted text-center py-2">
-            {t("loadingAudio")}
-          </p>
-        )}
-        {error && (
-          <p className="text-sm text-red-500 text-center py-2">{error}</p>
-        )}
-
-        <div className="space-y-3">
-          {surah.verses.map((verse, i) => (
-            <div
+      <ol className="space-y-2">
+        {verses.map((verse, i) => {
+          const isPlaying = playing === i;
+          return (
+            <li
               key={verse.verse}
-              className={`border-b border-gray-100 dark:border-gray-700 pb-3 last:border-0 last:pb-0 transition-colors ${
-                playingIndex === i
-                  ? "bg-primary-50/50 dark:bg-primary-900/20 -mx-2 px-2 rounded-lg"
-                  : ""
+              className={`grid grid-cols-[2.75rem_1fr] gap-x-4 rounded-panel px-3 py-3 transition-colors duration-150 ${
+                isPlaying ? "bg-wash" : ""
               }`}
             >
-              <div className="flex items-start gap-3">
-                <div className="flex flex-col items-center gap-1 shrink-0">
-                  <span className="w-7 h-7 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-xs flex items-center justify-center font-medium">
-                    {verse.verse}
-                  </span>
-                  {audioUrls[i] && (
-                    <button
-                      type="button"
-                      onClick={() => handleVersePlay(i)}
-                      className="relative w-8 h-8 rounded-full bg-primary-500 text-white flex items-center justify-center hover:bg-primary-600 transition-colors before:absolute before:inset-[-6px] before:content-['']"
-                      aria-label={
-                        isPlaying && playingIndex === i
-                          ? t("pauseVerseAria", { number: verse.verse })
-                          : t("playVerseAria", { number: verse.verse })
-                      }
-                    >
-                      {isPlaying && playingIndex === i ? (
-                        <Pause size={14} />
-                      ) : (
-                        <Play size={14} className="ml-0.5" />
-                      )}
-                    </button>
+              <div className="flex flex-col items-center gap-1 pt-2">
+                <button
+                  type="button"
+                  onClick={() => (isPlaying ? stop() : void start(i, false))}
+                  aria-label={
+                    isPlaying
+                      ? t("pauseVerseAria", { number: verse.verse })
+                      : t("playVerseAria", { number: verse.verse })
+                  }
+                  className={`flex size-11 items-center justify-center rounded-full border transition-colors duration-150 ${
+                    isPlaying
+                      ? "border-fajr bg-fajr text-paper"
+                      : "border-fajr text-fajr hover:bg-fajr/10"
+                  }`}
+                >
+                  {isPlaying ? (
+                    <Pause size={16} aria-hidden="true" />
+                  ) : (
+                    <Play size={16} aria-hidden="true" className="translate-x-px" />
                   )}
-                </div>
-                <div className="flex-1">
-                  <ArabicText
-                    arabic={verse.arabic}
-                    transliteration={verse.transliteration}
-                    translation={pickLocalized<string>(verse, "translation", locale)}
-                  />
-                </div>
+                </button>
+                <span aria-hidden="true" className="font-ui text-micro text-ink-2">
+                  {number.format(verse.verse)}
+                </span>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
+              <ArabicText
+                arabic={verse.arabic}
+                transliteration={verse.transliteration}
+                translation={verse.translation}
+              />
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 }
