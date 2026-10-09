@@ -57,7 +57,7 @@ export function PrayerTimesClient() {
               id={methodId}
               value={prayerMethod}
               onChange={(e) => setPrayerMethod(Number(e.target.value))}
-              className="min-h-11 w-full max-w-md rounded-control border border-ink-2 bg-paper px-3 font-ui text-ui text-ink"
+              className="min-h-11 w-full max-w-md truncate rounded-control border border-ink-2 bg-paper px-3 font-ui text-ui text-ink"
             >
               {PRAYER_METHODS.map((method) => (
                 <option key={method.id} value={method.id}>
