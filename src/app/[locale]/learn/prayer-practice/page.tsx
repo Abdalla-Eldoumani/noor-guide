@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import { getPrayerPracticeData, getLessonIdsForModule, getModuleById } from "@/lib/content";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { getPrayerPracticeData, getModuleById, getModuleNav } from "@/lib/content";
 import { pickLocalized } from "@/lib/content-i18n";
 import { moduleMetadata } from "@/lib/module-metadata";
 import { PageWrapper } from "@/components/layout/PageWrapper";
@@ -16,9 +16,8 @@ export async function generateMetadata({ params }: Params) {
 
 export default async function PrayerPracticePage({ params }: Params) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const tLearn = await getTranslations({ locale, namespace: "learn" });
-  const data = getPrayerPracticeData();
-  const lessonIds = getLessonIdsForModule("prayer-practice");
   const moduleData = getModuleById("prayer-practice");
 
   return (
@@ -32,14 +31,7 @@ export default async function PrayerPracticePage({ params }: Params) {
           courseName: tLearn("dashboardTitle"),
         })}
       />
-      <SectionedLesson
-        data={data}
-        lessonIds={lessonIds}
-      prevHref="/learn/taharah"
-      prevModuleId="taharah"
-      nextHref="/learn/janazah"
-      nextModuleId="janazah"
-      />
+      <SectionedLesson data={getPrayerPracticeData()} nav={getModuleNav("prayer-practice", locale)} />
     </PageWrapper>
   );
 }
