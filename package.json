@@ -2,7 +2,7 @@
   "name": "noor-guide",
   "version": "1.0.0",
   "private": true,
-  "description": "Noor Guide: a guided journey for new Muslims learning the basics of Islam.",
+  "description": "Noor Guide: a nine-module guide to the basics of Islam for new Muslims.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
