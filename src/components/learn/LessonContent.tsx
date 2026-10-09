@@ -1,45 +1,39 @@
 "use client";
 
+import { useEffect } from "react";
+import type { ReactNode } from "react";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { useProgress } from "@/hooks/useProgress";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle, ArrowLeft, ArrowRight } from "lucide-react";
+import { StatusMark } from "@/components/ui/StatusMark";
+import { MODULE_GLYPHS } from "@/components/ui/Glyphs";
+import type { ModuleNav } from "@/lib/content";
 
 interface LessonContentProps {
-  moduleId: string;
-  lessonIds?: string[];
+  nav: ModuleNav;
   title: string;
   titleAr?: string;
-  children: React.ReactNode;
-  prevHref?: string;
-  prevLabel?: string;
-  nextHref?: string;
-  nextLabel?: string;
+  // Wudu and salah follow one school's arrangement; say so before the reader starts.
+  schoolsNote?: boolean;
+  children: ReactNode;
 }
 
-export function LessonContent({
-  moduleId,
-  lessonIds,
-  title,
-  titleAr,
-  children,
-  prevHref,
-  prevLabel,
-  nextHref,
-  nextLabel,
-}: LessonContentProps) {
+export function LessonContent({ nav, title, titleAr, schoolsNote, children }: LessonContentProps) {
   const t = useTranslations("lesson");
   const tCrumb = useTranslations("breadcrumb");
-  const tCommon = useTranslations("common");
-  const { markComplete, isComplete } = useProgress();
+  const { progress, visit, completeLessons } = useProgress();
 
-  // Use the lesson IDs from learning-path.json if provided, otherwise fall back to moduleId
-  const idsToTrack = lessonIds && lessonIds.length > 0 ? lessonIds : [moduleId];
-  const completed = idsToTrack.every((id) => isComplete(id));
+  useEffect(() => {
+    visit(nav.moduleId);
+  }, [nav.moduleId, visit]);
+
+  const done = nav.lessonIds.every((id) => progress.completedLessons.includes(id));
+  const Glyph = MODULE_GLYPHS[nav.moduleId];
 
   return (
-    <div className="max-w-3xl mx-auto">
+    <article>
       <Breadcrumb
         items={[
           { label: tCrumb("home"), href: "/" },
@@ -48,55 +42,77 @@ export function LessonContent({
         ]}
       />
 
-      <div className="mt-6 mb-8">
-        <h1 className="font-heading text-h1 font-bold text-ink dark:text-gray-100">{title}</h1>
+      <header className="mt-6">
+        <p className="flex items-center gap-2 font-ui text-caption text-ink-2">
+          {Glyph && <Glyph size={20} />}
+          {t("partOf", { number: nav.number, total: nav.total })}
+        </p>
+        <h1 className="mt-3 text-balance font-prose text-title-sm font-semibold text-ink sm:text-title">
+          {title}
+        </h1>
         {titleAr && (
-          <p dir="rtl" lang="ar" className="font-arabic text-arabic-lg text-primary-500 dark:text-primary-300 mt-2">
-            {titleAr}
+          <p className="mt-1">
+            <span lang="ar" dir="rtl" className="font-quran text-section text-ink-2">
+              {titleAr}
+            </span>
           </p>
         )}
-      </div>
+        {schoolsNote && (
+          <p className="mt-6 rounded-panel border border-rule px-4 py-3 font-ui text-ui text-ink-2">
+            {t("schoolsNote")}
+          </p>
+        )}
+      </header>
 
-      <div className="space-y-8">{children}</div>
+      <div className="mt-10 space-y-14">{children}</div>
 
-      <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-        <div className="flex justify-center mb-8">
-          {completed ? (
-            <div className="flex items-center gap-2 text-green-600 font-medium">
-              <CheckCircle className="w-5 h-5" />
-              <span>{t("alreadyComplete")}</span>
-            </div>
-          ) : (
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => idsToTrack.forEach((id) => markComplete(id))}
-            >
-              {t("markComplete")}
-            </Button>
-          )}
-        </div>
+      <footer className="mt-16 border-t border-rule pt-8">
+        {done ? (
+          <p className="flex items-center gap-2 font-ui text-ui text-ink">
+            <StatusMark status="done" />
+            {t("alreadyComplete")}
+          </p>
+        ) : (
+          <Button onClick={() => completeLessons(nav.lessonIds)}>{t("markComplete")}</Button>
+        )}
 
-        <div className="flex items-center justify-between">
-          <div>
-            {prevHref && (
-              <Button variant="ghost" href={prevHref} icon={<ArrowLeft className="w-4 h-4 rtl:rotate-180" />}>
-                {prevLabel || tCommon("previous")}
-              </Button>
-            )}
-          </div>
-          <div>
-            {nextHref && (
-              <Button variant="secondary" href={nextHref}>
-                <span className="flex items-center gap-2">
-                  {nextLabel || tCommon("next")}
-                  <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+        {(nav.prev || nav.next) && (
+          <nav aria-label={t("pagerLabel")} className="mt-10 grid gap-3 sm:grid-cols-2">
+            {nav.prev && (
+              <Link
+                href={nav.prev.href}
+                className="group rounded-panel border border-rule px-4 py-3 transition-colors duration-150 hover:border-fajr"
+              >
+                <span className="block font-ui text-caption text-ink-2">
+                  {t("partNumber", { number: nav.number - 1 })}
                 </span>
-              </Button>
+                <span className="mt-1 block text-small text-ink group-hover:text-fajr">
+                  <span aria-hidden="true" className="me-1 inline-block rtl:-scale-x-100">
+                    ←
+                  </span>
+                  {nav.prev.title}
+                </span>
+              </Link>
             )}
-          </div>
-        </div>
-      </div>
-    </div>
+            {nav.next && (
+              <Link
+                href={nav.next.href}
+                className="group rounded-panel border border-rule px-4 py-3 text-end transition-colors duration-150 hover:border-fajr sm:col-start-2"
+              >
+                <span className="block font-ui text-caption text-ink-2">
+                  {t("partNumber", { number: nav.number + 1 })}
+                </span>
+                <span className="mt-1 block text-small text-ink group-hover:text-fajr">
+                  {nav.next.title}
+                  <span aria-hidden="true" className="ms-1 inline-block rtl:-scale-x-100">
+                    →
+                  </span>
+                </span>
+              </Link>
+            )}
+          </nav>
+        )}
+      </footer>
+    </article>
   );
 }
