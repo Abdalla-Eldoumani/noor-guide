@@ -1,114 +1,68 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Menu, X } from "lucide-react";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
+const NAV = [
+  { href: "/learn", key: "learn" },
+  { href: "/tools", key: "tools" },
+  { href: "/progress", key: "progress" },
+] as const;
+
+// A running head rather than an app bar. On phones the bottom bar carries the
+// navigation, so only the name and the language choice sit up here.
 export default function Header() {
   const t = useTranslations("nav");
   const tSite = useTranslations("site");
   const tLandmarks = useTranslations("landmarks");
+  const locale = useLocale();
   const pathname = usePathname();
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
-  const navLinks = [
-    { href: "/", label: t("home") },
-    { href: "/learn", label: t("learn") },
-    { href: "/tools", label: t("tools") },
-    { href: "/progress", label: t("progress") },
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 4);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <header
-      className={`sticky top-0 z-40 bg-surface dark:bg-gray-900 dark:border-b dark:border-gray-800 transition-shadow ${
-        scrolled ? "shadow-md dark:shadow-none" : ""
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-xl font-heading font-bold text-primary-600 dark:text-primary-300">
-              {tSite("name")}
-            </span>
-            <span
-              dir="rtl"
-              lang="ar"
-              className="font-arabic text-arabic-sm text-primary-500 dark:text-primary-400 opacity-80 group-hover:opacity-100 transition-opacity"
-            >
+    <header className="mx-auto w-full max-w-book px-5 sm:px-8">
+      <div className="flex min-h-16 items-center justify-between gap-4 border-b border-rule py-2">
+        <Link
+          href="/"
+          className={`inline-flex min-h-11 items-center gap-2 text-ink ${
+            locale === "ar" ? "font-quran text-section" : "font-prose text-subsection font-semibold"
+          }`}
+        >
+          {tSite("name")}
+          {locale !== "ar" && (
+            <span lang="ar" dir="rtl" className="font-quran text-arabic font-normal text-ink-2">
               نور
             </span>
-          </Link>
+          )}
+        </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-1" aria-label={tLandmarks("mainNav")}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  isActive(link.href)
-                    ? "bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300"
-                    : "text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="flex items-center gap-2 sm:gap-5">
+          <nav aria-label={tLandmarks("mainNav")} className="hidden md:block">
+            <ul className="flex items-center gap-1">
+              {NAV.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                      className={`inline-flex min-h-11 items-center px-3 font-ui text-ui transition-colors duration-150 ${
+                        active
+                          ? "text-ink underline decoration-ochre decoration-2 underline-offset-[10px]"
+                          : "text-ink-2 hover:text-ink"
+                      }`}
+                    >
+                      {t(item.key)}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
           </nav>
-
-          <div className="flex items-center gap-2">
-            <LocaleSwitcher />
-            {/* Mobile menu button */}
-            <button
-              type="button"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors"
-              aria-label={mobileOpen ? tLandmarks("closeMenu") : tLandmarks("openMenu")}
-              aria-expanded={mobileOpen}
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <LocaleSwitcher />
         </div>
-
-        {/* Mobile nav dropdown */}
-        {mobileOpen && (
-          <nav className="md:hidden pb-4 border-t border-gray-100 dark:border-gray-800 pt-2" aria-label={tLandmarks("mobileNav")}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  isActive(link.href)
-                    ? "bg-primary-50 text-primary-600 dark:bg-primary-500/15 dark:text-primary-300"
-                    : "text-muted hover:text-ink hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        )}
       </div>
     </header>
   );
