@@ -4,14 +4,17 @@ import { routing } from "./i18n/routing";
 
 const handleEntry = createMiddleware(routing);
 
-// A link inside the site already names its locale, so client navigations and
-// prefetches (sent with the RSC header) skip the cookie redirect. Otherwise a
-// prefetch that lands just after a language switch caches /learn as the Arabic
-// page, and the English links lead there for minutes afterwards.
+// A link inside the site already names its locale, so the client router's
+// fetches skip the cookie redirect and only page loads are redirected.
+// Otherwise a prefetch that lands just after a language switch caches /learn as
+// the Arabic page, and the English links lead there for minutes afterwards.
+// Next hides its RSC headers from the proxy, so the fetch is recognised by
+// Sec-Fetch-Dest; a browser that sends none keeps the old behaviour.
 const handleInApp = createMiddleware({ ...routing, localeDetection: false });
 
 export default function proxy(request: NextRequest) {
-  return request.headers.get("rsc") === "1" ? handleInApp(request) : handleEntry(request);
+  const dest = request.headers.get("sec-fetch-dest");
+  return dest && dest !== "document" ? handleInApp(request) : handleEntry(request);
 }
 
 export const config = {
