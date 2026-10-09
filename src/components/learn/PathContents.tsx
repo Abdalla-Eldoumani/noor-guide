@@ -45,8 +45,12 @@ export function PathContents({ rows, detail = "length" }: { rows: ModuleSummary[
                     {row.titleAr}
                   </span>
                 )}
-                <span aria-hidden="true" className="leader hidden sm:block" />
-                <span className="font-ui text-caption whitespace-nowrap text-ink-2">{meta}</span>
+                {/* Leader and length wrap together, so a long title pushes both
+                    to the next line and the dots still end at the numbers. */}
+                <span className="contents sm:flex sm:min-w-40 sm:flex-1 sm:items-baseline sm:gap-x-3">
+                  <span aria-hidden="true" className="leader hidden sm:block" />
+                  <span className="font-ui text-caption whitespace-nowrap text-ink-2">{meta}</span>
+                </span>
               </span>
               <span className="self-center">
                 <StatusMark
