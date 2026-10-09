@@ -1,62 +1,32 @@
-"use client";
-
 import { useLocale } from "next-intl";
-import { getModuleById } from "@/lib/content";
-import { pickLocalized, useLocalizedContent } from "@/lib/content-i18n";
+import { pickLocalized } from "@/lib/content-i18n";
 import { LessonContent } from "@/components/learn/LessonContent";
 import { RulingList } from "@/components/learn/RulingList";
+import type { ModuleNav } from "@/lib/content";
 import type { SectionedModule } from "@/types/content";
 
-interface SectionedLessonProps {
-  data: SectionedModule;
-  lessonIds: string[];
-  prevHref?: string;
-  prevModuleId?: string;
-  nextHref?: string;
-  nextModuleId?: string;
-}
-
-// Renders any module built from an introduction plus a list of sections. The
-// three modules added after the original six share this shape, so they share
-// one renderer rather than repeating a bespoke client each time.
-export function SectionedLesson({
-  data,
-  lessonIds,
-  prevHref,
-  prevModuleId,
-  nextHref,
-  nextModuleId,
-}: SectionedLessonProps) {
+// Taharah, prayer in practice and janazah are each an introduction plus
+// numbered sections, so they share one renderer.
+export function SectionedLesson({ data, nav }: { data: SectionedModule; nav: ModuleNav }) {
   const locale = useLocale();
-  const pick = useLocalizedContent();
 
   return (
     <LessonContent
-      moduleId={data.module_id}
-      lessonIds={lessonIds}
-      title={pick<string>(data, "title") ?? data.title_en}
+      nav={nav}
+      title={pickLocalized<string>(data, "title", locale) ?? data.title_en}
       titleAr={locale === "ar" ? undefined : data.title_ar}
-      prevHref={prevHref}
-      prevLabel={prevModuleId ? pick(getModuleById(prevModuleId), "title") : undefined}
-      nextHref={nextHref}
-      nextLabel={nextModuleId ? pick(getModuleById(nextModuleId), "title") : undefined}
     >
-      <section>
-        <p className="text-ink leading-relaxed">
-          {pick<string>(data.introduction, "content") ?? data.introduction.content_en}
-        </p>
-      </section>
+      <p className="text-body text-ink">
+        {pickLocalized<string>(data.introduction, "content", locale) ?? data.introduction.content_en}
+      </p>
 
-      {data.sections.map((entry) => (
+      {data.sections.map((section) => (
         <RulingList
-          key={entry.id}
-          heading={pickLocalized<string>(entry, "heading", locale) ?? entry.heading}
-          items={entry.items}
-          emphasis={entry.emphasis}
+          key={section.id}
+          heading={pickLocalized<string>(section, "heading", locale) ?? section.heading}
+          items={section.items}
         />
       ))}
     </LessonContent>
   );
 }
-
-export default SectionedLesson;
