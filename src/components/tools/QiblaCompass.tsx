@@ -1,86 +1,101 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
-interface QiblaCompassProps {
-  bearing: number;
-}
+const C = 120;
 
-export function QiblaCompass({ bearing }: QiblaCompassProps) {
+const point = (degrees: number, radius: number) => {
+  const r = (degrees * Math.PI) / 180;
+  return { x: C + radius * Math.sin(r), y: C - radius * Math.cos(r) };
+};
+
+// Drawn from coordinates rather than rotated with CSS. SVG geometry does not
+// mirror under `dir="rtl"`, so east stays on the right on `/ar` as well.
+export function QiblaCompass({ bearing }: { bearing: number }) {
   const t = useTranslations("qibla");
   const tCompass = useTranslations("compass");
+  const locale = useLocale();
+  const shown = new Intl.NumberFormat(locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(bearing);
+
+  const tip = point(bearing, 86);
+  const arcEnd = point(bearing, 58);
+  const largeArc = bearing > 180 ? 1 : 0;
+  const cardinals = [
+    { key: "north", deg: 0 },
+    { key: "east", deg: 90 },
+    { key: "south", deg: 180 },
+    { key: "west", deg: 270 },
+  ] as const;
+
   return (
-    <div className="flex flex-col items-center gap-6">
-      {/* Compass container */}
-      <div className="relative w-full max-w-72 sm:max-w-80 aspect-square mx-auto">
-        {/* Outer compass circle */}
-        <div className="absolute inset-0 rounded-full border-4 border-gray-200 bg-surface shadow-lg dark:border-gray-600 dark:bg-gray-800">
-          {/* Cardinal direction markers */}
-          <span className="absolute left-1/2 top-3 -translate-x-1/2 font-heading text-sm font-bold text-primary-500">
-            {tCompass("north")}
-          </span>
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            {tCompass("east")}
-          </span>
-          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            {tCompass("south")}
-          </span>
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 font-heading text-sm font-bold text-muted dark:text-gray-400">
-            {tCompass("west")}
-          </span>
-
-          {/* Degree tick marks (every 30 degrees) */}
-          {Array.from({ length: 12 }, (_, i) => i * 30).map((deg) => (
-            <div
+    <figure className="flex flex-col items-center gap-5">
+      <svg
+        viewBox="0 0 240 240"
+        role="img"
+        aria-label={t("directionStatement", { bearing: shown })}
+        className="size-60 sm:size-72"
+      >
+        <circle cx={C} cy={C} r={108} fill="none" stroke="var(--color-rule)" strokeWidth={1.5} />
+        {Array.from({ length: 36 }, (_, i) => i * 10).map((deg) => {
+          const major = deg % 90 === 0;
+          const a = point(deg, 108);
+          const b = point(deg, major ? 98 : 103);
+          return (
+            <line
               key={deg}
-              className="absolute left-1/2 top-0 h-1/2 w-px origin-bottom"
-              style={{ transform: `rotate(${deg}deg)` }}
+              x1={a.x}
+              y1={a.y}
+              x2={b.x}
+              y2={b.y}
+              stroke="var(--color-ink-2)"
+              strokeWidth={major ? 1.5 : 1}
+              strokeOpacity={major ? 1 : 0.5}
+            />
+          );
+        })}
+        {cardinals.map(({ key, deg }) => {
+          const p = point(deg, 84);
+          return (
+            <text
+              key={key}
+              x={p.x}
+              y={p.y}
+              textAnchor="middle"
+              dominantBaseline="central"
+              className="font-ui"
+              fontSize={15}
+              fontWeight={key === "north" ? 600 : 400}
+              fill={key === "north" ? "var(--color-fajr)" : "var(--color-ink-2)"}
             >
-              <div className="mx-auto h-3 w-0.5 bg-gray-300 dark:bg-gray-500" />
-            </div>
-          ))}
-
-          {/* Qibla direction arrow */}
-          <div
-            className="absolute left-1/2 top-0 h-1/2 w-8 -translate-x-1/2 origin-bottom transition-transform duration-500"
-            style={{ transform: `translateX(-50%) rotate(${bearing}deg)` }}
-          >
-            <svg
-              viewBox="0 0 32 140"
-              className="h-full w-full"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M16 2 L7 42 Q16 36 25 42 Z"
-                className="fill-primary-500"
-              />
-              <rect
-                x="14.5"
-                y="40"
-                width="3"
-                height="78"
-                rx="1.5"
-                className="fill-primary-500 opacity-40"
-              />
-            </svg>
-          </div>
-
-          {/* Center dot */}
-          <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500 shadow-md" />
-        </div>
-      </div>
-
-      {/* Bearing text */}
-      <div className="text-center">
-        <p className="font-heading text-3xl font-bold text-primary-500">
-          {bearing.toFixed(1)}&deg;
-        </p>
-        <p className="mt-1 text-sm text-muted dark:text-gray-400">
-          {t("fromNorth")}
-        </p>
-      </div>
-    </div>
+              {tCompass(key)}
+            </text>
+          );
+        })}
+        {bearing > 0.5 && (
+          <path
+            d={`M ${C} ${C - 58} A 58 58 0 ${largeArc} 1 ${arcEnd.x} ${arcEnd.y}`}
+            fill="none"
+            stroke="var(--color-ochre)"
+            strokeWidth={2}
+          />
+        )}
+        <line x1={C} y1={C} x2={tip.x} y2={tip.y} stroke="var(--color-ink)" strokeWidth={2.5} strokeLinecap="round" />
+        <rect
+          x={tip.x - 6}
+          y={tip.y - 6}
+          width={12}
+          height={12}
+          fill="var(--color-ink)"
+          transform={`rotate(${bearing} ${tip.x} ${tip.y})`}
+        />
+        <circle cx={C} cy={C} r={4} fill="var(--color-ink)" />
+      </svg>
+      <figcaption className="text-center">
+        <span className="block font-prose text-title-sm font-semibold text-ink">
+          <span dir="ltr">{shown}°</span>
+        </span>
+        <span className="mt-1 block font-ui text-ui text-ink-2">{t("fromNorth")}</span>
+      </figcaption>
+    </figure>
   );
 }
