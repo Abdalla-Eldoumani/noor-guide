@@ -10,11 +10,11 @@
     "source": {
       "type": "hadith",
       "reference": "Sahih Bukhari 8",
-      "text_en": "Islam is built upon five: the testimony that there is no god but Allah and that Muhammad is the Messenger of Allah, establishing prayer, giving zakat, fasting Ramadan, and pilgrimage to the House (Kaaba) for whoever is able.",
-      "text_ar": "بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالْحَجِّ، وَصَوْمِ رَمَضَانَ",
-      "text_fr": "L'islam est bâti sur cinq : l'attestation qu'il n'y a de divinité qu'Allah et que Mouhammad est le Messager d'Allah, l'accomplissement de la prière, l'acquittement de la zakât, le jeûne du Ramadan, et le pèlerinage à la Maison sacrée pour qui en a la capacité.",
+      "text_en": "Islam is based on (the following) five (principles): 1. To testify that none has the right to be worshipped but Allah and Muhammad is Allah's Messenger (ﷺ). 2. To offer the (compulsory congregational) prayers dutifully and perfectly. 3. To pay Zakat (i.e. obligatory charity) . 4. To perform Hajj. (i.e. Pilgrimage to Mecca) 5. To observe fast during the month of Ramadan.",
+      "text_ar": "بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالْحَجِّ، وَصَوْمِ رَمَضَانَ",
+      "text_fr": "L'islam est bâti sur cinq : l'attestation qu'il n'y a de divinité qu'Allah et que Mouhammad est le Messager d'Allah, l'accomplissement de la prière, l'acquittement de la zakât, le pèlerinage, et le jeûne du Ramadan.",
       "grade": "sahih",
-      "translation_provenance": "project"
+      "translation_provenance": "sunnah"
     }
   },
   "pillars": [
