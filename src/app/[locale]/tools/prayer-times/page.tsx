@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PageWrapper } from "@/components/layout/PageWrapper";
 import { Breadcrumb } from "@/components/layout/Breadcrumb";
+import { absoluteUrl } from "@/lib/site";
 import { PrayerTimesClient } from "./PrayerTimesClient";
 
 type Params = { params: Promise<{ locale: string }> };
@@ -8,7 +9,11 @@ type Params = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Params) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "prayerTimes" });
-  return { title: t("title"), description: t("subtitle") };
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+    alternates: { canonical: absoluteUrl(locale, "/tools/prayer-times") },
+  };
 }
 
 export default async function PrayerTimesPage({ params }: Params) {
