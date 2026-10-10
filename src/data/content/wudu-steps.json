@@ -338,9 +338,9 @@
     },
     {
       "id": "wudu-sunnah-2",
-      "description": "Using the siwak or brushing the teeth, which the narration links to every prayer.",
-      "description_ar": "السواك، وقد ربطه الحديث بكل صلاة.",
-      "description_fr": "Utiliser le siwak ou se brosser les dents ; le hadith le relie à chaque prière.",
+      "description": "Cleaning the teeth with the siwak. The Prophet ﷺ said he would have ordered it for every prayer had it not been hard on his followers.",
+      "description_ar": "تنظيف الأسنان بالسواك. قال النبي ﷺ إنه لو لم يكن في ذلك مشقة على أمته لأمرهم به مع كل صلاة.",
+      "description_fr": "Se nettoyer les dents avec le siwak. Le Prophète ﷺ a dit qu'il l'aurait ordonné pour chaque prière si cela n'avait pas été pénible pour sa communauté.",
       "source": "Sahih Bukhari 887",
       "verified": true,
       "needs_scholarly_review": true
