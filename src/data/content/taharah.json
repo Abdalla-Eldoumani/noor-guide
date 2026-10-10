@@ -53,7 +53,10 @@
           "description_fr": "À la fin des lochies.",
           "source": "Sunan Abu Dawud 311",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration gives the waiting period of forty days and does not mention the bath. Al-Tirmidhi (Jami' 139) reports that the people of knowledge agreed that a woman in postnatal bleeding leaves prayer for up to forty days, unless she sees purity sooner, in which case she bathes and prays.",
+          "note_ar": "ذكر الحديث مدة جلوس النفساء أربعين يومًا ولا يذكر الغسل. ونقل الترمذي في جامعه (139) إجماع أهل العلم على أن النفساء تدع الصلاة أربعين يومًا إلا أن ترى الطهر قبل ذلك فإنها تغتسل وتصلي.",
+          "note_fr": "Le hadith donne la durée d'attente de quarante jours et ne mentionne pas le bain. Al-Tirmidhî (Jâmi' 139) rapporte que les gens de science s'accordent à dire que la femme en lochies délaisse la prière jusqu'à quarante jours, sauf si elle voit la pureté plus tôt : elle fait alors le ghousl et prie."
         },
         {
           "id": "ghusl-when-5",
@@ -62,7 +65,10 @@
           "description_fr": "Au moment d'embrasser l'islam.",
           "source": "Sunan Abu Dawud 355",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration records the command to Qays ibn Asim. On whether the bath is required, Wahbah al-Zuhayli (al-Fiqh al-Islami wa Adillatuhu) reports that the Malikis and Hanbalis hold it obligatory, while the Hanafis and Shafi'is hold it recommended when the convert is not in a state of janabah. The Dorar fiqh encyclopedia, citing Mawahib al-Jalil, gives the well-known Maliki view as recommended.",
+          "note_ar": "ذكر الحديث أمر النبي صلى الله عليه وسلم قيس بن عاصم بالغسل. وفي وجوبه نقل وهبة الزحيلي في الفقه الإسلامي وأدلته أن المالكية والحنابلة أوجبوه، وأن الحنفية والشافعية قالوا بالاستحباب إذا لم يكن جنبًا. وفي الموسوعة الفقهية على موقع الدرر السنية، نقلًا عن مواهب الجليل، أن المشهور عند المالكية الاستحباب.",
+          "note_fr": "Le hadith rapporte l'ordre donné à Qays ibn 'Âsim. Sur le caractère obligatoire du bain, Wahbah al-Zuhaylî (al-Fiqh al-Islâmî wa Adillatuhu) rapporte que les malikites et les hanbalites le tiennent pour obligatoire, alors que les hanafites et les chaféites le tiennent pour recommandé lorsque le converti n'est pas en état de janâba. L'encyclopédie juridique de Dorar, citant Mawâhib al-Jalîl, donne l'avis connu des malikites comme étant la recommandation."
         }
       ]
     },
@@ -128,7 +134,6 @@
       "heading": "Tayammum, when there is no water",
       "heading_ar": "التيمم عند فقد الماء",
       "heading_fr": "Le tayammoum, en l'absence d'eau",
-      "emphasis": "recommended",
       "items": [
         {
           "id": "tayammum-1",
@@ -182,7 +187,6 @@
       "heading": "Menstruation and postnatal bleeding",
       "heading_ar": "أحكام الحيض والنفاس",
       "heading_fr": "Menstrues et lochies",
-      "emphasis": "recommended",
       "items": [
         {
           "id": "hayd-1",
@@ -199,9 +203,9 @@
           "description_ar": "ولا يُصام فيها، لكن تُقضى الأيام بعد ذلك.",
           "description_fr": "Le jeûne n'est pas accompli durant cette période, mais les jours manqués sont rattrapés plus tard.",
           "source": "Sahih Muslim 335",
-          "note": "This difference between prayer and fasting is reported from Aisha and is the position of the four schools.",
-          "note_ar": "وهذا الفرق بين الصلاة والصيام ثابت عن عائشة رضي الله عنها وعليه المذاهب الأربعة.",
-          "note_fr": "Cette différence entre la prière et le jeûne est rapportée d'Aïcha et constitue la position des quatre écoles.",
+          "note": "The difference between prayer and fasting is reported from Aisha. Al-Nawawi (Sharh Sahih Muslim, 4/26) reports that the Muslims are agreed on it: neither is performed during the bleeding, the prayer is not made up, and the fast is.",
+          "note_ar": "هذا الفرق بين الصلاة والصيام ثابت عن عائشة رضي الله عنها. ونقل النووي في شرح صحيح مسلم (4/26) إجماع المسلمين عليه: لا تجب الصلاة ولا الصوم في زمن الحيض، ولا يجب قضاء الصلاة، ويجب قضاء الصوم.",
+          "note_fr": "Cette différence entre la prière et le jeûne est rapportée d'Aïcha. Al-Nawawî (Charh Sahîh Mouslim, 4/26) rapporte que les musulmans s'accordent là-dessus : ni l'un ni l'autre n'est accompli pendant le saignement, la prière n'est pas rattrapée et le jeûne l'est.",
           "verified": true,
           "needs_scholarly_review": true
         },
