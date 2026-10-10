@@ -1,9 +1,10 @@
 // Types for the content JSON. Locale siblings (`_ar`, `_fr`) are read by
 // `pickLocalized`, so only the fields the code names directly are listed.
 
-// Where an English rendering came from: a published edition fetched from an
-// API, or the project's own translation.
-export type Provenance = "fetched" | "project";
+// Where an English rendering came from: a published Qur'an edition fetched
+// from an API, the English shown on sunnah.com for a hadith, or the project's
+// own translation.
+export type Provenance = "fetched" | "sunnah" | "project";
 
 export interface QuranReference {
   reference: string;
