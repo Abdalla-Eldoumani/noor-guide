@@ -214,7 +214,6 @@ export interface SalahStep {
   recitation_standing?: Recitation;
   after_fatiha?: string;
   after_fatiha_ar?: string;
-  repetitions?: number;
   notes?: string;
   notes_ar?: string;
   source?: ContentSource;
