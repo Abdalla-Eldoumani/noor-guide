@@ -96,8 +96,7 @@
     "positionSitting": "Assis",
     "whenLabel": "Quand\u00a0: {when}",
     "whileRising": "En se relevant",
-    "onceStanding": "Une fois debout",
-    "sayThisTimes": "Dis ceci {count} fois."
+    "onceStanding": "Une fois debout"
   },
   "surahs": {
     "startHere": "Commence ici",

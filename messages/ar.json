@@ -96,8 +96,7 @@
     "positionSitting": "الجلوس",
     "whenLabel": "متى: {when}",
     "whileRising": "أثناء الرفع",
-    "onceStanding": "عند الاعتدال",
-    "sayThisTimes": "قُل ذلك {count} مرّات."
+    "onceStanding": "عند الاعتدال"
   },
   "surahs": {
     "startHere": "ابدأ هنا",

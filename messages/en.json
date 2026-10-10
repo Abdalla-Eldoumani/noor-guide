@@ -96,8 +96,7 @@
     "positionSitting": "Sitting",
     "whenLabel": "When: {when}",
     "whileRising": "While rising",
-    "onceStanding": "Once standing",
-    "sayThisTimes": "Say this {count} times."
+    "onceStanding": "Once standing"
   },
   "surahs": {
     "startHere": "Start here",
