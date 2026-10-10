@@ -42,8 +42,8 @@
   --text-ui--line-height: 1.375rem;
   --text-caption: 0.875rem;
   --text-caption--line-height: 1.25rem;
-  --text-micro: 0.75rem;
-  --text-micro--line-height: 1rem;
+  --text-micro: 0.8125rem;
+  --text-micro--line-height: 1.125rem;
   --text-quran: 1.75rem;
   --text-quran--line-height: 3.5rem;
   --text-quran-sm: 1.5rem;
@@ -85,6 +85,40 @@
       --color-ochre: #d9a441;
       --color-sage: #8fb096;
       --color-clay: #e39a87;
+    }
+  }
+
+  /* At desktop widths the phone-sized scale reads small. Every step rises and
+     the column widens so a line stays near 70 characters. */
+  @media (min-width: 64rem) {
+    :root {
+      --text-display: 3.5rem;
+      --text-display--line-height: 4rem;
+      --text-display-sm: 2.5rem;
+      --text-display-sm--line-height: 3rem;
+      --text-title: 2.75rem;
+      --text-title--line-height: 3.25rem;
+      --text-title-sm: 2.25rem;
+      --text-title-sm--line-height: 2.75rem;
+      --text-section: 1.875rem;
+      --text-section--line-height: 2.5rem;
+      --text-subsection: 1.4375rem;
+      --text-subsection--line-height: 2rem;
+      --text-body: 1.25rem;
+      --text-body--line-height: 2.125rem;
+      --text-small: 1.125rem;
+      --text-small--line-height: 1.875rem;
+      --text-ui: 1rem;
+      --text-ui--line-height: 1.5rem;
+      --text-caption: 0.9375rem;
+      --text-caption--line-height: 1.375rem;
+      --text-quran: 2rem;
+      --text-quran--line-height: 3.75rem;
+      --text-quran-sm: 1.75rem;
+      --text-quran-sm--line-height: 3.25rem;
+      --text-arabic: 1.375rem;
+      --text-arabic--line-height: 2.25rem;
+      --container-book: 48rem;
     }
   }
 
