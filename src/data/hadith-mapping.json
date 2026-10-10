@@ -194,7 +194,8 @@
       "narrator": "Umar ibn al-Khattab",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "The reward of deeds depends upon the intentions",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Concerns intention in general. On saying the intention aloud, see the prayer step note, from Ibn Taymiyyah."
     },
     "Sahih Bukhari 1081": {
       "usedIn": [
@@ -505,7 +506,8 @@
       "narrator": "Salim, from Abdullah ibn Umar",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "raised both hands on opening the prayer, on the takbir for bowing, and on rising from bowing",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Gives raising the hands to shoulder height. Ear height comes from Sahih Muslim 401. The schools' positions on where and how high are in the item notes, from Ibn Rushd."
     },
     "Sahih Bukhari 740": {
       "usedIn": [
@@ -536,7 +538,8 @@
       "narrator": "Ubadah ibn as-Samit",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Whoever does not recite Al-Fatiha in his prayer, his prayer is invalid",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Says the prayer of one who does not recite Al-Fatiha is invalid. Whether that means every rakah, and what a follower recites, is in the item notes, from Ibn Rushd."
     },
     "Sahih Bukhari 776": {
       "usedIn": [
@@ -556,7 +559,8 @@
       "narrator": "Abu Hurayrah",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Say Amen when the Imam says ghayri l-maghdubi alayhim wa la d-dalleen",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Says to say Ameen when the imam says the last words of Al-Fatiha and does not state the volume. The three views are in the item note, from Ibn Rajab."
     },
     "Sahih Bukhari 789": {
       "usedIn": [
@@ -764,7 +768,8 @@
       "narrator": "Wa'il ibn Hujr",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "raised his hands at the beginning of the prayer, then placed his right hand over his left hand",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Gives ear level, according to the narrator Hammam, and the right hand placed over the left. It states no place for the hands; the chapter heading above it on sunnah.com is the translator's. The schools' positions are in the item note, from the Kuwaiti Encyclopedia of Fiqh."
     },
     "Sahih Muslim 482": {
       "usedIn": [
@@ -806,17 +811,8 @@
       "narrator": "Ibn Umar",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "raised his right finger, the one next to the thumb, and supplicated with it",
-      "grade": "the collection carries no grading line"
-    },
-    "Sahih Muslim 582": {
-      "usedIn": [
-        "salah-steps.json"
-      ],
-      "status": "verified",
-      "narrator": "Amir ibn Sa'd, from his father",
-      "checkedAgainst": "sunnah.com",
-      "confirmedWording": "pronouncing the taslim on his right and on his left until the whiteness of his cheek was seen",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Records the finger raised while supplicating and does not say whether it moves or when. The schools' positions are in the finger note, from al-Dubayyan."
     },
     "Sahih Muslim 612": {
       "usedIn": [
@@ -859,7 +855,7 @@
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "in bowing Subhana Rabbiyal-Azim, and in prostration Subhana Rabbiyal-A'la",
       "grade": "the collection carries no grading line",
-      "note": "Carries both formulas in one narration, which is why the obligatory duties and the prostration step were moved to it from Sunan Abi Dawud 869 (graded da'if)."
+      "note": "Carries both formulas in one narration, which is why the obligatory duties and the prostration step were moved to it from Sunan Abi Dawud 869 (graded da'if). It gives the words and no count; the schools' positions on the count are in the item notes, from Ibn Rushd."
     },
     "Sahih Muslim 861": {
       "usedIn": [
@@ -1036,7 +1032,8 @@
       "narrator": "Ali ibn Abi Talib",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "The key to prayer is purification, its beginning is takbir and its end is taslim",
-      "grade": "Hasan Sahih (Al-Albani)"
+      "grade": "Hasan Sahih (Al-Albani)",
+      "note": "Says the prayer ends with taslim and does not state its number or whether it is obligatory. Those points are in the item note, from Ibn Rushd."
     },
     "Sunan Abu Dawud 775": {
       "usedIn": [
@@ -1101,6 +1098,17 @@
       "confirmedWording": "Jumu'ah prayer is two rak'ahs, and the prayer of Al-Fitr is two rak'ahs, and the prayer of Al-Adha is two rak'ahs, and the prayer when traveling is two rak'ahs, complete and not shortened, on the tongue of Muhammad",
       "grade": "Sahih (Darussalam)",
       "note": "Al-Nasa'i adds that Abd al-Rahman ibn Abi Layla did not hear from Umar; the item note says so."
+    },
+    "Sunan Abu Dawud 996": {
+      "usedIn": [
+        "salah-steps.json"
+      ],
+      "status": "verified",
+      "narrator": "Abdullah ibn Mas'ud",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "used to give the salutation to his left and right sides until the whiteness of his cheek was seen",
+      "grade": "Sahih (Al-Albani)",
+      "note": "Abu Dawud adds that Shu'bah used to reject this narration as a report from the Prophet. Whether the tasleem is obligatory, and whether it is one or two, is in the item note, from Ibn Rushd."
     }
   }
 }

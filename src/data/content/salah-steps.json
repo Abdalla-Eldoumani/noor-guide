@@ -4,17 +4,17 @@
   "title_ar": "كيفية الصلاة",
   "title_fr": "Comment accomplir la salât",
   "introduction": {
-    "content_en": "Salah (prayer) is the second pillar of Islam and the most important act of worship after believing in Allah. Muslims pray five times a day at specific times. The Prophet ﷺ said: 'Pray as you have seen me praying.' This guide follows exactly how he ﷺ prayed.",
-    "content_ar": "الصلاة هي الركن الثاني من أركان الإسلام، وأعظم العبادات بعد الإيمان بالله. يصلي المسلم خمس مرات في اليوم في أوقات مخصوصة. قال النبي ﷺ: صلوا كما رأيتموني أصلي. هذا الدليل يتبع صلاته ﷺ كما صلاها.",
-    "content_fr": "La salât (la prière) est le deuxième pilier de l'islam et le plus important acte d'adoration après la croyance en Allah. Les musulmans prient cinq fois par jour à des moments déterminés. Le Prophète ﷺ a dit : « Priez comme vous m'avez vu prier. » Ce guide suit exactement sa manière de prier ﷺ.",
+    "content_en": "Salah (prayer) is the second pillar of Islam and the most important act of worship after believing in Allah. Muslims pray five times a day at specific times. The Prophet ﷺ said: 'Pray as you have seen me praying.' This guide follows the narrations that describe his prayer and notes where the schools of law differ.",
+    "content_ar": "الصلاة هي الركن الثاني من أركان الإسلام، وأعظم العبادات بعد الإيمان بالله. يصلي المسلم خمس مرات في اليوم في أوقات مخصوصة. قال النبي ﷺ: صلوا كما رأيتموني أصلي. يتبع هذا الدليل الروايات التي وصفت صلاته ﷺ، وينبّه إلى المواضع التي اختلفت فيها المذاهب.",
+    "content_fr": "La salât (la prière) est le deuxième pilier de l'islam et le plus important acte d'adoration après la croyance en Allah. Les musulmans prient cinq fois par jour à des moments déterminés. Le Prophète ﷺ a dit : « Priez comme vous m'avez vu prier. » Ce guide suit les récits qui décrivent sa prière ﷺ et signale les points sur lesquels les écoles divergent.",
     "source": {
       "type": "hadith",
       "reference": "Sahih Bukhari 631",
-      "text_en": "Pray as you have seen me praying.",
-      "text_ar": "وَصَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي، فَإِذَا حَضَرَتِ الصَّلاَةُ فَلْيُؤَذِّنْ لَكُمْ أَحَدُكُمْ وَلْيَؤُمَّكُمْ أَكْبَرُكُمْ",
+      "text_en": "Pray as you have seen me praying and when it is the time for the prayer one of you should pronounce the Adhan and the oldest of you should lead the prayer.",
+      "text_ar": "وَصَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي، فَإِذَا حَضَرَتِ الصَّلاَةُ فَلْيُؤَذِّنْ لَكُمْ أَحَدُكُمْ وَلْيَؤُمَّكُمْ أَكْبَرُكُمْ",
       "text_fr": "Priez comme vous m'avez vu prier.",
       "grade": "sahih",
-      "translation_provenance": "project"
+      "translation_provenance": "sunnah"
     }
   },
   "prerequisites": [
@@ -103,9 +103,12 @@
       "title_ar": "القيام والنية",
       "title_fr": "Se tenir debout et formuler l'intention (qiyâm et niyya)",
       "position": "standing",
-      "instruction_en": "Stand upright facing the Qibla. Make the intention in your heart for the specific prayer you are about to perform. The intention is NOT spoken aloud.",
-      "instruction_ar": "قف قائمًا مستقبلًا القبلة. وانوِ في قلبك الصلاة المعينة التي تريد أداءها. ولا يُتلفظ بالنية.",
-      "instruction_fr": "Tiens-toi droit, face à la qibla. Forme dans ton cœur l'intention de la prière que tu vas accomplir. L'intention ne se prononce PAS à voix haute.",
+      "instruction_en": "Stand upright facing the Qibla. Make the intention in your heart for the specific prayer you are about to perform.",
+      "instruction_ar": "قف قائمًا مستقبلًا القبلة. وانوِ في قلبك الصلاة المعينة التي تريد أداءها.",
+      "instruction_fr": "Tiens-toi droit, face à la qibla. Forme dans ton cœur l'intention de la prière que tu vas accomplir.",
+      "notes": "The intention is in the heart. Ibn Taymiyyah (Majmu' al-Fatawa, 22/246) reports that the imams agree it is not prescribed to say it aloud and that the prayer is valid with the intention of the heart alone. On saying it quietly, he reports that a group of Hanafi, Shafi'i and Hanbali scholars recommend it and a group of Maliki and Hanbali scholars do not (22/231, quoted in al-Ba'dani, Fath al-'Allam, 2/250).",
+      "notes_ar": "النية محلها القلب. ونقل ابن تيمية في مجموع الفتاوى (22/246) اتفاق الأئمة على أن الجهر بها غير مشروع، وأن الصلاة تصح بنية القلب وحدها. وفي التلفظ بها سرًّا نقل (22/231، كما أورده البعداني في فتح العلام 2/250) أن طائفة من الحنفية والشافعية والحنابلة استحبته، وأن طائفة من المالكية والحنابلة لم تستحبه.",
+      "notes_fr": "L'intention se fait dans le cœur. Ibn Taymiyya (Majmou' al-Fatâwâ, 22/246) rapporte que les imams s'accordent à dire qu'il n'est pas prescrit de la prononcer à voix haute et que la prière est valable avec la seule intention du cœur. Sur le fait de la prononcer à voix basse, il rapporte qu'un groupe de savants hanafites, chaféites et hanbalites la recommande et qu'un groupe de malikites et de hanbalites ne la recommande pas (22/231, cité par al-Ba'dânî, Fath al-'Allâm, 2/250).",
       "source": {
         "type": "hadith",
         "reference": "Sahih Bukhari 1",
@@ -120,9 +123,9 @@
       "title_ar": "تكبيرة الإحرام",
       "title_fr": "Le takbîr d'ouverture (takbîrat al-ihrâm)",
       "position": "standing-hands-raised",
-      "instruction_en": "Raise both hands up to your ears (men) or shoulders (women) and say 'Allahu Akbar' (Allah is the Greatest). This officially begins the prayer. From this moment, you are in a sacred state.",
-      "instruction_ar": "ارفع يديك إلى أذنيك (للرجل) أو إلى منكبيك (للمرأة) وقل: الله أكبر. بهذه التكبيرة تنعقد الصلاة، ومنذ هذه اللحظة أنت في حالة خاصة لا يجوز فيها الحديث ولا الانشغال.",
-      "instruction_fr": "Lève les deux mains à hauteur des oreilles (pour les hommes) ou des épaules (pour les femmes) et dis « Allâhou akbar » (Allah est le plus grand). C'est ce qui ouvre officiellement la prière. À partir de cet instant, tu es en état sacré.",
+      "instruction_en": "Raise both hands level with your shoulders, or with your ears, and say 'Allahu Akbar' (Allah is the Greatest). This begins the prayer.",
+      "instruction_ar": "ارفع يديك إلى حذو منكبيك أو إلى حذو أذنيك وقل: الله أكبر. بهذه التكبيرة تبدأ الصلاة.",
+      "instruction_fr": "Lève les deux mains à hauteur des épaules ou des oreilles et dis « Allâhou akbar » (Allah est le plus grand). C'est ce qui ouvre la prière.",
       "recitation": {
         "arabic": "اللَّهُ أَكْبَرُ",
         "transliteration": "Allahu Akbar",
@@ -130,6 +133,9 @@
         "translation_fr": "Allah est le plus grand.",
         "translation_provenance": "project"
       },
+      "notes": "Ibn Umar's narration (Sahih Bukhari 735) gives shoulder height. Wa'il ibn Hujr's report (Sahih Muslim 401) gives ear level. Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Malik and al-Shafi'i hold shoulders and Abu Hanifa holds ears, and that each is narrated from the Prophet ﷺ.",
+      "notes_ar": "حديث ابن عمر (البخاري 735) فيه الرفع إلى حذو المنكبين، وحديث وائل بن حجر (مسلم 401) فيه الرفع إلى حذو الأذنين. ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن مالكًا والشافعي قالا بالمنكبين، وأن أبا حنيفة قال بالأذنين، وأن كلًّا منهما مروي عن النبي ﷺ.",
+      "notes_fr": "Le récit d'Ibn Umar (Boukhârî 735) indique la hauteur des épaules. Le récit de Wâ'il ibn Hujr (Mouslim 401) indique la hauteur des oreilles. Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que Mâlik et al-Châfi'î retiennent les épaules et Abou Hanîfa les oreilles, et que chacune de ces façons est rapportée du Prophète ﷺ.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Bukhari 735",
@@ -140,16 +146,16 @@
     {
       "id": "salah-step-3",
       "order": 3,
-      "title_en": "Place Hands on Chest (Qabd)",
+      "title_en": "Fold Your Hands (Qabd)",
       "title_ar": "وضع اليدين",
-      "title_fr": "Placer les mains sur la poitrine (qabd)",
+      "title_fr": "Placer les mains (qabd)",
       "position": "standing-hands-folded",
-      "instruction_en": "Place your right hand over your left hand on your chest. Your eyes should look toward the place where you will prostrate (the ground in front of you).",
-      "instruction_ar": "ضع يدك اليمنى على يدك اليسرى على صدرك. وانظر بعينيك إلى موضع سجودك على الأرض أمامك.",
-      "instruction_fr": "Pose ta main droite sur ta main gauche, sur la poitrine. Le regard se porte vers l'endroit où tu te prosterneras (le sol devant toi).",
-      "notes": "There is a difference of opinion on exactly where to place the hands. Placing them on the chest is the most common Sunni practice based on Sahih hadith.",
-      "notes_ar": "اختلف الفقهاء في موضع وضع اليدين بالضبط. ووضعهما على الصدر هو القول الأشهر عند أهل السنة المستند إلى الأحاديث الصحيحة.",
-      "notes_fr": "Il existe une divergence sur l'emplacement exact des mains. Les placer sur la poitrine est la pratique sunnite la plus répandue, fondée sur des hadîths authentiques.",
+      "instruction_en": "Place your right hand over your left hand.",
+      "instruction_ar": "ضع يدك اليمنى على يدك اليسرى.",
+      "instruction_fr": "Pose ta main droite sur ta main gauche.",
+      "notes": "The narration says he placed his right hand over his left and does not say where. The Hanafis, Shafi'is and Hanbalis hold folding the hands a sunnah, while the Malikis prefer letting the arms hang in the obligatory prayer. On the place, the Hanafis say below the navel, the Shafi'is and Malikis say below the chest and above the navel, and the Hanbalis report both (al-Mawsu'a al-Fiqhiyya al-Kuwaitiyya, vol. 38, p. 369).",
+      "notes_ar": "ذكر الحديث أنه وضع يده اليمنى على اليسرى ولم يذكر الموضع. وذكرت الموسوعة الفقهية الكويتية (ج 38، ص 369) أن الحنفية والشافعية والحنابلة يرون القبض سنة، وأن المالكية يستحبون السدل في الفريضة. وفي الموضع: الحنفية تحت السرة، والشافعية والمالكية تحت الصدر وفوق السرة، وعند الحنابلة روايتان.",
+      "notes_fr": "Le hadith dit qu'il a placé sa main droite sur sa main gauche et ne précise pas l'endroit. Les hanafites, les chaféites et les hanbalites tiennent le croisement des mains pour une sunna, alors que les malikites préfèrent laisser les bras le long du corps dans la prière obligatoire. Sur l'endroit, les hanafites disent sous le nombril, les chaféites et les malikites sous la poitrine et au-dessus du nombril, et les hanbalites rapportent les deux avis (Encyclopédie juridique koweïtienne, vol. 38, p. 369).",
       "source": {
         "type": "hadith",
         "reference": "Sahih Muslim 401",
@@ -174,9 +180,9 @@
         "translation_fr": "Gloire et pureté à Toi, ô Allah, et à Toi la louange. Béni soit Ton nom, et élevée soit Ta majesté. Il n'y a de divinité digne d'adoration que Toi.",
         "translation_provenance": "project"
       },
-      "notes": "This is said only in the first rakah, not in subsequent ones.",
-      "notes_ar": "يُقال هذا الدعاء في الركعة الأولى فقط، لا في الركعات التي بعدها.",
-      "notes_fr": "Elle ne se dit que dans la première rak'a, pas dans les suivantes.",
+      "notes": "This is said only in the first rakah, not in subsequent ones. Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Malik held the opening supplication is neither obligatory nor a sunnah, and that al-Shafi'i and Abu Hanifa each use a different wording.",
+      "notes_ar": "يُقال هذا الدعاء في الركعة الأولى فقط، لا في الركعات التي بعدها. ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن مالكًا لم ير دعاء الاستفتاح واجبًا ولا سنة، وأن الشافعي وأبا حنيفة يختار كل منهما صيغة تختلف عن الأخرى.",
+      "notes_fr": "Elle ne se dit que dans la première rak'a, pas dans les suivantes. Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que Mâlik ne tenait l'invocation d'ouverture ni pour obligatoire ni pour une sunna, et qu'al-Châfi'î et Abou Hanîfa retiennent chacun une formule différente.",
       "source": {
         "type": "hadith",
         "reference": "Sunan Abu Dawud 775",
@@ -191,9 +197,9 @@
       "title_ar": "الاستعاذة وقراءة الفاتحة",
       "title_fr": "Chercher refuge et réciter Al-Fâtiha",
       "position": "standing-hands-folded",
-      "instruction_en": "Say 'A'udhu billahi min ash-Shaytanir-rajim' (I seek refuge in Allah from the accursed Shaytan), then say 'Bismillahir-Rahmanir-Rahim' (In the name of Allah, the Most Gracious, the Most Merciful), then recite Surah Al-Fatiha. This surah is OBLIGATORY in every single rakah of every prayer.",
-      "instruction_ar": "قل: أعوذ بالله من الشيطان الرجيم، ثم قل: بسم الله الرحمن الرحيم، ثم اقرأ سورة الفاتحة. وقراءة الفاتحة ركن في كل ركعة من كل صلاة.",
-      "instruction_fr": "Dis « A'oûdhou billâhi mina ch-chaytâni r-rajîm » (je cherche refuge auprès d'Allah contre Satan le maudit), puis « Bismillâhi r-Rahmâni r-Rahîm » (au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux), puis récite la sourate Al-Fâtiha. Cette sourate est OBLIGATOIRE à chaque rak'a de chaque prière.",
+      "instruction_en": "Say 'A'udhu billahi min ash-Shaytanir-rajim' (I seek refuge in Allah from the accursed Shaytan), then say 'Bismillahir-Rahmanir-Rahim' (In the name of Allah, the Most Gracious, the Most Merciful), then recite Surah Al-Fatiha.",
+      "instruction_ar": "قل: أعوذ بالله من الشيطان الرجيم، ثم قل: بسم الله الرحمن الرحيم، ثم اقرأ سورة الفاتحة.",
+      "instruction_fr": "Dis « A'oûdhou billâhi mina ch-chaytâni r-rajîm » (je cherche refuge auprès d'Allah contre Satan le maudit), puis « Bismillâhi r-Rahmâni r-Rahîm » (au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux), puis récite la sourate Al-Fâtiha.",
       "recitation": {
         "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
         "transliteration": "Bismillahir-Rahmanir-Rahim. Al-hamdu lillahi Rabbil-'alamin. Ar-Rahmanir-Rahim. Maliki yawmid-Din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim walad-dallin.",
@@ -204,14 +210,17 @@
       "after_fatiha": "Say 'Ameen' (meaning: O Allah, answer our prayer) after completing Al-Fatiha.",
       "after_fatiha_ar": "قل: آمين، أي اللهم استجب، بعد فراغك من قراءة الفاتحة.",
       "after_fatiha_fr": "Dis « Âmîn » (ô Allah, exauce notre invocation) après avoir achevé Al-Fâtiha.",
+      "notes": "The narration says the prayer of one who does not recite Al-Fatiha is invalid. The schools differ on whether it is required in every rakah (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer): al-Shafi'i and the best-known report from Malik require it in every rakah, while Abu Hanifa requires some verses of the Qur'an in the first two rakahs and recommends tasbih over recitation in the last two.",
+      "notes_ar": "ورد في الحديث نفي الصلاة عمّن لم يقرأ بفاتحة الكتاب. واختلف العلماء في وجوبها في كل ركعة (ابن رشد، بداية المجتهد، كتاب الصلاة): فالشافعي وأشهر الروايات عن مالك توجبها في كل ركعة، وأبو حنيفة يوجب قراءة ما تيسر من القرآن في الركعتين الأوليين ويستحب التسبيح دون القراءة في الأخيرتين.",
+      "notes_fr": "Le hadith nie la prière de celui qui ne récite pas Al-Fâtiha. Les écoles divergent sur son caractère obligatoire à chaque rak'a (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière) : al-Châfi'î et la transmission la plus connue de Mâlik l'exigent à chaque rak'a, alors qu'Abou Hanîfa exige quelques versets du Coran dans les deux premières rak'ât et recommande le tasbîh plutôt que la récitation dans les deux dernières.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Bukhari 756",
-        "text_en": "There is no prayer for the one who does not recite the Opening of the Book (Al-Fatiha).",
+        "text_en": "Whoever does not recite Al-Fatiha in his prayer, his prayer is invalid.",
         "text_ar": "لاَ صَلاَةَ لِمَنْ لَمْ يَقْرَأْ بِفَاتِحَةِ الْكِتَابِ",
         "text_fr": "Il n'y a pas de prière pour celui qui ne récite pas l'Ouverture du Livre (Al-Fâtiha).",
         "grade": "sahih",
-        "translation_provenance": "project"
+        "translation_provenance": "sunnah"
       },
       "verified": true
     },
@@ -225,9 +234,9 @@
       "instruction_en": "After Al-Fatiha, recite any other surah or verses from the Quran. This is done in the first two rakaat of the Fardh prayer. Start with short surahs like Al-Ikhlas (112), Al-Falaq (113), or An-Nas (114).",
       "instruction_ar": "اقرأ بعد الفاتحة سورة أخرى أو ما تيسر من القرآن. ويكون ذلك في الركعتين الأوليين من صلاة الفريضة. ابدأ بالسور القصار كالإخلاص والفلق والناس.",
       "instruction_fr": "Après Al-Fâtiha, récite une autre sourate ou des versets du Coran. Cela se fait dans les deux premières rak'ât de la prière obligatoire. Commence par des sourates brèves comme Al-Ikhlâs (112), Al-Falaq (113) ou An-Nâs (114).",
-      "notes": "In the 3rd and 4th rakaat of Fardh prayers, you only recite Al-Fatiha. No additional surah is needed.",
-      "notes_ar": "في الركعتين الثالثة والرابعة من صلاة الفريضة، تقرأ الفاتحة فقط ولا تُقرأ سورة بعدها.",
-      "notes_fr": "Dans les troisième et quatrième rak'ât des prières obligatoires, tu ne récites qu'Al-Fâtiha. Aucune sourate supplémentaire n'est requise.",
+      "notes": "In the third and fourth rakahs of the obligatory prayers the schools differ (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer). Malik chose Al-Fatiha alone, relying on the report of Abu Qatada. Al-Shafi'i chose Al-Fatiha with a surah in all four rakahs of Dhuhr, the surah being longer in the first two. Abu Hanifa recommends tasbih in place of recitation.",
+      "notes_ar": "اختلف العلماء في الركعتين الثالثة والرابعة من صلاة الفريضة (ابن رشد، بداية المجتهد، كتاب الصلاة). فاختار مالك الفاتحة وحدها اعتمادًا على حديث أبي قتادة، واختار الشافعي الفاتحة وسورة في الركعات الأربع من الظهر مع جعل السورة في الأوليين أطول، وأبو حنيفة يستحب التسبيح بدل القراءة.",
+      "notes_fr": "Dans les troisième et quatrième rak'ât des prières obligatoires, les écoles divergent (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière). Mâlik a retenu Al-Fâtiha seule, en s'appuyant sur le récit d'Abou Qatâda. Al-Châfi'î a retenu Al-Fâtiha avec une sourate aux quatre rak'ât du Dhouhr, la sourate étant plus longue dans les deux premières. Abou Hanîfa recommande le tasbîh à la place de la récitation.",
       "verified": true
     },
     {
@@ -237,9 +246,9 @@
       "title_ar": "الركوع",
       "title_fr": "L'inclinaison (roukoû')",
       "position": "bowing",
-      "instruction_en": "Say 'Allahu Akbar' and bow down. Place your hands firmly on your knees with fingers spread. Keep your back straight and level with your head. In this position, say the tasbeeh three times.",
-      "instruction_ar": "قل: الله أكبر، واركع. ضع يديك على ركبتيك ممسكًا بهما، وفرّج بين أصابعك. واجعل ظهرك مستويًا مع رأسك. وقل التسبيح في هذا الموضع ثلاث مرات.",
-      "instruction_fr": "Dis « Allâhou akbar » et incline-toi. Pose fermement les mains sur les genoux, doigts écartés. Garde le dos droit, à niveau avec la tête. Dans cette position, dis le tasbîh trois fois.",
+      "instruction_en": "Say 'Allahu Akbar' and bow down. Place your hands firmly on your knees with fingers spread. Keep your back straight and level with your head. In this position, say the tasbeeh.",
+      "instruction_ar": "قل: الله أكبر، واركع. ضع يديك على ركبتيك ممسكًا بهما، وفرّج بين أصابعك. واجعل ظهرك مستويًا مع رأسك. وقل التسبيح في هذا الموضع.",
+      "instruction_fr": "Dis « Allâhou akbar » et incline-toi. Pose fermement les mains sur les genoux, doigts écartés. Garde le dos droit, à niveau avec la tête. Dans cette position, dis le tasbîh.",
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْعَظِيمِ",
         "transliteration": "Subhana Rabbiyal-'Adhim",
@@ -247,7 +256,9 @@
         "translation_fr": "Gloire à mon Seigneur, le Très Grand.",
         "translation_provenance": "project"
       },
-      "repetitions": 3,
+      "notes": "Sahih Muslim 772 gives the words and no count. Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Malik held there is no fixed saying in bowing and prostration, while al-Shafi'i, Abu Hanifa, Ahmad and others say it three times, following the report of Uqba ibn Amir.",
+      "notes_ar": "ذكر حديث مسلم (772) الألفاظ ولم يذكر العدد. ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن مالكًا قال ليس في الركوع والسجود قول محدود، وأن الشافعي وأبا حنيفة وأحمد وغيرهم قالوا بالتسبيح ثلاثًا اتباعًا لحديث عقبة بن عامر.",
+      "notes_fr": "Le hadith de Mouslim 772 donne les paroles et n'indique pas de nombre. Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que Mâlik n'y voyait pas de formule fixe dans l'inclinaison et la prosternation, alors qu'al-Châfi'î, Abou Hanîfa, Ahmad et d'autres la disent trois fois, suivant le récit de 'Oqba ibn 'Âmir.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Muslim 772",
@@ -293,9 +304,9 @@
       "title_ar": "السجود الأول",
       "title_fr": "La première prosternation (soujoûd)",
       "position": "prostrating",
-      "instruction_en": "Say 'Allahu Akbar' and go down into prostration. Your forehead, nose, both palms, both knees, and toes of both feet should touch the ground. In this position, say the tasbeeh three times. This is the closest a servant is to Allah.",
-      "instruction_ar": "قل: الله أكبر، واسجد. ويلتقي بالأرض جبهتك وأنفك وكفّاك وركبتاك وأطراف قدميك. وقل التسبيح في هذا الموضع ثلاث مرات. وأقرب ما يكون العبد من ربه وهو ساجد.",
-      "instruction_fr": "Dis « Allâhou akbar » et descends en prosternation. Le front, le nez, les deux paumes, les deux genoux et les orteils des deux pieds doivent toucher le sol. Dans cette position, dis le tasbîh trois fois. C'est le moment où le serviteur est le plus proche d'Allah.",
+      "instruction_en": "Say 'Allahu Akbar' and go down into prostration. Your forehead, nose, both palms, both knees, and toes of both feet should touch the ground. In this position, say the tasbeeh. This is the closest a servant is to Allah.",
+      "instruction_ar": "قل: الله أكبر، واسجد. ويلتقي بالأرض جبهتك وأنفك وكفّاك وركبتاك وأطراف قدميك. وقل التسبيح في هذا الموضع. وأقرب ما يكون العبد من ربه وهو ساجد.",
+      "instruction_fr": "Dis « Allâhou akbar » et descends en prosternation. Le front, le nez, les deux paumes, les deux genoux et les orteils des deux pieds doivent toucher le sol. Dans cette position, dis le tasbîh. C'est le moment où le serviteur est le plus proche d'Allah.",
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
         "transliteration": "Subhana Rabbiyal-A'la",
@@ -303,10 +314,9 @@
         "translation_fr": "Gloire à mon Seigneur, le Très Haut.",
         "translation_provenance": "project"
       },
-      "repetitions": 3,
-      "notes": "You may make personal dua (supplication) in any language during sujud. The Prophet ﷺ said this is the closest position to Allah.",
-      "notes_ar": "يجوز لك أن تدعو ربك بحاجاتك الخاصة في السجود بأي لغة. وقد قال النبي ﷺ إن أقرب ما يكون العبد من ربه وهو ساجد.",
-      "notes_fr": "Tu peux formuler des invocations personnelles dans n'importe quelle langue pendant la prosternation. Le Prophète ﷺ a dit que c'est la position la plus proche d'Allah.",
+      "notes": "You may make personal dua (supplication) during sujud. The Prophet ﷺ said this is the closest position to Allah. Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Abu Hanifa does not allow supplication in the prayer in words other than the Qur'an's, while Malik and al-Shafi'i allow it.",
+      "notes_ar": "يجوز لك أن تدعو ربك بحاجاتك الخاصة في السجود. وقد قال النبي ﷺ إن أقرب ما يكون العبد من ربه وهو ساجد. ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن أبا حنيفة لا يجيز الدعاء في الصلاة بغير ألفاظ القرآن، وأن مالكًا والشافعي يجيزانه.",
+      "notes_fr": "Tu peux formuler des invocations personnelles pendant la prosternation. Le Prophète ﷺ a dit que c'est la position la plus proche d'Allah. Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte qu'Abou Hanîfa n'admet pas l'invocation dans la prière avec d'autres mots que ceux du Coran, alors que Mâlik et al-Châfi'î l'admettent.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Muslim 772",
@@ -345,9 +355,9 @@
       "title_ar": "السجود الثاني",
       "title_fr": "La seconde prosternation (soujoûd)",
       "position": "prostrating",
-      "instruction_en": "Say 'Allahu Akbar' and prostrate again exactly as the first time. Say the tasbeeh three times. This completes one full rakah (unit of prayer).",
-      "instruction_ar": "قل: الله أكبر، واسجد كما سجدت في المرة الأولى. وقل التسبيح ثلاث مرات. وبهذا تكتمل ركعة واحدة من الصلاة.",
-      "instruction_fr": "Dis « Allâhou akbar » et prosterne-toi de nouveau exactement comme la première fois. Dis le tasbîh trois fois. Cela achève une rak'a complète (une unité de prière).",
+      "instruction_en": "Say 'Allahu Akbar' and prostrate again exactly as the first time. Say the tasbeeh. This completes one full rakah (unit of prayer).",
+      "instruction_ar": "قل: الله أكبر، واسجد كما سجدت في المرة الأولى. وقل التسبيح. وبهذا تكتمل ركعة واحدة من الصلاة.",
+      "instruction_fr": "Dis « Allâhou akbar » et prosterne-toi de nouveau exactement comme la première fois. Dis le tasbîh. Cela achève une rak'a complète (une unité de prière).",
       "recitation": {
         "arabic": "سُبْحَانَ رَبِّيَ الْأَعْلَى",
         "transliteration": "Subhana Rabbiyal-A'la",
@@ -355,7 +365,6 @@
         "translation_fr": "Gloire à mon Seigneur, le Très Haut.",
         "translation_provenance": "project"
       },
-      "repetitions": 3,
       "verified": true
     }
   ],
@@ -378,9 +387,9 @@
       "reference": "Sahih Bukhari 831",
       "grade": "sahih"
     },
-    "finger_note": "When you reach the shahada part ('Ash-hadu an la ilaha illallah'), raise your right index finger. This symbolizes the Oneness of Allah (Tawhid).",
-    "finger_note_ar": "عند بلوغك موضع الشهادة (أشهد أن لا إله إلا الله)، ارفع سبّابة يدك اليمنى. وهذا إشارة إلى توحيد الله.",
-    "finger_note_fr": "Lorsque tu arrives au passage de la chahâda (« Ach-hadou an lâ ilâha illâ Allâh »), lève l'index de la main droite. Cela symbolise l'unicité d'Allah (le tawhîd).",
+    "finger_note": "In the tashahhud sitting, raise the index finger of your right hand. The narration says he raised his right finger, the one next to the thumb, while making supplication. The four imams agree on pointing and differ on moving the finger: the Malikis move it throughout the tashahhud, and the others point without moving it, differing on whether the finger stays raised throughout or only at a particular place (al-Dubayyan, al-Jami' fi Ahkam Sifat al-Salah, vol. 4, p. 562).",
+    "finger_note_ar": "في جلسة التشهد ارفع سبّابة يدك اليمنى. وفي الحديث أنه رفع إصبعه اليمنى التي تلي الإبهام يدعو بها. واتفق الأئمة الأربعة على الإشارة بها واختلفوا في تحريكها: فالمالكية يحركونها في التشهد كله، ويشير الباقون بلا تحريك، ثم اختلفوا هل تبقى مرفوعة طوال التشهد أو عند موضع معين (الدبيان، الجامع في أحكام صفة الصلاة، ج 4، ص 562).",
+    "finger_note_fr": "Pendant l'assise du tachahhoud, lève l'index de la main droite. Le hadith dit qu'il a levé son doigt droit, celui qui est à côté du pouce, en invoquant. Les quatre imams s'accordent sur le fait de pointer le doigt et divergent sur son mouvement : les malikites le remuent pendant tout le tachahhoud, les autres pointent sans le remuer et divergent sur le fait de le garder levé tout du long ou à un endroit précis (al-Dubayyan, al-Jâmi' fî ahkâm sifat as-salât, vol. 4, p. 562).",
     "verified": true
   },
   "salawat_ibrahimiyyah": {
@@ -409,7 +418,7 @@
     "title_ar": "التسليم",
     "title_fr": "Clore la prière (taslîm)",
     "instruction_en": "To end the prayer, turn your head to the right and say 'As-salamu alaykum wa rahmatullah', then turn your head to the left and say it again.",
-    "instruction_ar": "للخروج من الصلاة، أَلْتفت بوجهك إلى يمينك وقل: السلام عليكم ورحمة الله، ثم أَلْتفت إلى يسارك وقلها مرة أخرى.",
+    "instruction_ar": "للخروج من الصلاة، التفت بوجهك إلى يمينك وقل: السلام عليكم ورحمة الله، ثم التفت إلى يسارك وقلها مرة أخرى.",
     "instruction_fr": "Pour clore la prière, tourne la tête vers la droite et dis « As-salâmou 'alaykoum wa rahmatoullâh », puis tourne la tête vers la gauche et répète la même formule.",
     "recitation": {
       "arabic": "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ",
@@ -420,7 +429,7 @@
     },
     "source": {
       "type": "hadith",
-      "reference": "Sahih Muslim 582",
+      "reference": "Sunan Abu Dawud 996",
       "grade": "sahih"
     },
     "verified": true
@@ -510,7 +519,10 @@
       "description_fr": "Réciter la sourate Al-Fâtiha à chaque rak'a.",
       "source": "Sahih Bukhari 756",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "Whether a person praying behind an imam recites it is a point the schools differ on. Ibn Rushd (Bidayat al-Mujtahid, the chapter on what the imam carries for the followers) reports that Malik has the follower recite in the quiet prayers and not the loud ones, Abu Hanifa not at all, al-Shafi'i in both (Al-Fatiha alone in the loud prayers), and Ahmad when the imam cannot be heard.",
+      "note_ar": "في قراءة المأموم لها خلاف بين المذاهب. ونقل ابن رشد في بداية المجتهد (الفصل فيما يحمله الإمام عن المأمومين) أن مالكًا يرى أن المأموم يقرأ فيما أسرّ فيه الإمام ولا يقرأ فيما جهر، وأن أبا حنيفة يرى ألا يقرأ أصلًا، وأن الشافعي يرى أن يقرأ في الحالين لكنه في الجهرية يقرأ الفاتحة فقط، وأن أحمد يرى أن يقرأ إذا لم يسمع الإمام.",
+      "note_fr": "Savoir si celui qui prie derrière l'imam la récite est un point sur lequel les écoles divergent. Ibn Rushd (Bidayat al-Mujtahid, chapitre sur ce que l'imam porte pour les suiveurs) rapporte que Mâlik fait réciter le suiveur dans les prières silencieuses et non dans les prières à voix haute, qu'Abou Hanîfa ne le fait pas réciter du tout, qu'al-Châfi'î le fait réciter dans les deux (Al-Fâtiha seule dans les prières à voix haute) et qu'Ahmad le fait réciter lorsqu'il n'entend pas l'imam."
     },
     {
       "id": "salah-rukn-4",
@@ -582,7 +594,10 @@
       "description_fr": "Le taslîm final.",
       "source": "Sunan Abu Dawud 61",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that most scholars hold the tasleem obligatory and Abu Hanifa does not. Among those who require it, some say one tasleem and some say two, and Malik chose two for the follower and one for the imam.",
+      "note_ar": "نقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن جمهور العلماء قالوا بوجوب التسليم وأن أبا حنيفة قال ليس بواجب. والذين أوجبوه منهم من قال تسليمة واحدة ومنهم من قال تسليمتان، واختار مالك تسليمتين للمأموم وواحدة للإمام.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que la plupart des savants tiennent le taslîm pour obligatoire et qu'Abou Hanîfa ne le tient pas pour tel. Parmi ceux qui l'exigent, certains disent un seul taslîm et d'autres deux, et Mâlik a retenu deux pour celui qui prie derrière l'imam et un pour l'imam."
     },
     {
       "id": "salah-rukn-12",
@@ -632,7 +647,10 @@
       "description_fr": "Dire soubhâna rabbiya l-'azîm dans l'inclinaison.",
       "source": "Sahih Muslim 772",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "Malik held there is no fixed saying in bowing and prostration, while al-Shafi'i, Abu Hanifa, Ahmad and others say it three times, following the report of Uqba ibn Amir (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer). The narration cited here gives the words and no count.",
+      "note_ar": "قال مالك ليس في الركوع والسجود قول محدود، وقال الشافعي وأبو حنيفة وأحمد وغيرهم بالتسبيح ثلاثًا اتباعًا لحديث عقبة بن عامر (ابن رشد، بداية المجتهد، كتاب الصلاة). والحديث المذكور هنا يذكر الألفاظ ولا يذكر العدد.",
+      "note_fr": "Mâlik n'y voyait pas de formule fixe dans l'inclinaison et la prosternation, alors qu'al-Châfi'î, Abou Hanîfa, Ahmad et d'autres la disent trois fois, suivant le récit de 'Oqba ibn 'Âmir (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière). Le hadith cité ici donne les paroles et n'indique pas de nombre."
     },
     {
       "id": "salah-wajib-5",
@@ -641,7 +659,10 @@
       "description_fr": "Dire soubhâna rabbiya l-a'lâ dans la prosternation.",
       "source": "Sahih Muslim 772",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "Malik held there is no fixed saying in bowing and prostration, while al-Shafi'i, Abu Hanifa, Ahmad and others say it three times, following the report of Uqba ibn Amir (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer). The narration cited here gives the words and no count.",
+      "note_ar": "قال مالك ليس في الركوع والسجود قول محدود، وقال الشافعي وأبو حنيفة وأحمد وغيرهم بالتسبيح ثلاثًا اتباعًا لحديث عقبة بن عامر (ابن رشد، بداية المجتهد، كتاب الصلاة). والحديث المذكور هنا يذكر الألفاظ ولا يذكر العدد.",
+      "note_fr": "Mâlik n'y voyait pas de formule fixe dans l'inclinaison et la prosternation, alors qu'al-Châfi'î, Abou Hanîfa, Ahmad et d'autres la disent trois fois, suivant le récit de 'Oqba ibn 'Âmir (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière). Le hadith cité ici donne les paroles et n'indique pas de nombre."
     },
     {
       "id": "salah-wajib-6",
@@ -700,7 +721,10 @@
       "description_fr": "Lever les mains au takbîr d'ouverture, à l'inclinaison et en se relevant.",
       "source": "Sahih Bukhari 735",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Abu Hanifa, al-Thawri and one report from Malik (through Ibn al-Qasim) raise the hands only at the opening takbir, while al-Shafi'i, Ahmad and others raise them at the opening, at bowing and on rising. Most hold raising the hands a sunnah, and Dawud holds it required.",
+      "note_ar": "نقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن أبا حنيفة والثوري، وهو رواية ابن القاسم عن مالك، لا يرفعون اليدين إلا عند تكبيرة الإحرام، وأن الشافعي وأحمد وغيرهما يرفعون عند الإحرام وعند الركوع وعند الرفع منه. والجمهور على أن الرفع سنة، وداود يراه فرضًا.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte qu'Abou Hanîfa, al-Thawrî et une transmission de Mâlik (par Ibn al-Qâsim) ne lèvent les mains qu'au takbîr d'ouverture, alors qu'al-Châfi'î, Ahmad et d'autres les lèvent à l'ouverture, à l'inclinaison et au redressement. La plupart y voient une sunna, et Dâwoud l'estime obligatoire."
     },
     {
       "id": "salah-sunnah-5",
@@ -710,9 +734,9 @@
       "source": "Sahih Bukhari 740",
       "verified": true,
       "needs_scholarly_review": true,
-      "note": "The narration says the forearm. Placing the hands on the chest is the most common Sunni practice, and the schools differ on the exact place.",
-      "note_ar": "جاء في الحديث وضعها على الذراع، ووضع اليدين على الصدر هو الأشهر عند أهل السنة، وقد اختلفت المذاهب في موضعهما.",
-      "note_fr": "Le hadith mentionne l'avant-bras. Poser les mains sur la poitrine est la pratique sunnite la plus répandue, et les écoles divergent sur l'endroit exact."
+      "note": "The narration says the forearm and does not mention the chest or the navel. The schools differ on where the hands rest (al-Mawsu'a al-Fiqhiyya al-Kuwaitiyya, vol. 38, p. 369). Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Malik disliked folding the hands in the obligatory prayer and allowed it in the voluntary prayer, while the majority hold it a sunnah.",
+      "note_ar": "ذكر الحديث الذراع ولم يذكر الصدر ولا السرة. واختلفت المذاهب في موضع اليدين (الموسوعة الفقهية الكويتية، ج 38، ص 369). ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن مالكًا كره القبض في الفريضة وأجازه في النافلة، وأن الجمهور يرونه سنة.",
+      "note_fr": "Le hadith parle de l'avant-bras et ne mentionne ni la poitrine ni le nombril. Les écoles divergent sur l'endroit où reposent les mains (Encyclopédie juridique koweïtienne, vol. 38, p. 369). Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que Mâlik désapprouvait de croiser les mains dans la prière obligatoire et l'admettait dans la prière surérogatoire, alors que la majorité y voit une sunna."
     },
     {
       "id": "salah-sunnah-6",
@@ -730,7 +754,10 @@
       "description_fr": "Dire âmîn à voix haute après Al-Fâtiha dans les prières à voix haute.",
       "source": "Sahih Bukhari 782",
       "verified": true,
-      "needs_scholarly_review": true
+      "needs_scholarly_review": true,
+      "note": "The narration says to say Ameen when the imam says the last words of Al-Fatiha and does not state the volume. Ibn Rajab (Fath al-Bari, the chapter on the imam saying ameen aloud) reports three views on saying it aloud: the imam and the follower aloud (Ata, al-Awza'i, al-Shafi'i, Ahmad, Ishaq and most hadith scholars), both quietly (al-Hasan, al-Nakha'i, al-Thawri, Malik, Abu Hanifa and his companions), and the imam aloud with the follower quiet, which is a view of al-Shafi'i.",
+      "note_ar": "ذكر الحديث أن يقول المأموم آمين إذا قال الإمام آخر الفاتحة ولم يذكر الجهر ولا الإخفاء. ونقل ابن رجب في فتح الباري (باب جهر الإمام بالتأمين) ثلاثة أقوال في الجهر: يجهر بها الإمام ومن خلفه، وهو قول عطاء والأوزاعي والشافعي وأحمد وإسحاق وعامة أهل الحديث؛ ويخفيها الإمام ومن خلفه، وهو قول الحسن والنخعي والثوري ومالك وأبي حنيفة وأصحابه؛ ويخفيها المأموم ويجهر بها الإمام، وهو قول للشافعي.",
+      "note_fr": "Le hadith dit de dire Âmîn lorsque l'imam prononce la fin d'Al-Fâtiha et ne précise pas le volume. Ibn Rajab (Fath al-Bârî, chapitre sur l'imam qui dit âmîn à voix haute) rapporte trois avis : l'imam et celui qui prie derrière lui à voix haute ('Atâ', al-Awzâ'î, al-Châfi'î, Ahmad, Ishâq et la plupart des gens du hadith), tous deux à voix basse (al-Hasan, al-Nakha'î, al-Thawrî, Mâlik, Abou Hanîfa et ses compagnons), et l'imam à voix haute avec celui qui prie derrière lui à voix basse, un avis d'al-Châfi'î."
     },
     {
       "id": "salah-sunnah-8",
