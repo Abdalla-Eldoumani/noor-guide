@@ -3,11 +3,17 @@ import { Link } from "@/i18n/navigation";
 import { getModuleSummaries } from "@/lib/content";
 import { PathContents } from "@/components/learn/PathContents";
 import { ToolRows } from "@/components/tools/ToolRows";
+import { absoluteUrl } from "@/lib/site";
 
 const DOORS = [
   { href: "/learn", key: "shahada" },
   { href: "/learn/aqeedah", key: "exploring" },
 ] as const;
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return { alternates: { canonical: absoluteUrl(locale, "/") } };
+}
 
 // Taking the locale from `params` rather than request state is what lets this
 // page prerender.
