@@ -39,12 +39,12 @@
       "title_en": "Intention (Niyyah)",
       "title_ar": "النية",
       "title_fr": "L'intention (niyya)",
-      "instruction_en": "Make the intention in your heart to perform wudu for the sake of Allah. The intention is in the heart, not spoken aloud.",
-      "instruction_ar": "انوِ في قلبك أداء الوضوء لله تعالى. النية محلها القلب، ولا تُتلفظ بها بلسان.",
-      "instruction_fr": "Forme dans ton cœur l'intention d'accomplir les ablutions pour Allah. L'intention se situe dans le cœur, elle ne se prononce pas à voix haute.",
-      "notes": "The Prophet ﷺ never instructed verbal intention for wudu. It is purely in the heart.",
-      "notes_ar": "لم يأمر النبي ﷺ بالتلفظ بالنية في الوضوء، فالنية كلها في القلب.",
-      "notes_fr": "Le Prophète ﷺ n'a jamais enseigné de formuler l'intention à voix haute pour les ablutions. Elle est purement intérieure.",
+      "instruction_en": "Make the intention in your heart to perform wudu for the sake of Allah.",
+      "instruction_ar": "انوِ في قلبك أداء الوضوء لله تعالى.",
+      "instruction_fr": "Forme dans ton cœur l'intention d'accomplir les ablutions pour Allah.",
+      "notes": "The narration says actions are judged by their intentions. It does not mention speaking the intention.",
+      "notes_ar": "يدل الحديث على أن الأعمال تُقدَّر بالنيات، ولا يذكر التلفظ بها.",
+      "notes_fr": "Le hadith dit que les actes valent selon leurs intentions. Il ne mentionne pas le fait de la prononcer.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Bukhari 1",
@@ -227,6 +227,9 @@
       "description": "Deep sleep (light dozing while seated does not break wudu)",
       "description_ar": "النوم العميق، أما النعاس الخفيف وأنت جالس فلا ينقض الوضوء",
       "description_fr": "Le sommeil profond (somnoler légèrement en position assise n'annule pas les ablutions)",
+      "notes": "The schools differ on this. Ibn Rushd (Bidayat al-Mujtahid) reports that the majority separate heavy sleep from light sleep, that Abu Hanifa counts only sleep lying down, that al-Shafi'i excepts only sleep while seated, and that Malik looks at how heavy the sleep is, how long it lasts and the posture.",
+      "notes_ar": "للعلماء في ذلك أقوال. ينقل ابن رشد في بداية المجتهد أن الجمهور يفرّقون بين النوم الثقيل والنوم الخفيف، وأن أبا حنيفة لا يوجب الوضوء إلا من النوم مضطجعًا، وأن الشافعي لا يستثني إلا النوم جالسًا، وأن مالكًا يراعي الاستثقال والطول والهيئة.",
+      "notes_fr": "Les écoles divergent. Ibn Rushd (Bidayat al-Mujtahid) rapporte que la majorité distingue le sommeil lourd du sommeil léger, qu'Abou Hanifa ne retient que le sommeil couché, qu'al-Shafi'i n'excepte que le sommeil assis, et que Malik tient compte de la profondeur du sommeil, de sa durée et de la posture.",
       "source": "Sunan Abu Dawud 203",
       "verified": true
     },
@@ -242,9 +245,19 @@
       "description": "Bleeding from a wound (difference of opinion among scholars: some say it breaks wudu, some say it doesn't)",
       "description_ar": "الدم الخارج من جرح، وفيه خلاف بين العلماء: بعضهم يرى أنه ينقض الوضوء وبعضهم لا يرى ذلك.",
       "description_fr": "Le saignement d'une plaie (divergence entre les savants : certains disent que cela annule les ablutions, d'autres non)",
-      "notes": "This is a point of scholarly difference. To be safe, renew your wudu.",
-      "notes_ar": "هذه مسألة فيها خلاف بين العلماء. والأحوط أن تعيد الوضوء.",
-      "notes_fr": "C'est un point de divergence entre les savants. Par précaution, refais tes ablutions.",
+      "notes": "Ibn Rushd (Bidayat al-Mujtahid) reports that Abu Hanifa and his companions, al-Thawri and Ahmad count flowing blood as breaking wudu, while al-Shafi'i and Malik count only what comes out of the two private passages.",
+      "notes_ar": "ينقل ابن رشد في بداية المجتهد أن أبا حنيفة وأصحابه والثوري وأحمد يرون الدم السائل ناقضًا للوضوء، وأن الشافعي ومالكًا لا يعدّان ناقضًا إلا ما يخرج من السبيلين.",
+      "notes_fr": "Ibn Rushd (Bidayat al-Mujtahid) rapporte qu'Abou Hanifa et ses compagnons, al-Thawri et Ahmad tiennent le sang qui coule pour un annulateur des ablutions, alors qu'al-Shafi'i et Malik ne retiennent que ce qui sort des deux voies.",
+      "verified": true
+    },
+    {
+      "id": "breaker-5",
+      "description": "Touching the private part with the hand, skin contact between a man and a woman, and eating camel meat (the schools differ on each)",
+      "description_ar": "مسّ الفرج باليد، ولمس الرجل للمرأة، وأكل لحم الإبل (وللمذاهب في كل منها أقوال مختلفة)",
+      "description_fr": "Toucher le sexe avec la main, le contact de la peau entre un homme et une femme, et manger de la viande de chameau (les écoles divergent sur chacun)",
+      "notes": "Ibn Rushd (Bidayat al-Mujtahid): for touching the private part, al-Shafi'i, Ahmad and Dawud require wudu and Abu Hanifa does not, while the Maliki position is divided. For touching a woman, al-Shafi'i requires wudu, Malik and most of his companions require it when there is pleasure, and Abu Hanifa does not require it. For camel meat, among the four schools only the Hanbali school requires wudu (Bughyat al-Muqtasid, a commentary on the Bidayat).",
+      "notes_ar": "ينقل ابن رشد في بداية المجتهد: في مسّ الفرج يوجب الشافعي وأحمد وداود الوضوء ولا يوجبه أبو حنيفة، وللمالكية أقوال. وفي لمس المرأة يوجبه الشافعي، ويوجبه مالك وجمهور أصحابه مع اللذة، ولا يوجبه أبو حنيفة. وفي لحم الإبل لا يوجب الوضوء من المذاهب الأربعة إلا مذهب أحمد (بغية المقتصد شرح بداية المجتهد).",
+      "notes_fr": "Ibn Rushd (Bidayat al-Mujtahid) : pour le contact du sexe, al-Shafi'i, Ahmad et Dawud exigent les ablutions, Abou Hanifa non, et l'école malikite est partagée. Pour le contact d'une femme, al-Shafi'i les exige, Malik et la plupart de ses compagnons les exigent en cas de plaisir, Abou Hanifa ne les exige pas. Pour la viande de chameau, parmi les quatre écoles seule l'école hanbalite les exige (Bughyat al-Muqtasid, commentaire de la Bidaya).",
       "verified": true
     }
   ],
@@ -257,9 +270,9 @@
       "source": "Sahih Bukhari 1",
       "verified": true,
       "needs_scholarly_review": true,
-      "note": "The intention is never spoken aloud. Scholars differ on whether it is a condition or a pillar; either way it must be present.",
-      "note_ar": "لا تُلفظ النية باللسان. واختلف العلماء أهي شرط أم ركن، وعلى كل حال لا بد من وجودها.",
-      "note_fr": "L'intention ne se prononce jamais à voix haute. Les savants divergent sur son statut de condition ou de pilier ; dans les deux cas elle doit être présente."
+      "note": "The schools differ on how much weight it carries. Ibn Rushd (Bidayat al-Mujtahid) reports that Malik, al-Shafi'i and Ahmad require it for wudu to be valid, while Abu Hanifa and al-Thawri do not.",
+      "note_ar": "للمذاهب في ذلك خلاف. ينقل ابن رشد في بداية المجتهد أن مالكًا والشافعي وأحمد يشترطون النية لصحة الوضوء، وأن أبا حنيفة والثوري لا يشترطونها.",
+      "note_fr": "Les écoles divergent sur son poids. Ibn Rushd (Bidayat al-Mujtahid) rapporte que Malik, al-Shafi'i et Ahmad l'exigent pour la validité des ablutions, alors qu'Abou Hanifa et al-Thawri ne l'exigent pas."
     },
     {
       "id": "wudu-fard-2",
@@ -305,9 +318,9 @@
       "source": "Sahih Muslim 226",
       "verified": true,
       "needs_scholarly_review": true,
-      "note": "The Hanbali and Shafi'i schools treat order and continuity as obligatory. The Hanafi school treats them as strongly recommended.",
-      "note_ar": "يرى الحنابلة والشافعية وجوب الترتيب والموالاة، ويراهما الحنفية سنة مؤكدة.",
-      "note_fr": "Les écoles hanbalite et chaféite considèrent l'ordre et la continuité comme obligatoires. L'école hanafite les tient pour fortement recommandés."
+      "note": "The schools differ on both. Order is obligatory for the Shafi'i and Hanbali schools and recommended for the Hanafi and Maliki schools. Continuity is obligatory for the Maliki and Hanbali schools and not obligatory for the Hanafi and Shafi'i schools (Ibn Rushd, Bidayat al-Mujtahid, as set out in the commentary Bughyat al-Muqtasid).",
+      "note_ar": "للمذاهب في ذلك خلاف. الترتيب واجب عند الشافعية والحنابلة، وسنة عند الحنفية والمالكية. والموالاة واجبة عند المالكية والحنابلة، وغير واجبة عند الحنفية والشافعية (ابن رشد، بداية المجتهد، كما في شرحها بغية المقتصد).",
+      "note_fr": "Les écoles divergent sur les deux points. L'ordre est obligatoire pour les chaféites et les hanbalites, recommandé pour les hanafites et les malikites. La continuité est obligatoire pour les malikites et les hanbalites, non obligatoire pour les hanafites et les chaféites (Ibn Rushd, Bidayat al-Mujtahid, tel que présenté dans le commentaire Bughyat al-Muqtasid)."
     }
   ],
   "obligations_heading": "What is obligatory (fard)",
@@ -325,9 +338,9 @@
     },
     {
       "id": "wudu-sunnah-2",
-      "description": "Using the siwak or brushing the teeth.",
-      "description_ar": "السواك.",
-      "description_fr": "Utiliser le siwak ou se brosser les dents.",
+      "description": "Using the siwak or brushing the teeth, which the narration links to every prayer.",
+      "description_ar": "السواك، وقد ربطه الحديث بكل صلاة.",
+      "description_fr": "Utiliser le siwak ou se brosser les dents ; le hadith le relie à chaque prière.",
       "source": "Sahih Bukhari 887",
       "verified": true,
       "needs_scholarly_review": true
