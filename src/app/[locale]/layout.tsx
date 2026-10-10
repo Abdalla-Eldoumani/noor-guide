@@ -43,7 +43,6 @@ export async function generateMetadata({
     },
     description: t("description"),
     keywords: tMeta.raw("keywords") as string[],
-    alternates: { canonical: "./" },
     openGraph: {
       title: defaultTitle,
       description: t("description"),
