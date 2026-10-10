@@ -197,9 +197,9 @@
       "title_ar": "الاستعاذة وقراءة الفاتحة",
       "title_fr": "Chercher refuge et réciter Al-Fâtiha",
       "position": "standing-hands-folded",
-      "instruction_en": "Say 'A'udhu billahi min ash-Shaytanir-rajim' (I seek refuge in Allah from the accursed Shaytan), then say 'Bismillahir-Rahmanir-Rahim' (In the name of Allah, the Most Gracious, the Most Merciful), then recite Surah Al-Fatiha.",
-      "instruction_ar": "قل: أعوذ بالله من الشيطان الرجيم، ثم قل: بسم الله الرحمن الرحيم، ثم اقرأ سورة الفاتحة.",
-      "instruction_fr": "Dis « A'oûdhou billâhi mina ch-chaytâni r-rajîm » (je cherche refuge auprès d'Allah contre Satan le maudit), puis « Bismillâhi r-Rahmâni r-Rahîm » (au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux), puis récite la sourate Al-Fâtiha.",
+      "instruction_en": "Say 'A'udhu billahi min ash-Shaytanir-rajim' (I seek refuge in Allah from the accursed Shaytan), then recite Surah Al-Fatiha. The schools differ on whether and how 'Bismillahir-Rahmanir-Rahim' (In the name of Allah, the Most Gracious, the Most Merciful) is said before it, as the note below explains.",
+      "instruction_ar": "قل: أعوذ بالله من الشيطان الرجيم، ثم اقرأ سورة الفاتحة. وقد اختلفت المذاهب في قراءة البسملة قبلها وفي كيفيتها، كما في الملاحظة أدناه.",
+      "instruction_fr": "Dis « A'oûdhou billâhi mina ch-chaytâni r-rajîm » (je cherche refuge auprès d'Allah contre Satan le maudit), puis récite la sourate Al-Fâtiha. Les écoles divergent sur le fait de dire « Bismillâhi r-Rahmâni r-Rahîm » (au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux) avant elle et sur la manière de le faire, comme l'explique la note ci-dessous.",
       "recitation": {
         "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
         "transliteration": "Bismillahir-Rahmanir-Rahim. Al-hamdu lillahi Rabbil-'alamin. Ar-Rahmanir-Rahim. Maliki yawmid-Din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta 'alayhim, ghayril-maghdubi 'alayhim walad-dallin.",
@@ -210,9 +210,9 @@
       "after_fatiha": "Say 'Ameen' (meaning: O Allah, answer our prayer) after completing Al-Fatiha.",
       "after_fatiha_ar": "قل: آمين، أي اللهم استجب، بعد فراغك من قراءة الفاتحة.",
       "after_fatiha_fr": "Dis « Âmîn » (ô Allah, exauce notre invocation) après avoir achevé Al-Fâtiha.",
-      "notes": "The narration says the prayer of one who does not recite Al-Fatiha is invalid. The schools differ on whether it is required in every rakah (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer): al-Shafi'i and the best-known report from Malik require it in every rakah, while Abu Hanifa requires some verses of the Qur'an in the first two rakahs and recommends tasbih over recitation in the last two.",
-      "notes_ar": "ورد في الحديث نفي الصلاة عمّن لم يقرأ بفاتحة الكتاب. واختلف العلماء في وجوبها في كل ركعة (ابن رشد، بداية المجتهد، كتاب الصلاة): فالشافعي وأشهر الروايات عن مالك توجبها في كل ركعة، وأبو حنيفة يوجب قراءة ما تيسر من القرآن في الركعتين الأوليين ويستحب التسبيح دون القراءة في الأخيرتين.",
-      "notes_fr": "Le hadith nie la prière de celui qui ne récite pas Al-Fâtiha. Les écoles divergent sur son caractère obligatoire à chaque rak'a (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière) : al-Châfi'î et la transmission la plus connue de Mâlik l'exigent à chaque rak'a, alors qu'Abou Hanîfa exige quelques versets du Coran dans les deux premières rak'ât et recommande le tasbîh plutôt que la récitation dans les deux dernières.",
+      "notes": "The narration says the prayer of one who does not recite Al-Fatiha is invalid. The schools differ on whether it is required in every rakah (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer): al-Shafi'i and the best-known report from Malik require it in every rakah, while Abu Hanifa requires some verses of the Qur'an in the first two rakahs and recommends tasbih over recitation in the last two. On the basmala, Ibn Rushd reports that Malik disallowed it in the obligatory prayer, aloud or quietly, and allowed it in the voluntary prayer; that Abu Hanifa and Ahmad have it said quietly with Al-Fatiha in every rakah; and that al-Shafi'i has it said aloud in the loud prayers and quietly in the quiet ones, as a verse of Al-Fatiha.",
+      "notes_ar": "ورد في الحديث نفي الصلاة عمّن لم يقرأ بفاتحة الكتاب. واختلف العلماء في وجوبها في كل ركعة (ابن رشد، بداية المجتهد، كتاب الصلاة): فالشافعي وأشهر الروايات عن مالك توجبها في كل ركعة، وأبو حنيفة يوجب قراءة ما تيسر من القرآن في الركعتين الأوليين ويستحب التسبيح دون القراءة في الأخيرتين. وفي البسملة نقل ابن رشد أن مالكًا منع قراءتها في الصلاة المكتوبة جهرًا وسرًّا وأجازها في النافلة، وأن أبا حنيفة وأحمد يقرآنها سرًّا مع الفاتحة في كل ركعة، وأن الشافعي يقرؤها جهرًا في الجهرية وسرًّا في السرية لأنها عنده آية من الفاتحة.",
+      "notes_fr": "Le hadith nie la prière de celui qui ne récite pas Al-Fâtiha. Les écoles divergent sur son caractère obligatoire à chaque rak'a (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière) : al-Châfi'î et la transmission la plus connue de Mâlik l'exigent à chaque rak'a, alors qu'Abou Hanîfa exige quelques versets du Coran dans les deux premières rak'ât et recommande le tasbîh plutôt que la récitation dans les deux dernières. Pour la basmala, Ibn Rushd rapporte que Mâlik ne l'admettait pas dans la prière obligatoire, ni à voix haute ni à voix basse, et l'admettait dans la prière surérogatoire, qu'Abou Hanîfa et Ahmad la font dire à voix basse avec Al-Fâtiha à chaque rak'a, et qu'al-Châfi'î la fait dire à voix haute dans les prières à voix haute et à voix basse dans les autres, car il la tient pour un verset d'Al-Fâtiha.",
       "source": {
         "type": "hadith",
         "reference": "Sahih Bukhari 756",
@@ -520,9 +520,9 @@
       "source": "Sahih Bukhari 756",
       "verified": true,
       "needs_scholarly_review": true,
-      "note": "Whether a person praying behind an imam recites it is a point the schools differ on. Ibn Rushd (Bidayat al-Mujtahid, the chapter on what the imam carries for the followers) reports that Malik has the follower recite in the quiet prayers and not the loud ones, Abu Hanifa not at all, al-Shafi'i in both (Al-Fatiha alone in the loud prayers), and Ahmad when the imam cannot be heard.",
-      "note_ar": "في قراءة المأموم لها خلاف بين المذاهب. ونقل ابن رشد في بداية المجتهد (الفصل فيما يحمله الإمام عن المأمومين) أن مالكًا يرى أن المأموم يقرأ فيما أسرّ فيه الإمام ولا يقرأ فيما جهر، وأن أبا حنيفة يرى ألا يقرأ أصلًا، وأن الشافعي يرى أن يقرأ في الحالين لكنه في الجهرية يقرأ الفاتحة فقط، وأن أحمد يرى أن يقرأ إذا لم يسمع الإمام.",
-      "note_fr": "Savoir si celui qui prie derrière l'imam la récite est un point sur lequel les écoles divergent. Ibn Rushd (Bidayat al-Mujtahid, chapitre sur ce que l'imam porte pour les suiveurs) rapporte que Mâlik fait réciter le suiveur dans les prières silencieuses et non dans les prières à voix haute, qu'Abou Hanîfa ne le fait pas réciter du tout, qu'al-Châfi'î le fait réciter dans les deux (Al-Fâtiha seule dans les prières à voix haute) et qu'Ahmad le fait réciter lorsqu'il n'entend pas l'imam."
+      "note": "The schools differ on whether it is required in every rakah: al-Shafi'i and the best-known report from Malik require it, while Abu Hanifa requires some verses of the Qur'an in the first two rakahs (Ibn Rushd, Bidayat al-Mujtahid, Book of Prayer). Whether a person praying behind an imam recites it is a point the schools differ on. Ibn Rushd (Bidayat al-Mujtahid, the chapter on what the imam carries for the followers) reports that Malik has the follower recite in the quiet prayers and not the loud ones, Abu Hanifa not at all, al-Shafi'i in both (Al-Fatiha alone in the loud prayers), and Ahmad when the imam cannot be heard.",
+      "note_ar": "واختلفت المذاهب في وجوبها في كل ركعة: فالشافعي وأشهر الروايات عن مالك توجبها، وأبو حنيفة يوجب قراءة ما تيسر من القرآن في الركعتين الأوليين (ابن رشد، بداية المجتهد، كتاب الصلاة). في قراءة المأموم لها خلاف بين المذاهب. ونقل ابن رشد في بداية المجتهد (الفصل فيما يحمله الإمام عن المأمومين) أن مالكًا يرى أن المأموم يقرأ فيما أسرّ فيه الإمام ولا يقرأ فيما جهر، وأن أبا حنيفة يرى ألا يقرأ أصلًا، وأن الشافعي يرى أن يقرأ في الحالين لكنه في الجهرية يقرأ الفاتحة فقط، وأن أحمد يرى أن يقرأ إذا لم يسمع الإمام.",
+      "note_fr": "Les écoles divergent sur son caractère obligatoire à chaque rak'a : al-Châfi'î et la transmission la plus connue de Mâlik l'exigent, alors qu'Abou Hanîfa exige quelques versets du Coran dans les deux premières rak'ât (Ibn Rushd, Bidayat al-Mujtahid, Livre de la prière). Savoir si celui qui prie derrière l'imam la récite est un point sur lequel les écoles divergent. Ibn Rushd (Bidayat al-Mujtahid, chapitre sur ce que l'imam porte pour les suiveurs) rapporte que Mâlik fait réciter le suiveur dans les prières silencieuses et non dans les prières à voix haute, qu'Abou Hanîfa ne le fait pas réciter du tout, qu'al-Châfi'î le fait réciter dans les deux (Al-Fâtiha seule dans les prières à voix haute) et qu'Ahmad le fait réciter lorsqu'il n'entend pas l'imam."
     },
     {
       "id": "salah-rukn-4",
@@ -539,6 +539,9 @@
       "description_ar": "الرفع من الركوع والاعتدال قائماً.",
       "description_fr": "Se relever de l'inclinaison et se tenir droit.",
       "source": "Sahih Bukhari 793",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Abu Hanifa does not hold standing upright after bowing obligatory, that al-Shafi'i does, and that Malik's companions differ on whether his school counts it a sunnah or an obligation.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن أبا حنيفة لا يرى الاعتدال من الركوع واجبًا، وأن الشافعي يراه واجبًا، وأن أصحاب مالك اختلفوا هل ظاهر مذهبه أنه سنة أو واجب.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte qu'Abou Hanîfa ne tient pas pour obligatoire le fait de se redresser après l'inclinaison, qu'al-Châfi'î le tient pour obligatoire et que les compagnons de Mâlik divergent pour savoir si son école y voit une sunna ou une obligation.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -548,6 +551,9 @@
       "description_ar": "السجود على الأعضاء السبعة.",
       "description_fr": "Se prosterner sur les sept membres.",
       "source": "Sahih Bukhari 812",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports agreement that prostration is on seven limbs and a difference over whether the prayer is invalid if one is missed: one group says it is not, because the word prostration names the face only, and another says it is. On the face, Malik accepts the forehead without the nose but not the nose without the forehead, Abu Hanifa accepts either, and al-Shafi'i requires both.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) اتفاق العلماء على أن السجود يكون على سبعة أعضاء، واختلافهم فيمن نقص عضوًا منها: فقال قوم لا تبطل صلاته لأن اسم السجود إنما يتناول الوجه فقط، وقال قوم تبطل. وفي الوجه قال مالك: يجوز السجود على الجبهة دون الأنف ولا يجوز على الأنف دون الجبهة، وقال أبو حنيفة: يجوز على أيهما، وقال الشافعي: لا يجوز إلا عليهما معًا.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte l'accord des savants sur le fait que la prosternation se fait sur sept membres, et une divergence sur la validité de la prière si l'un d'eux manque : un groupe dit qu'elle reste valable parce que le mot prosternation ne désigne que le visage, un autre dit qu'elle est nulle. Pour le visage, Mâlik admet le front sans le nez mais non le nez sans le front, Abou Hanîfa admet l'un ou l'autre et al-Châfi'î exige les deux.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -575,6 +581,9 @@
       "description_ar": "التشهد الأخير والجلوس له.",
       "description_fr": "Le tachahhoud final, et l'assise qu'il requiert.",
       "source": "Sahih Bukhari 831",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that most scholars hold the final sitting obligatory and a minority do not. On the words of the tashahhud, he reports that Malik and a group of scholars do not hold them obligatory, while al-Shafi'i, Ahmad and Dawud do.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن جمهور العلماء على أن الجلوس الأخير فرض وأن قومًا لا يرونه فرضًا. وفي ألفاظ التشهد: ذهب مالك وجماعة إلى أنه ليس بواجب، وقال بوجوبه الشافعي وأحمد وداود.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que la plupart des savants tiennent la dernière position assise pour obligatoire et qu'un groupe ne la tient pas pour telle. Sur les paroles du tachahhoud, Mâlik et un groupe de savants ne les tiennent pas pour obligatoires, alors qu'al-Châfi'î, Ahmad et Dawud les tiennent pour obligatoires.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -584,6 +593,9 @@
       "description_ar": "الصلاة على النبي صلى الله عليه وسلم في التشهد الأخير.",
       "description_fr": "Invoquer les bénédictions sur le Prophète lors de l'assise finale.",
       "source": "Sahih Bukhari 3370",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that al-Shafi'i made sending blessings on the Prophet ﷺ obligatory in the tashahhud, citing Qur'an 33:56.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن الشافعي أوجب الصلاة على النبي ﷺ في التشهد، مستدلًّا بآية سورة الأحزاب (33: 56).",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte qu'al-Châfi'î a rendu obligatoire la prière sur le Prophète ﷺ dans le tachahhoud, en invoquant le Coran 33:56.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -679,6 +691,9 @@
       "description_ar": "التشهد الأول والجلوس له.",
       "description_fr": "Le premier tachahhoud, et l'assise qu'il requiert.",
       "source": "Sahih Bukhari 829",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that most scholars hold the middle sitting a sunnah and not an obligation, and that a group holds it obligatory. The Hanafis count the first sitting, for the length of the tashahhud, among the wajib acts (al-Mawsu'a al-Fiqhiyya al-Kuwaitiyya, vol. 27, p. 79).",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن أكثر العلماء على أن الجلسة الوسطى سنة وليست فرضًا، وأن قومًا قالوا إنها فرض. وعند الحنفية يجب القعود الأول بقدر التشهد (الموسوعة الفقهية الكويتية، ج 27، ص 79).",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que la plupart des savants tiennent la position assise intermédiaire pour une sunna et non pour une obligation, et qu'un groupe la tient pour obligatoire. Les hanafites tiennent la première position assise, pour la durée du tachahhoud, pour wâjib (Encyclopédie juridique koweïtienne, vol. 27, p. 79).",
       "verified": true,
       "needs_scholarly_review": true
     }
@@ -711,6 +726,9 @@
       "description_ar": "قراءة سورة بعد الفاتحة في الركعتين الأوليين.",
       "description_fr": "Réciter une sourate après Al-Fâtiha dans les deux premières rak'ât.",
       "source": "Sahih Bukhari 776",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Malik chooses a surah after Al-Fatiha in the first two rakahs only, while al-Shafi'i chooses one in all four rakahs of the noon prayer, with a longer one in the first two.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن مالكًا اختار قراءة سورة بعد الفاتحة في الركعتين الأوليين فقط، وأن الشافعي اختار قراءتها في الركعات الأربع من الظهر مع تطويل السورة في الأوليين.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que Mâlik retient une sourate après Al-Fâtiha dans les deux premières rak'ât seulement, alors qu'al-Châfi'î en retient une dans les quatre rak'ât de la prière de Dhouhr, plus longue dans les deux premières.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -765,6 +783,9 @@
       "description_ar": "الإشارة بالسبابة في التشهد.",
       "description_fr": "Lever l'index pendant le tachahhoud.",
       "source": "Sahih Muslim 580",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports agreement that resting the hands on the knees and pointing with the finger is an approved way of sitting in prayer, and a difference over moving the finger. He adds that the established report says only that the Prophet ﷺ pointed.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) اتفاق العلماء على أن وضع الكفين على الركبتين والإشارة بالإصبع من هيئات الجلوس المستحسنة في الصلاة، واختلافهم في تحريك الأصابع، وقال إن الثابت أنه كان يشير فقط.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte que les savants s'accordent à tenir pour une manière de s'asseoir agréée dans la prière le fait de poser les mains sur les genoux et de désigner du doigt, et qu'ils divergent sur le mouvement du doigt ; il ajoute que le récit établi dit seulement que le Prophète ﷺ désignait.",
       "verified": true,
       "needs_scholarly_review": true
     },
@@ -774,6 +795,9 @@
       "description_ar": "الإكثار من الدعاء في السجود.",
       "description_fr": "Faire des invocations personnelles pendant la prosternation.",
       "source": "Sahih Muslim 482",
+      "note": "Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) reports that Abu Hanifa does not allow supplication in the prayer in words other than the Qur'an's, while Malik and al-Shafi'i allow it.",
+      "note_ar": "ونقل ابن رشد في بداية المجتهد (كتاب الصلاة) أن أبا حنيفة لا يجيز الدعاء في الصلاة بغير ألفاظ القرآن، وأن مالكًا والشافعي يجيزان ذلك.",
+      "note_fr": "Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) rapporte qu'Abou Hanîfa n'admet pas l'invocation dans la prière avec d'autres mots que ceux du Coran, alors que Mâlik et al-Châfi'î l'admettent.",
       "verified": true,
       "needs_scholarly_review": true
     }
@@ -781,9 +805,9 @@
   "sunan_heading": "The recommended acts (sunan)",
   "sunan_heading_ar": "سنن الصلاة",
   "sunan_heading_fr": "Les actes recommandés (sounan)",
-  "madhab_note": "The three groupings below follow the Hanbali arrangement, which is the one most beginner texts in English and French use because it separates the acts clearly. The Shafi'i school counts pillars and recommended acts but has no middle category; the Hanafi school divides them as obligations and required duties on a different count. Follow whichever school your local mosque teaches.",
-  "madhab_note_ar": "التقسيم الثلاثي الآتي على ترتيب الحنابلة، وهو الأشهر في كتب المبتدئين بالإنجليزية والفرنسية لوضوح التفريق فيه. وأما الشافعية فيذكرون الأركان والسنن دون مرتبة وسطى، والحنفية يقسمونها إلى فرائض وواجبات بعدد مختلف. فاتبع ما يُعلَّم في مسجدك.",
-  "madhab_note_fr": "Les trois groupes ci-dessous suivent la classification hanbalite, la plus employée dans les manuels pour débutants en anglais et en français car elle distingue clairement les actes. L'école chaféite compte des piliers et des actes recommandés sans catégorie intermédiaire ; l'école hanafite les répartit en obligations et devoirs requis selon un décompte différent. Suis l'enseignement de ta mosquée locale.",
+  "madhab_note": "The schools sort the acts of prayer into groups differently, so an act listed in one group below can sit in another group, or count as another kind of act, in another school. The Shafi'is and Hanbalis use three groups, the Malikis use pillars and sunan and add the fada'il (recommended acts), and the Hanafis use pillars, wajib acts and sunan and add adab as a fourth (al-Mawsu'a al-Fiqhiyya al-Kuwaitiyya, vol. 27, p. 62; vol. 42, p. 320). Ibn Rushd (Bidayat al-Mujtahid, Book of Prayer) traces many of the differences over what is obligatory to a difference of method: some scholars take the Prophet's ﷺ acts in prayer as obligatory unless evidence shows otherwise, and others take as obligatory only what the texts state outright or the scholars agree on. On the second method, no spoken part of the prayer except the opening takbir and the recitation is obligatory. The notes under individual acts give the positions the sources record. Your local imam can tell you which school your mosque follows.",
+  "madhab_note_ar": "تختلف المذاهب في تقسيم أعمال الصلاة وأقوالها إلى مراتب، فقد يقع الفعل المذكور في مرتبة أدناه ويقع في مرتبة أخرى أو يُعدّ نوعًا آخر عند مذهب آخر. فالشافعية والحنابلة يقسمونها ثلاثة أقسام، والمالكية يقسمونها إلى أركان وسنن ويزيدون الفضائل (المندوبات)، والحنفية يقسمونها إلى أركان وواجبات وسنن ويزيدون الآداب قسمًا رابعًا (الموسوعة الفقهية الكويتية، ج 27، ص 62؛ ج 42، ص 320). ويرجع ابن رشد في بداية المجتهد (كتاب الصلاة) كثيرًا من الخلاف فيما يجب إلى اختلاف في المنهج: فبعض العلماء يحمل أفعال النبي ﷺ في الصلاة على الوجوب ما لم يدل دليل على غيره، وبعضهم لا يوجب إلا ما نُصّ عليه صراحة أو اتُّفق عليه. وعلى المنهج الثاني لا يجب من أقوال الصلاة إلا تكبيرة الإحرام والقراءة. وفي الملاحظات تحت كل عمل ما نقلته المصادر من أقوال. وإمام مسجدك يخبرك بالمذهب الذي يسير عليه المسجد.",
+  "madhab_note_fr": "Les écoles répartissent les actes de la prière en groupes différents : un acte rangé dans un groupe ci-dessous peut donc figurer dans un autre groupe, ou compter comme un autre type d'acte, chez une autre école. Les chaféites et les hanbalites emploient trois groupes, les malikites distinguent les piliers et les sounan et ajoutent les fadâ'il (actes recommandés), et les hanafites distinguent les piliers, les actes wâjib et les sounan et ajoutent les âdâb comme quatrième catégorie (Encyclopédie juridique koweïtienne, vol. 27, p. 62 ; vol. 42, p. 320). Ibn Rushd (Bidayat al-Mujtahid, Livre de la prière) ramène beaucoup de divergences sur ce qui est obligatoire à une différence de méthode : certains savants tiennent les actes du Prophète ﷺ dans la prière pour obligatoires sauf indice contraire, d'autres ne tiennent pour obligatoire que ce que les textes énoncent expressément ou ce qui fait consensus. Selon la seconde méthode, aucune parole de la prière n'est obligatoire hormis le takbîr d'ouverture et la récitation. Les notes sous chaque acte donnent les positions que rapportent les sources. L'imam de ta mosquée peut te dire quelle école elle suit.",
   "sujud_as_sahw": [
     {
       "id": "sahw-1",
