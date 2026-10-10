@@ -18,30 +18,36 @@
       "items": [
         {
           "id": "window-fajr",
-          "description": "Fajr: from the true dawn until sunrise.",
-          "description_ar": "الفجر: من طلوع الفجر الصادق إلى طلوع الشمس.",
-          "description_fr": "Fajr : de l'aube véritable jusqu'au lever du soleil.",
+          "description": "Fajr: from the appearance of dawn until the sun rises.",
+          "description_ar": "الفجر: من طلوع الفجر إلى طلوع الشمس.",
+          "description_fr": "Fajr : de l'apparition de l'aube jusqu'au lever du soleil.",
           "source": "Sahih Muslim 612",
           "verified": true,
           "needs_scholarly_review": true
         },
         {
           "id": "window-dhuhr",
-          "description": "Dhuhr: from just after the sun passes its highest point until an object's shadow equals its own length.",
-          "description_ar": "الظهر: من زوال الشمس إلى أن يصير ظل الشيء مثله.",
-          "description_fr": "Dhuhr : juste après que le soleil a dépassé son zénith, jusqu'à ce que l'ombre d'un objet égale sa longueur.",
+          "description": "Dhuhr: from when the sun passes its highest point until the time of Asr comes.",
+          "description_ar": "الظهر: من زوال الشمس إلى أن يحضر وقت العصر.",
+          "description_fr": "Dhuhr : du moment où le soleil dépasse son zénith jusqu'à l'arrivée du temps de 'Asr.",
           "source": "Sahih Muslim 612",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration also gives a man's shadow as long as his height. On where Dhuhr ends, Ibn Rushd (Bidayat al-Mujtahid) reports that Malik, al-Shafi'i, Abu Thawr and Dawud say when an object's shadow equals its own length, while Abu Hanifa, in one of two narrations, says when it reaches twice its length.",
+          "note_ar": "يذكر الحديث أيضًا أن ظل الرجل كطوله. واختلفوا في آخر وقت الظهر: نقل ابن رشد في بداية المجتهد أن مالكًا والشافعي وأبا ثور وداود قالوا إذا صار ظل كل شيء مثله، وأن أبا حنيفة قال في إحدى الروايتين عنه إذا صار مثليه.",
+          "note_fr": "Le hadith mentionne aussi l'ombre d'un homme égale à sa taille. Sur la fin du temps de Dhuhr, Ibn Rushd (Bidayat al-Mujtahid) rapporte que Mâlik, al-Châfi'î, Abou Thawr et Dâwoud la placent quand l'ombre d'un objet égale sa longueur, et qu'Abou Hanîfa, dans l'une de ses deux narrations, la place quand elle atteint le double."
         },
         {
           "id": "window-asr",
-          "description": "Asr: from the end of Dhuhr until sunset, though praying it before the sun yellows is better.",
-          "description_ar": "العصر: من خروج وقت الظهر إلى غروب الشمس، والأفضل أداؤها قبل اصفرار الشمس.",
-          "description_fr": "'Asr : de la fin de Dhuhr jusqu'au coucher du soleil, mais il vaut mieux l'accomplir avant que le soleil ne jaunisse.",
+          "description": "Asr: from the end of Dhuhr until the sun turns yellow.",
+          "description_ar": "العصر: من خروج وقت الظهر إلى أن تصفر الشمس.",
+          "description_fr": "'Asr : de la fin de Dhuhr jusqu'à ce que le soleil jaunisse.",
           "source": "Sahih Muslim 612",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration ends Asr when the sun turns yellow. Ibn Rushd (Bidayat al-Mujtahid) reports two narrations from Malik: until an object's shadow is twice its length (also al-Shafi'i's view) or until the sun yellows (also Ahmad's view). The Zahiris extend it to one unit before sunset, on Abu Hurayrah's report, which Ibn Rushd says most jurists read as concerning people with an excuse.",
+          "note_ar": "ينتهي وقت العصر في الحديث باصفرار الشمس. ونقل ابن رشد في بداية المجتهد عن مالك روايتين: إلى أن يصير ظل كل شيء مثليه (وبه قال الشافعي)، وإلى أن تصفر الشمس (وبه قال أحمد). وقال أهل الظاهر: إلى أن تبقى ركعة قبل الغروب، لحديث أبي هريرة، وحمله الجمهور على أصحاب الأعذار.",
+          "note_fr": "Le hadith fait finir 'Asr quand le soleil jaunit. Ibn Rushd (Bidayat al-Mujtahid) rapporte deux narrations de Mâlik : jusqu'à ce que l'ombre d'un objet atteigne le double de sa longueur (avis aussi d'al-Châfi'î), ou jusqu'à ce que le soleil jaunisse (avis aussi d'Ahmad). Les zâhirites l'étendent jusqu'à une unité avant le coucher du soleil, d'après le hadith d'Abou Hourayra, que la plupart des juristes comprennent comme visant les personnes ayant une excuse."
         },
         {
           "id": "window-maghrib",
@@ -50,16 +56,22 @@
           "description_fr": "Maghrib : du coucher du soleil jusqu'à la disparition du crépuscule rouge.",
           "source": "Sahih Muslim 612",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "Ibn Rushd (Bidayat al-Mujtahid) reports that Abu Hanifa, Ahmad, Abu Thawr and Dawud give Maghrib a window that lasts until the twilight ends, while the best-known narrations from Malik and al-Shafi'i give it one short time just after sunset. They also differ on what the twilight is: Malik and al-Shafi'i say the red glow, Abu Hanifa the whiteness that follows it.",
+          "note_ar": "نقل ابن رشد في بداية المجتهد أن أبا حنيفة وأحمد وأبا ثور وداود قالوا إن للمغرب وقتًا موسعًا إلى غياب الشفق، وأن أشهر الروايات عن مالك والشافعي أن وقتها واحد بعد الغروب. واختلفوا في الشفق: فهو عند مالك والشافعي الحمرة، وعند أبي حنيفة البياض الذي بعدها.",
+          "note_fr": "Ibn Rushd (Bidayat al-Mujtahid) rapporte qu'Abou Hanîfa, Ahmad, Abou Thawr et Dâwoud donnent à Maghrib un temps qui dure jusqu'à la fin du crépuscule, alors que les narrations les mieux connues de Mâlik et d'al-Châfi'î lui donnent un seul temps, juste après le coucher du soleil. Ils divergent aussi sur le crépuscule : la lueur rouge pour Mâlik et al-Châfi'î, la blancheur qui la suit pour Abou Hanîfa."
         },
         {
           "id": "window-isha",
-          "description": "Isha: from the end of the twilight until midnight, and in necessity until the true dawn.",
-          "description_ar": "العشاء: من مغيب الشفق إلى منتصف الليل، وعند الضرورة إلى طلوع الفجر.",
-          "description_fr": "'Ichâ : de la fin du crépuscule jusqu'à minuit, et en cas de nécessité jusqu'à l'aube véritable.",
+          "description": "Isha: from the end of the twilight until the middle of the night.",
+          "description_ar": "العشاء: من مغيب الشفق إلى منتصف الليل.",
+          "description_fr": "'Ichâ : de la fin du crépuscule jusqu'au milieu de la nuit.",
           "source": "Sahih Muslim 612",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "Ibn Rushd (Bidayat al-Mujtahid) reports three views on where it ends: a third of the night (al-Shafi'i, Abu Hanifa and the best-known view of Malik), half of the night (also reported from Malik), and the dawn (Dawud).",
+          "note_ar": "نقل ابن رشد في بداية المجتهد ثلاثة أقوال في آخر وقتها: ثلث الليل (وبه قال الشافعي وأبو حنيفة وهو المشهور عن مالك)، ونصف الليل (ورُوي عن مالك أيضًا)، وإلى طلوع الفجر (وهو قول داود).",
+          "note_fr": "Ibn Rushd (Bidayat al-Mujtahid) rapporte trois avis sur la fin de ce temps : le tiers de la nuit (al-Châfi'î, Abou Hanîfa et l'avis le plus connu de Mâlik), la moitié de la nuit (également rapporté de Mâlik) et l'aube (Dâwoud)."
         }
       ]
     },
@@ -82,11 +94,14 @@
         {
           "id": "qada-2",
           "description": "Make it up in the order the prayers fall where you can.",
-          "description_ar": "ويُستحب قضاؤها مرتبة على ترتيب الصلوات ما أمكن.",
+          "description_ar": "وتُقضى على ترتيب الصلوات ما أمكن.",
           "description_fr": "Rattrape-les dans l'ordre où elles se succèdent, autant que possible.",
           "source": "Sahih Bukhari 598",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration records the Prophet praying the missed Asr after sunset and then Maghrib. Ibn Rushd (Bidayat al-Mujtahid) reports that Malik makes the order obligatory for five missed prayers or fewer, Abu Hanifa and al-Thawri make it obligatory while the time of the current prayer allows, and al-Shafi'i does not make it obligatory.",
+          "note_ar": "يذكر الحديث أن النبي صلى الله عليه وسلم صلى العصر الفائتة بعد الغروب ثم صلى المغرب. ونقل ابن رشد في بداية المجتهد أن مالكًا أوجب الترتيب في الخمس فما دونها، وأن أبا حنيفة والثوري أوجباه ما اتسع وقت الحاضرة، وأن الشافعي لم يوجبه.",
+          "note_fr": "Le hadith rapporte que le Prophète ﷺ a prié 'Asr, manquée, après le coucher du soleil, puis Maghrib. Ibn Rushd (Bidayat al-Mujtahid) rapporte que Mâlik rend l'ordre obligatoire pour cinq prières manquées ou moins, qu'Abou Hanîfa et ath-Thawrî le rendent obligatoire tant que le temps de la prière présente le permet, et qu'al-Châfi'î ne le rend pas obligatoire."
         },
         {
           "id": "qada-3",
@@ -96,9 +111,9 @@
           "source": "Scholarly consensus",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The schools agree that missed obligatory prayers are made up. They differ over prayers left deliberately over a long period, so ask a local scholar about your own case.",
-          "note_ar": "اتفقت المذاهب على قضاء الفرائض الفائتة، واختلفت فيمن ترك الصلاة عمدا مدة طويلة، فليسأل عن حاله أهل العلم.",
-          "note_fr": "Les écoles s'accordent sur le rattrapage des prières obligatoires manquées. Elles divergent au sujet des prières délaissées volontairement sur une longue période : demandez conseil à un savant."
+          "note": "Ibn Rushd (Bidayat al-Mujtahid) records agreement that a prayer missed through sleep or forgetting is made up. For a prayer left deliberately, most jurists require it to be made up, while the Zahiris, and later Ibn Taymiyyah and Ibn Rajab, say it is not required (as set out on islamqa.info). Ask a local scholar about your own case.",
+          "note_ar": "اتفق المسلمون، كما ذكر ابن رشد في بداية المجتهد، على قضاء ما فات بنوم أو نسيان. وفيمن تركها عمدًا: الجمهور على وجوب القضاء، وقال أهل الظاهر ومن المتأخرين ابن تيمية وابن رجب لا يجب (كما في الإسلام سؤال وجواب). فليسأل عن حاله أهل العلم.",
+          "note_fr": "Ibn Rushd (Bidayat al-Mujtahid) rapporte l'accord des musulmans sur le rattrapage d'une prière manquée par sommeil ou oubli. Pour une prière délaissée volontairement, la plupart des juristes exigent de la rattraper, tandis que les zâhirites, puis Ibn Taymiyya et Ibn Rajab, disent qu'elle n'est pas due (d'après islamqa.info). Demande conseil à un savant pour ton cas."
         }
       ]
     },
@@ -107,7 +122,6 @@
       "heading": "Praying while travelling",
       "heading_ar": "صلاة المسافر",
       "heading_fr": "La prière en voyage",
-      "emphasis": "recommended",
       "items": [
         {
           "id": "travel-1",
@@ -132,12 +146,15 @@
         },
         {
           "id": "travel-3",
-          "description": "Dhuhr may be joined with Asr, and Maghrib with Isha, in either the earlier or the later time.",
-          "description_ar": "ويجوز الجمع بين الظهر والعصر، وبين المغرب والعشاء، جمع تقديم أو تأخير.",
-          "description_fr": "Dhuhr peut être jointe à 'Asr, et Maghrib à 'Ichâ, dans le temps de la première ou de la seconde.",
-          "source": "Sahih Muslim 705",
+          "description": "On a journey, Dhuhr may be prayed together with Asr, and Maghrib together with Isha.",
+          "description_ar": "يجوز للمسافر الجمع بين الظهر والعصر، وبين المغرب والعشاء.",
+          "description_fr": "En voyage, Dhuhr peut être accomplie avec 'Asr, et Maghrib avec 'Ichâ.",
+          "source": "Sahih Muslim 706a",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration records that the Prophet did this on the Tabuk expedition. It does not say whether the prayers were joined in the time of the first or the second. Ibn Rushd (Bidayat al-Mujtahid) reports that most jurists allow joining on a journey, while Abu Hanifa and his companions allow it only at Arafah and Muzdalifah. Among those who allow it, al-Shafi'i accepts either time, and one narration from Malik prefers the later.",
+          "note_ar": "يذكر الحديث أن النبي صلى الله عليه وسلم فعل ذلك في غزوة تبوك، ولا يبين هل كان الجمع في وقت الأولى أم الثانية. ونقل ابن رشد في بداية المجتهد أن الجمهور على جواز الجمع في السفر، وأن أبا حنيفة وأصحابه لا يجيزونه إلا بعرفة والمزدلفة. ومن أجازه فالشافعي يجيزه في الوقتين، وعن مالك رواية تختار التأخير.",
+          "note_fr": "Le hadith rapporte que le Prophète ﷺ l'a fait lors de l'expédition de Tabouk, sans préciser si les prières étaient jointes dans le temps de la première ou de la seconde. Ibn Rushd (Bidayat al-Mujtahid) rapporte que la plupart des juristes autorisent la jonction en voyage, tandis qu'Abou Hanîfa et ses compagnons ne l'admettent qu'à 'Arafa et à Mouzdalifa. Parmi ceux qui l'autorisent, al-Châfi'î admet l'un ou l'autre temps, et une narration de Mâlik préfère le second."
         },
         {
           "id": "travel-4",
@@ -167,16 +184,31 @@
           "description_fr": "Elle remplace Dhuhr le vendredi et est obligatoire pour les hommes adultes résidents.",
           "source": "Quran 62:9",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The verse does not list who is bound. Ibn Rushd (Bidayat al-Mujtahid) records agreement that Friday prayer is not required of women or of the ill, and disagreement over the traveller and the slave. Most jurists exempt the traveller, while the Zahiris hold it binding on him (Ibn Hazm, al-Muhalla, as quoted in Bughyat al-Muqtasid).",
+          "note_ar": "لا تبين الآية من تجب عليه الجمعة. ونقل ابن رشد في بداية المجتهد الاتفاق على أنها لا تجب على المرأة ولا المريض، والخلاف في المسافر والعبد: فأكثر الفقهاء على إسقاطها عن المسافر، وأهل الظاهر على وجوبها عليه (ابن حزم، المحلى، كما في بغية المقتصد).",
+          "note_fr": "Le verset n'indique pas qui est tenu de prier le vendredi. Ibn Rushd (Bidayat al-Mujtahid) rapporte l'accord pour dire que la joumou'a n'est pas due par la femme ni par le malade, et le désaccord pour le voyageur et l'esclave : la plupart des juristes en dispensent le voyageur, tandis que les zâhirites la lui imposent (Ibn Hazm, al-Muhalla, cité dans Bughyat al-Muqtasid)."
         },
         {
           "id": "jumuah-2",
-          "description": "It is two units, preceded by a sermon in two parts, which is part of the prayer.",
-          "description_ar": "وهي ركعتان تسبقهما خطبتان، والخطبة من الصلاة.",
-          "description_fr": "Elle compte deux unités, précédées d'un sermon en deux parties, qui fait partie de la prière.",
+          "description": "The sermon is given standing, in two parts, with the speaker sitting between them.",
+          "description_ar": "تكون الخطبة قائمًا في خطبتين يجلس الخطيب بينهما.",
+          "description_fr": "Le sermon se donne debout, en deux parties, celui qui le prononce s'asseyant entre les deux.",
           "source": "Sahih Muslim 861",
           "verified": true,
           "needs_scholarly_review": true
+        },
+        {
+          "id": "jumuah-2b",
+          "description": "The Friday prayer is two units.",
+          "description_ar": "صلاة الجمعة ركعتان.",
+          "description_fr": "La prière du vendredi compte deux unités.",
+          "source": "Sunan an-Nasa'i 1420",
+          "verified": true,
+          "needs_scholarly_review": true,
+          "note": "The report is Umar's, who attributes the wording to the Prophet. Sunnah.com shows the grading Sahih (Darussalam) and records al-Nasa'i's own remark that the narrator Abd al-Rahman ibn Abi Layla did not hear from Umar.",
+          "note_ar": "الرواية عن عمر، وهو ينسب لفظها إلى النبي صلى الله عليه وسلم. وعلى صفحة الحديث في موقع sunnah.com الحكم: صحيح (دار السلام)، وفيها قول النسائي: عبد الرحمن بن أبي ليلى لم يسمع من عمر.",
+          "note_fr": "Le récit est de 'Omar, qui en attribue la formulation au Prophète ﷺ. Sunnah.com indique le jugement Sahih (Darussalam) et rapporte la remarque d'an-Nasâ'î lui-même : le narrateur 'Abd ar-Rahmân ibn Abî Laylâ n'a pas entendu 'Omar."
         },
         {
           "id": "jumuah-3",
@@ -189,15 +221,15 @@
         },
         {
           "id": "jumuah-4",
-          "description": "Bathing, wearing clean clothes, using fragrance, and arriving early are all recommended.",
-          "description_ar": "ويُستحب الغسل ولبس أحسن الثياب والتطيب والتبكير.",
-          "description_fr": "Se laver, porter des vêtements propres, se parfumer et arriver tôt sont tous recommandés.",
-          "source": "Sahih Bukhari 877",
+          "description": "Take a bath, clean yourself as well as you can, and use oil or perfume before going to the Friday prayer.",
+          "description_ar": "يغتسل المرء ويتطهر ما استطاع ويدّهن أو يتطيب، ثم يخرج إلى الجمعة.",
+          "description_fr": "Prends un bain, purifie-toi autant que tu le peux et mets de l'huile ou du parfum avant de te rendre à la prière du vendredi.",
+          "source": "Sahih Bukhari 883",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The narration names the bath. Clean clothes, fragrance, and arriving early are established by other reports and are agreed to be recommended.",
-          "note_ar": "نص الحديث على الغسل، وأما الثياب النظيفة والطيب والتبكير فثابتة بأحاديث أخرى، والاستحباب متفق عليه.",
-          "note_fr": "Le hadith mentionne le bain. Les vêtements propres, le parfum et le fait d'arriver tôt sont établis par d'autres rapports et leur caractère recommandé fait consensus."
+          "note": "The narration joins these with going out quietly and keeping silent during the sermon. Whether the Friday bath is obligatory is disputed: Ibn Rushd (Bidayat al-Mujtahid) reports that most jurists hold it a sunnah and the Zahiris hold it obligatory, and that none makes the prayer invalid without it.",
+          "note_ar": "يجمع الحديث بين هذه الأمور والخروج بسكينة والإنصات أثناء الخطبة. واختلف في وجوب غسل الجمعة: نقل ابن رشد في بداية المجتهد أن الجمهور على أنه سنة وأن أهل الظاهر على أنه فرض، وأنه لا خلاف في أن الصلاة تصح بدونه.",
+          "note_fr": "Le hadith associe ces gestes au fait de sortir avec calme et de se taire pendant le sermon. L'obligation du bain du vendredi est disputée : Ibn Rushd (Bidayat al-Mujtahid) rapporte que la plupart des juristes y voient une sunna et que les zâhirites le tiennent pour obligatoire, sans que personne n'invalide la prière en son absence."
         },
         {
           "id": "jumuah-5",
@@ -207,9 +239,9 @@
           "source": "Scholarly consensus",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The four schools agree Jumuah is not obligatory on women, who pray Dhuhr instead if they do not attend. The narration usually cited for this is graded differently across collections, so it is presented here as the agreed position rather than tied to one number.",
-          "note_ar": "اتفقت المذاهب الأربعة على أن الجمعة لا تجب على النساء، وتصلي من لم تحضر الظهر. وقد اختُلف في تصحيح الحديث المستدل به، فذُكر هنا بوصفه القول المتفق عليه دون تعليقه برقم بعينه.",
-          "note_fr": "Les quatre écoles s'accordent : la joumou'a n'est pas obligatoire pour les femmes, qui accomplissent Dhuhr si elles n'y assistent pas. La narration habituellement citée est gradée différemment selon les recueils ; elle est donc présentée ici comme la position admise plutôt que rattachée à un numéro précis."
+          "note": "Ibn Rushd (Bidayat al-Mujtahid) lists being male as a condition the jurists agree on, and Ibn al-Qattan (al-Iqna' fi Masa'il al-Ijma', as quoted in Bughyat al-Muqtasid) records agreement that women who attend pray with the imam and it suffices.",
+          "note_ar": "عدّ ابن رشد في بداية المجتهد الذكورة شرطًا متفقًا عليه، ونقل ابن القطان في الإقناع في مسائل الإجماع (كما في بغية المقتصد) الإجماع على أن المرأة إن حضرت صلّت مع الإمام وأجزأها ذلك.",
+          "note_fr": "Ibn Rushd (Bidayat al-Mujtahid) range la masculinité parmi les conditions sur lesquelles les juristes s'accordent, et Ibn al-Qattân (al-Iqnâ' fî masâ'il al-ijmâ', cité dans Bughyat al-Muqtasid) rapporte l'accord pour dire que les femmes qui y assistent prient avec l'imam et que cela leur suffit."
         }
       ]
     }

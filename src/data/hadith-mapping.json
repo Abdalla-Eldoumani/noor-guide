@@ -627,16 +627,16 @@
       "confirmedWording": "at-Tahiyyatu lillahi wa s-salawatu wa t-tayyibat",
       "grade": "the collection carries no grading line"
     },
-    "Sahih Bukhari 877": {
+    "Sahih Bukhari 883": {
       "usedIn": [
         "prayer-practice.json"
       ],
       "status": "verified",
-      "narrator": "Abdullah ibn Umar",
+      "narrator": "Salman al-Farisi",
       "checkedAgainst": "sunnah.com",
-      "confirmedWording": "Anyone of you attending the Friday prayers should take a bath",
+      "confirmedWording": "Whoever takes a bath on Friday, purifies himself as much as he can, then uses his (hair) oil or perfumes himself with the scent of his house, then proceeds (for the Jumua prayer)",
       "grade": "the collection carries no grading line",
-      "note": "Names the bath. Clean clothes, fragrance, and arriving early rest on other reports, which the item now says."
+      "note": "Names the bath, the cleansing, and the oil or perfume, then not separating two people sitting together, praying what is written, and keeping silent while the imam speaks. Whether the bath is obligatory is recorded in the item note as a difference between the jurists."
     },
     "Sahih Bukhari 887": {
       "usedIn": [
@@ -822,18 +822,20 @@
       "status": "verified",
       "narrator": "Abdullah ibn Amr",
       "checkedAgainst": "sunnah.com",
-      "confirmedWording": "the time windows for Fajr, Zuhr, Asr, Maghrib, and Isha",
-      "grade": "the collection carries no grading line"
+      "confirmedWording": "Fajr from the appearance of dawn until sunrise; Dhuhr from the sun passing the meridian until Asr comes; Asr until the sun turns pale; Maghrib until the twilight has gone; Isha until the middle of the night",
+      "grade": "the collection carries no grading line",
+      "note": "The school positions on where each window ends are in the item notes."
     },
-    "Sahih Muslim 705": {
+    "Sahih Muslim 706a": {
       "usedIn": [
         "prayer-practice.json"
       ],
       "status": "verified",
-      "narrator": "Ibn Abbas",
+      "narrator": "Muadh ibn Jabal",
       "checkedAgainst": "sunnah.com",
-      "confirmedWording": "observed the noon and afternoon prayers together, and the sunset and Isha prayers together",
-      "grade": "the collection carries no grading line"
+      "confirmedWording": "set out with the Messenger of Allah on the Tabuk expedition, and he observed the noon and afternoon prayers together and the sunset and Isha prayers together",
+      "grade": "the collection carries no grading line",
+      "note": "Gives the joining on a journey. It does not say whether it was done in the time of the first or the second prayer, which the item note records as a difference between the schools."
     },
     "Sahih Muslim 713": {
       "usedIn": [
@@ -864,7 +866,8 @@
       "narrator": "Ibn Umar",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "delivered the sermon standing, then sat, then stood for the second sermon",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "States the two sermons and the sitting between them. It says nothing about the number of units or about the sermon being part of the prayer, so the item says only the first."
     },
     "Sahih Muslim 8a": {
       "usedIn": [
@@ -1082,6 +1085,17 @@
       "confirmedWording": "recite Umm al-Qur'an quietly in the first takbir, then say three more takbirs, and the taslim after the last one",
       "grade": "Sahih (Darussalam)",
       "note": "States the recitation and the closing taslim. It does not mention blessings upon the Prophet after the second takbir, which is cited to scholarly consensus."
+    },
+    "Sunan an-Nasa'i 1420": {
+      "usedIn": [
+        "prayer-practice.json"
+      ],
+      "status": "verified",
+      "narrator": "Umar ibn al-Khattab",
+      "checkedAgainst": "sunnah.com",
+      "confirmedWording": "Jumu'ah prayer is two rak'ahs, and the prayer of Al-Fitr is two rak'ahs, and the prayer of Al-Adha is two rak'ahs, and the prayer when traveling is two rak'ahs, complete and not shortened, on the tongue of Muhammad",
+      "grade": "Sahih (Darussalam)",
+      "note": "Al-Nasa'i adds that Abd al-Rahman ibn Abi Layla did not hear from Umar; the item note says so."
     }
   }
 }
