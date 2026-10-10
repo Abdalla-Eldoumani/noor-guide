@@ -29,14 +29,17 @@ export function useLocalizedContent() {
     pickLocalized<T>(obj, field, locale);
 }
 
-// Names where an English or French rendering came from. Every fetched
-// rendering in the content is the Qur'an, in Saheeh International or
-// Hamidullah; the rest are the project's own. Arabic readers see no rendering.
+// Names where an English or French rendering came from. A fetched rendering is
+// the Qur'an, in Saheeh International or Hamidullah. A sunnah rendering is the
+// English shown on sunnah.com, so it is credited only in English; the French
+// beside it is the project's own. Arabic readers see no rendering.
 export function useTranslationCredit() {
   const t = useTranslations("sources");
   const locale = useLocale();
   return (provenance?: Provenance): string | undefined => {
     if (locale === "ar" || !provenance) return undefined;
-    return provenance === "fetched" ? t("creditQuran") : t("creditProject");
+    if (provenance === "fetched") return t("creditQuran");
+    if (provenance === "sunnah" && locale === "en") return t("creditSunnah");
+    return t("creditProject");
   };
 }
