@@ -14,7 +14,11 @@ type Params = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Params) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "learn" });
-  return { title: t("dashboardTitle"), description: t("dashboardIntro") };
+  return {
+    title: t("dashboardTitle"),
+    description: t("dashboardIntro"),
+    alternates: { canonical: absoluteUrl(locale, "/learn") },
+  };
 }
 
 export default async function LearnPage({ params }: Params) {
