@@ -95,7 +95,6 @@ function SalahLesson({ nav }: { nav: ModuleNav }) {
       notes:
         [
           pick(step, "notes"),
-          step.repetitions ? t("sayThisTimes", { count: step.repetitions }) : null,
           pick(step, "after_fatiha"),
         ]
           .filter(Boolean)
