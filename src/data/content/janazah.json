@@ -4,9 +4,9 @@
   "title_ar": "أحكام الجنائز",
   "title_fr": "Quand un musulman meurt",
   "introduction": {
-    "content_en": "This is the module nobody reads until they need it, and by then there is no time to learn. What follows is the sequence, and what is said at each point, though not the supplications themselves; a local imam can teach you those. It is a communal obligation: if some of the community carry it out, the duty is lifted from the rest.",
-    "content_ar": "هذه وحدة لا يقرؤها أحد حتى يحتاج إليها، وعندها لا يبقى وقت للتعلم. وهذا بيان الترتيب وما يُقال في كل موضع، دون نصوص الأدعية نفسها، وإمام مسجدك يعلّمك إياها. وهو فرض كفاية، إذا قام به بعض المسلمين سقط عن الباقين.",
-    "content_fr": "C'est le module que personne ne lit avant d'en avoir besoin, et il est alors trop tard pour apprendre. Voici la marche à suivre et ce que l'on dit à chaque étape, sans le texte des invocations : un imam près de chez toi peut te les apprendre. C'est une obligation communautaire : si une partie de la communauté s'en acquitte, les autres en sont dispensés."
+    "content_en": "What follows is the sequence, and what is said at each point, though not the supplications themselves; a local imam can teach you those. It is a communal obligation: if some of the community carry it out, the duty is lifted from the rest.",
+    "content_ar": "وهذا بيان الترتيب وما يُقال في كل موضع، دون نصوص الأدعية نفسها، وإمام مسجدك يعلّمك إياها. وهو فرض كفاية، إذا قام به بعض المسلمين سقط عن الباقين.",
+    "content_fr": "Voici la marche à suivre et ce que l'on dit à chaque étape, sans le texte des invocations : un imam près de chez toi peut te les apprendre. C'est une obligation communautaire : si une partie de la communauté s'en acquitte, les autres en sont dispensés."
   },
   "sections": [
     {
@@ -59,17 +59,16 @@
       "heading": "Washing and shrouding",
       "heading_ar": "الغسل والتكفين",
       "heading_fr": "Le lavage et le linceul",
-      "emphasis": "recommended",
       "items": [
         {
           "id": "prep-1",
-          "description": "The body is washed an odd number of times by people of the same sex, except that a spouse may wash a spouse.",
-          "description_ar": "يُغسّل الميت وترًا ويتولاه من كان من جنسه، ويجوز أن يغسّل أحد الزوجين الآخر.",
-          "description_fr": "Le corps est lavé un nombre impair de fois par des personnes du même sexe, sauf qu'un époux peut laver son conjoint.",
-          "note": "The narration permits three, five, or more washings. That the count is odd, and that the washer is of the same sex except between spouses, are the agreed practice rather than wording in this narration.",
-          "note_ar": "أذن الحديث بالغسل ثلاثًا أو خمسًا أو أكثر. وأما كون العدد وترًا، وكون الغاسل من جنس الميت إلا بين الزوجين، فهو العمل المتفق عليه لا لفظ في هذا الحديث.",
-          "note_fr": "Le hadith autorise trois lavages, cinq ou davantage. Que le nombre soit impair, et que celui qui lave soit du même sexe sauf entre époux, relève de la pratique reconnue et non d'une formulation de ce hadith.",
-          "source": "Sahih Bukhari 1253",
+          "description": "The body is washed an odd number of times, starting on the right side and with the parts washed in wudu.",
+          "description_ar": "يُغسَّل الميت وترًا، ويُبدأ بميامنه ومواضع الوضوء منه.",
+          "description_fr": "Le corps est lavé un nombre impair de fois, en commençant par le côté droit et par les parties lavées dans les ablutions.",
+          "note": "The narration is addressed to the women washing the Prophet's daughter. On who may wash, Ibn Rushd (Bidayat al-Mujtahid) records agreement that a wife may wash her husband; most jurists also allow a husband to wash his wife, and Abu Hanifa does not. For someone of the other sex who is neither a spouse nor a close relative, he gives the majority view as tayammum in place of washing.",
+          "note_ar": "الحديث موجه إلى النساء اللاتي كنّ يغسلن ابنة النبي صلى الله عليه وسلم. وفيمن يجوز أن يغسّل الميت: نقل ابن رشد في بداية المجتهد الإجماع على جواز غسل المرأة زوجها، وأن أكثر الفقهاء يجيزون غسل الرجل امرأته وأن أبا حنيفة لا يجيزه. وفي من كان من الجنس الآخر وليس زوجًا ولا ذا محرم ذكر قول الجمهور بالتيمم بدل الغسل.",
+          "note_fr": "Le hadith s'adresse aux femmes qui lavaient la fille du Prophète ﷺ. Sur qui peut laver, Ibn Rushd (Bidayat al-Mujtahid) rapporte l'accord pour dire qu'une épouse peut laver son mari ; la plupart des juristes permettent aussi au mari de laver sa femme, ce qu'Abou Hanîfa n'admet pas. Pour une personne de l'autre sexe qui n'est ni un conjoint ni un proche parent, il donne comme avis de la majorité le tayammoum à la place du lavage.",
+          "source": "Sahih Bukhari 1254",
           "verified": true,
           "needs_scholarly_review": true
         },
@@ -93,12 +92,15 @@
         },
         {
           "id": "prep-4",
-          "description": "Those killed on the battlefield are buried in their clothes, without being washed.",
-          "description_ar": "الشهيد في المعركة يدفن بثيابه ولا يغسل.",
-          "description_fr": "Ceux qui sont tués sur le champ de bataille sont enterrés dans leurs vêtements, sans être lavés.",
+          "description": "Those killed in battle are buried with their blood, without being washed.",
+          "description_ar": "من قُتل في المعركة يُدفن بدمه دون غسل.",
+          "description_fr": "Ceux qui sont tués au combat sont enterrés avec leur sang, sans être lavés.",
           "source": "Sahih Bukhari 1346",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration is about the dead of Uhud and does not mention clothes. Al-Khiraqi's Mukhtasar, as set out in al-Mughni, adds that the martyr is buried in his clothes, with any leather or weapons taken off.",
+          "note_ar": "الحديث في شهداء أحد ولا يذكر الثياب. وزاد الخرقي في مختصره، كما في المغني، أن الشهيد يُدفن في ثيابه وتُنزع عنه الجلود والسلاح.",
+          "note_fr": "Le hadith concerne les morts d'Uhud et ne mentionne pas les vêtements. Le Mukhtasar d'al-Khiraqî, tel qu'exposé dans al-Moughnî, ajoute que le martyr est enterré dans ses vêtements, après avoir retiré les peaux et les armes."
         }
       ]
     },
@@ -128,7 +130,10 @@
           "description_fr": "Après le premier takbîr, récite la sourate Al-Fâtiha.",
           "source": "Sahih Bukhari 1335",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "Ibn Abbas calls it the Sunnah in this narration. Ibn Rushd (Bidayat al-Mujtahid) reports that al-Shafi'i, Ahmad and Dawud recite al-Fatiha after the first takbir, while Malik and Abu Hanifa say this prayer has supplication and no recitation, with Malik having praise of Allah after the first takbir instead.",
+          "note_ar": "يذكر ابن عباس في هذا الحديث أنها سنة. ونقل ابن رشد في بداية المجتهد أن الشافعي وأحمد وداود يقرؤون الفاتحة بعد التكبيرة الأولى، وأن مالكًا وأبا حنيفة قالا ليس في صلاة الجنازة قراءة وإنما هي الدعاء، وعند مالك أن يحمد الله ويثني عليه بعد التكبيرة الأولى.",
+          "note_fr": "Ibn 'Abbâs la qualifie de sunna dans ce hadith. Ibn Rushd (Bidayat al-Mujtahid) rapporte qu'al-Châfi'î, Ahmad et Dâwoud récitent al-Fâtiha après le premier takbîr, alors que Mâlik et Abou Hanîfa disent que cette prière comporte l'invocation sans récitation, Mâlik plaçant à la place la louange d'Allah après le premier takbîr."
         },
         {
           "id": "janazah-3",
@@ -138,9 +143,9 @@
           "source": "Scholarly consensus",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The four schools agree that blessings upon the Prophet follow the second takbir, on the fuller wording of Abu Umamah's report on the funeral prayer.",
-          "note_ar": "اتفقت المذاهب الأربعة على الصلاة على النبي صلى الله عليه وسلم بعد التكبيرة الثانية، اعتمادا على رواية أبي أمامة الموسعة في صلاة الجنازة.",
-          "note_fr": "Les quatre écoles s'accordent pour dire que les prières sur le Prophète suivent le deuxième takbîr, d'après la version complète du rapport d'Abou Oumâma sur la prière funéraire."
+          "note": "The standard text of each school puts the blessing on the Prophet after the second takbir: Ibn Rushd for Malik (Bidayat al-Mujtahid), al-Umm for al-Shafi'i, al-Binayah for the Hanafis, and al-Khiraqi's Mukhtasar in al-Mughni for the Hanbalis.",
+          "note_ar": "جعلت كتب المذاهب المعتمدة الصلاة على النبي صلى الله عليه وسلم بعد التكبيرة الثانية: ابن رشد في بداية المجتهد عن مالك، والأم للشافعي، والبناية للحنفية، ومختصر الخرقي في المغني للحنابلة.",
+          "note_fr": "Le texte de référence de chaque école place la prière sur le Prophète ﷺ après le deuxième takbîr : Ibn Rushd pour Mâlik (Bidayat al-Mujtahid), al-Umm pour al-Châfi'î, al-Binâya pour les hanafites, et le Mukhtasar d'al-Khiraqî dans al-Moughnî pour les hanbalites."
         },
         {
           "id": "janazah-4",
@@ -150,18 +155,21 @@
           "source": "Sahih Muslim 963",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The narration preserves the supplication. Placing it after the third takbir is the arrangement the schools agree on.",
-          "note_ar": "حفظ الحديث الدعاء، وأما جعله بعد التكبيرة الثالثة فترتيب متفق عليه بين المذاهب.",
-          "note_fr": "Le hadith conserve l'invocation. La placer après le troisième takbîr est l'ordre sur lequel les écoles s'accordent."
+          "note": "The narration preserves the supplication. The same four works place the supplication for the deceased after the third takbir.",
+          "note_ar": "حفظ الحديث الدعاء، وتجعل الكتب الأربعة نفسها الدعاء للميت بعد التكبيرة الثالثة.",
+          "note_fr": "Le hadith conserve l'invocation. Les quatre mêmes ouvrages placent l'invocation pour le défunt après le troisième takbîr."
         },
         {
           "id": "janazah-5",
-          "description": "After the fourth, pause briefly and then give the tasleem.",
-          "description_ar": "وبعد الرابعة يقف قليلاً ثم يسلّم.",
-          "description_fr": "Après le quatrième, marque une brève pause puis donne le taslîm.",
+          "description": "After the fourth, give the tasleem.",
+          "description_ar": "وبعد الرابعة يسلّم.",
+          "description_fr": "Après le quatrième, donne le taslîm.",
           "source": "Sunan an-Nasa'i 1989",
           "verified": true,
-          "needs_scholarly_review": true
+          "needs_scholarly_review": true,
+          "note": "The narration puts the taslim after the last takbir and mentions no pause. Al-Khiraqi's Mukhtasar, in al-Mughni, has the Hanbali practice of standing briefly after the fourth takbir; Ibn Rushd (Bidayat al-Mujtahid) gives Malik's order as the fourth takbir and then the taslim.",
+          "note_ar": "يضع الحديث التسليم بعد التكبيرة الأخيرة ولا يذكر وقوفًا. وفي مختصر الخرقي، كما في المغني، عند الحنابلة أن يقف قليلًا بعد التكبيرة الرابعة؛ وذكر ابن رشد في بداية المجتهد ترتيب مالك: التكبيرة الرابعة ثم السلام.",
+          "note_fr": "Le hadith place le taslîm après le dernier takbîr et ne mentionne aucune pause. Le Mukhtasar d'al-Khiraqî, dans al-Moughnî, donne la pratique hanbalite de s'arrêter brièvement après le quatrième takbîr ; Ibn Rushd (Bidayat al-Mujtahid) donne l'ordre de Mâlik : le quatrième takbîr, puis le taslîm."
         }
       ]
     },
@@ -170,7 +178,6 @@
       "heading": "Burial and after",
       "heading_ar": "الدفن وما بعده",
       "heading_fr": "L'enterrement et après",
-      "emphasis": "recommended",
       "items": [
         {
           "id": "burial-1",
@@ -180,9 +187,9 @@
           "source": "Sahih Bukhari 1315",
           "verified": true,
           "needs_scholarly_review": true,
-          "note": "The narration commands haste. Laying the body on its right side facing the qibla is the agreed practice.",
-          "note_ar": "أمر الحديث بالإسراع، وأما إضجاع الميت على شقه الأيمن نحو القبلة فهو العمل المتفق عليه.",
-          "note_fr": "Le hadith ordonne de se hâter. Coucher le corps sur le côté droit face à la qibla est la pratique reconnue."
+          "note": "The narration commands haste. Laying the body on its right side facing the qibla is the practice Ibn Qudamah gives in al-Mughni.",
+          "note_ar": "أمر الحديث بالإسراع. وأما وضع الميت على جنبه الأيمن مستقبل القبلة فهو ما ذكره ابن قدامة في المغني.",
+          "note_fr": "Le hadith ordonne de se hâter. Coucher le corps sur le côté droit face à la qibla est la pratique que donne Ibn Qudâma dans al-Moughnî."
         },
         {
           "id": "burial-2",

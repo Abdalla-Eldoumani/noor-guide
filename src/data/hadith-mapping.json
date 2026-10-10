@@ -249,16 +249,16 @@
       "grade": "the collection carries no grading line",
       "note": "Describes standing in rows and the takbirs. That the prayer has no bowing and no prostration is agreed upon, which the item now says."
     },
-    "Sahih Bukhari 1253": {
+    "Sahih Bukhari 1254": {
       "usedIn": [
         "janazah.json"
       ],
       "status": "verified",
       "narrator": "Umm Atiyyah al-Ansariyyah",
       "checkedAgainst": "sunnah.com",
-      "confirmedWording": "Wash her thrice or five times or more, if you see it necessary",
+      "confirmedWording": "Wash her three, five or more times with water and Sidr; in Hafsa's version, wash her an odd number of times, three, five or seven, starting with the right side and the parts washed in ablution",
       "grade": "the collection carries no grading line",
-      "note": "Permits three, five, or more. It does not itself mandate an odd count, nor does it cover who may wash whom."
+      "note": "Gives the odd count and the right side first. Who may wash whom is in the item note, from Bidayat al-Mujtahid."
     },
     "Sahih Bukhari 1264": {
       "usedIn": [
@@ -299,7 +299,7 @@
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Hurry up with the dead body",
       "grade": "the collection carries no grading line",
-      "note": "Commands haste. Laying the body on its right side facing the qibla is the agreed practice, which the item now says."
+      "note": "Commands haste. Laying the body on its right side facing the qibla is in the item note, from al-Mughni."
     },
     "Sahih Bukhari 1335": {
       "usedIn": [
@@ -309,7 +309,8 @@
       "narrator": "Talhah ibn Abdullah ibn Awf",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Ibn Abbas recited Al-Fatiha in the funeral prayer and said it is the Sunnah",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Ibn Abbas recites al-Fatiha and calls it the Sunnah. The other schools' positions on reciting it are in the item note, from Bidayat al-Mujtahid."
     },
     "Sahih Bukhari 1346": {
       "usedIn": [
@@ -319,7 +320,8 @@
       "narrator": "Jabir ibn Abdullah",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "Bury them with their blood, said of the dead of Uhud, and he did not have them washed",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Says the dead of Uhud were buried with their blood and not washed. Clothes are in the item note, from al-Khiraqi's Mukhtasar in al-Mughni."
     },
     "Sahih Bukhari 135": {
       "usedIn": [
@@ -918,7 +920,7 @@
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "O Allah, forgive him, have mercy upon him, give him peace and absolve him",
       "grade": "the collection carries no grading line",
-      "note": "Preserves the supplication. Placing it after the third takbir is the arrangement the schools agree on, which the item now says. Cited at sunnah.com as 963a and 963b."
+      "note": "Preserves the supplication. Placing it after the third takbir is in the item note, from the schools' standard texts. Cited at sunnah.com as 963a and 963b."
     },
     "Sahih Muslim 976": {
       "usedIn": [
@@ -1084,7 +1086,7 @@
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "recite Umm al-Qur'an quietly in the first takbir, then say three more takbirs, and the taslim after the last one",
       "grade": "Sahih (Darussalam)",
-      "note": "States the recitation and the closing taslim. It does not mention blessings upon the Prophet after the second takbir, which is cited to scholarly consensus."
+      "note": "States the recitation and the closing taslim. It does not mention blessings upon the Prophet after the second takbir or a pause after the fourth; the item notes give both from the schools' standard texts."
     },
     "Sunan an-Nasa'i 1420": {
       "usedIn": [
