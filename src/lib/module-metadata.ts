@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getModuleById } from "@/lib/content";
 import { pickLocalized } from "@/lib/content-i18n";
+import { absoluteUrl } from "@/lib/site";
 
 // Module titles and descriptions are already translated in learning-path.json,
 // so page metadata reads them rather than duplicating the strings in messages.
@@ -14,5 +15,8 @@ export function moduleMetadata(moduleId: string, locale: string): Metadata {
   return {
     ...(title ? { title } : {}),
     ...(description ? { description } : {}),
+    // Absolute and unprefixed for the default locale. A relative "./" resolves
+    // to the internal /en path, which redirects.
+    alternates: { canonical: absoluteUrl(locale, `/learn/${moduleId}`) },
   };
 }
