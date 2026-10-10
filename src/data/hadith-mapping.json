@@ -731,7 +731,8 @@
       "narrator": "Muadha, from Aishah",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "we were ordered to complete the fasts, but were not ordered to complete the prayers",
-      "grade": "the collection carries no grading line"
+      "grade": "the collection carries no grading line",
+      "note": "Gives the make-up of fasts and not of prayers. The report of agreement is in the item note, from al-Nawawi's Sharh Sahih Muslim 4/26."
     },
     "Sahih Muslim 348": {
       "usedIn": [
@@ -972,7 +973,8 @@
       "narrator": "Umm Salamah",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "the woman with postnatal bleeding would refrain from prayer for forty days",
-      "grade": "Hasan Sahih (Al-Albani)"
+      "grade": "Hasan Sahih (Al-Albani)",
+      "note": "Gives the forty-day waiting period and does not mention the bath. The bath at the end is in the item note, from al-Tirmidhi's report of agreement in Jami' 139."
     },
     "Sunan Abu Dawud 3221": {
       "usedIn": [
@@ -1003,7 +1005,8 @@
       "narrator": "Qays ibn Asim",
       "checkedAgainst": "sunnah.com",
       "confirmedWording": "he came intending to embrace Islam and was commanded to bathe",
-      "grade": "Sahih (Al-Albani)"
+      "grade": "Sahih (Al-Albani)",
+      "note": "Records the command to bathe with water and lote leaves. Whether the bath is required or recommended is in the item note, from al-Zuhayli and the Dorar fiqh encyclopedia."
     },
     "Sunan Abu Dawud 4023": {
       "usedIn": [
