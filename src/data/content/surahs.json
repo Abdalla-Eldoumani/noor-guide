@@ -4,9 +4,9 @@
   "title_ar": "سور أساسية للصلاة",
   "title_fr": "Sourates essentielles pour la prière",
   "introduction": {
-    "content_en": "You need to recite Surah Al-Fatiha in every rakah of every prayer. After Al-Fatiha, you recite another short surah in the first two rakaat. Here are the essential surahs to memorize first. Start with Al-Fatiha, then learn the short surahs at the end of the Quran.",
-    "content_ar": "تحتاج إلى قراءة سورة الفاتحة في كل ركعة من كل صلاة. وبعد الفاتحة تقرأ سورة قصيرة أخرى في الركعتين الأوليين. هذه أهم السور التي ينبغي حفظها أولًا. ابدأ بالفاتحة، ثم تعلم قصار السور من آخر القرآن.",
-    "content_fr": "Tu dois réciter la sourate Al-Fâtiha à chaque rak'a de chaque prière. Après Al-Fâtiha, tu récites une autre sourate brève dans les deux premières rak'ât. Voici les sourates essentielles à mémoriser en premier. Commence par Al-Fâtiha, puis apprends les sourates brèves de la fin du Coran."
+    "content_en": "Al-Fatiha is recited in the prayer, and a short surah is recited after it. The schools differ on how this applies in each rakah, and the salah lesson gives their positions. Here are the surahs to memorize first. Start with Al-Fatiha, then learn the short surahs at the end of the Quran.",
+    "content_ar": "تُقرأ الفاتحة في الصلاة، وتُقرأ بعدها سورة قصيرة. وللمذاهب خلاف في كيفية ذلك في كل ركعة، وفي درس الصلاة بيان مواقفها. وهذه السور التي ينبغي حفظها أولًا. ابدأ بالفاتحة، ثم تعلم قصار السور من آخر القرآن.",
+    "content_fr": "Al-Fâtiha se récite dans la prière, et une courte sourate se récite après elle. Les écoles divergent sur la manière dont cela s'applique à chaque rak'a ; la leçon sur la salât donne leurs positions. Voici les sourates à mémoriser en premier. Commence par Al-Fâtiha, puis apprends les sourates brèves de la fin du Coran."
   },
   "surahs": [
     {
@@ -15,9 +15,9 @@
       "title_en": "Al-Fatiha (The Opening)",
       "title_ar": "الفاتحة",
       "title_fr": "Al-Fâtiha (Le Prologue)",
-      "priority": "MUST LEARN FIRST: Required in every rakah",
-      "priority_ar": "يجب تعلمها أولًا، فهي ركن في كل ركعة",
-      "priority_fr": "À APPRENDRE EN PREMIER : obligatoire à chaque rak'a",
+      "priority": "Learn first: recited in the prayer",
+      "priority_ar": "تُتعلَّم أولًا، فهي تُقرأ في الصلاة",
+      "priority_fr": "À apprendre en premier : elle se récite dans la prière",
       "verses": [
         {
           "verse": 1,
@@ -255,9 +255,9 @@
       "title_en": "Al-Asr (The Time)",
       "title_ar": "العصر",
       "title_fr": "Al-'Asr (Le Temps)",
-      "priority": "Additional short surah: profound summary of success",
-      "priority_ar": "سورة قصيرة إضافية، وهي تلخّص أسباب الفلاح في الدنيا والآخرة",
-      "priority_fr": "Sourate brève supplémentaire : un résumé profond de la réussite",
+      "priority": "Additional short surah: three verses",
+      "priority_ar": "سورة قصيرة إضافية من ثلاث آيات",
+      "priority_fr": "Sourate brève supplémentaire : trois versets",
       "verses": [
         {
           "verse": 1,
